@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `StoreFront`,
+    description: `Knick Knacks`,
+    author: `@a-w-m`,
+    url: "http://localhost",
+    keywords: ["e-commerce"],
+    meta: [{name: "meta", content: "meta"}],
+    image: "image"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,13 +17,27 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {},
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `storefront`,
+        short_name: `storefront`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
