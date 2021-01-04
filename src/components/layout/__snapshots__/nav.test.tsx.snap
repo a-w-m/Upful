@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component component tree matches snapshot 1`] = `
+<nav
+  class="sc-bdfBwQ dQksmd"
+>
+  <a
+    href="/"
+  >
+    About Us
+  </a>
+  <a
+    href="/"
+  >
+    Clothing
+  </a>
+  <a
+    href="/"
+  >
+    Home
+  </a>
+  <a
+    href="/"
+  >
+    Accessories
+  </a>
+</nav>
+`;

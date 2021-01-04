@@ -1,42 +1,44 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from 'prop-types'
+import React from 'react'
+const {useState, useRef} = React
+
+import Hamburger from "./hamburger"
+import Nav from "./Nav"
+import {
+  HeaderContainer,
+  LinkWrapper,
+  TitleWrapper,
+  TitleLink,
+} from "./header.styled"
+import useOnClickOutside from "../../hooks/useOnClickOutside"
 
 interface HeaderProps {
   siteTitle: String
 }
 
-const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
+
+  const node = useRef(null)
+  const [open, setOpen] = useState(false)
+  useOnClickOutside(node, ()=> setOpen(false))
+
+  return(
+
+  <HeaderContainer>
+    <div ref ={node}>
+    <Hamburger open = {open} setOpen = {setOpen} />
+    <Nav open = {open}/>
     </div>
-  </header>
-)
+    <TitleWrapper>
+      <LinkWrapper>
+        <TitleLink to="/">{siteTitle}</TitleLink>
+      </LinkWrapper>
+    </TitleWrapper>
+  </HeaderContainer>
+  )}
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string.isRequired
 }
 
 Header.defaultProps = {

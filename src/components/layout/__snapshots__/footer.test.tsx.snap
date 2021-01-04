@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component matches component 1`] = `
+<footer
+  class="sc-bdfBwQ"
+>
+  <div
+    class="sc-gsTCUz gxCAbH"
+  >
+    <nav
+      class="sc-dlfnbm eLoerb"
+    >
+      <a
+        href="/"
+      >
+        About Us
+      </a>
+      <a
+        href="/"
+      >
+        Clothing
+      </a>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        href="/"
+      >
+        Accessories
+      </a>
+    </nav>
+    <div
+      class="sc-hKgILt"
+    />
+    <div
+      class="sc-eCssSg"
+    />
+    <div
+      class="sc-jSgupP"
+    >
+      <div>
+        © 
+        2020
+        , Built with
+         
+        <a
+          href="https://www.gatsbyjs.com"
+        >
+          Gatsby
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+`;

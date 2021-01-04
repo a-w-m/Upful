@@ -2,17 +2,54 @@
 
 exports[`Layout component should match snapshot 1`] = `
 <header
-  style="background: rebeccapurple; margin-bottom: 1.45rem;"
+  class="sc-dlfnbm mFHZk"
 >
-  <div
-    style="margin: 0px auto; max-width: 960px; padding: 1.45rem 1.0875rem;"
-  >
-    <h1
-      style="margin: 0px;"
+  <div>
+    <button
+      aria-controls="link-list"
+      aria-expanded="false"
+      aria-label="open navigation"
+      class="sc-bdfBwQ fwZoWG"
+      type="button"
+    >
+      <div />
+      <div />
+      <div />
+    </button>
+    <nav
+      class="sc-gsTCUz EzLyR"
     >
       <a
         href="/"
-        style="color: white; text-decoration: none;"
+      >
+        About Us
+      </a>
+      <a
+        href="/"
+      >
+        Clothing
+      </a>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        href="/"
+      >
+        Accessories
+      </a>
+    </nav>
+  </div>
+  <div
+    class="sc-hKgILt fEkVZL"
+  >
+    <h1
+      class="sc-eCssSg iHXJeJ"
+    >
+      <a
+        class="sc-jSgupP ZBvTP"
+        href="/"
       >
         StoreFront
       </a>

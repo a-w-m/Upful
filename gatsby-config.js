@@ -5,18 +5,11 @@ module.exports = {
     author: `@a-w-m`,
     url: "http://localhost",
     keywords: ["e-commerce"],
-    meta: [{name: "meta", content: "meta"}],
-    image: "image"
+    meta: [{ name: "meta", content: "meta" }],
+    image: "image",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
 
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -26,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown`,
-        path: `${__dirname}/src/markdown`,
+        path: `${__dirname}/src/markdown/products`,
+        name: `products`
       },
     },
 
@@ -45,6 +38,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+
+    {
+      resolve: "gatsby-plugin-snipcart",
+      options: {
+        apiKey:
+          "ZWY0M2E5YjQtMGZkNi00MDc5LWI1OTMtN2RhNmExNWQ3ODJlNjM3NDQ4NTE1OTE0MDAwMTAz",
+        autopop: true,
+      },
+    },
+
+    "gatsby-transformer-remark",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

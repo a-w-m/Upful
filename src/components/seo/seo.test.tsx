@@ -10,7 +10,6 @@ const siteDescription = "Knick and Knacks"
 const siteURL = "http://localhost"
 const siteKeywords = ""
 const siteImage = "image"
-const metaTags = "metaTags"
 
 describe("SEO component", () => {
   test("matches snapshot", () => {
@@ -20,11 +19,11 @@ describe("SEO component", () => {
 
   test("should render correct meta data for home page", () => {
     render(<SEO />)
-    const helmet = Helmet.peek()
+    const helmet:any = Helmet.peek()
 
     expect(helmet.title).toBe(siteTitle)
 
-    expect(helmet[metaTags]).toEqual(
+    expect(helmet.metaTags).toEqual(
       expect.arrayContaining([
         {
           name: "canonical",

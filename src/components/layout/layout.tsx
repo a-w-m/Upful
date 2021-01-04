@@ -10,7 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
+
+import { Container, MainWrapper, Main } from "./layout.styled"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -28,27 +31,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   `)
 
   return (
-    <>
+    <Container>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date(Date.now()).getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+      <MainWrapper>
+        <Main>{children}</Main>
+      </MainWrapper>
+      <Footer></Footer>
+    </Container>
   )
 }
 
