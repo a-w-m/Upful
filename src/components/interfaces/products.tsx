@@ -1,4 +1,5 @@
 import {FluidObject} from "../../../node_modules/gatsby-image/index" 
+import {IGatsbyImageData} from "../../../node_modules/gatsby-plugin-image/dist/src/components/gatsby-image.browser"
 
 
 export interface CustomField {
@@ -15,7 +16,7 @@ export interface State {
   customFieldSelected1?: string
   customFieldSelected2?: string
   quantitySelected?: number
-  imageSelected: FluidObject
+  imageSelected: IGatsbyImageData
 }
 
 export type Dispatch = React.Dispatch<Action>
@@ -24,7 +25,7 @@ export type Action = ActionImage | ActionQuantity | ActionSize | ActionColor
 
 export interface ActionImage {
   type: "image" 
-  payload: FluidObject
+  payload: IGatsbyImageData
 }
 
 export interface ActionColor{
@@ -73,7 +74,7 @@ export interface Props {
 
 export interface Image{ 
     childImageSharp: {
-      fluid: FluidObject
+      gatsbyImageData: IGatsbyImageData
     }
 
   

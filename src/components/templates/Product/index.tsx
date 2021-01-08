@@ -2,6 +2,7 @@ import React, { useMemo, useReducer, useRef } from "react"
 import { graphql } from "gatsby"
 import Layout from "../../layout/layout"
 import Img from "gatsby-image"
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
 import ImageGallery from "../../ImageGallery"
@@ -45,8 +46,12 @@ const Product: React.FC<P.Props> = ({ data }) => {
  
   const fluidArray = useMemo(()=> createFluidArray(data.allFile.edges), [])
 
+  //const img = getImage(data.markdownRemark.frontmatter.image)
 
-  const [state, dispatch] = useReducer(reducer, {imageSelected: image.childImageSharp.fluid})
+  console.log(data)
+
+
+  const [state, dispatch] = useReducer(reducer, {imageSelected: image.childImageSharp.gatsbyImageData})
 
 
 
@@ -59,7 +64,7 @@ const Product: React.FC<P.Props> = ({ data }) => {
         <Title>{title}</Title>
         <BasePrice> ${price}</BasePrice>
       </TitleContainer>
-      <Img fluid={state.imageSelected}></Img>
+      <GatsbyImage image={state.imageSelected} alt = ""></GatsbyImage>
       <ImageGallery images = {fluidArray} dispatch = {dispatch}></ImageGallery> 
 
 
@@ -68,7 +73,7 @@ const Product: React.FC<P.Props> = ({ data }) => {
         data-item-price={price}
         data-item-name={title}
         data-item-description={description}
-        data-item-image={image.childImageSharp.fluid.src}
+        data-item-image={""}
         data-item-url={slug}
         data-item-custom1-name={customField1?.name}
         data-item-custom1-options={createOptionsString(customField1?.values?? [])}
@@ -102,9 +107,7 @@ export const query = graphql`
         price
         image {
           childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
-            }
+              gatsbyImageData(maxWidth: 600, layout: FLUID)
           }
         }
         id
