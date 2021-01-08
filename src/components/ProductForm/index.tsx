@@ -1,14 +1,11 @@
-import React, { ChangeEvent, Dispatch, RefObject } from "react"
+import React, { ChangeEvent, Dispatch} from "react"
 import { Container, Select } from "./styled"
-import { Action } from "../templates/Product/index"
+import {P} from "../interfaces/index"
+
 
 interface OptionProps {
-  dispatch: Dispatch<Action>
-  customField: {
-    field: string
-    name: string
-    values: Array<{ name: string; priceChange: string }>
-  } 
+  dispatch: P.Dispatch
+  customField: P.CustomField 
 }
 
 type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
@@ -21,19 +18,22 @@ const Options: React.FC<OptionProps> = ({
   dispatch
 }: OptionProps) => {
   const handleChange = (event: HTMLElementEvent<HTMLSelectElement>) => {
-    dispatch({ type: customField.field, payload: event.target.value })
-    console.log(customField)
+
+      dispatch( { type: customField.name, payload: event.target.value})
+    
   }
 
   return (
     <Container>
-      <label htmlFor={customField.name}></label>
+      <label htmlFor={customField.name}>{customField.name}</label>
       <Select
+        id = {customField.name}
+        defaultValue = {""}
         onChange={e => {
           handleChange(e)
         }}
       >
-        <option selected value="">
+        <option value="">
           select an option
         </option>
         {customField.values.map((value: any) => {

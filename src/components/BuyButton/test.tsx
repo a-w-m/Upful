@@ -1,14 +1,13 @@
 import React from 'react'
-import {render} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import BuyButton from "."
 
 describe("BuyButton Component", ()=>{
     test("matches snapshot", ()=>{
         const {container} = render( <BuyButton
-            className ='snipcart-add-item'
             data-item-id= ""
-            data-item-price= ""
-            data-item-name= ""
+            data-item-price= {0}
+            data-item-name= ''
             data-item-description=""
             data-item-image=""
             data-item-url=""
@@ -19,4 +18,5 @@ describe("BuyButton Component", ()=>{
         expect(container.firstChild).toMatchSnapshot()
 
     })
+
 })

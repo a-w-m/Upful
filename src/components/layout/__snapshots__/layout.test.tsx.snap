@@ -1,24 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout component should match snapshot 1`] = `
-<header
-  class="sc-dlfnbm mFHZk"
+<div
+  class="sc-crrsfI cKsulN"
 >
-  <div>
-    <button
-      aria-controls="link-list"
-      aria-expanded="false"
-      aria-label="open navigation"
-      class="sc-bdfBwQ fwZoWG"
-      type="button"
+  <header
+    class="sc-dlfnbm edAUkJ"
+  >
+    <div>
+      <button
+        aria-controls="link-list"
+        aria-expanded="false"
+        aria-label="open navigation"
+        class="sc-bdfBwQ fwZoWG"
+        type="button"
+      >
+        <div />
+        <div />
+        <div />
+      </button>
+      <nav
+        class="sc-gsTCUz eahIHO"
+      >
+        <a
+          href="/"
+        >
+          About Us
+        </a>
+        <a
+          href="/"
+        >
+          Clothing
+        </a>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          href="/"
+        >
+          Accessories
+        </a>
+      </nav>
+    </div>
+    <div
+      class="sc-hKgILt fEkVZL"
     >
-      <div />
-      <div />
-      <div />
-    </button>
+      <h1
+        class="sc-eCssSg iHXJeJ"
+      >
+        <a
+          class="sc-jSgupP eywEqP"
+          href="/"
+        >
+          StoreFront
+        </a>
+      </h1>
+    </div>
+  </header>
+  <div
+    class="sc-dQppl gYULKE"
+  >
+    <main
+      class="sc-bqyKva jzRrKO"
+    />
+  </div>
+  <footer
+    class="sc-gKsewC fIoWJo"
+  >
     <nav
-      class="sc-gsTCUz EzLyR"
+      class="sc-iBPRYJ eeUOoZ"
     >
+      <h5
+        class="sc-kEjbxe iqwogK"
+      >
+        Categories
+      </h5>
       <a
         href="/"
       >
@@ -40,20 +98,53 @@ exports[`Layout component should match snapshot 1`] = `
         Accessories
       </a>
     </nav>
-  </div>
-  <div
-    class="sc-hKgILt fEkVZL"
-  >
-    <h1
-      class="sc-eCssSg iHXJeJ"
+    <div
+      class="sc-fubCfw flkmPR"
     >
-      <a
-        class="sc-jSgupP ZBvTP"
-        href="/"
+      <h5
+        class="sc-kEjbxe iqwogK"
+      >
+        Contact
+      </h5>
+      <address
+        class="sc-iqHYGH fZGVri"
       >
         StoreFront
+        <br />
+        555 Santa Monica Blvd.
+        <br />
+        Los Angeles, CA 90210
+      </address>
+      <address
+        class="sc-iqHYGH fZGVri"
+      >
+        <a
+          href="mailto:howdy@storefront.com"
+        >
+          howdy@storefront.com
+        </a>
+      </address>
+    </div>
+    <div
+      class="sc-pFZIQ bQODGP"
+    >
+      <h5
+        class="sc-kEjbxe iqwogK"
+      >
+        Terms & Conditions
+      </h5>
+      <a
+        href="/"
+      >
+        Returns
       </a>
-    </h1>
-  </div>
-</header>
+    </div>
+    <div
+      class="sc-jrAGrp kxXRxJ"
+    >
+      © StoreFront 
+      2019
+    </div>
+  </footer>
+</div>
 `;

@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Component matches snapshot 1`] = `
+<div
+  class="sc-crrsfI cKsulN"
+>
+  <header
+    class="sc-dlfnbm edAUkJ"
+  >
+    <div>
+      <button
+        aria-controls="link-list"
+        aria-expanded="false"
+        aria-label="open navigation"
+        class="sc-bdfBwQ fwZoWG"
+        type="button"
+      >
+        <div />
+        <div />
+        <div />
+      </button>
+      <nav
+        class="sc-gsTCUz eahIHO"
+      >
+        <a
+          href="/"
+        >
+          About Us
+        </a>
+        <a
+          href="/"
+        >
+          Clothing
+        </a>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          href="/"
+        >
+          Accessories
+        </a>
+      </nav>
+    </div>
+    <div
+      class="sc-hKgILt fEkVZL"
+    >
+      <h1
+        class="sc-eCssSg iHXJeJ"
+      >
+        <a
+          class="sc-jSgupP eywEqP"
+          href="/"
+        >
+          StoreFront
+        </a>
+      </h1>
+    </div>
+  </header>
+  <div
+    class="sc-dQppl gYULKE"
+  >
+    <main
+      class="sc-bqyKva jzRrKO"
+    >
+      <section
+        class="sc-fFubgz feLSrX"
+      >
+        <h1
+          class="sc-bkzZxe hncqoo"
+        >
+          Pietsie Atlin Blouse
+        </h1>
+        <div
+          class="sc-idOhPF gGEoUM"
+        >
+           $
+          240
+        </div>
+      </section>
+      <div
+        class=" gatsby-image-wrapper"
+        style="position: relative; overflow: hidden;"
+      >
+        <div
+          aria-hidden="true"
+          style="width: 100%; padding-bottom: 100%;"
+        />
+        <img
+          alt=""
+          aria-hidden="true"
+          src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
+          style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+        />
+        <picture>
+          <source
+            sizes="(max-width: 800px) 100vw, 800px"
+            srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/f836f/pietsie-atlin-blouse.jpg 200w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/2244e/pietsie-atlin-blouse.jpg 400w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg 800w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/16310/pietsie-atlin-blouse.jpg 1024w"
+          />
+          <img
+            alt=""
+            loading="lazy"
+            sizes="(max-width: 800px) 100vw, 800px"
+            src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg"
+            srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/f836f/pietsie-atlin-blouse.jpg 200w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/2244e/pietsie-atlin-blouse.jpg 400w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg 800w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/16310/pietsie-atlin-blouse.jpg 1024w"
+            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+          />
+        </picture>
+        <noscript>
+          &lt;picture&gt;&lt;source srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/f836f/pietsie-atlin-blouse.jpg 200w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/2244e/pietsie-atlin-blouse.jpg 400w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg 800w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/16310/pietsie-atlin-blouse.jpg 1024w" sizes="(max-width: 800px) 100vw, 800px" /&gt;&lt;img loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/f836f/pietsie-atlin-blouse.jpg 200w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/2244e/pietsie-atlin-blouse.jpg 400w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg 800w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/16310/pietsie-atlin-blouse.jpg 1024w" src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+        </noscript>
+      </div>
+      <button
+        class="sc-fodVxV eIwYSu snipcart-add-item"
+        data-item-custom1-name="size"
+        data-item-custom1-options="small|medium|large"
+        data-item-custom2-name="color"
+        data-item-custom2-options="blue|grey|black"
+        data-item-description="Pietsie Campbell creates all of her garments out of deadstock, vintage fabrics, and natural fibers. Each collection is made in sunny California and embodies the effortlessly chic look we all strive for. Our favorite loose, flowing blouse in a cotton and linen blend. Slightly fitted across the shoulders. Wear tucked or loose, with the sleeves rolled up or down. Delicate pleating at shoulders, bell sleeves, pleated cuffs. Trapeze shape, easy fit. Pulls over, vintage shell buttons on a placket that ends mid way. Delicate hand-pleated detail on chest, stand-up prairie collar."
+        data-item-id="pietsie-atlin-blouse"
+        data-item-image="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg"
+        data-item-name="Pietsie Atlin Blouse"
+        data-item-price="240"
+        data-item-url="/pietsie-atlin-blouse/"
+      >
+        Add to Cart
+      </button>
+      <div
+        class="sc-hBEYos"
+      >
+        <label
+          for="size"
+        >
+          size
+        </label>
+        <select
+          class="sc-kstrdz gMjnKk"
+          id="size"
+        >
+          <option
+            selected=""
+            value=""
+          >
+            select an option
+          </option>
+          <option
+            value="small"
+          >
+            small
+          </option>
+          <option
+            value="medium"
+          >
+            medium
+          </option>
+          <option
+            value="large"
+          >
+            large
+          </option>
+        </select>
+      </div>
+      <div
+        class="sc-hBEYos"
+      >
+        <label
+          for="color"
+        >
+          color
+        </label>
+        <select
+          class="sc-kstrdz gMjnKk"
+          id="color"
+        >
+          <option
+            selected=""
+            value=""
+          >
+            select an option
+          </option>
+          <option
+            value="blue"
+          >
+            blue
+          </option>
+          <option
+            value="grey"
+          >
+            grey
+          </option>
+          <option
+            value="black"
+          >
+            black
+          </option>
+        </select>
+      </div>
+      <section
+        class="sc-hHftDr"
+      >
+        <div
+          class="sc-dmlrTW"
+        >
+          Pietsie Campbell creates all of her garments out of deadstock, vintage fabrics, and natural fibers. Each collection is made in sunny California and embodies the effortlessly chic look we all strive for. Our favorite loose, flowing blouse in a cotton and linen blend. Slightly fitted across the shoulders. Wear tucked or loose, with the sleeves rolled up or down. Delicate pleating at shoulders, bell sleeves, pleated cuffs. Trapeze shape, easy fit. Pulls over, vintage shell buttons on a placket that ends mid way. Delicate hand-pleated detail on chest, stand-up prairie collar.
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer
+    class="sc-gKsewC fIoWJo"
+  >
+    <nav
+      class="sc-iBPRYJ eeUOoZ"
+    >
+      <h5
+        class="sc-kEjbxe iqwogK"
+      >
+        Categories
+      </h5>
+      <a
+        href="/"
+      >
+        About Us
+      </a>
+      <a
+        href="/"
+      >
+        Clothing
+      </a>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        href="/"
+      >
+        Accessories
+      </a>
+    </nav>
+    <div
+      class="sc-fubCfw flkmPR"
+    >
+      <h5
+        class="sc-kEjbxe iqwogK"
+      >
+        Contact
+      </h5>
+      <address
+        class="sc-iqHYGH fZGVri"
+      >
+        StoreFront
+        <br />
+        555 Santa Monica Blvd.
+        <br />
+        Los Angeles, CA 90210
+      </address>
+      <address
+        class="sc-iqHYGH fZGVri"
+      >
+        <a
+          href="mailto:howdy@storefront.com"
+        >
+          howdy@storefront.com
+        </a>
+      </address>
+    </div>
+    <div
+      class="sc-pFZIQ bQODGP"
+    >
+      <h5
+        class="sc-kEjbxe iqwogK"
+      >
+        Terms & Conditions
+      </h5>
+      <a
+        href="/"
+      >
+        Returns
+      </a>
+    </div>
+    <div
+      class="sc-jrAGrp kxXRxJ"
+    >
+      © StoreFront 
+      2019
+    </div>
+  </footer>
+</div>
+`;

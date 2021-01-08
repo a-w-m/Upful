@@ -2,6 +2,15 @@
 
 exports[`BuyButton Component matches snapshot 1`] = `
 <button
-  class="sc-bdfBwQ"
+  class="sc-bdfBwQ iCZIQn snipcart-add-item"
+  data-item-custom1-name=""
+  data-item-custom1-options=""
+  data-item-custom1-value=""
+  data-item-description=""
+  data-item-id=""
+  data-item-image=""
+  data-item-name=""
+  data-item-price="0"
+  data-item-url=""
 />
 `;

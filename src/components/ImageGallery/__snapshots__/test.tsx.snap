@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageGallery Component matches snapshot 1`] = `
+<div>
+  <ul>
+    <li>
+      <div
+        class=" gatsby-image-wrapper"
+        style="position: relative; overflow: hidden;"
+      >
+        <div
+          aria-hidden="true"
+          style="width: 100%; padding-bottom: 100%;"
+        />
+        <img
+          alt=""
+          aria-hidden="true"
+          src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
+          style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+        />
+        <picture>
+          <source
+            sizes="(max-width: 800px) 100vw, 800px"
+            srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/f836f/pietsie-atlin-blouse.jpg 200w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/2244e/pietsie-atlin-blouse.jpg 400w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg 800w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/16310/pietsie-atlin-blouse.jpg 1024w"
+          />
+          <img
+            alt=""
+            loading="lazy"
+            sizes="(max-width: 800px) 100vw, 800px"
+            src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg"
+            srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/f836f/pietsie-atlin-blouse.jpg 200w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/2244e/pietsie-atlin-blouse.jpg 400w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg 800w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/16310/pietsie-atlin-blouse.jpg 1024w"
+            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+          />
+        </picture>
+        <noscript>
+          &lt;picture&gt;&lt;source srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/f836f/pietsie-atlin-blouse.jpg 200w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/2244e/pietsie-atlin-blouse.jpg 400w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg 800w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/16310/pietsie-atlin-blouse.jpg 1024w" sizes="(max-width: 800px) 100vw, 800px" /&gt;&lt;img loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/f836f/pietsie-atlin-blouse.jpg 200w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/2244e/pietsie-atlin-blouse.jpg 400w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg 800w,
+/static/184dc14fc5e96a12c4f7c6ee0f71f32a/16310/pietsie-atlin-blouse.jpg 1024w" src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/14b42/pietsie-atlin-blouse.jpg" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+        </noscript>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

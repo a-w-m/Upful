@@ -2,56 +2,83 @@
 
 exports[`Footer Component matches component 1`] = `
 <footer
-  class="sc-bdfBwQ"
+  class="sc-bdfBwQ eUkNkO"
 >
-  <div
-    class="sc-gsTCUz gxCAbH"
+  <nav
+    class="sc-gsTCUz bClOqD"
   >
-    <nav
-      class="sc-dlfnbm eLoerb"
+    <h5
+      class="sc-jSgupP hSPQha"
+    >
+      Categories
+    </h5>
+    <a
+      href="/"
+    >
+      About Us
+    </a>
+    <a
+      href="/"
+    >
+      Clothing
+    </a>
+    <a
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      href="/"
+    >
+      Accessories
+    </a>
+  </nav>
+  <div
+    class="sc-dlfnbm crRguJ"
+  >
+    <h5
+      class="sc-jSgupP hSPQha"
+    >
+      Contact
+    </h5>
+    <address
+      class="sc-gKsewC eDEVly"
+    >
+      StoreFront
+      <br />
+      555 Santa Monica Blvd.
+      <br />
+      Los Angeles, CA 90210
+    </address>
+    <address
+      class="sc-gKsewC eDEVly"
     >
       <a
-        href="/"
+        href="mailto:howdy@storefront.com"
       >
-        About Us
+        howdy@storefront.com
       </a>
-      <a
-        href="/"
-      >
-        Clothing
-      </a>
-      <a
-        href="/"
-      >
-        Home
-      </a>
-      <a
-        href="/"
-      >
-        Accessories
-      </a>
-    </nav>
-    <div
-      class="sc-hKgILt"
-    />
-    <div
-      class="sc-eCssSg"
-    />
-    <div
-      class="sc-jSgupP"
+    </address>
+  </div>
+  <div
+    class="sc-hKgILt gUssEG"
+  >
+    <h5
+      class="sc-jSgupP hSPQha"
     >
-      <div>
-        © 
-        2020
-        , Built with
-         
-        <a
-          href="https://www.gatsbyjs.com"
-        >
-          Gatsby
-        </a>
-      </div>
-    </div>
+      Terms & Conditions
+    </h5>
+    <a
+      href="/"
+    >
+      Returns
+    </a>
+  </div>
+  <div
+    class="sc-eCssSg fHHycj"
+  >
+    © StoreFront 
+    2019
   </div>
 </footer>
 `;

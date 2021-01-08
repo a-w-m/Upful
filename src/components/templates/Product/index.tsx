@@ -1,9 +1,11 @@
-import React, { useReducer, useRef } from "react"
+import React, { useMemo, useReducer, useRef } from "react"
 import { graphql } from "gatsby"
 import Layout from "../../layout/layout"
 import Img from "gatsby-image"
-import Options from "../../ProductForm/index"
-import BuyButton from "../../BuyButton/index"
+import Options from "../../ProductForm/"
+import BuyButton from "../../BuyButton/"
+import ImageGallery from "../../ImageGallery"
+import {createFluidArray} from "../../helpers"
 import {
   TitleContainer,
   Title,
@@ -11,49 +13,16 @@ import {
   DescriptionWrapper,
   Description,
 } from "./styled"
+import { P } from "../../interfaces"
+import { createOptionsString } from "../../helpers/index"
 
-interface CustomField {
-  field: string
-  name: string
-  values: Array<{ name: string; priceChange: string }>
-}
-
-interface Props {
-  data: {
-    markdownRemark: {
-      frontmatter: {
-        title: string
-        price: string
-        image: any
-        id: string
-        description: string
-        date: string
-        customField1: CustomField | false
-        customField2: CustomField | false
-      }
-    }
-  }
-  pageContext: {
-    slug: string
-  }
-}
-
-interface State {
-  customFieldSelected1?: string
-  customFieldSelected2?: string
-  quantitySelected?: string
-}
-
-export interface Action {
-  type: string
-  payload: string
-}
-
-function reducer(state: State, action: Action): State {
+function reducer(state: P.State, action: P.Action): P.State {
   switch (action.type) {
-    case "one":
+    case "image":
+      return {...state, imageSelected: action.payload}
+    case "size":
       return { ...state, customFieldSelected1: action.payload }
-    case "two":
+    case "color":
       return { ...state, customFieldSelected2: action.payload }
     case "quantity":
       return { ...state, quantitySelected: action.payload }
@@ -62,32 +31,27 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-const createOptionsString = (values: CustomField["values"]) => {
-  if (values) {
-    return values
-      .map(value => {
-        return value.name
-      })
-      .join("|")
-  } else {
-    return
-  }
-}
 
-
-const Product: React.FC<Props> = ({ data, pageContext }) => {
-  const [state, dispatch] = useReducer(reducer, {})
-  const { slug } = pageContext
-  const customField1 = data.markdownRemark.frontmatter.customField1 ? data.markdownRemark.frontmatter.customField1  : {field: "", name: "", values: [{name:"", priceChange:""}]}
-  const customField2 = data.markdownRemark.frontmatter.customField2 ? data.markdownRemark.frontmatter.customField2: {field: "", name: "", values: [{name:"", priceChange:""}]} 
-
+const Product: React.FC<P.Props> = ({ data }) => {
   const {
     title,
     price,
     image,
     id,
     description,
+    customField1,
+    customField2,
   } = data.markdownRemark.frontmatter
+ 
+  const fluidArray = useMemo(()=> createFluidArray(data.allFile.edges), [])
+
+
+  const [state, dispatch] = useReducer(reducer, {imageSelected: image.childImageSharp.fluid})
+
+
+
+
+  const { slug } = data.markdownRemark.fields
 
   return (
     <Layout>
@@ -95,27 +59,27 @@ const Product: React.FC<Props> = ({ data, pageContext }) => {
         <Title>{title}</Title>
         <BasePrice> ${price}</BasePrice>
       </TitleContainer>
-      <Img fluid={image.childImageSharp.fluid}></Img>
+      <Img fluid={state.imageSelected}></Img>
+      <ImageGallery images = {fluidArray} dispatch = {dispatch}></ImageGallery> 
+
 
       <BuyButton
-      
         data-item-id={id}
         data-item-price={price}
         data-item-name={title}
         data-item-description={description}
-        data-item-image={image}
+        data-item-image={image.childImageSharp.fluid.src}
         data-item-url={slug}
-        data-item-custom1-name={customField1.name}
-        data-item-custom1-options={
-        createOptionsString(customField1.values)
-        }
+        data-item-custom1-name={customField1?.name}
+        data-item-custom1-options={createOptionsString(customField1?.values?? [])}
         data-item-custom1-value={state.customFieldSelected1}
-        data-item-custom2-name={customField2.name}
-        data-item-custom2-options={
-        createOptionsString(customField2.values)
-        }
+        data-item-custom2-name={customField2?.name}
+        data-item-custom2-options={createOptionsString(customField2?.values ?? [])}
         data-item-custom2-value={state.customFieldSelected2}
-      >Add to Cart</BuyButton>
+      
+      >
+        Add to Cart
+      </BuyButton>
       {customField1 && (
         <Options customField={customField1} dispatch={dispatch}></Options>
       )}
@@ -131,7 +95,7 @@ const Product: React.FC<Props> = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $pathRegex: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
@@ -147,21 +111,37 @@ export const query = graphql`
         description
         date
         customField1 {
-          field
+          name
           values {
             name
             priceChange
           }
         }
         customField2 {
-          field
+          name
           values {
             name
             priceChange
           }
         }
       }
+      fields {
+        slug
+      }
     }
+    allFile(filter: {relativeDirectory: {regex: $pathRegex}}) {
+      edges {
+        node {   
+          childImageSharp {
+            fluid (maxWidth: 50) {
+              ...GatsbyImageSharpFluid
+
+            }
+          }
+        }
+      }
+    }
+
   }
 `
 export default Product

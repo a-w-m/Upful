@@ -41,9 +41,52 @@ exports.createPages = async({graphql, actions}) =>{
               path: node.fields.slug,
               component: path.resolve(`src/components/templates/Product/index.tsx`),
               context: {
-                  slug: node.fields.slug
+                  slug: node.fields.slug,
+                  pathRegex: `/${node.fields.slug.replace("/", "")}images/`
               }
           })
 
       })
 }
+
+exports.createSchemaCustomization = ({actions})=>{
+  const {createTypes} = actions
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter!
+    }  
+    type Frontmatter @infer {
+      title: String!
+      price: Int!
+      id: String!
+      image: File! @fileByRelativePath
+      description: String!
+      date: String!
+      customField1: CustomField
+      customField2: CustomField
+
+    }
+
+    type CustomField {
+      name: String!
+      values: [Values]!
+    }
+
+    type Values {
+      name: String!
+      priceChange: Int!
+    }
+
+    type ImageSharp{
+      aijdbaj: String!
+    }
+
+  `
+  createTypes(typeDefs)
+}
+
+
+
+
+
+
