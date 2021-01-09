@@ -1,16 +1,16 @@
 import React, { ChangeEvent } from 'react'
-import Img from 'gatsby-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 import {P} from "../interfaces/index"
 import {Wrapper, UL, LI} from "./styled"
 
 interface Props{
-    images: P.Image['childImageSharp']['fluid'][]
+    images: P.ImageNode[]  
     dispatch: P.Dispatch
 }
 const ImageGallery:React.FC<Props> =(props)=>{
     const {images, dispatch} = props
 
-    const handleClick = (img: P.Image['childImageSharp']['fluid'])=>{
+    const handleClick = (img: P.Image['childImageSharp']['gatsbyImageData'])=>{
         dispatch({type: "image", payload: img})
     }
 
@@ -23,8 +23,8 @@ if (images.length <= 1){
             <UL>
             {images.map((image, index)=>{
                 return (
-                    <LI key = {index} onClick = {()=>{handleClick(image)}}>
-                    <Img fluid = {image} ></Img>
+                    <LI key = {index} onClick = {()=>{handleClick(image.node.childImageSharp.gatsbyImageData)}}>
+                    <GatsbyImage image = {image.node.childImageSharp.gatsbyImageData} alt = "" ></GatsbyImage>
                     </LI>
                 )
             
