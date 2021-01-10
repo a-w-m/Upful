@@ -45,28 +45,42 @@ export interface ActionQuantity{
 }
 
 
+export interface Index {
+  data:{
+   allMarkdownRemark:AllMarkdownRemark
+  }
+}
 
-export interface Props {
+export interface Product {
   data: {
-    markdownRemark: {
-      frontmatter: {
-        title: string
-        price: number
-        image: Image
-        id: string
-        description: string
-        date: string
-        customField1: CustomField | null
-        customField2: CustomField | null
-      }
-      fields: {
-        slug: string
-      }
+    markdownRemark: MarkdownRemark
+    allFile: AllImageFiles
     }
-    allFile:{
-      edges: ImageNode[]
-      } 
+  }
+
+  export interface MarkdownRemark{
+    frontmatter: {
+      title: string
+      price: number
+      image: Image
+      id: string
+      description: string
+      date: string
+      customField1: CustomField | null
+      customField2: CustomField | null
     }
+    fields: {
+      slug: string
+    }
+  }
+  
+  export interface AllMarkdownRemark{
+    edges: MarkdownNode[]
+  
+  }
+  
+  export interface MarkdownNode {
+    node: MarkdownRemark
   }
 
 
@@ -83,4 +97,10 @@ export interface ImageNode{
   node:  Image
   
 }
+
+export interface AllImageFiles{
+  edges: ImageNode[]
+}
+
+
 

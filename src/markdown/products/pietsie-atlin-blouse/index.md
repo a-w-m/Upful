@@ -9,6 +9,7 @@ description: Pietsie Campbell creates all of her garments out of deadstock, vint
 customField2:
     name: "color"
     values: [{name: 'blue', priceChange: 0}, {name: 'grey', priceChange: 0}, {name: 'black', priceChange: 0}]
+tags: [featured]
 
 ---
 

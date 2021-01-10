@@ -5,7 +5,6 @@ import {GatsbyImage} from 'gatsby-plugin-image'
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
 import ImageGallery from "../../ImageGallery"
-import {createFluidArray} from "../../helpers"
 import {
   TitleContainer,
   Title,
@@ -32,7 +31,7 @@ function reducer(state: P.State, action: P.Action): P.State {
 }
 
 
-const Product: React.FC<P.Props> = ({ data }) => {
+const Product: React.FC<P.Product> = ({ data }) => {
   const {
     title,
     price,

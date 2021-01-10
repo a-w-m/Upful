@@ -1,6 +1,6 @@
 import {P} from "../src/components/interfaces"
 
-export const pageQueryData:P.Props = {
+export const pageQueryData:P.Product = {
   "data": {
     markdownRemark: {
       "frontmatter": {
@@ -306,7 +306,7 @@ export const pageQueryData:P.Props = {
 
 }
   
-export const pageQueryDataNullCustomFields:P.Props = {
+export const pageQueryDataNullCustomFields:P.Product = {
   "data": {
     markdownRemark: {
       "frontmatter": {

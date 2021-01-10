@@ -1,22 +1,27 @@
 import React from 'react'
 import {P} from "../interfaces"
 import {GatsbyImage} from 'gatsby-plugin-image'
+import {Link} from 'gatsby'
 import {Article, H3, PriceWrapper} from "./styled"
 
 interface Props{
-    name: string,
+    title: string,
     price: number,
+    slug: string,
     image: P.Image
 }
 
 
 
+
 const ProductThumbnail:React.FC<Props> = (props)=>{
-    const {name, price, image} = props
+    const {title, price, image, slug} = props
     return (
         <Article>
+            <Link to = {slug}>
             <GatsbyImage image = {image.childImageSharp.gatsbyImageData} alt = ""/>
-            <H3>{name}</H3>
+            <H3>{title}</H3>
+            </Link>
             <PriceWrapper>{price}</PriceWrapper>
         </Article>
     )
