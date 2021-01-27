@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 
+export const ProductContainer = styled.div`
+display: grid;
+grid-auto-rows: repeat(8, 1fr);
+grid-template-columns: 1fr;
+`
+
 export const TitleContainer = styled.section`
 displaY: flex;
 flex-direction: column;
