@@ -2,15 +2,27 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo/seo"
 import ProductThumbnail from "../components/ProductThumbnail"
+import styled from 'styled-components'
 import { graphql } from "gatsby"
 import { P } from "../components/interfaces"
 
+
+export const Container = styled.div`
+
+	display: grid;
+	width: auto;
+	grid-auto-rows: auto;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2.1rem;
+
+`
+
 const IndexPage: React.FC<P.Index> = ({ data }) => {
-  console.log(data)
 
   return (
     <Layout>
       <SEO />
+      <Container>
       {data.allMarkdownRemark.edges.map(edge => {
         const { title, price, image } = edge.node.frontmatter
         const { slug } = edge.node.fields
@@ -23,14 +35,16 @@ const IndexPage: React.FC<P.Index> = ({ data }) => {
             slug={slug}
           ></ProductThumbnail>
         )
+        
       })}
+      </Container>
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark (filter: {frontmatter: {tags: {in: "featured"}}})  {
       edges {
         node {
           frontmatter {
@@ -48,12 +62,13 @@ export const query = graphql`
                 priceChange
               }
             }
+            title
             id
             date
             description
             image {
               childImageSharp {
-                gatsbyImageData(maxWidth: 400, layout: FLUID)
+                gatsbyImageData(width: 600)
               }
             }
             tags

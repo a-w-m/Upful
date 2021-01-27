@@ -23,7 +23,7 @@ if (images.length <= 1){
             <UL>
             {images.map((image, index)=>{
                 return (
-                    <LI key = {index} onClick = {()=>{handleClick(image.node.childImageSharp.gatsbyImageData)}}>
+                    <LI key = {index} onClick = {()=>{dispatch({type: "image", payload: image.node.childImageSharp.gatsbyImageData})}}>
                     <GatsbyImage image = {image.node.childImageSharp.gatsbyImageData} alt = "" ></GatsbyImage>
                     </LI>
                 )

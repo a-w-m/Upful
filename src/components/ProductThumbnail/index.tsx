@@ -2,7 +2,7 @@ import React from 'react'
 import {P} from "../interfaces"
 import {GatsbyImage} from 'gatsby-plugin-image'
 import {Link} from 'gatsby'
-import {Article, H3, PriceWrapper} from "./styled"
+import {Article, H3, PriceWrapper, ProductInfoContainer} from "./styled"
 
 interface Props{
     title: string,
@@ -20,9 +20,11 @@ const ProductThumbnail:React.FC<Props> = (props)=>{
         <Article>
             <Link to = {slug}>
             <GatsbyImage image = {image.childImageSharp.gatsbyImageData} alt = ""/>
-            <H3>{title}</H3>
             </Link>
-            <PriceWrapper>{price}</PriceWrapper>
+            <ProductInfoContainer>
+            <H3>{title}</H3>
+            <PriceWrapper>${price.toFixed(2)}</PriceWrapper>
+            </ProductInfoContainer>
         </Article>
     )
 }

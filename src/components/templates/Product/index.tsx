@@ -1,7 +1,7 @@
-import React, { useMemo, useReducer, useRef } from "react"
+import React, { useEffect, useMemo, useReducer, useRef} from "react"
 import { graphql } from "gatsby"
 import Layout from "../../layout/layout"
-import {GatsbyImage} from 'gatsby-plugin-image'
+import {GatsbyImage,getImage} from 'gatsby-plugin-image'
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
 import ImageGallery from "../../ImageGallery"
@@ -41,12 +41,13 @@ const Product: React.FC<P.Product> = ({ data }) => {
     customField1,
     customField2,
   } = data.markdownRemark.frontmatter
- 
+
+  const images = [data.allFile.edges]
+ console.log(images)
 
   const [state, dispatch] = useReducer(reducer, {imageSelected: image.childImageSharp.gatsbyImageData})
   
   const { slug } = data.markdownRemark.fields
-  console.log(data)
 
   return (
     <Layout>
@@ -54,7 +55,7 @@ const Product: React.FC<P.Product> = ({ data }) => {
         <Title>{title}</Title>
         <BasePrice> ${price}</BasePrice>
       </TitleContainer>
-      <GatsbyImage image={state.imageSelected} alt = ""></GatsbyImage>
+      <GatsbyImage image={state.imageSelected} alt = ""/>
       <ImageGallery images = {data.allFile.edges} dispatch = {dispatch}></ImageGallery> 
 
 
@@ -88,6 +89,14 @@ const Product: React.FC<P.Product> = ({ data }) => {
   )
 }
 
+export const Image = (props:any)=>{
+  const{ image} = props
+
+  return(
+    <GatsbyImage image = {image} alt = ""></GatsbyImage>
+  )
+}
+
 export const query = graphql`
   query($slug: String!, $pathRegex: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -96,7 +105,7 @@ export const query = graphql`
         price
         image {
           childImageSharp {
-              gatsbyImageData(maxWidth: 600, layout: FLUID)
+              gatsbyImageData(width: 600)
           }
         }
         id
@@ -125,7 +134,7 @@ export const query = graphql`
       edges {
         node {   
           childImageSharp {
-            gatsbyImageData(maxWidth: 600, layout: FLUID)
+            gatsbyImageData(width: 600)
 
           }
         }

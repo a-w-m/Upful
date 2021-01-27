@@ -16,6 +16,7 @@ transition: transform 0.3s ease-in-out;
 transform: ${({open}) => open ? 'translateX(0)' : 'translateX(-100%)'};
 //hiding slide-out-navigation to prevent focus from keyboards or screen readers
 visibility: ${({open}) => open ? 'visible' : 'hidden'};
+z-index: 9;
 
 a{
     font-size: 2rem;

@@ -57,7 +57,7 @@ exports.createSchemaCustomization = ({actions})=>{
     }  
     type Frontmatter @infer {
       title: String!
-      price: Int!
+      price: Float!
       id: String!
       image: File! @fileByRelativePath
       description: String!
@@ -76,11 +76,6 @@ exports.createSchemaCustomization = ({actions})=>{
       name: String!
       priceChange: Int!
     }
-
-    type ImageSharp{
-      aijdbaj: String!
-    }
-
   `
   createTypes(typeDefs)
 }

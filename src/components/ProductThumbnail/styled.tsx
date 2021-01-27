@@ -2,12 +2,23 @@ import styled from 'styled-components'
 
 
 export const Article = styled.article`
-    width: 15rem;
-    height: 15rem;
 `
 export const H3 = styled.h3`
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    line-height: 1.25;
 `
 export const PriceWrapper = styled.div`
-font-size: 1.2rem;
+font-size: 1.6rem;
+color: #000;
+opacity: .5;
 `
+
+export const ProductInfoContainer = styled.div`
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-size: 1.4rem;
+`
+
