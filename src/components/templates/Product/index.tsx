@@ -93,7 +93,7 @@ export const Image = (props:any)=>{
   const{ image} = props
 
   return(
-    <GatsbyImage image = {image} alt = ""></GatsbyImage>
+    <GatsbyImage image = {image} alt = "" style ={{opacity: 1}}></GatsbyImage>
   )
 }
 

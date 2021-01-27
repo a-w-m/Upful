@@ -54,7 +54,12 @@ exports.createSchemaCustomization = ({actions})=>{
   const typeDefs = `
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter!
+      fields: Field!
     }  
+
+    type Field {
+      slug: String!
+    }
     type Frontmatter @infer {
       title: String!
       price: Float!
@@ -64,6 +69,7 @@ exports.createSchemaCustomization = ({actions})=>{
       date: String!
       customField1: CustomField
       customField2: CustomField
+      tags: [String]
 
     }
 
