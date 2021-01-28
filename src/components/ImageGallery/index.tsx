@@ -24,7 +24,7 @@ if (images.length <= 1){
             {images.map((image, index)=>{
                 return (
                     <LI key = {index} onClick = {()=>{dispatch({type: "image", payload: image.node.childImageSharp.gatsbyImageData})}}>
-                    <GatsbyImage image = {image.node.childImageSharp.gatsbyImageData} alt = "" ></GatsbyImage>
+                    <GatsbyImage image = {image.node.childImageSharp.gatsbyImageData} alt = "" style ={{opacity: 1}}></GatsbyImage>
                     </LI>
                 )
             
