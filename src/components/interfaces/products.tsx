@@ -72,6 +72,8 @@ export interface Product {
     fields: {
       slug: string
     }
+    html: string
+    
   }
   
   export interface AllMarkdownRemark{

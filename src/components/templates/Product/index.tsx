@@ -11,7 +11,8 @@ import {
   Title,
   BasePrice,
   DescriptionWrapper,
-  Description,
+  DescriptionHeading,
+  DescriptionContents,
 } from "./styled"
 import { P } from "../../interfaces"
 import { createOptionsString } from "../../helpers/index"
@@ -35,38 +36,42 @@ const Product: React.FC<P.Product> = ({ data }) => {
   const {
     title,
     price,
-    image,
     id,
     description,
     customField1,
     customField2,
   } = data.markdownRemark.frontmatter
-
+  const { html } = data.markdownRemark
   const images = data.allFile.edges
+  const { slug } = data.markdownRemark.fields
 
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: images[0].node.childImageSharp.gatsbyImageData,
   })
-
-  const { slug } = data.markdownRemark.fields
 
   return (
     <Layout>
       <ProductContainer>
         <TitleContainer>
           <Title>{title}</Title>
-          <BasePrice> ${price}</BasePrice>
+          <BasePrice> ${price.toFixed(2)}</BasePrice>
         </TitleContainer>
         <GatsbyImage
           image={state.imageSelected}
           alt=""
           style={{ opacity: 1 }}
-          backgroundColor={"white"}
         />
         <ImageGallery
-          images={data.allFile.edges}
+          images={images}
           dispatch={dispatch}
         ></ImageGallery>
+
+        {customField1 && (
+          <Options customField={customField1} dispatch={dispatch}></Options>
+        )}
+        {customField2 && (
+          <Options customField={customField2} dispatch={dispatch}></Options>
+        )}
 
         <BuyButton
           data-item-id={id}
@@ -88,15 +93,10 @@ const Product: React.FC<P.Product> = ({ data }) => {
         >
           Add to Cart
         </BuyButton>
-        {customField1 && (
-          <Options customField={customField1} dispatch={dispatch}></Options>
-        )}
-        {customField2 && (
-          <Options customField={customField2} dispatch={dispatch}></Options>
-        )}
 
         <DescriptionWrapper>
-          <Description>{description}</Description>
+          <DescriptionHeading>Description</DescriptionHeading>
+          <DescriptionContents dangerouslySetInnerHTML={{ __html: html }} />
         </DescriptionWrapper>
       </ProductContainer>
     </Layout>
@@ -106,50 +106,34 @@ const Product: React.FC<P.Product> = ({ data }) => {
 export const query = graphql`
   query($slug: String!, $pathRegex: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        price
-        image {
-          childImageSharp {
-            gatsbyImageData(width: 800, aspectRatio: 1)
-          }
-        }
-        id
-        description
-        date
-        customField1 {
-          name
-          values {
-            name
-            priceChange
-          }
-        }
-        customField2 {
-          name
-          values {
-            name
-            priceChange
-          }
-        }
-      }
+      ...Frontmatter
+      ...CustomFields
+      html
       fields {
         slug
       }
     }
+
     allFile(filter: { relativeDirectory: { regex: $pathRegex } }) {
       edges {
         node {
           childImageSharp {
-            gatsbyImageData(
-              layout: CONSTRAINED
-              width: 1024
-              height: 1024
-              transformOptions: { fit: CONTAIN }
-              backgroundColor: "white"
-            )
+            ...ImageGalleryFragment
           }
         }
       }
+    }
+  }
+`
+
+export const frontmatterQuery = graphql`
+  fragment Frontmatter on MarkdownRemark {
+    frontmatter {
+      title
+      price
+      id
+      description
+      date
     }
   }
 `

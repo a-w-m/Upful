@@ -11,6 +11,7 @@ export const Container = styled.div`
     'main' 
     'footer';
     overflow: scroll;
+    font-family: var(--main-font)
 `
 
 export const MainWrapper = styled.div`

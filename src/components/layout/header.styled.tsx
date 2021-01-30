@@ -17,6 +17,8 @@ export const TitleWrapper = styled.div`
 `
 export const LinkWrapper = styled.h1`
   margin: 0;
+  font-family: var(--main-font);
+
 `
 
 export const TitleLink = styled(props => <Link {...props}/>)`

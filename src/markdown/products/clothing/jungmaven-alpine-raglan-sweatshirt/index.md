@@ -14,3 +14,10 @@ French Terry - 55 Hemp | 45 Organic Cotton
 Women's sizing. Men should size up."
 tags: [featured, clothing]
 ---
+Inspired by a vintage shop in Phoenix, AZ – this mellow, retro style is impossible to wear without a smile.
+
+Vintage-inspired, slim fit.
+
+French Terry - 55 Hemp | 45 Organic Cotton
+
+Women's sizing. Men should size up.

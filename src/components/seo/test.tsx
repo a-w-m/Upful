@@ -2,7 +2,7 @@ import React from "react"
 import { render } from "@testing-library/react"
 import Helmet from "react-helmet"
 
-import SEO from "./seo"
+import SEO from "."
 
 const siteAuthor = "awm"
 const siteTitle = "StoreFront"

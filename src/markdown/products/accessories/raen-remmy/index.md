@@ -8,3 +8,4 @@ image: ./images/image-1.webp
 description: "Inspired by retro round sunglasses, the Remmy carries the look with a modern flare.  Their ultra-light construction features a slight horned temple and notched bridge."
 tags: [featured, accessories]
 ---
+Inspired by retro round sunglasses, the Remmy carries the look with a modern flare.  Their ultra-light construction features a slight horned temple and notched bridge.

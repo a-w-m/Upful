@@ -1,6 +1,7 @@
 :root{
-  font-size: 10px;
-  
+  font-size: 10px; 
+  --main-font: "Quicksand";
+  --secondary-color: #4f4f4f;
 }
 
 script { display: none !important; }
@@ -8,7 +9,7 @@ script { display: none !important; }
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 112.5%/1.45em "Quicksand", georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }

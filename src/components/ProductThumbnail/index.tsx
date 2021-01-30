@@ -1,4 +1,5 @@
 import React from 'react'
+import {graphql} from 'gatsby'
 import {P} from "../interfaces"
 import {GatsbyImage} from 'gatsby-plugin-image'
 import {Link} from 'gatsby'
@@ -30,3 +31,29 @@ const ProductThumbnail:React.FC<Props> = (props)=>{
 }
 
 export default ProductThumbnail
+
+export const thumbnailQuery = graphql`
+  fragment Thumbnail on MarkdownRemark {
+    frontmatter {
+      title
+      price
+      image{
+          childImageSharp{
+              ...ThumbnailImage
+          }
+      }
+    }
+  }
+
+`
+
+export const imageQuery = graphql`
+  fragment ThumbnailImage on ImageSharp{
+  gatsbyImageData(
+    width: 1024
+    aspectRatio: 1
+    transformOptions: { fit: COVER }
+  )
+  }
+`
+

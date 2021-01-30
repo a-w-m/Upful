@@ -11,3 +11,7 @@ All natural
 12 oz"
 tags: [featured, home]
 ---
+With just 5 ingredients, the LP Lavender Hand Soap cleans hands with the invigorating scent of lavender. An essential item for your kitchen and bathroom.
+Organic Lavender Essential Oil
+All natural
+12 oz
