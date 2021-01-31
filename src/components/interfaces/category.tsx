@@ -6,6 +6,13 @@ export interface CategoryPage{
       edges: childMarkdownRemarkNode[]
     }
   }
+  pageContext:{
+    currentPage: number
+    category: string,
+    limit: number,
+    skip: number,
+    numPages: number
+  }
   }
   
   export interface childMarkdownRemark{

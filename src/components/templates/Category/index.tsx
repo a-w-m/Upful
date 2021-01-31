@@ -3,22 +3,25 @@ import Layout from '../../layout/layout'
 import SEO from '../../seo'
 import {graphql} from 'gatsby'
 import ProductGrid from '../../ProductGrid'
+import Pagination from '../../Pagination'
 import {C} from '../../interfaces/'
 
 
-const Category: React.FC<C.CategoryPage> = ({ data }) => {
+const Category: React.FC<C.CategoryPage> = ({ data, pageContext }) => {
+    const{category,numPages, currentPage} = pageContext
     return (
       <Layout>
         <SEO />
         <ProductGrid edges = {data.allFile.edges}/> 
+        {numPages>1 && <Pagination currentPage = {currentPage} numPages ={numPages} category ={category}></Pagination>}
       </Layout>
     )
   }
 
   export const query = graphql`
-  query($skip: Int! = 0, $collection: String!, $limit: Int!){
+  query($skip: Int! = 0, $category: String!, $limit: Int!){
     allFile(
-        filter: {sourceInstanceName: {eq: $collection}, internal: {mediaType: {eq: "text/markdown"}}}
+        filter: {sourceInstanceName: {eq: $category}, internal: {mediaType: {eq: "text/markdown"}}}
         limit: $limit
         skip: $skip
         ) {

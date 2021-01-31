@@ -2,6 +2,7 @@ const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
+  //create node slug and new field on node
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
@@ -10,14 +11,18 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-async function paginate(graphql, actions) {
+async function paginate({ graphql, actions, category }) {
+  //page template
   const categoryTemplate = path.resolve(
     "src/components/templates/Category/index.tsx"
   )
-  const { errors, data } = await graphql(`
+
+  //query markdown nodes in category created by gatsby-source-filesystem
+  try {
+    const { data } = await graphql(`
   {
       allFile(
-        filter: {sourceInstanceName: { eq: "accessories" }, internal: { mediaType: { eq: "text/markdown" }} }
+        filter: {sourceInstanceName: { eq: "${category}"}, internal: { mediaType: { eq: "text/markdown" }} }
         ) {
         edges {
           node {
@@ -30,36 +35,37 @@ async function paginate(graphql, actions) {
       
   `)
 
-const count = data.allFile.edges.length;
-const perPage = 2;
-const numPages = Math.ceil(count/perPage)
+    const count = data.allFile.edges.length
+    const perPage = 2
+    const numPages = Math.ceil(count / perPage)
 
-Array.from({length: numPages}).forEach((_, i) =>{
-  //for each page use the createPages aapi to dynamically create that page
-  actions.createPage({
-    path: i == 0 ? `/accessories/`: `/accessories/${i + 1}/`,
-    component: categoryTemplate,
-    context:{
-      limit: perPage,
-      skip: i * perPage,
-      numPages,
-      currentPage: i + 1,
-      collection: "accessories"
-    }
-  })
-})
-
-
-if (errors){
-  throw new Error('There was an error')
+    Array.from({ length: numPages }).forEach((_, i) => {
+      /*
+  - For each page use the createPages api to dynamically create that page
+  - Send pagination data to component via context
+  */
+      actions.createPage({
+        path: i == 0 ? `/${category}/` : `/${category}/${i + 1}/`,
+        component: categoryTemplate,
+        context: {
+          limit: perPage,
+          skip: i * perPage,
+          numPages,
+          currentPage: i + 1,
+          category,
+        },
+      })
+    })
+  } catch (err) {
+    throw new Error("There was an error")
   }
-
 }
 
 exports.createPages = async ({ graphql, actions }) => {
   //the graphql function returns a promise
 
   const { createPage } = actions
+  const categories = ["accessories", "clothing", "home"]
   const products = await graphql(`
     query {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/products/" } }) {
@@ -85,7 +91,11 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  paginate(graphql, actions)
+  const promises = categories.map(async category => {
+    await paginate({ graphql, actions, category })
+  })
+
+  await Promise.all(promises)
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
