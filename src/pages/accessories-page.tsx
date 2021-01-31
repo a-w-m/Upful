@@ -16,8 +16,8 @@ const Accessories: React.FC<C.CategoryPage> = ({ data }) => {
   }
 
   export const query = graphql`
-  {
-    allFile(filter: {sourceInstanceName: {eq: "accessories"}, internal: {mediaType: {eq: "text/markdown"}}}) {
+  query($limit: Int!, $skip: Int! = 0){
+    allFile(filter: {sourceInstanceName: {eq: "accessories"}, internal: {mediaType: {eq: "text/markdown"}}} limit: $limit skip: $skip) {
       edges {
         node {
           childMarkdownRemark {

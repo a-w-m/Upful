@@ -1,12 +1,4 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
-const path = require('path')
+const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -18,39 +10,86 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async({graphql, actions}) =>{
-    //the graphql function returns a promise
+async function paginate(graphql, actions) {
+  const categoryTemplate = path.resolve(
+    "src/components/templates/Category/index.tsx"
+  )
+  const { errors, data } = await graphql(`
+  {
+      allFile(
+        filter: {sourceInstanceName: { eq: "accessories" }, internal: { mediaType: { eq: "text/markdown" }} }
+        ) {
+        edges {
+          node {
+            id
+          }
+          }
+        }
 
-    const {createPage} = actions
-    const result = await graphql(`
+      }
+      
+  `)
+
+const count = data.allFile.edges.length;
+const perPage = 2;
+const numPages = Math.ceil(count/perPage)
+
+Array.from({length: numPages}).forEach((_, i) =>{
+  //for each page use the createPages aapi to dynamically create that page
+  actions.createPage({
+    path: i == 0 ? `/accessories/`: `/accessories/${i + 1}/`,
+    component: categoryTemplate,
+    context:{
+      limit: perPage,
+      skip: i * perPage,
+      numPages,
+      currentPage: i + 1,
+      collection: "accessories"
+    }
+  })
+})
+
+
+if (errors){
+  throw new Error('There was an error')
+  }
+
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  //the graphql function returns a promise
+
+  const { createPage } = actions
+  const products = await graphql(`
     query {
-        allMarkdownRemark {
-          edges {
-            node {
-              fields {
-                slug
-              }
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/products/" } }) {
+        edges {
+          node {
+            fields {
+              slug
             }
           }
         }
       }
-      `)
+    }
+  `)
 
-      result.data.allMarkdownRemark.edges.forEach(({node}) =>{
-          createPage({
-              path: node.fields.slug,
-              component: path.resolve(`src/components/templates/Product/index.tsx`),
-              context: {
-                  slug: node.fields.slug,
-                  pathRegex: `/${node.fields.slug.replace("/", "")}images/`
-              }
-          })
+  products.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`src/components/templates/Product/index.tsx`),
+      context: {
+        slug: node.fields.slug,
+        pathRegex: `/${node.fields.slug.replace("/", "")}images/`,
+      },
+    })
+  })
 
-      })
+  paginate(graphql, actions)
 }
 
-exports.createSchemaCustomization = ({actions})=>{
-  const {createTypes} = actions
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
   const typeDefs = `
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter!
@@ -85,9 +124,3 @@ exports.createSchemaCustomization = ({actions})=>{
   `
   createTypes(typeDefs)
 }
-
-
-
-
-
-
