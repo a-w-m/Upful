@@ -3,31 +3,35 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import ProductGrid from "../components/ProductGrid"
 import { graphql } from "gatsby"
-import { P } from "../components/interfaces"
+import { C, P } from "../components/interfaces"
 
-const IndexPage: React.FC<P.Index> = ({ data }) => {
+const IndexPage: React.FC<C.CategoryPage> = ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <ProductGrid edges = {data.allMarkdownRemark.edges}/> 
+      <ProductGrid edges = {data.allFile.edges}/> 
     </Layout>
   )
 }
 
 
 export const query = graphql`
-  {
-    allMarkdownRemark (filter: {frontmatter: {tags: {in: "featured"}}})  {
-      edges {
-        node {
-            ...Thumbnail
-          fields {
-            slug
-          }
+{
+  allFile(filter: {childMarkdownRemark: {frontmatter: {tags: {in: "featured"}}}}) {
+    edges {
+      node {
+        childMarkdownRemark{
+        ...Thumbnail
+        fields{
+          
+          slug
         }
+        }
+        
       }
     }
   }
+}
 `
 
 export default IndexPage

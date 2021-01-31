@@ -1,15 +1,14 @@
 import React from "react"
-import { graphql } from "gatsby"
-import { P } from "../interfaces"
+import { C } from "../interfaces"
 import ProductThumbnail from "../ProductThumbnail"
 import { Container } from "./style"
 
-const ProductGrid: React.FC<P.AllMarkdownRemark> = props => {
+const ProductGrid: React.FC<C.Grid> = props => {
   return (
     <Container>
       {props.edges.map((edge, index) => {
-        const { title, price, image } = edge.node.frontmatter
-        const { slug } = edge.node.fields
+        const { title, price, image } = edge.node.childMarkdownRemark.frontmatter
+        const { slug } = edge.node.childMarkdownRemark.fields
 
         return (
           <ProductThumbnail

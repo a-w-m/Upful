@@ -15,10 +15,10 @@ const Footer: React.FC<{}> = () => {
     <FooterContainer>
         <FooterNav>
           <Heading>Categories</Heading>
-          <Link to="/">About Us</Link>
-          <Link to="/">Clothing</Link>
-          <Link to="/">Home</Link>
-          <Link to="/">Accessories</Link>
+          <Link to="/about/">About Us</Link>
+          <Link to="/clothing/">Clothing</Link>
+          <Link to="/home/">Home</Link>
+          <Link to="/accessories/">Accessories</Link>
         </FooterNav>
         <ContactWrapper>
             <Heading>Contact</Heading>
@@ -36,7 +36,7 @@ const Footer: React.FC<{}> = () => {
         </ContactWrapper>
         <TermsWrapper>
             <Heading>Terms & Conditions</Heading>
-            <Link to = "/">Returns</Link>
+            <Link to = "/returns">Returns</Link>
         </TermsWrapper>
         <CopyrightWrapper>
             © StoreFront {new Date(Date.now()).getFullYear()}

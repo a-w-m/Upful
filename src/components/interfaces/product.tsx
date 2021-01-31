@@ -1,4 +1,4 @@
-import {IGatsbyImageData} from "../../../node_modules/gatsby-plugin-image/dist/src/components/gatsby-image.browser"
+import {IGatsbyImageData} from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
 
 
 export interface CustomField {
@@ -102,6 +102,15 @@ export interface ImageNode{
 
 export interface AllImageFiles{
   edges: ImageNode[]
+}
+
+
+
+export interface Thumbnail{
+  title: string,
+  price: number,
+  slug: string,
+  image: Image
 }
 
 

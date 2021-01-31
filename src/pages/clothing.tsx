@@ -3,32 +3,34 @@ import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
 import {graphql} from 'gatsby'
 import ProductGrid from '../components/ProductGrid'
-import {P} from '../components/interfaces'
+import {C} from '../components/interfaces'
 
 
-const Clothing: React.FC<P.Index> = ({ data }) => {
+const Clothing: React.FC<C.CategoryPage> = ({ data }) => {
+  console.log(data)
     return (
       <Layout>
         <SEO />
-        <ProductGrid edges = {data.allMarkdownRemark.edges}/> 
+        <ProductGrid edges = {data.allFile.edges}/> 
       </Layout>
     )
   }
 
   export const query = graphql`
   {
-    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/clothing/"}})  {
+    allFile(filter: {sourceInstanceName: {eq: "clothing"}, internal: {mediaType: {eq: "text/markdown"}}}) {
       edges {
         node {
+          childMarkdownRemark {
             ...Thumbnail
-          fields {
-            slug
+            fields {
+              slug
+            }
           }
         }
       }
     }
   }
-  
 `
 
 

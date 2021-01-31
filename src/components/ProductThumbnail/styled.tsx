@@ -6,6 +6,7 @@ export const Article = styled.article`
 export const H3 = styled.h3`
     font-size: 1.5rem;
     line-height: 1.25;
+    font-family: var(--main-font)
 `
 export const PriceWrapper = styled.div`
 font-size: 1.6rem;

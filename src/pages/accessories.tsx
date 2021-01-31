@@ -3,26 +3,28 @@ import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
 import {graphql} from 'gatsby'
 import ProductGrid from '../components/ProductGrid'
-import {P} from '../components/interfaces'
+import {C} from '../components/interfaces'
 
 
-const Accessories: React.FC<P.Index> = ({ data }) => {
+const Accessories: React.FC<C.CategoryPage> = ({ data }) => {
     return (
       <Layout>
         <SEO />
-        <ProductGrid edges = {data.allMarkdownRemark.edges}/> 
+        <ProductGrid edges = {data.allFile.edges}/> 
       </Layout>
     )
   }
 
   export const query = graphql`
   {
-    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/accessories/"}})  {
+    allFile(filter: {sourceInstanceName: {eq: "accessories"}, internal: {mediaType: {eq: "text/markdown"}}}) {
       edges {
         node {
+          childMarkdownRemark {
             ...Thumbnail
-          fields {
-            slug
+            fields {
+              slug
+            }
           }
         }
       }

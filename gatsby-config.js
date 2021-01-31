@@ -41,6 +41,14 @@ module.exports = {
     },
 
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/pages`,
+        name: `pages`
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `storefront`,
@@ -66,9 +74,6 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
 
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -76,7 +81,7 @@ module.exports = {
         fonts: [
           `Quicksand:400`,
         ],
-        display: 'swap'
+        display: 'block'
       }
     }
   ],

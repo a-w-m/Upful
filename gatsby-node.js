@@ -61,12 +61,12 @@ exports.createSchemaCustomization = ({actions})=>{
       slug: String!
     }
     type Frontmatter @infer {
-      title: String!
-      price: Float!
-      id: String!
-      image: File! @fileByRelativePath
-      description: String!
-      date: String!
+      title: String
+      price: Float
+      id: String
+      image: File @fileByRelativePath
+      description: String
+      date: String
       customField1: CustomField
       customField2: CustomField
       tags: [String]
