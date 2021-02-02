@@ -12,8 +12,9 @@ const Category: React.FC<C.CategoryPage> = ({ data, pageContext }) => {
     return (
       <Layout>
         <SEO />
-        <ProductGrid edges = {data.allFile.edges}/> 
+        <ProductGrid edges = {data.allFile.edges}>
         {numPages>1 && <Pagination currentPage = {currentPage} numPages ={numPages} category ={category}></Pagination>}
+        </ProductGrid>
       </Layout>
     )
   }

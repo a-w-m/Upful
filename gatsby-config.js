@@ -83,6 +83,6 @@ module.exports = {
         ],
         display: 'block'
       }
-    }
+    },
   ],
 }
