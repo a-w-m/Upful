@@ -36,7 +36,7 @@ async function paginate({ graphql, actions, category }) {
   `)
 
     const count = data.allFile.edges.length
-    const perPage = 2
+    const perPage = 48
     const numPages = Math.ceil(count / perPage)
 
     Array.from({ length: numPages }).forEach((_, i) => {
