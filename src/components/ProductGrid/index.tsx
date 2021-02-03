@@ -20,7 +20,6 @@ const ProductGrid: React.FC<C.Grid> = props => {
           ></ProductThumbnail>
         )
       })}
-      {props.children}
     </Container>
   )
 }

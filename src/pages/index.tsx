@@ -2,14 +2,18 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import ProductGrid from "../components/ProductGrid"
+import {CategoryHeading, Container} from "../components/templates/Category/styled"
 import { graphql } from "gatsby"
-import { C, P } from "../components/interfaces"
+import { C } from "../components/interfaces"
 
 const IndexPage: React.FC<C.CategoryPage> = ({ data }) => {
   return (
     <Layout>
       <SEO />
+      <Container>
+      <CategoryHeading>FEATURED GOODS</CategoryHeading>
       <ProductGrid edges = {data.allFile.edges}/> 
+      </Container>
     </Layout>
   )
 }
