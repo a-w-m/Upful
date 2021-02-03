@@ -7,6 +7,7 @@ export const Container = styled.div`
     text-align: center;
     grid-area: auto/1/auto/-1;
     grid-template-areas: "prev num next";
+    padding: 2rem 1rem;
 
 
     & > a:first-child{

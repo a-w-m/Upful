@@ -4,6 +4,7 @@ import SEO from '../../seo'
 import {graphql} from 'gatsby'
 import ProductGrid from '../../ProductGrid'
 import Pagination from '../../Pagination'
+import {CategoryHeading, Container} from "./styled"
 import {C} from '../../interfaces/'
 
 
@@ -12,9 +13,11 @@ const Category: React.FC<C.CategoryPage> = ({ data, pageContext }) => {
     return (
       <Layout>
         <SEO />
-        <ProductGrid edges = {data.allFile.edges}>
-        {numPages>1 && <Pagination currentPage = {currentPage} numPages ={numPages} category ={category}></Pagination>}
-        </ProductGrid>
+        <Container>
+        <CategoryHeading>{category.toUpperCase()}</CategoryHeading>
+        <ProductGrid edges = {data.allFile.edges}/>
+        {numPages > 1 && <Pagination currentPage = {currentPage} numPages ={numPages} category ={category}/>}
+        </Container>
       </Layout>
     )
   }
