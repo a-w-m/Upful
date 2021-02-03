@@ -5,13 +5,13 @@ exports[`Option Componenent matches snapshot 1`] = `
   class="sc-gsTCUz"
 >
   <label
-    for="size"
+    for="color"
   >
-    size
+    color
   </label>
   <select
     class="sc-bdfBwQ gcffNY"
-    id="size"
+    id="color"
   >
     <option
       selected=""
@@ -20,19 +20,19 @@ exports[`Option Componenent matches snapshot 1`] = `
       select an option
     </option>
     <option
-      value="small"
+      value="blue"
     >
-      small
+      blue
     </option>
     <option
-      value="medium"
+      value="grey"
     >
-      medium
+      grey
     </option>
     <option
-      value="large"
+      value="black"
     >
-      large
+      black
     </option>
   </select>
 </div>

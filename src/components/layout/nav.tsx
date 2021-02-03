@@ -10,10 +10,10 @@ const Nav:React.FC<NavProps> = (props)=>{
     const {open} = props
     return(
         <Menu open = {open}>
-            <Link to ="/">About Us</Link>
-            <Link to ="/">Clothing</Link>
-            <Link to ="/">Home</Link>
-            <Link to ="/">Accessories</Link>
+            <Link to ="/about/">About Us</Link>
+            <Link to ="/clothing/">Clothing</Link>
+            <Link to ="/home/">Home</Link>
+            <Link to ="/accessories/">Accessories</Link>
         </Menu>
     )
 }

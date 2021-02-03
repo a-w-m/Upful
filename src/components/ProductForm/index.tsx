@@ -1,11 +1,11 @@
-import React, { ChangeEvent, Dispatch} from "react"
-import { Container, Select } from "./styled"
-import {P} from "../interfaces/index"
-
+import React, { ChangeEvent, Dispatch } from "react"
+import { graphql } from "gatsby"
+import { Container, Label, Select } from "./styled"
+import { P } from "../interfaces/index"
 
 interface OptionProps {
   dispatch: P.Dispatch
-  customField: P.CustomField 
+  customField: P.CustomField
 }
 
 type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
@@ -15,27 +15,23 @@ type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
 
 const Options: React.FC<OptionProps> = ({
   customField,
-  dispatch
+  dispatch,
 }: OptionProps) => {
   const handleChange = (event: HTMLElementEvent<HTMLSelectElement>) => {
-
-      dispatch( { type: customField.name, payload: event.target.value})
-    
+    dispatch({ type: customField.name, payload: event.target.value })
   }
 
   return (
     <Container>
-      <label htmlFor={customField.name}>{customField.name}</label>
+      <Label htmlFor={customField.name}>{customField.name}</Label>
       <Select
-        id = {customField.name}
-        defaultValue = {""}
+        id={customField.name}
+        defaultValue={""}
         onChange={e => {
           handleChange(e)
         }}
       >
-        <option value="">
-          select an option
-        </option>
+        <option value="">select an option</option>
         {customField.values.map((value: any) => {
           return (
             <option value={value.name} key={value.name}>
@@ -49,3 +45,24 @@ const Options: React.FC<OptionProps> = ({
 }
 
 export default Options
+
+export const query = graphql`
+fragment CustomFields on MarkdownRemark{
+  frontmatter{
+    customField1{
+      name
+      values{
+        name
+        priceChange
+      }
+    }
+      customField2{
+        name
+        values{
+          name
+          priceChange
+        }
+      }
+  }
+}
+`

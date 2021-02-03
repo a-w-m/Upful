@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 export const Wrapper = styled.div`
-	width: 100vw;
+	width: auto;
     height: auto;
 `
 export const UL = styled.ul`
@@ -8,13 +8,14 @@ export const UL = styled.ul`
 	height: 100%;
 	display: flex;
     flex-wrap: wrap;
+    margin: 0;
     
 
     & > li{
     
-
-    padding-right: 1rem;
+    list-style: none;
     flex: 0 0 6.8rem;
+    margin-bottom: 0;
     
     }`
 export const LI = styled.li``

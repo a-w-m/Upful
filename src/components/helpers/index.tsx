@@ -14,9 +14,9 @@ export const createOptionsString = (values: P.Values[]) => {
 
 
 
-  export const createFluidArray = (edges:P.ImageNode[]) =>  {
+  export const createFluidArray =  (edges:P.ImageNode[]) =>  {
     return edges.map((edge)=>{
-      return edge.node.childImageSharp.fluid
+      return edge.node
     })
   }
   

@@ -19,13 +19,35 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/markdown/products`,
-        name: `products`
+        path: `${__dirname}/src/markdown/products/accessories`,
+        name: `accessories`
       },
     },
 
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/products/home`,
+        name: `home`
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/products/clothing`,
+        name: `clothing`
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/pages`,
+        name: `pages`
+      },
+    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -49,8 +71,18 @@ module.exports = {
     },
 
     "gatsby-transformer-remark",
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Quicksand:400`,
+        ],
+        display: 'block'
+      }
+    },
   ],
 }
