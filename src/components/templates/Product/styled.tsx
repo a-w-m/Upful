@@ -15,6 +15,7 @@ displaY: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: flex-start;
+justify-self: flex-start;
 flex-wrap: wrap;
 
 `
