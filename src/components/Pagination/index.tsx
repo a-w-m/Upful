@@ -39,10 +39,7 @@ const Pagination: React.FC<Props> = props => {
       </p>
       {nextPage <= numPages && (
         <Link
-          to={
-            nextPage > numPages
-              ? `/${category}/${currentPage}`
-              : `/${category}/${nextPage}/`
+          to={`/${category}/${nextPage}/`
           }
         >
           <svg
