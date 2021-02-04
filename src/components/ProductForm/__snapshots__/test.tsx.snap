@@ -2,15 +2,16 @@
 
 exports[`Option Componenent matches snapshot 1`] = `
 <div
-  class="sc-gsTCUz"
+  class="sc-dlfnbm fgsagg"
 >
   <label
+    class="sc-gsTCUz fJlOKk"
     for="color"
   >
     color
   </label>
   <select
-    class="sc-bdfBwQ gcffNY"
+    class="sc-bdfBwQ eMAlNn"
     id="color"
   >
     <option

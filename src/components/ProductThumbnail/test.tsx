@@ -3,7 +3,7 @@ import {render, screen} from "@testing-library/react"
 import ProductThumbnail from "./index"
 import {imageGalleryData} from "../../../__mocks__/mock-data"
 
-const price = 0
+const price = 10
 const title = "Pietsie Atlin Blouse"
 
 describe("Thumbnail Component", ()=>{
@@ -11,8 +11,8 @@ describe("Thumbnail Component", ()=>{
     //displays price
 
     test("price displays correctly", ()=>{
-        render(<ProductThumbnail price = {0} title = {"Pietsie Atlin Blouse"} image = {imageGalleryData[0].node} slug = {"/"}></ProductThumbnail>)
-        expect(screen.getByText(price.toString())).toBeInTheDocument()
+        render(<ProductThumbnail price = {price} title = {"Pietsie Atlin Blouse"} image = {imageGalleryData[0].node} slug = {"/"}></ProductThumbnail>)
+        expect(screen.getByText("$10.00")).toBeInTheDocument()
         
     })
 

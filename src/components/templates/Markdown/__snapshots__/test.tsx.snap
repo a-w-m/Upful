@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Layout component should match snapshot 1`] = `
+exports[`Markdown component snapshot 1`] = `
 <div
   class="sc-crrsfI izmpdG"
 >
@@ -64,7 +64,15 @@ exports[`Layout component should match snapshot 1`] = `
   >
     <main
       class="sc-bqyKva jzRrKO"
-    />
+    >
+      <div
+        class="sc-kstrdz cJQtuj"
+      >
+        <p>
+          TEST
+        </p>
+      </div>
+    </main>
   </div>
   <footer
     class="sc-gKsewC fIoWJo"

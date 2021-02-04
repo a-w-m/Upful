@@ -1,7 +1,6 @@
 import React from "react"
 import { fireEvent, render, screen, waitFor } from "@testing-library/react"
 import Product from "./index"
-import { P } from "../../interfaces/index"
 import {
   pageQueryData,
   pageQueryDataNullCustomFields,

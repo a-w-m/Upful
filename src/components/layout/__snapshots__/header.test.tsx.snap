@@ -2,7 +2,7 @@
 
 exports[`Header component matches snapshot 1`] = `
 <div
-  class="sc-crrsfI cKsulN"
+  class="sc-crrsfI izmpdG"
 >
   <header
     class="sc-dlfnbm edAUkJ"
@@ -20,25 +20,25 @@ exports[`Header component matches snapshot 1`] = `
         <div />
       </button>
       <nav
-        class="sc-gsTCUz eahIHO"
+        class="sc-gsTCUz gmiPDZ"
       >
         <a
-          href="/"
+          href="/about/"
         >
           About Us
         </a>
         <a
-          href="/"
+          href="/clothing/"
         >
           Clothing
         </a>
         <a
-          href="/"
+          href="/home/"
         >
           Home
         </a>
         <a
-          href="/"
+          href="/accessories/"
         >
           Accessories
         </a>
@@ -48,7 +48,7 @@ exports[`Header component matches snapshot 1`] = `
       class="sc-hKgILt fEkVZL"
     >
       <h1
-        class="sc-eCssSg iHXJeJ"
+        class="sc-eCssSg fvUBXx"
       >
         <a
           class="sc-jSgupP eywEqP"
@@ -60,10 +60,10 @@ exports[`Header component matches snapshot 1`] = `
     </div>
   </header>
   <div
-    class="sc-dQppl gYULKE"
+    class="sc-dQppl fDjYVG"
   >
     <main
-      class="sc-bqyKva kOAjrj"
+      class="sc-bqyKva jzRrKO"
     />
   </div>
   <footer
@@ -78,22 +78,22 @@ exports[`Header component matches snapshot 1`] = `
         Categories
       </h5>
       <a
-        href="/"
+        href="/about/"
       >
         About Us
       </a>
       <a
-        href="/"
+        href="/clothing/"
       >
         Clothing
       </a>
       <a
-        href="/"
+        href="/home/"
       >
         Home
       </a>
       <a
-        href="/"
+        href="/accessories/"
       >
         Accessories
       </a>
@@ -134,7 +134,7 @@ exports[`Header component matches snapshot 1`] = `
         Terms & Conditions
       </h5>
       <a
-        href="/"
+        href="/returns"
       >
         Returns
       </a>

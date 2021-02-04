@@ -2,23 +2,30 @@
 
 exports[`ImageGallery Component matches snapshot 1`] = `
 <div
-  class="sc-bdfBwQ bOsYoh"
+  class="sc-bdfBwQ brHIsy"
 >
   <ul
-    class="sc-gsTCUz jxwfsg"
+    class="sc-gsTCUz QinaJ"
   >
     <li
       class="sc-dlfnbm"
     >
       <div
-        class="gatsby-image-wrapper"
+        class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="position: relative; overflow: hidden;"
+        style="display: inline-block; opacity: 1;"
       >
         <div
-          aria-hidden="true"
-          style="padding-top: 100%;"
-        />
+          style="max-width: 1px; display: block;"
+        >
+          <img
+            alt=""
+            aria-hidden="true"
+            role="presentation"
+            src="data:image/svg+xml;charset=utf-8,%3Csvg height='1' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+            style="max-width: 100%; display: block; position: static;"
+          />
+        </div>
         <img
           alt=""
           aria-hidden="true"
@@ -29,6 +36,7 @@ exports[`ImageGallery Component matches snapshot 1`] = `
         />
         <picture>
           <source
+            sizes="100vw"
             srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/c65bc/pietsie-atlin-blouse.webp 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/078c3/pietsie-atlin-blouse.webp 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/6d09e/pietsie-atlin-blouse.webp 600w"
             type="image/webp"
           />
@@ -36,10 +44,11 @@ exports[`ImageGallery Component matches snapshot 1`] = `
             alt=""
             data-gatsby-image-ssr=""
             data-main-image=""
-            data-src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg"
-            data-srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w"
             decoding="async"
-            loading="lazy"
+            loading="eager"
+            sizes="100vw"
+            src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg"
+            srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w"
             style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
           />
         </picture>
@@ -55,14 +64,21 @@ exports[`ImageGallery Component matches snapshot 1`] = `
       class="sc-dlfnbm"
     >
       <div
-        class="gatsby-image-wrapper"
+        class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="position: relative; overflow: hidden;"
+        style="display: inline-block; opacity: 1;"
       >
         <div
-          aria-hidden="true"
-          style="padding-top: 100%;"
-        />
+          style="max-width: 1px; display: block;"
+        >
+          <img
+            alt=""
+            aria-hidden="true"
+            role="presentation"
+            src="data:image/svg+xml;charset=utf-8,%3Csvg height='1' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+            style="max-width: 100%; display: block; position: static;"
+          />
+        </div>
         <img
           alt=""
           aria-hidden="true"
@@ -73,6 +89,7 @@ exports[`ImageGallery Component matches snapshot 1`] = `
         />
         <picture>
           <source
+            sizes="100vw"
             srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/c65bc/pietsie-atlin-blouse.webp 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/078c3/pietsie-atlin-blouse.webp 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/6d09e/pietsie-atlin-blouse.webp 600w"
             type="image/webp"
           />
@@ -80,10 +97,11 @@ exports[`ImageGallery Component matches snapshot 1`] = `
             alt=""
             data-gatsby-image-ssr=""
             data-main-image=""
-            data-src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg"
-            data-srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w"
             decoding="async"
-            loading="lazy"
+            loading="eager"
+            sizes="100vw"
+            src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg"
+            srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w"
             style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
           />
         </picture>

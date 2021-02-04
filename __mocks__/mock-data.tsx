@@ -1,15 +1,18 @@
-import {P} from "../src/components/interfaces"
+import {P, C} from "../src/components/interfaces"
+
+const constrained:"constrained" = "constrained"
 
 export const pageQueryData:P.Product = {
   "data": {
     markdownRemark: {
+      "html": "<p>test html</p>",
       "frontmatter": {
         "title": "Pietsie Atlin Blouse",
         "price": 240,
         "image": {
           "childImageSharp": {
             "gatsbyImageData": {
-              layout: "fluid" as "fluid", 
+              layout: constrained, 
               "placeholder": {
                 "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
               },
@@ -80,7 +83,7 @@ export const pageQueryData:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABs5cclPYuYZuES2C//8QAHRAAAgICAwEAAAAAAAAAAAAAAgMBBAAREhMUIv/aAAgBAQABBQJrRUMW1yWXz+t4Bcgs1pYXjbtIdav/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAdEAACAgMAAwAAAAAAAAAAAAABAgARECFREnGB/9oACAEBAAY/AraAb3hV+4Ddnmp3yC6r3FUm6n//xAAcEAEAAwEAAwEAAAAAAAAAAAABABEhQRAxUXH/2gAIAQEAAT8h0VrQHZWgfXj8uRxAK4GPrzy0KYaa8RLED3P/2gAMAwEAAgADAAAAECfPf//EABURAQEAAAAAAAAAAAAAAAAAABEg/9oACAEDAQE/EGP/xAAXEQADAQAAAAAAAAAAAAAAAAABEBEh/9oACAECAQE/EAMVX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACExQRBxsYH/2gAIAQEAAT8QI0EAqpjx024IL0x8Ehd2e1nwcEUcj8xBKG/pkD8NIADpxREqAMYXaVBDm5//2Q=="
                 },
@@ -108,7 +111,7 @@ export const pageQueryData:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAgME/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAXi8To4Eod6ykmhkV//EABwQAAICAgMAAAAAAAAAAAAAAAECAAQRIgNBQv/aAAgBAQABBQJ2CKbgy1sLLp06lt88oOkdiX8z/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHBAAAQQDAQAAAAAAAAAAAAAAAQACECERUWGh/9oACAEBAAY/AsuVNpWz1AS7gknc/wD/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMWFx/9oACAEBAAE/IVzUEBtfrYoCaXlpnercu7kFOMAl5VEi+R0d1OI8g4T/2gAMAwEAAgADAAAAECz2zv/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxAr/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQEf/aAAgBAgEBPxALkZ//xAAhEAEAAgIBAwUAAAAAAAAAAAABABExUSFBYYFxobHR8P/aAAgBAQABPxDCEWLV1MQDlpaOwomng7rD2lb3QfTHzAh3n97wHEPNVKCqYNtKwV3lRXzG5bUf+7F5v7gqnSLbtT//2Q=="
                 },
@@ -136,7 +139,7 @@ export const pageQueryData:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAQFAgMG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgD/2gAMAwEAAhADEAAAAWEWJZqYkFYK9FARqGwL/8QAHRAAAgEEAwAAAAAAAAAAAAAAAQIRAAMTIhIxMv/aAAgBAQABBQJtqRoa2dRcWOclvRMEGDiJDWkYDvPFf//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASn/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAHBAAAgICAwAAAAAAAAAAAAAAABEBITFxAiIy/9oACAEBAAY/AlhEdhPFCVwYNkyMhnmERsrjR//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhcfD/2gAIAQEAAT8hFwOC7uENSX+IRdS7tGvJyQuWHryNs12nxCpU+oPtqgkA5dwhisgOGNrM/9oADAMBAAIAAwAAABDH9P3/xAAYEQADAQEAAAAAAAAAAAAAAAAAAREQIf/aAAgBAwEBPxDmJGWH/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERITH/2gAIAQIBAT8Qr6imkQ//xAAgEAEBAAICAgIDAAAAAAAAAAABEQAhMUFRcWGBodHh/9oACAEBAAE/EFZCNeTP1i8GwYhsmnjvICKAxw4gWpi1Q5r6xrYeASuphzoIP2ZA1qI63/MUDqsDefZSs/GADKtfBkctFAI+Lg2toGkPWf/Z"
                 },
@@ -164,7 +167,7 @@ export const pageQueryData:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGrLamFpYD/AP/EABsQAAIDAAMAAAAAAAAAAAAAAAERAAIDEhMj/9oACAEBAAEFAtb1XPsIqo2MB6EKf//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAACAgMAAAAAAAAAAAAAAAAAARAREiFB/9oACAEBAAY/ArRo4YjUf//EABoQAQADAAMAAAAAAAAAAAAAAAEAESFBccH/2gAIAQEAAT8hUQtILEnkQVnuOwXWCym1xBVT/9oADAMBAAIAAwAAABAr/wD/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxCD/8QAFxEBAAMAAAAAAAAAAAAAAAAAARARIf/aAAgBAgEBPxDUbj//xAAeEAEAAgIBBQAAAAAAAAAAAAABABEhMUFhcaHB8P/aAAgBAQABPxC+QLyUZPMw9DVpQfmDQ8yZtxAADyAQrFVi+zKgDXU9z//Z"
                 },
@@ -192,7 +195,7 @@ export const pageQueryData:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFBgP/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABpzLoE6B5hkyyjpRD/8QAHRAAAQQCAwAAAAAAAAAAAAAAAgABAwQSMxEhI//aAAgBAQABBQK7I4NmfEJZw3ukREb1tF7TA/qv/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BIT//xAAeEAACAgEFAQAAAAAAAAAAAAABAgARIRASMlFxgf/aAAgBAQAGPwJVBrdALOIrHqIw5CWTeIs+xPdP/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyFRFjaQtgmiP0jHTaIWWTWRgnOlUZOL4Yj9DF2f/9oADAMBAAIAAwAAABC/yH//xAAWEQEBAQAAAAAAAAAAAAAAAAABABD/2gAIAQMBAT8QYnP/xAAXEQADAQAAAAAAAAAAAAAAAAAAATEQ/9oACAECAQE/EEHSM//EAB0QAQEAAQQDAAAAAAAAAAAAAAERACExQVFhcZH/2gAIAQEAAT8QO0USMDa+3AVzrJp2POJLbl74uQRAJCEqt60+4JW2zCeNPOJurCuSscBoCjH3bggyVfccgz//2Q=="
                 },
@@ -220,7 +223,7 @@ export const pageQueryData:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAQFAQIDBv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGTwxET0zVLX15ZdCH/xAAbEAACAwEBAQAAAAAAAAAAAAABBAADERMjNP/aAAgBAQABBQJywgK2npHt2ve0b+dU+5n/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAcEAACAgIDAAAAAAAAAAAAAAABAgAQESFBUXH/2gAIAQEABj8CCdwJnVKeIuKPogr/xAAeEAACAgEFAQAAAAAAAAAAAAAAAREhMRBRYZGx8P/aAAgBAQABPyFSoi7YuzaqWi1+MTyRNzmBuz6G4zv8Gs//2gAMAwEAAgADAAAAEPvPPf/EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEDAQE/EFj/xAAXEQEBAQEAAAAAAAAAAAAAAAABEBEx/9oACAECAQE/EAMhyf/EABsQAQADAQADAAAAAAAAAAAAAAEAESFRMeHw/9oACAEBAAE/EDVoqjcSq5GabEMF2LFFaHWYW8Mq0pAAvnuGKOcoV/FEvs//2Q=="
                 },
@@ -248,7 +251,7 @@ export const pageQueryData:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAFAokE2MpmTswd3H//EABsQAAICAwEAAAAAAAAAAAAAAAECAxEAEhMh/9oACAEBAAEFAmw10ktmLnkrMWY+tEwSOMhdbLVreFRf/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8BIf/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABsQAAMAAgMAAAAAAAAAAAAAAAABERAxIVFh/9oACAEBAAY/Aq0L0pWzvDr4NoY6jSx//8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyHFXhODCeh5mYIDYzLnYW+xF9JSTQghRvext7DfZwByeZJbb3yf/9oADAMBAAIAAwAAABAYDwD/xAAXEQEBAQEAAAAAAAAAAAAAAAAAESEx/9oACAEDAQE/EEdVr//EABcRAQEBAQAAAAAAAAAAAAAAABEQIQH/2gAIAQIBAT8QXeRwn//EAB4QAQEAAgICAwAAAAAAAAAAAAERACExQWFxkbHR/9oACAEBAAE/EKT2k0Qn5kKCRE1OE9dYIUicsMWobHZcHjHPWeeuMhWiEXxhbZVLhLAqE3Zo+s7Z0jifKgdc50rOTqOOIlpN4/Of/9k="
                 },
@@ -276,7 +279,7 @@ export const pageQueryData:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
                 },
@@ -309,13 +312,14 @@ export const pageQueryData:P.Product = {
 export const pageQueryDataNullCustomFields:P.Product = {
   "data": {
     markdownRemark: {
+      "html": "<p>test html</p>",
       "frontmatter": {
         "title": "Pietsie Atlin Blouse",
         "price": 240,
         "image": {
           "childImageSharp": {
             "gatsbyImageData": {
-              layout: "fluid" as "fluid", 
+              layout: constrained, 
               "placeholder": {
                 "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
               },
@@ -354,7 +358,7 @@ export const pageQueryDataNullCustomFields:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABs5cclPYuYZuES2C//8QAHRAAAgICAwEAAAAAAAAAAAAAAgMBBAAREhMUIv/aAAgBAQABBQJrRUMW1yWXz+t4Bcgs1pYXjbtIdav/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAdEAACAgMAAwAAAAAAAAAAAAABAgARECFREnGB/9oACAEBAAY/AraAb3hV+4Ddnmp3yC6r3FUm6n//xAAcEAEAAwEAAwEAAAAAAAAAAAABABEhQRAxUXH/2gAIAQEAAT8h0VrQHZWgfXj8uRxAK4GPrzy0KYaa8RLED3P/2gAMAwEAAgADAAAAECfPf//EABURAQEAAAAAAAAAAAAAAAAAABEg/9oACAEDAQE/EGP/xAAXEQADAQAAAAAAAAAAAAAAAAABEBEh/9oACAECAQE/EAMVX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACExQRBxsYH/2gAIAQEAAT8QI0EAqpjx024IL0x8Ehd2e1nwcEUcj8xBKG/pkD8NIADpxREqAMYXaVBDm5//2Q=="
                 },
@@ -382,7 +386,7 @@ export const pageQueryDataNullCustomFields:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAgME/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAXi8To4Eod6ykmhkV//EABwQAAICAgMAAAAAAAAAAAAAAAECAAQRIgNBQv/aAAgBAQABBQJ2CKbgy1sLLp06lt88oOkdiX8z/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHBAAAQQDAQAAAAAAAAAAAAAAAQACECERUWGh/9oACAEBAAY/AsuVNpWz1AS7gknc/wD/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMWFx/9oACAEBAAE/IVzUEBtfrYoCaXlpnercu7kFOMAl5VEi+R0d1OI8g4T/2gAMAwEAAgADAAAAECz2zv/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxAr/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQEf/aAAgBAgEBPxALkZ//xAAhEAEAAgIBAwUAAAAAAAAAAAABABExUSFBYYFxobHR8P/aAAgBAQABPxDCEWLV1MQDlpaOwomng7rD2lb3QfTHzAh3n97wHEPNVKCqYNtKwV3lRXzG5bUf+7F5v7gqnSLbtT//2Q=="
                 },
@@ -410,7 +414,7 @@ export const pageQueryDataNullCustomFields:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAQFAgMG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgD/2gAMAwEAAhADEAAAAWEWJZqYkFYK9FARqGwL/8QAHRAAAgEEAwAAAAAAAAAAAAAAAQIRAAMTIhIxMv/aAAgBAQABBQJtqRoa2dRcWOclvRMEGDiJDWkYDvPFf//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASn/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAHBAAAgICAwAAAAAAAAAAAAAAABEBITFxAiIy/9oACAEBAAY/AlhEdhPFCVwYNkyMhnmERsrjR//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhcfD/2gAIAQEAAT8hFwOC7uENSX+IRdS7tGvJyQuWHryNs12nxCpU+oPtqgkA5dwhisgOGNrM/9oADAMBAAIAAwAAABDH9P3/xAAYEQADAQEAAAAAAAAAAAAAAAAAAREQIf/aAAgBAwEBPxDmJGWH/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERITH/2gAIAQIBAT8Qr6imkQ//xAAgEAEBAAICAgIDAAAAAAAAAAABEQAhMUFRcWGBodHh/9oACAEBAAE/EFZCNeTP1i8GwYhsmnjvICKAxw4gWpi1Q5r6xrYeASuphzoIP2ZA1qI63/MUDqsDefZSs/GADKtfBkctFAI+Lg2toGkPWf/Z"
                 },
@@ -438,7 +442,7 @@ export const pageQueryDataNullCustomFields:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGrLamFpYD/AP/EABsQAAIDAAMAAAAAAAAAAAAAAAERAAIDEhMj/9oACAEBAAEFAtb1XPsIqo2MB6EKf//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAACAgMAAAAAAAAAAAAAAAAAARAREiFB/9oACAEBAAY/ArRo4YjUf//EABoQAQADAAMAAAAAAAAAAAAAAAEAESFBccH/2gAIAQEAAT8hUQtILEnkQVnuOwXWCym1xBVT/9oADAMBAAIAAwAAABAr/wD/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxCD/8QAFxEBAAMAAAAAAAAAAAAAAAAAARARIf/aAAgBAgEBPxDUbj//xAAeEAEAAgIBBQAAAAAAAAAAAAABABEhMUFhcaHB8P/aAAgBAQABPxC+QLyUZPMw9DVpQfmDQ8yZtxAADyAQrFVi+zKgDXU9z//Z"
                 },
@@ -466,7 +470,7 @@ export const pageQueryDataNullCustomFields:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFBgP/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABpzLoE6B5hkyyjpRD/8QAHRAAAQQCAwAAAAAAAAAAAAAAAgABAwQSMxEhI//aAAgBAQABBQK7I4NmfEJZw3ukREb1tF7TA/qv/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BIT//xAAeEAACAgEFAQAAAAAAAAAAAAABAgARIRASMlFxgf/aAAgBAQAGPwJVBrdALOIrHqIw5CWTeIs+xPdP/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyFRFjaQtgmiP0jHTaIWWTWRgnOlUZOL4Yj9DF2f/9oADAMBAAIAAwAAABC/yH//xAAWEQEBAQAAAAAAAAAAAAAAAAABABD/2gAIAQMBAT8QYnP/xAAXEQADAQAAAAAAAAAAAAAAAAAAATEQ/9oACAECAQE/EEHSM//EAB0QAQEAAQQDAAAAAAAAAAAAAAERACExQVFhcZH/2gAIAQEAAT8QO0USMDa+3AVzrJp2POJLbl74uQRAJCEqt60+4JW2zCeNPOJurCuSscBoCjH3bggyVfccgz//2Q=="
                 },
@@ -494,7 +498,7 @@ export const pageQueryDataNullCustomFields:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAQFAQIDBv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGTwxET0zVLX15ZdCH/xAAbEAACAwEBAQAAAAAAAAAAAAABBAADERMjNP/aAAgBAQABBQJywgK2npHt2ve0b+dU+5n/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAcEAACAgIDAAAAAAAAAAAAAAABAgAQESFBUXH/2gAIAQEABj8CCdwJnVKeIuKPogr/xAAeEAACAgEFAQAAAAAAAAAAAAAAAREhMRBRYZGx8P/aAAgBAQABPyFSoi7YuzaqWi1+MTyRNzmBuz6G4zv8Gs//2gAMAwEAAgADAAAAEPvPPf/EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEDAQE/EFj/xAAXEQEBAQEAAAAAAAAAAAAAAAABEBEx/9oACAECAQE/EAMhyf/EABsQAQADAQADAAAAAAAAAAAAAAEAESFRMeHw/9oACAEBAAE/EDVoqjcSq5GabEMF2LFFaHWYW8Mq0pAAvnuGKOcoV/FEvs//2Q=="
                 },
@@ -522,7 +526,7 @@ export const pageQueryDataNullCustomFields:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAFAokE2MpmTswd3H//EABsQAAICAwEAAAAAAAAAAAAAAAECAxEAEhMh/9oACAEBAAEFAmw10ktmLnkrMWY+tEwSOMhdbLVreFRf/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8BIf/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABsQAAMAAgMAAAAAAAAAAAAAAAABERAxIVFh/9oACAEBAAY/Aq0L0pWzvDr4NoY6jSx//8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyHFXhODCeh5mYIDYzLnYW+xF9JSTQghRvext7DfZwByeZJbb3yf/9oADAMBAAIAAwAAABAYDwD/xAAXEQEBAQEAAAAAAAAAAAAAAAAAESEx/9oACAEDAQE/EEdVr//EABcRAQEBAQAAAAAAAAAAAAAAABEQIQH/2gAIAQIBAT8QXeRwn//EAB4QAQEAAgICAwAAAAAAAAAAAAERACExQWFxkbHR/9oACAEBAAE/EKT2k0Qn5kKCRE1OE9dYIUicsMWobHZcHjHPWeeuMhWiEXxhbZVLhLAqE3Zo+s7Z0jifKgdc50rOTqOOIlpN4/Of/9k="
                 },
@@ -550,7 +554,7 @@ export const pageQueryDataNullCustomFields:P.Product = {
           "node": {
             "childImageSharp": {
               "gatsbyImageData": {
-                "layout": "fluid",
+                "layout": constrained,
                 "placeholder": {
                   "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
                 },
@@ -583,7 +587,7 @@ export const imageGalleryData:P.ImageNode[] = [{
   node:{
     childImageSharp: {
       gatsbyImageData: {
-  "layout": "fluid",
+  "layout": constrained,
   "placeholder": {
     "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
   },
@@ -609,7 +613,7 @@ export const imageGalleryData:P.ImageNode[] = [{
   node:{
     childImageSharp: {
       gatsbyImageData: {
-  "layout": "fluid",
+  "layout": constrained,
   "placeholder": {
     "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
   },
@@ -632,4 +636,275 @@ export const imageGalleryData:P.ImageNode[] = [{
   }}}
 },
 ]
+
+export const ProductGridData:C.Grid = {
+
+      "edges": [
+        {
+          "node": {
+            "childMarkdownRemark": {
+              "frontmatter": {
+                "title": "Raen : Remmy",
+                "price": 170,
+                "image": {
+                  "childImageSharp": {
+                    "gatsbyImageData": {
+                      "layout": "constrained",
+                      "backgroundColor": "#c8b8b8",
+                      "images": {
+                        "fallback": {
+                          "src": "/static/68a4441c5612cb09d427b074118d500f/67ded/image-1.webp",
+                          "srcSet": "/static/68a4441c5612cb09d427b074118d500f/22bfc/image-1.webp 256w,\n/static/68a4441c5612cb09d427b074118d500f/d689f/image-1.webp 512w,\n/static/68a4441c5612cb09d427b074118d500f/67ded/image-1.webp 1024w",
+                          "sizes": "(min-width: 1024px) 1024px, 100vw"
+                        },
+                        "sources": []
+                      },
+                      "width": 1024,
+                      "height": 1024
+                    }
+                  }
+                }
+              },
+              "fields": {
+                "slug": "/raen-remmy/"
+              }
+            }
+          }
+        },
+        {
+          "node": {
+            "childMarkdownRemark": {
+              "frontmatter": {
+                "title": "Sunnies Face : Fluffmate Lipstick",
+                "price": 23,
+                "image": {
+                  "childImageSharp": {
+                    "gatsbyImageData": {
+                      "layout": "constrained",
+                      "backgroundColor": "#d8d8d8",
+                      "images": {
+                        "fallback": {
+                          "src": "/static/ccd6bc14b1549c89087b0efe229ed9d1/67ded/image-1.webp",
+                          "srcSet": "/static/ccd6bc14b1549c89087b0efe229ed9d1/22bfc/image-1.webp 256w,\n/static/ccd6bc14b1549c89087b0efe229ed9d1/d689f/image-1.webp 512w,\n/static/ccd6bc14b1549c89087b0efe229ed9d1/67ded/image-1.webp 1024w",
+                          "sizes": "(min-width: 1024px) 1024px, 100vw"
+                        },
+                        "sources": []
+                      },
+                      "width": 1024,
+                      "height": 1024
+                    }
+                  }
+                }
+              },
+              "fields": {
+                "slug": "/sunnies-face-fluffmate-lipstick/"
+              }
+            }
+          }
+        },
+        {
+          "node": {
+            "childMarkdownRemark": {
+              "frontmatter": {
+                "title": "Tamra : Denim Bottle Tote",
+                "price": 18.5,
+                "image": {
+                  "childImageSharp": {
+                    "gatsbyImageData": {
+                      "layout": "constrained",
+                      "backgroundColor": "#181808",
+                      "images": {
+                        "fallback": {
+                          "src": "/static/989a6a99cc516636b6331550f9fb7f4a/67ded/image-1.webp",
+                          "srcSet": "/static/989a6a99cc516636b6331550f9fb7f4a/22bfc/image-1.webp 256w,\n/static/989a6a99cc516636b6331550f9fb7f4a/d689f/image-1.webp 512w,\n/static/989a6a99cc516636b6331550f9fb7f4a/67ded/image-1.webp 1024w",
+                          "sizes": "(min-width: 1024px) 1024px, 100vw"
+                        },
+                        "sources": []
+                      },
+                      "width": 1024,
+                      "height": 1024
+                    }
+                  }
+                }
+              },
+              "fields": {
+                "slug": "/tamra-denim-bottle-tote/"
+              }
+            }
+          }
+        },
+        {
+          "node": {
+            "childMarkdownRemark": {
+              "frontmatter": {
+                "title": "Sunnies Face : Airblush Cheek Tint",
+                "price": 20,
+                "image": {
+                  "childImageSharp": {
+                    "gatsbyImageData": {
+                      "layout": "constrained",
+                      "backgroundColor": "#d8d8d8",
+                      "images": {
+                        "fallback": {
+                          "src": "/static/c244bd9394710eb5129c1548210e5e4d/67ded/image-1.webp",
+                          "srcSet": "/static/c244bd9394710eb5129c1548210e5e4d/22bfc/image-1.webp 256w,\n/static/c244bd9394710eb5129c1548210e5e4d/d689f/image-1.webp 512w,\n/static/c244bd9394710eb5129c1548210e5e4d/67ded/image-1.webp 1024w",
+                          "sizes": "(min-width: 1024px) 1024px, 100vw"
+                        },
+                        "sources": []
+                      },
+                      "width": 1024,
+                      "height": 1024
+                    }
+                  }
+                }
+              },
+              "fields": {
+                "slug": "/sunnies-face-airblush-cheek-tint/"
+              }
+            }
+          }
+        },
+        {
+          "node": {
+            "childMarkdownRemark": {
+              "frontmatter": {
+                "title": "Saffron & Poe : Tenganan Basket Clasp Handbag",
+                "price": 95,
+                "image": {
+                  "childImageSharp": {
+                    "gatsbyImageData": {
+                      "layout": "constrained",
+                      "backgroundColor": "#c8b8b8",
+                      "images": {
+                        "fallback": {
+                          "src": "/static/51f281e08f63efa0f34578e0375ca050/24f4c/image-1.jpg",
+                          "srcSet": "/static/51f281e08f63efa0f34578e0375ca050/68974/image-1.jpg 256w,\n/static/51f281e08f63efa0f34578e0375ca050/3c367/image-1.jpg 512w,\n/static/51f281e08f63efa0f34578e0375ca050/24f4c/image-1.jpg 1024w",
+                          "sizes": "(min-width: 1024px) 1024px, 100vw"
+                        },
+                        "sources": [
+                          {
+                            "srcSet": "/static/51f281e08f63efa0f34578e0375ca050/22bfc/image-1.webp 256w,\n/static/51f281e08f63efa0f34578e0375ca050/d689f/image-1.webp 512w,\n/static/51f281e08f63efa0f34578e0375ca050/67ded/image-1.webp 1024w",
+                            "type": "image/webp",
+                            "sizes": "(min-width: 1024px) 1024px, 100vw"
+                          }
+                        ]
+                      },
+                      "width": 1024,
+                      "height": 1024
+                    }
+                  }
+                }
+              },
+              "fields": {
+                "slug": "/tenganan-basket-clasp-handbag/"
+              }
+            }
+          }
+        },
+        {
+          "node": {
+            "childMarkdownRemark": {
+              "frontmatter": {
+                "title": "Vintage : Bandanas",
+                "price": 40,
+                "image": {
+                  "childImageSharp": {
+                    "gatsbyImageData": {
+                      "layout": "constrained",
+                      "backgroundColor": "#888888",
+                      "images": {
+                        "fallback": {
+                          "src": "/static/9133de778bf79dcab3543f7c92a97773/24f4c/image-1.jpg",
+                          "srcSet": "/static/9133de778bf79dcab3543f7c92a97773/68974/image-1.jpg 256w,\n/static/9133de778bf79dcab3543f7c92a97773/3c367/image-1.jpg 512w,\n/static/9133de778bf79dcab3543f7c92a97773/24f4c/image-1.jpg 1024w",
+                          "sizes": "(min-width: 1024px) 1024px, 100vw"
+                        },
+                        "sources": [
+                          {
+                            "srcSet": "/static/9133de778bf79dcab3543f7c92a97773/22bfc/image-1.webp 256w,\n/static/9133de778bf79dcab3543f7c92a97773/d689f/image-1.webp 512w,\n/static/9133de778bf79dcab3543f7c92a97773/67ded/image-1.webp 1024w",
+                            "type": "image/webp",
+                            "sizes": "(min-width: 1024px) 1024px, 100vw"
+                          }
+                        ]
+                      },
+                      "width": 1024,
+                      "height": 1024
+                    }
+                  }
+                }
+              },
+              "fields": {
+                "slug": "/vintage-bandanas/"
+              }
+            }
+          }
+        },
+        {
+          "node": {
+            "childMarkdownRemark": {
+              "frontmatter": {
+                "title": "Rachel Craven : Hope Jumpsuit",
+                "price": 300,
+                "image": {
+                  "childImageSharp": {
+                    "gatsbyImageData": {
+                      "layout": "constrained",
+                      "backgroundColor": "#c8c8b8",
+                      "images": {
+                        "fallback": {
+                          "src": "/static/5cf000df3c225771c1133e8683ca2595/24f4c/image-1.jpg",
+                          "srcSet": "/static/5cf000df3c225771c1133e8683ca2595/68974/image-1.jpg 256w,\n/static/5cf000df3c225771c1133e8683ca2595/3c367/image-1.jpg 512w,\n/static/5cf000df3c225771c1133e8683ca2595/24f4c/image-1.jpg 1024w",
+                          "sizes": "(min-width: 1024px) 1024px, 100vw"
+                        },
+                        "sources": [
+                          {
+                            "srcSet": "/static/5cf000df3c225771c1133e8683ca2595/22bfc/image-1.webp 256w,\n/static/5cf000df3c225771c1133e8683ca2595/d689f/image-1.webp 512w,\n/static/5cf000df3c225771c1133e8683ca2595/67ded/image-1.webp 1024w",
+                            "type": "image/webp",
+                            "sizes": "(min-width: 1024px) 1024px, 100vw"
+                          }
+                        ]
+                      },
+                      "width": 1024,
+                      "height": 1024
+                    }
+                  }
+                }
+              },
+              "fields": {
+                "slug": "/rachel-craven-hope-jumpsuit/"
+              }
+            }
+          }
+        }
+      ]
+    }
+  
+export const CategoryPageContext:C.CategoryPage = {
+  data: {
+   allFile:{
+     edges: ProductGridData.edges
+    }
+},
+pageContext:{
+  currentPage: 1,
+  category: "TEST",
+  limit: 48,
+  skip: 0,
+  numPages: 1
+}
+}
+
+export const CategoryPageContextWithPagination:C.CategoryPage = {
+  data: {
+   allFile:{
+     edges: ProductGridData.edges
+    }
+},
+pageContext:{
+  currentPage: 1,
+  category: "TEST",
+  limit: 48,
+  skip: 0,
+  numPages: 10
+}
+}
 

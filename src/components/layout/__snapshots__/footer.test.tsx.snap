@@ -13,22 +13,22 @@ exports[`Footer Component matches component 1`] = `
       Categories
     </h5>
     <a
-      href="/"
+      href="/about/"
     >
       About Us
     </a>
     <a
-      href="/"
+      href="/clothing/"
     >
       Clothing
     </a>
     <a
-      href="/"
+      href="/home/"
     >
       Home
     </a>
     <a
-      href="/"
+      href="/accessories/"
     >
       Accessories
     </a>
@@ -69,7 +69,7 @@ exports[`Footer Component matches component 1`] = `
       Terms & Conditions
     </h5>
     <a
-      href="/"
+      href="/returns"
     >
       Returns
     </a>

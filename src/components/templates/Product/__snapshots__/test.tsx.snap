@@ -2,7 +2,7 @@
 
 exports[`Product Component matches snapshot 1`] = `
 <div
-  class="sc-crrsfI cKsulN"
+  class="sc-crrsfI izmpdG"
 >
   <header
     class="sc-dlfnbm edAUkJ"
@@ -20,25 +20,25 @@ exports[`Product Component matches snapshot 1`] = `
         <div />
       </button>
       <nav
-        class="sc-gsTCUz eahIHO"
+        class="sc-gsTCUz gmiPDZ"
       >
         <a
-          href="/"
+          href="/about/"
         >
           About Us
         </a>
         <a
-          href="/"
+          href="/clothing/"
         >
           Clothing
         </a>
         <a
-          href="/"
+          href="/home/"
         >
           Home
         </a>
         <a
-          href="/"
+          href="/accessories/"
         >
           Accessories
         </a>
@@ -48,7 +48,7 @@ exports[`Product Component matches snapshot 1`] = `
       class="sc-hKgILt fEkVZL"
     >
       <h1
-        class="sc-eCssSg iHXJeJ"
+        class="sc-eCssSg fvUBXx"
       >
         <a
           class="sc-jSgupP eywEqP"
@@ -60,520 +60,614 @@ exports[`Product Component matches snapshot 1`] = `
     </div>
   </header>
   <div
-    class="sc-dQppl gYULKE"
+    class="sc-dQppl fDjYVG"
   >
     <main
-      class="sc-bqyKva kOAjrj"
+      class="sc-bqyKva jzRrKO"
     >
-      <section
-        class="sc-dIUggk gbKtwu"
-      >
-        <h1
-          class="sc-hHftDr blKiLs"
-        >
-          Pietsie Atlin Blouse
-        </h1>
-        <div
-          class="sc-dmlrTW lnzYLs"
-        >
-           $
-          240
-        </div>
-      </section>
       <div
-        class="gatsby-image-wrapper"
-        data-gatsby-image-wrapper=""
-        style="position: relative; overflow: hidden;"
+        class="sc-hHftDr casNS"
       >
+        <section
+          class="sc-dmlrTW eOBpvq"
+        >
+          <h1
+            class="sc-kfzAmx fxDDfl"
+          >
+            Pietsie Atlin Blouse
+          </h1>
+          <div
+            class="sc-fKFyDc dZMseF"
+          >
+             $
+            240.00
+          </div>
+        </section>
         <div
-          aria-hidden="true"
-          style="padding-top: 100%;"
-        />
-        <img
-          alt=""
-          aria-hidden="true"
-          data-placeholder-image=""
-          decoding="async"
-          src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
-          style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-        />
-        <picture>
-          <source
-            srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/c65bc/pietsie-atlin-blouse.webp 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/078c3/pietsie-atlin-blouse.webp 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/6d09e/pietsie-atlin-blouse.webp 600w"
-            type="image/webp"
-          />
+          class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+          data-gatsby-image-wrapper=""
+          style="display: inline-block; opacity: 1;"
+        >
+          <div
+            style="max-width: 1px; display: block;"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              role="presentation"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.1933333333333334' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+              style="max-width: 100%; display: block; position: static;"
+            />
+          </div>
           <img
             alt=""
-            data-gatsby-image-ssr=""
-            data-main-image=""
-            data-src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg"
-            data-srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w"
+            aria-hidden="true"
+            data-placeholder-image=""
             decoding="async"
-            loading="lazy"
-            style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+            src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABs5cclPYuYZuES2C//8QAHRAAAgICAwEAAAAAAAAAAAAAAgMBBAAREhMUIv/aAAgBAQABBQJrRUMW1yWXz+t4Bcgs1pYXjbtIdav/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAdEAACAgMAAwAAAAAAAAAAAAABAgARECFREnGB/9oACAEBAAY/AraAb3hV+4Ddnmp3yC6r3FUm6n//xAAcEAEAAwEAAwEAAAAAAAAAAAABABEhQRAxUXH/2gAIAQEAAT8h0VrQHZWgfXj8uRxAK4GPrzy0KYaa8RLED3P/2gAMAwEAAgADAAAAECfPf//EABURAQEAAAAAAAAAAAAAAAAAABEg/9oACAEDAQE/EGP/xAAXEQADAQAAAAAAAAAAAAAAAAABEBEh/9oACAECAQE/EAMVX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACExQRBxsYH/2gAIAQEAAT8QI0EAqpjx024IL0x8Ehd2e1nwcEUcj8xBKG/pkD8NIADpxREqAMYXaVBDm5//2Q=="
+            style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
           />
-        </picture>
-        <noscript />
-        <script
-          type="module"
-        >
-          const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-        </script>
-      </div>
-      <div
-        class="sc-fFubgz hnjFiH"
-      >
-        <ul
-          class="sc-bkzZxe gyeyJk"
-        >
-          <li
-            class="sc-idOhPF"
+          <picture>
+            <source
+              sizes="100vw"
+              srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/8cca9/pietsie-atlin-4.webp 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/b81ad/pietsie-atlin-4.webp 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/9ceb8/pietsie-atlin-4.webp 600w"
+              type="image/webp"
+            />
+            <img
+              alt=""
+              data-gatsby-image-ssr=""
+              data-main-image=""
+              data-src="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg"
+              data-srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/5d47b/pietsie-atlin-4.jpg 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/1e7db/pietsie-atlin-4.jpg 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg 600w"
+              decoding="async"
+              loading="lazy"
+              sizes="100vw"
+              style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+            />
+          </picture>
+          <noscript />
+          <script
+            type="module"
           >
-            <div
-              class="gatsby-image-wrapper"
-              data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden;"
-            >
-              <div
-                aria-hidden="true"
-                style="padding-top: 119.33333333333334%;"
-              />
-              <img
-                alt=""
-                aria-hidden="true"
-                data-placeholder-image=""
-                decoding="async"
-                src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABs5cclPYuYZuES2C//8QAHRAAAgICAwEAAAAAAAAAAAAAAgMBBAAREhMUIv/aAAgBAQABBQJrRUMW1yWXz+t4Bcgs1pYXjbtIdav/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAdEAACAgMAAwAAAAAAAAAAAAABAgARECFREnGB/9oACAEBAAY/AraAb3hV+4Ddnmp3yC6r3FUm6n//xAAcEAEAAwEAAwEAAAAAAAAAAAABABEhQRAxUXH/2gAIAQEAAT8h0VrQHZWgfXj8uRxAK4GPrzy0KYaa8RLED3P/2gAMAwEAAgADAAAAECfPf//EABURAQEAAAAAAAAAAAAAAAAAABEg/9oACAEDAQE/EGP/xAAXEQADAQAAAAAAAAAAAAAAAAABEBEh/9oACAECAQE/EAMVX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACExQRBxsYH/2gAIAQEAAT8QI0EAqpjx024IL0x8Ehd2e1nwcEUcj8xBKG/pkD8NIADpxREqAMYXaVBDm5//2Q=="
-                style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-              />
-              <picture>
-                <source
-                  srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/8cca9/pietsie-atlin-4.webp 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/b81ad/pietsie-atlin-4.webp 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/9ceb8/pietsie-atlin-4.webp 600w"
-                  type="image/webp"
-                />
-                <img
-                  alt=""
-                  data-gatsby-image-ssr=""
-                  data-main-image=""
-                  data-src="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg"
-                  data-srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/5d47b/pietsie-atlin-4.jpg 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/1e7db/pietsie-atlin-4.jpg 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg 600w"
-                  decoding="async"
-                  loading="lazy"
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                />
-              </picture>
-              <noscript />
-              <script
-                type="module"
-              >
-                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-              </script>
-            </div>
-          </li>
-          <li
-            class="sc-idOhPF"
-          >
-            <div
-              class="gatsby-image-wrapper"
-              data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden;"
-            >
-              <div
-                aria-hidden="true"
-                style="padding-top: 150%;"
-              />
-              <img
-                alt=""
-                aria-hidden="true"
-                data-placeholder-image=""
-                decoding="async"
-                src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAgME/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAXi8To4Eod6ykmhkV//EABwQAAICAgMAAAAAAAAAAAAAAAECAAQRIgNBQv/aAAgBAQABBQJ2CKbgy1sLLp06lt88oOkdiX8z/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHBAAAQQDAQAAAAAAAAAAAAAAAQACECERUWGh/9oACAEBAAY/AsuVNpWz1AS7gknc/wD/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMWFx/9oACAEBAAE/IVzUEBtfrYoCaXlpnercu7kFOMAl5VEi+R0d1OI8g4T/2gAMAwEAAgADAAAAECz2zv/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxAr/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQEf/aAAgBAgEBPxALkZ//xAAhEAEAAgIBAwUAAAAAAAAAAAABABExUSFBYYFxobHR8P/aAAgBAQABPxDCEWLV1MQDlpaOwomng7rD2lb3QfTHzAh3n97wHEPNVKCqYNtKwV3lRXzG5bUf+7F5v7gqnSLbtT//2Q=="
-                style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-              />
-              <picture>
-                <source
-                  srcset="/static/a414d5b3121133600f7cb6cdef8673da/4c6e4/pietsie-atlin-7.webp 150w,/static/a414d5b3121133600f7cb6cdef8673da/8e42d/pietsie-atlin-7.webp 300w,/static/a414d5b3121133600f7cb6cdef8673da/e1ec2/pietsie-atlin-7.webp 600w"
-                  type="image/webp"
-                />
-                <img
-                  alt=""
-                  data-gatsby-image-ssr=""
-                  data-main-image=""
-                  data-src="/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg"
-                  data-srcset="/static/a414d5b3121133600f7cb6cdef8673da/fa2a5/pietsie-atlin-7.jpg 150w,/static/a414d5b3121133600f7cb6cdef8673da/cdddd/pietsie-atlin-7.jpg 300w,/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg 600w"
-                  decoding="async"
-                  loading="lazy"
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                />
-              </picture>
-              <noscript />
-              <script
-                type="module"
-              >
-                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-              </script>
-            </div>
-          </li>
-          <li
-            class="sc-idOhPF"
-          >
-            <div
-              class="gatsby-image-wrapper"
-              data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden;"
-            >
-              <div
-                aria-hidden="true"
-                style="padding-top: 150%;"
-              />
-              <img
-                alt=""
-                aria-hidden="true"
-                data-placeholder-image=""
-                decoding="async"
-                src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAQFAgMG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgD/2gAMAwEAAhADEAAAAWEWJZqYkFYK9FARqGwL/8QAHRAAAgEEAwAAAAAAAAAAAAAAAQIRAAMTIhIxMv/aAAgBAQABBQJtqRoa2dRcWOclvRMEGDiJDWkYDvPFf//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASn/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAHBAAAgICAwAAAAAAAAAAAAAAABEBITFxAiIy/9oACAEBAAY/AlhEdhPFCVwYNkyMhnmERsrjR//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhcfD/2gAIAQEAAT8hFwOC7uENSX+IRdS7tGvJyQuWHryNs12nxCpU+oPtqgkA5dwhisgOGNrM/9oADAMBAAIAAwAAABDH9P3/xAAYEQADAQEAAAAAAAAAAAAAAAAAAREQIf/aAAgBAwEBPxDmJGWH/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERITH/2gAIAQIBAT8Qr6imkQ//xAAgEAEBAAICAgIDAAAAAAAAAAABEQAhMUFRcWGBodHh/9oACAEBAAE/EFZCNeTP1i8GwYhsmnjvICKAxw4gWpi1Q5r6xrYeASuphzoIP2ZA1qI63/MUDqsDefZSs/GADKtfBkctFAI+Lg2toGkPWf/Z"
-                style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-              />
-              <picture>
-                <source
-                  srcset="/static/597520e19b6aa9cfc80a981e4e8386de/4c6e4/elaina_midland-3.webp 150w,/static/597520e19b6aa9cfc80a981e4e8386de/8e42d/elaina_midland-3.webp 300w,/static/597520e19b6aa9cfc80a981e4e8386de/e1ec2/elaina_midland-3.webp 600w"
-                  type="image/webp"
-                />
-                <img
-                  alt=""
-                  data-gatsby-image-ssr=""
-                  data-main-image=""
-                  data-src="/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg"
-                  data-srcset="/static/597520e19b6aa9cfc80a981e4e8386de/fa2a5/elaina_midland-3.jpg 150w,/static/597520e19b6aa9cfc80a981e4e8386de/cdddd/elaina_midland-3.jpg 300w,/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg 600w"
-                  decoding="async"
-                  loading="lazy"
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                />
-              </picture>
-              <noscript />
-              <script
-                type="module"
-              >
-                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-              </script>
-            </div>
-          </li>
-          <li
-            class="sc-idOhPF"
-          >
-            <div
-              class="gatsby-image-wrapper"
-              data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden;"
-            >
-              <div
-                aria-hidden="true"
-                style="padding-top: 66.66666666666666%;"
-              />
-              <img
-                alt=""
-                aria-hidden="true"
-                data-placeholder-image=""
-                decoding="async"
-                src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGrLamFpYD/AP/EABsQAAIDAAMAAAAAAAAAAAAAAAERAAIDEhMj/9oACAEBAAEFAtb1XPsIqo2MB6EKf//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAACAgMAAAAAAAAAAAAAAAAAARAREiFB/9oACAEBAAY/ArRo4YjUf//EABoQAQADAAMAAAAAAAAAAAAAAAEAESFBccH/2gAIAQEAAT8hUQtILEnkQVnuOwXWCym1xBVT/9oADAMBAAIAAwAAABAr/wD/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxCD/8QAFxEBAAMAAAAAAAAAAAAAAAAAARARIf/aAAgBAgEBPxDUbj//xAAeEAEAAgIBBQAAAAAAAAAAAAABABEhMUFhcaHB8P/aAAgBAQABPxC+QLyUZPMw9DVpQfmDQ8yZtxAADyAQrFVi+zKgDXU9z//Z"
-                style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-              />
-              <picture>
-                <source
-                  srcset="/static/5de9f409a5a5abb0a95569ed12d4c3e9/70dfd/elaina_midland-4.webp 150w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/9b21f/elaina_midland-4.webp 300w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/9ff6b/elaina_midland-4.webp 600w"
-                  type="image/webp"
-                />
-                <img
-                  alt=""
-                  data-gatsby-image-ssr=""
-                  data-main-image=""
-                  data-src="/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg"
-                  data-srcset="/static/5de9f409a5a5abb0a95569ed12d4c3e9/f1a3a/elaina_midland-4.jpg 150w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/81bf6/elaina_midland-4.jpg 300w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg 600w"
-                  decoding="async"
-                  loading="lazy"
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                />
-              </picture>
-              <noscript />
-              <script
-                type="module"
-              >
-                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-              </script>
-            </div>
-          </li>
-          <li
-            class="sc-idOhPF"
-          >
-            <div
-              class="gatsby-image-wrapper"
-              data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden;"
-            >
-              <div
-                aria-hidden="true"
-                style="padding-top: 100%;"
-              />
-              <img
-                alt=""
-                aria-hidden="true"
-                data-placeholder-image=""
-                decoding="async"
-                src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFBgP/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABpzLoE6B5hkyyjpRD/8QAHRAAAQQCAwAAAAAAAAAAAAAAAgABAwQSMxEhI//aAAgBAQABBQK7I4NmfEJZw3ukREb1tF7TA/qv/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BIT//xAAeEAACAgEFAQAAAAAAAAAAAAABAgARIRASMlFxgf/aAAgBAQAGPwJVBrdALOIrHqIw5CWTeIs+xPdP/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyFRFjaQtgmiP0jHTaIWWTWRgnOlUZOL4Yj9DF2f/9oADAMBAAIAAwAAABC/yH//xAAWEQEBAQAAAAAAAAAAAAAAAAABABD/2gAIAQMBAT8QYnP/xAAXEQADAQAAAAAAAAAAAAAAAAAAATEQ/9oACAECAQE/EEHSM//EAB0QAQEAAQQDAAAAAAAAAAAAAAERACExQVFhcZH/2gAIAQEAAT8QO0USMDa+3AVzrJp2POJLbl74uQRAJCEqt60+4JW2zCeNPOJurCuSscBoCjH3bggyVfccgz//2Q=="
-                style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-              />
-              <picture>
-                <source
-                  srcset="/static/ddeb0faace7a650dc777dcc61914b1de/c65bc/pietsie-atlin-6.webp 150w,/static/ddeb0faace7a650dc777dcc61914b1de/078c3/pietsie-atlin-6.webp 300w,/static/ddeb0faace7a650dc777dcc61914b1de/6d09e/pietsie-atlin-6.webp 600w"
-                  type="image/webp"
-                />
-                <img
-                  alt=""
-                  data-gatsby-image-ssr=""
-                  data-main-image=""
-                  data-src="/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg"
-                  data-srcset="/static/ddeb0faace7a650dc777dcc61914b1de/96deb/pietsie-atlin-6.jpg 150w,/static/ddeb0faace7a650dc777dcc61914b1de/0fdf4/pietsie-atlin-6.jpg 300w,/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg 600w"
-                  decoding="async"
-                  loading="lazy"
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                />
-              </picture>
-              <noscript />
-              <script
-                type="module"
-              >
-                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-              </script>
-            </div>
-          </li>
-          <li
-            class="sc-idOhPF"
-          >
-            <div
-              class="gatsby-image-wrapper"
-              data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden;"
-            >
-              <div
-                aria-hidden="true"
-                style="padding-top: 96.83333333333333%;"
-              />
-              <img
-                alt=""
-                aria-hidden="true"
-                data-placeholder-image=""
-                decoding="async"
-                src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAQFAQIDBv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGTwxET0zVLX15ZdCH/xAAbEAACAwEBAQAAAAAAAAAAAAABBAADERMjNP/aAAgBAQABBQJywgK2npHt2ve0b+dU+5n/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAcEAACAgIDAAAAAAAAAAAAAAABAgAQESFBUXH/2gAIAQEABj8CCdwJnVKeIuKPogr/xAAeEAACAgEFAQAAAAAAAAAAAAAAAREhMRBRYZGx8P/aAAgBAQABPyFSoi7YuzaqWi1+MTyRNzmBuz6G4zv8Gs//2gAMAwEAAgADAAAAEPvPPf/EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEDAQE/EFj/xAAXEQEBAQEAAAAAAAAAAAAAAAABEBEx/9oACAECAQE/EAMhyf/EABsQAQADAQADAAAAAAAAAAAAAAEAESFRMeHw/9oACAEBAAE/EDVoqjcSq5GabEMF2LFFaHWYW8Mq0pAAvnuGKOcoV/FEvs//2Q=="
-                style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-              />
-              <picture>
-                <source
-                  srcset="/static/6767260d2590b3fb8d50c6b995c829a8/6bc6e/pietsie-atlin-5.webp 150w,/static/6767260d2590b3fb8d50c6b995c829a8/50a0d/pietsie-atlin-5.webp 300w,/static/6767260d2590b3fb8d50c6b995c829a8/68747/pietsie-atlin-5.webp 600w"
-                  type="image/webp"
-                />
-                <img
-                  alt=""
-                  data-gatsby-image-ssr=""
-                  data-main-image=""
-                  data-src="/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg"
-                  data-srcset="/static/6767260d2590b3fb8d50c6b995c829a8/72c97/pietsie-atlin-5.jpg 150w,/static/6767260d2590b3fb8d50c6b995c829a8/4a85a/pietsie-atlin-5.jpg 300w,/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg 600w"
-                  decoding="async"
-                  loading="lazy"
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                />
-              </picture>
-              <noscript />
-              <script
-                type="module"
-              >
-                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-              </script>
-            </div>
-          </li>
-          <li
-            class="sc-idOhPF"
-          >
-            <div
-              class="gatsby-image-wrapper"
-              data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden;"
-            >
-              <div
-                aria-hidden="true"
-                style="padding-top: 150%;"
-              />
-              <img
-                alt=""
-                aria-hidden="true"
-                data-placeholder-image=""
-                decoding="async"
-                src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAFAokE2MpmTswd3H//EABsQAAICAwEAAAAAAAAAAAAAAAECAxEAEhMh/9oACAEBAAEFAmw10ktmLnkrMWY+tEwSOMhdbLVreFRf/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8BIf/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABsQAAMAAgMAAAAAAAAAAAAAAAABERAxIVFh/9oACAEBAAY/Aq0L0pWzvDr4NoY6jSx//8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyHFXhODCeh5mYIDYzLnYW+xF9JSTQghRvext7DfZwByeZJbb3yf/9oADAMBAAIAAwAAABAYDwD/xAAXEQEBAQEAAAAAAAAAAAAAAAAAESEx/9oACAEDAQE/EEdVr//EABcRAQEBAQAAAAAAAAAAAAAAABEQIQH/2gAIAQIBAT8QXeRwn//EAB4QAQEAAgICAwAAAAAAAAAAAAERACExQWFxkbHR/9oACAEBAAE/EKT2k0Qn5kKCRE1OE9dYIUicsMWobHZcHjHPWeeuMhWiEXxhbZVLhLAqE3Zo+s7Z0jifKgdc50rOTqOOIlpN4/Of/9k="
-                style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-              />
-              <picture>
-                <source
-                  srcset="/static/cf70b8d2ec726c940b9c1d1caede05e9/4c6e4/elaina_midland-2.webp 150w,/static/cf70b8d2ec726c940b9c1d1caede05e9/8e42d/elaina_midland-2.webp 300w,/static/cf70b8d2ec726c940b9c1d1caede05e9/e1ec2/elaina_midland-2.webp 600w"
-                  type="image/webp"
-                />
-                <img
-                  alt=""
-                  data-gatsby-image-ssr=""
-                  data-main-image=""
-                  data-src="/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg"
-                  data-srcset="/static/cf70b8d2ec726c940b9c1d1caede05e9/fa2a5/elaina_midland-2.jpg 150w,/static/cf70b8d2ec726c940b9c1d1caede05e9/cdddd/elaina_midland-2.jpg 300w,/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg 600w"
-                  decoding="async"
-                  loading="lazy"
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                />
-              </picture>
-              <noscript />
-              <script
-                type="module"
-              >
-                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-              </script>
-            </div>
-          </li>
-          <li
-            class="sc-idOhPF"
-          >
-            <div
-              class="gatsby-image-wrapper"
-              data-gatsby-image-wrapper=""
-              style="position: relative; overflow: hidden;"
-            >
-              <div
-                aria-hidden="true"
-                style="padding-top: 100%;"
-              />
-              <img
-                alt=""
-                aria-hidden="true"
-                data-placeholder-image=""
-                decoding="async"
-                src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
-                style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-              />
-              <picture>
-                <source
-                  srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/c65bc/pietsie-atlin-blouse.webp 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/078c3/pietsie-atlin-blouse.webp 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/6d09e/pietsie-atlin-blouse.webp 600w"
-                  type="image/webp"
-                />
-                <img
-                  alt=""
-                  data-gatsby-image-ssr=""
-                  data-main-image=""
-                  data-src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg"
-                  data-srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w"
-                  decoding="async"
-                  loading="lazy"
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                />
-              </picture>
-              <noscript />
-              <script
-                type="module"
-              >
-                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-              </script>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <button
-        class="sc-fodVxV eIwYSu snipcart-add-item"
-        data-item-custom1-name="size"
-        data-item-custom1-options="small|medium|large"
-        data-item-custom2-name="color"
-        data-item-custom2-options="blue|grey|black"
-        data-item-description="Pietsie Campbell creates all of her garments out of deadstock, vintage fabrics, and natural fibers. Each collection is made in sunny California and embodies the effortlessly chic look we all strive for. Our favorite loose, flowing blouse in a cotton and linen blend. Slightly fitted across the shoulders. Wear tucked or loose, with the sleeves rolled up or down. Delicate pleating at shoulders, bell sleeves, pleated cuffs. Trapeze shape, easy fit. Pulls over, vintage shell buttons on a placket that ends mid way. Delicate hand-pleated detail on chest, stand-up prairie collar."
-        data-item-id="pietsie-atlin-blouse"
-        data-item-image=""
-        data-item-name="Pietsie Atlin Blouse"
-        data-item-price="240"
-        data-item-url="/pietsie-atlin-blouse/"
-      >
-        Add to Cart
-      </button>
-      <div
-        class="sc-hBEYos"
-      >
-        <label
-          for="size"
-        >
-          size
-        </label>
-        <select
-          class="sc-kstrdz gMjnKk"
-          id="size"
-        >
-          <option
-            selected=""
-            value=""
-          >
-            select an option
-          </option>
-          <option
-            value="small"
-          >
-            small
-          </option>
-          <option
-            value="medium"
-          >
-            medium
-          </option>
-          <option
-            value="large"
-          >
-            large
-          </option>
-        </select>
-      </div>
-      <div
-        class="sc-hBEYos"
-      >
-        <label
-          for="color"
-        >
-          color
-        </label>
-        <select
-          class="sc-kstrdz gMjnKk"
-          id="color"
-        >
-          <option
-            selected=""
-            value=""
-          >
-            select an option
-          </option>
-          <option
-            value="blue"
-          >
-            blue
-          </option>
-          <option
-            value="grey"
-          >
-            grey
-          </option>
-          <option
-            value="black"
-          >
-            black
-          </option>
-        </select>
-      </div>
-      <section
-        class="sc-fKFyDc"
-      >
-        <div
-          class="sc-bBXqnf"
-        >
-          Pietsie Campbell creates all of her garments out of deadstock, vintage fabrics, and natural fibers. Each collection is made in sunny California and embodies the effortlessly chic look we all strive for. Our favorite loose, flowing blouse in a cotton and linen blend. Slightly fitted across the shoulders. Wear tucked or loose, with the sleeves rolled up or down. Delicate pleating at shoulders, bell sleeves, pleated cuffs. Trapeze shape, easy fit. Pulls over, vintage shell buttons on a placket that ends mid way. Delicate hand-pleated detail on chest, stand-up prairie collar.
+            const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+          </script>
         </div>
-      </section>
+        <div
+          class="sc-bkzZxe cwWlJK"
+        >
+          <ul
+            class="sc-idOhPF jrLBIl"
+          >
+            <li
+              class="sc-dIUggk"
+            >
+              <div
+                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+                data-gatsby-image-wrapper=""
+                style="display: inline-block; opacity: 1;"
+              >
+                <div
+                  style="max-width: 1px; display: block;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.1933333333333334' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    style="max-width: 100%; display: block; position: static;"
+                  />
+                </div>
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  data-placeholder-image=""
+                  decoding="async"
+                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABs5cclPYuYZuES2C//8QAHRAAAgICAwEAAAAAAAAAAAAAAgMBBAAREhMUIv/aAAgBAQABBQJrRUMW1yWXz+t4Bcgs1pYXjbtIdav/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAdEAACAgMAAwAAAAAAAAAAAAABAgARECFREnGB/9oACAEBAAY/AraAb3hV+4Ddnmp3yC6r3FUm6n//xAAcEAEAAwEAAwEAAAAAAAAAAAABABEhQRAxUXH/2gAIAQEAAT8h0VrQHZWgfXj8uRxAK4GPrzy0KYaa8RLED3P/2gAMAwEAAgADAAAAECfPf//EABURAQEAAAAAAAAAAAAAAAAAABEg/9oACAEDAQE/EGP/xAAXEQADAQAAAAAAAAAAAAAAAAABEBEh/9oACAECAQE/EAMVX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACExQRBxsYH/2gAIAQEAAT8QI0EAqpjx024IL0x8Ehd2e1nwcEUcj8xBKG/pkD8NIADpxREqAMYXaVBDm5//2Q=="
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+                />
+                <picture>
+                  <source
+                    sizes="100vw"
+                    srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/8cca9/pietsie-atlin-4.webp 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/b81ad/pietsie-atlin-4.webp 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/9ceb8/pietsie-atlin-4.webp 600w"
+                    type="image/webp"
+                  />
+                  <img
+                    alt=""
+                    data-gatsby-image-ssr=""
+                    data-main-image=""
+                    decoding="async"
+                    loading="eager"
+                    sizes="100vw"
+                    src="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg"
+                    srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/5d47b/pietsie-atlin-4.jpg 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/1e7db/pietsie-atlin-4.jpg 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg 600w"
+                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                  />
+                </picture>
+                <noscript />
+                <script
+                  type="module"
+                >
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                </script>
+              </div>
+            </li>
+            <li
+              class="sc-dIUggk"
+            >
+              <div
+                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+                data-gatsby-image-wrapper=""
+                style="display: inline-block; opacity: 1;"
+              >
+                <div
+                  style="max-width: 1px; display: block;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.5' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    style="max-width: 100%; display: block; position: static;"
+                  />
+                </div>
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  data-placeholder-image=""
+                  decoding="async"
+                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAgME/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAXi8To4Eod6ykmhkV//EABwQAAICAgMAAAAAAAAAAAAAAAECAAQRIgNBQv/aAAgBAQABBQJ2CKbgy1sLLp06lt88oOkdiX8z/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHBAAAQQDAQAAAAAAAAAAAAAAAQACECERUWGh/9oACAEBAAY/AsuVNpWz1AS7gknc/wD/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMWFx/9oACAEBAAE/IVzUEBtfrYoCaXlpnercu7kFOMAl5VEi+R0d1OI8g4T/2gAMAwEAAgADAAAAECz2zv/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxAr/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQEf/aAAgBAgEBPxALkZ//xAAhEAEAAgIBAwUAAAAAAAAAAAABABExUSFBYYFxobHR8P/aAAgBAQABPxDCEWLV1MQDlpaOwomng7rD2lb3QfTHzAh3n97wHEPNVKCqYNtKwV3lRXzG5bUf+7F5v7gqnSLbtT//2Q=="
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+                />
+                <picture>
+                  <source
+                    sizes="100vw"
+                    srcset="/static/a414d5b3121133600f7cb6cdef8673da/4c6e4/pietsie-atlin-7.webp 150w,/static/a414d5b3121133600f7cb6cdef8673da/8e42d/pietsie-atlin-7.webp 300w,/static/a414d5b3121133600f7cb6cdef8673da/e1ec2/pietsie-atlin-7.webp 600w"
+                    type="image/webp"
+                  />
+                  <img
+                    alt=""
+                    data-gatsby-image-ssr=""
+                    data-main-image=""
+                    decoding="async"
+                    loading="eager"
+                    sizes="100vw"
+                    src="/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg"
+                    srcset="/static/a414d5b3121133600f7cb6cdef8673da/fa2a5/pietsie-atlin-7.jpg 150w,/static/a414d5b3121133600f7cb6cdef8673da/cdddd/pietsie-atlin-7.jpg 300w,/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg 600w"
+                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                  />
+                </picture>
+                <noscript />
+                <script
+                  type="module"
+                >
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                </script>
+              </div>
+            </li>
+            <li
+              class="sc-dIUggk"
+            >
+              <div
+                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+                data-gatsby-image-wrapper=""
+                style="display: inline-block; opacity: 1;"
+              >
+                <div
+                  style="max-width: 1px; display: block;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.5' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    style="max-width: 100%; display: block; position: static;"
+                  />
+                </div>
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  data-placeholder-image=""
+                  decoding="async"
+                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAQFAgMG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgD/2gAMAwEAAhADEAAAAWEWJZqYkFYK9FARqGwL/8QAHRAAAgEEAwAAAAAAAAAAAAAAAQIRAAMTIhIxMv/aAAgBAQABBQJtqRoa2dRcWOclvRMEGDiJDWkYDvPFf//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASn/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAHBAAAgICAwAAAAAAAAAAAAAAABEBITFxAiIy/9oACAEBAAY/AlhEdhPFCVwYNkyMhnmERsrjR//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhcfD/2gAIAQEAAT8hFwOC7uENSX+IRdS7tGvJyQuWHryNs12nxCpU+oPtqgkA5dwhisgOGNrM/9oADAMBAAIAAwAAABDH9P3/xAAYEQADAQEAAAAAAAAAAAAAAAAAAREQIf/aAAgBAwEBPxDmJGWH/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERITH/2gAIAQIBAT8Qr6imkQ//xAAgEAEBAAICAgIDAAAAAAAAAAABEQAhMUFRcWGBodHh/9oACAEBAAE/EFZCNeTP1i8GwYhsmnjvICKAxw4gWpi1Q5r6xrYeASuphzoIP2ZA1qI63/MUDqsDefZSs/GADKtfBkctFAI+Lg2toGkPWf/Z"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+                />
+                <picture>
+                  <source
+                    sizes="100vw"
+                    srcset="/static/597520e19b6aa9cfc80a981e4e8386de/4c6e4/elaina_midland-3.webp 150w,/static/597520e19b6aa9cfc80a981e4e8386de/8e42d/elaina_midland-3.webp 300w,/static/597520e19b6aa9cfc80a981e4e8386de/e1ec2/elaina_midland-3.webp 600w"
+                    type="image/webp"
+                  />
+                  <img
+                    alt=""
+                    data-gatsby-image-ssr=""
+                    data-main-image=""
+                    decoding="async"
+                    loading="eager"
+                    sizes="100vw"
+                    src="/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg"
+                    srcset="/static/597520e19b6aa9cfc80a981e4e8386de/fa2a5/elaina_midland-3.jpg 150w,/static/597520e19b6aa9cfc80a981e4e8386de/cdddd/elaina_midland-3.jpg 300w,/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg 600w"
+                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                  />
+                </picture>
+                <noscript />
+                <script
+                  type="module"
+                >
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                </script>
+              </div>
+            </li>
+            <li
+              class="sc-dIUggk"
+            >
+              <div
+                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+                data-gatsby-image-wrapper=""
+                style="display: inline-block; opacity: 1;"
+              >
+                <div
+                  style="max-width: 1px; display: block;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='0.6666666666666666' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    style="max-width: 100%; display: block; position: static;"
+                  />
+                </div>
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  data-placeholder-image=""
+                  decoding="async"
+                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGrLamFpYD/AP/EABsQAAIDAAMAAAAAAAAAAAAAAAERAAIDEhMj/9oACAEBAAEFAtb1XPsIqo2MB6EKf//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAACAgMAAAAAAAAAAAAAAAAAARAREiFB/9oACAEBAAY/ArRo4YjUf//EABoQAQADAAMAAAAAAAAAAAAAAAEAESFBccH/2gAIAQEAAT8hUQtILEnkQVnuOwXWCym1xBVT/9oADAMBAAIAAwAAABAr/wD/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxCD/8QAFxEBAAMAAAAAAAAAAAAAAAAAARARIf/aAAgBAgEBPxDUbj//xAAeEAEAAgIBBQAAAAAAAAAAAAABABEhMUFhcaHB8P/aAAgBAQABPxC+QLyUZPMw9DVpQfmDQ8yZtxAADyAQrFVi+zKgDXU9z//Z"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+                />
+                <picture>
+                  <source
+                    sizes="100vw"
+                    srcset="/static/5de9f409a5a5abb0a95569ed12d4c3e9/70dfd/elaina_midland-4.webp 150w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/9b21f/elaina_midland-4.webp 300w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/9ff6b/elaina_midland-4.webp 600w"
+                    type="image/webp"
+                  />
+                  <img
+                    alt=""
+                    data-gatsby-image-ssr=""
+                    data-main-image=""
+                    decoding="async"
+                    loading="eager"
+                    sizes="100vw"
+                    src="/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg"
+                    srcset="/static/5de9f409a5a5abb0a95569ed12d4c3e9/f1a3a/elaina_midland-4.jpg 150w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/81bf6/elaina_midland-4.jpg 300w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg 600w"
+                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                  />
+                </picture>
+                <noscript />
+                <script
+                  type="module"
+                >
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                </script>
+              </div>
+            </li>
+            <li
+              class="sc-dIUggk"
+            >
+              <div
+                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+                data-gatsby-image-wrapper=""
+                style="display: inline-block; opacity: 1;"
+              >
+                <div
+                  style="max-width: 1px; display: block;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    style="max-width: 100%; display: block; position: static;"
+                  />
+                </div>
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  data-placeholder-image=""
+                  decoding="async"
+                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFBgP/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABpzLoE6B5hkyyjpRD/8QAHRAAAQQCAwAAAAAAAAAAAAAAAgABAwQSMxEhI//aAAgBAQABBQK7I4NmfEJZw3ukREb1tF7TA/qv/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BIT//xAAeEAACAgEFAQAAAAAAAAAAAAABAgARIRASMlFxgf/aAAgBAQAGPwJVBrdALOIrHqIw5CWTeIs+xPdP/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyFRFjaQtgmiP0jHTaIWWTWRgnOlUZOL4Yj9DF2f/9oADAMBAAIAAwAAABC/yH//xAAWEQEBAQAAAAAAAAAAAAAAAAABABD/2gAIAQMBAT8QYnP/xAAXEQADAQAAAAAAAAAAAAAAAAAAATEQ/9oACAECAQE/EEHSM//EAB0QAQEAAQQDAAAAAAAAAAAAAAERACExQVFhcZH/2gAIAQEAAT8QO0USMDa+3AVzrJp2POJLbl74uQRAJCEqt60+4JW2zCeNPOJurCuSscBoCjH3bggyVfccgz//2Q=="
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+                />
+                <picture>
+                  <source
+                    sizes="100vw"
+                    srcset="/static/ddeb0faace7a650dc777dcc61914b1de/c65bc/pietsie-atlin-6.webp 150w,/static/ddeb0faace7a650dc777dcc61914b1de/078c3/pietsie-atlin-6.webp 300w,/static/ddeb0faace7a650dc777dcc61914b1de/6d09e/pietsie-atlin-6.webp 600w"
+                    type="image/webp"
+                  />
+                  <img
+                    alt=""
+                    data-gatsby-image-ssr=""
+                    data-main-image=""
+                    decoding="async"
+                    loading="eager"
+                    sizes="100vw"
+                    src="/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg"
+                    srcset="/static/ddeb0faace7a650dc777dcc61914b1de/96deb/pietsie-atlin-6.jpg 150w,/static/ddeb0faace7a650dc777dcc61914b1de/0fdf4/pietsie-atlin-6.jpg 300w,/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg 600w"
+                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                  />
+                </picture>
+                <noscript />
+                <script
+                  type="module"
+                >
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                </script>
+              </div>
+            </li>
+            <li
+              class="sc-dIUggk"
+            >
+              <div
+                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+                data-gatsby-image-wrapper=""
+                style="display: inline-block; opacity: 1;"
+              >
+                <div
+                  style="max-width: 1px; display: block;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='0.9683333333333333' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    style="max-width: 100%; display: block; position: static;"
+                  />
+                </div>
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  data-placeholder-image=""
+                  decoding="async"
+                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAQFAQIDBv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGTwxET0zVLX15ZdCH/xAAbEAACAwEBAQAAAAAAAAAAAAABBAADERMjNP/aAAgBAQABBQJywgK2npHt2ve0b+dU+5n/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAcEAACAgIDAAAAAAAAAAAAAAABAgAQESFBUXH/2gAIAQEABj8CCdwJnVKeIuKPogr/xAAeEAACAgEFAQAAAAAAAAAAAAAAAREhMRBRYZGx8P/aAAgBAQABPyFSoi7YuzaqWi1+MTyRNzmBuz6G4zv8Gs//2gAMAwEAAgADAAAAEPvPPf/EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEDAQE/EFj/xAAXEQEBAQEAAAAAAAAAAAAAAAABEBEx/9oACAECAQE/EAMhyf/EABsQAQADAQADAAAAAAAAAAAAAAEAESFRMeHw/9oACAEBAAE/EDVoqjcSq5GabEMF2LFFaHWYW8Mq0pAAvnuGKOcoV/FEvs//2Q=="
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+                />
+                <picture>
+                  <source
+                    sizes="100vw"
+                    srcset="/static/6767260d2590b3fb8d50c6b995c829a8/6bc6e/pietsie-atlin-5.webp 150w,/static/6767260d2590b3fb8d50c6b995c829a8/50a0d/pietsie-atlin-5.webp 300w,/static/6767260d2590b3fb8d50c6b995c829a8/68747/pietsie-atlin-5.webp 600w"
+                    type="image/webp"
+                  />
+                  <img
+                    alt=""
+                    data-gatsby-image-ssr=""
+                    data-main-image=""
+                    decoding="async"
+                    loading="eager"
+                    sizes="100vw"
+                    src="/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg"
+                    srcset="/static/6767260d2590b3fb8d50c6b995c829a8/72c97/pietsie-atlin-5.jpg 150w,/static/6767260d2590b3fb8d50c6b995c829a8/4a85a/pietsie-atlin-5.jpg 300w,/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg 600w"
+                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                  />
+                </picture>
+                <noscript />
+                <script
+                  type="module"
+                >
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                </script>
+              </div>
+            </li>
+            <li
+              class="sc-dIUggk"
+            >
+              <div
+                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+                data-gatsby-image-wrapper=""
+                style="display: inline-block; opacity: 1;"
+              >
+                <div
+                  style="max-width: 1px; display: block;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.5' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    style="max-width: 100%; display: block; position: static;"
+                  />
+                </div>
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  data-placeholder-image=""
+                  decoding="async"
+                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAFAokE2MpmTswd3H//EABsQAAICAwEAAAAAAAAAAAAAAAECAxEAEhMh/9oACAEBAAEFAmw10ktmLnkrMWY+tEwSOMhdbLVreFRf/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8BIf/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABsQAAMAAgMAAAAAAAAAAAAAAAABERAxIVFh/9oACAEBAAY/Aq0L0pWzvDr4NoY6jSx//8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyHFXhODCeh5mYIDYzLnYW+xF9JSTQghRvext7DfZwByeZJbb3yf/9oADAMBAAIAAwAAABAYDwD/xAAXEQEBAQEAAAAAAAAAAAAAAAAAESEx/9oACAEDAQE/EEdVr//EABcRAQEBAQAAAAAAAAAAAAAAABEQIQH/2gAIAQIBAT8QXeRwn//EAB4QAQEAAgICAwAAAAAAAAAAAAERACExQWFxkbHR/9oACAEBAAE/EKT2k0Qn5kKCRE1OE9dYIUicsMWobHZcHjHPWeeuMhWiEXxhbZVLhLAqE3Zo+s7Z0jifKgdc50rOTqOOIlpN4/Of/9k="
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+                />
+                <picture>
+                  <source
+                    sizes="100vw"
+                    srcset="/static/cf70b8d2ec726c940b9c1d1caede05e9/4c6e4/elaina_midland-2.webp 150w,/static/cf70b8d2ec726c940b9c1d1caede05e9/8e42d/elaina_midland-2.webp 300w,/static/cf70b8d2ec726c940b9c1d1caede05e9/e1ec2/elaina_midland-2.webp 600w"
+                    type="image/webp"
+                  />
+                  <img
+                    alt=""
+                    data-gatsby-image-ssr=""
+                    data-main-image=""
+                    decoding="async"
+                    loading="eager"
+                    sizes="100vw"
+                    src="/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg"
+                    srcset="/static/cf70b8d2ec726c940b9c1d1caede05e9/fa2a5/elaina_midland-2.jpg 150w,/static/cf70b8d2ec726c940b9c1d1caede05e9/cdddd/elaina_midland-2.jpg 300w,/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg 600w"
+                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                  />
+                </picture>
+                <noscript />
+                <script
+                  type="module"
+                >
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                </script>
+              </div>
+            </li>
+            <li
+              class="sc-dIUggk"
+            >
+              <div
+                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+                data-gatsby-image-wrapper=""
+                style="display: inline-block; opacity: 1;"
+              >
+                <div
+                  style="max-width: 1px; display: block;"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    style="max-width: 100%; display: block; position: static;"
+                  />
+                </div>
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  data-placeholder-image=""
+                  decoding="async"
+                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+                />
+                <picture>
+                  <source
+                    sizes="100vw"
+                    srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/c65bc/pietsie-atlin-blouse.webp 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/078c3/pietsie-atlin-blouse.webp 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/6d09e/pietsie-atlin-blouse.webp 600w"
+                    type="image/webp"
+                  />
+                  <img
+                    alt=""
+                    data-gatsby-image-ssr=""
+                    data-main-image=""
+                    decoding="async"
+                    loading="eager"
+                    sizes="100vw"
+                    src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg"
+                    srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w"
+                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                  />
+                </picture>
+                <noscript />
+                <script
+                  type="module"
+                >
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                </script>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="sc-fodVxV lbzmpy"
+        >
+          <label
+            class="sc-hBEYos gMLomm"
+            for="size"
+          >
+            size
+          </label>
+          <select
+            class="sc-kstrdz eOpnUf"
+            id="size"
+          >
+            <option
+              selected=""
+              value=""
+            >
+              select an option
+            </option>
+            <option
+              value="small"
+            >
+              small
+            </option>
+            <option
+              value="medium"
+            >
+              medium
+            </option>
+            <option
+              value="large"
+            >
+              large
+            </option>
+          </select>
+        </div>
+        <div
+          class="sc-fodVxV lbzmpy"
+        >
+          <label
+            class="sc-hBEYos gMLomm"
+            for="color"
+          >
+            color
+          </label>
+          <select
+            class="sc-kstrdz eOpnUf"
+            id="color"
+          >
+            <option
+              selected=""
+              value=""
+            >
+              select an option
+            </option>
+            <option
+              value="blue"
+            >
+              blue
+            </option>
+            <option
+              value="grey"
+            >
+              grey
+            </option>
+            <option
+              value="black"
+            >
+              black
+            </option>
+          </select>
+        </div>
+        <button
+          class="sc-fFubgz heOAWB snipcart-add-item"
+          data-item-custom1-name="size"
+          data-item-custom1-options="small|medium|large"
+          data-item-custom2-name="color"
+          data-item-custom2-options="blue|grey|black"
+          data-item-description="Pietsie Campbell creates all of her garments out of deadstock, vintage fabrics, and natural fibers. Each collection is made in sunny California and embodies the effortlessly chic look we all strive for. Our favorite loose, flowing blouse in a cotton and linen blend. Slightly fitted across the shoulders. Wear tucked or loose, with the sleeves rolled up or down. Delicate pleating at shoulders, bell sleeves, pleated cuffs. Trapeze shape, easy fit. Pulls over, vintage shell buttons on a placket that ends mid way. Delicate hand-pleated detail on chest, stand-up prairie collar."
+          data-item-id="pietsie-atlin-blouse"
+          data-item-image=""
+          data-item-name="Pietsie Atlin Blouse"
+          data-item-price="240"
+          data-item-url="/pietsie-atlin-blouse/"
+        >
+          Add to Cart
+        </button>
+        <section
+          class="sc-bBXqnf jeUMqg"
+        >
+          <h2
+            class="sc-iwyYcG elVgQC"
+          >
+            Description
+          </h2>
+          <div
+            class="sc-cxFLnm jewTNR"
+          >
+            <p>
+              test html
+            </p>
+          </div>
+        </section>
+      </div>
     </main>
   </div>
   <footer
@@ -588,22 +682,22 @@ exports[`Product Component matches snapshot 1`] = `
         Categories
       </h5>
       <a
-        href="/"
+        href="/about/"
       >
         About Us
       </a>
       <a
-        href="/"
+        href="/clothing/"
       >
         Clothing
       </a>
       <a
-        href="/"
+        href="/home/"
       >
         Home
       </a>
       <a
-        href="/"
+        href="/accessories/"
       >
         Accessories
       </a>
@@ -644,7 +738,7 @@ exports[`Product Component matches snapshot 1`] = `
         Terms & Conditions
       </h5>
       <a
-        href="/"
+        href="/returns"
       >
         Returns
       </a>
