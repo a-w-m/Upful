@@ -9,11 +9,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import Footer from "./footer"
-import "./layout.css"
+import Header from "./Header"
+import Footer from "./Footer"
 
-import { Container, MainWrapper, Main } from "./layout.styled"
+
+import { Container, MainWrapper, Main} from "./styled"
+import {GlobalStyle} from "./GlobalStyle"
+
 
 interface LayoutProps {
   children: React.ReactNode
@@ -31,6 +33,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   `)
 
   return (
+    <>
+    <GlobalStyle/>
     <Container>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <MainWrapper>
@@ -38,6 +42,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </MainWrapper>
       <Footer></Footer>
     </Container>
+    
+
+    </>
   )
 }
 

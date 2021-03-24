@@ -1,5 +1,5 @@
 import React, {SetStateAction, Dispatch} from 'react'
-import {Container} from "./hamburger.styled"
+import {Container} from "./styled"
 
 interface HamburgerProps {
     open: boolean

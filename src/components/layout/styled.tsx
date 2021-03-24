@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+
 export const Container = styled.div`
     position: relative;
     height: 100vh;
@@ -25,3 +26,4 @@ grid-area: main;
 export const Main = styled.main`
 
 `
+

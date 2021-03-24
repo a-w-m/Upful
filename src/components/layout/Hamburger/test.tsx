@@ -1,6 +1,6 @@
 import React from "react"
 import { fireEvent, render, screen, waitFor } from "@testing-library/react"
-import Hamburger from "./hamburger"
+import Hamburger from "."
 
 
 describe("Hamburger component", ()=>{

@@ -1,6 +1,6 @@
 import React  from 'react'
 import { fireEvent, render, screen } from "@testing-library/react"
-import Header from "./layout"
+import Header from ".."
 
 describe("Header component", () => {
   test("matches snapshot", () => {

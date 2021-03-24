@@ -3,7 +3,7 @@ import {Button} from "./styled"
 
 interface Props{
     'data-item-id': String,
-    'data-item-price': number,
+    'data-item-price': String
     'data-item-url': String,
     'data-item-name': String,
     'data-item-description': String,

@@ -7,7 +7,7 @@ import {
   CopyrightWrapper,
   Heading,
   Address
-} from "./footer.styled"
+} from "./styled"
 import {Link} from 'gatsby'
 
 const Footer: React.FC<{}> = () => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useReducer, useState } from "react"
 import { graphql } from "gatsby"
-import Layout from "../../layout/layout"
+import Layout from "../../layout"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
@@ -75,11 +75,11 @@ const Product: React.FC<P.Product> = ({ data }) => {
 
         <BuyButton
           data-item-id={id}
-          data-item-price={price}
+          data-item-price={price.toFixed(2)}
           data-item-name={title}
           data-item-description={description}
-          data-item-image={""}
-          data-item-url={slug}
+          data-item-image={images[0].node.childImageSharp.gatsbyImageData.images.fallback?.src ||""}
+          data-item-url={`${slug}`}
           data-item-custom1-name={customField1?.name}
           data-item-custom1-options={createOptionsString(
             customField1?.values ?? []

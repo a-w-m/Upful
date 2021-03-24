@@ -2,15 +2,15 @@ import PropTypes from 'prop-types'
 import React from 'react'
 const {useState, useRef} = React
 
-import Hamburger from "./hamburger"
-import Nav from "./Nav"
+import Hamburger from "../Hamburger"
+import Nav from "../Nav"
 import {
   HeaderContainer,
   LinkWrapper,
   TitleWrapper,
   TitleLink,
-} from "./header.styled"
-import useOnClickOutside from "../../hooks/useOnClickOutside"
+} from "./styled"
+import useOnClickOutside from "../../../hooks/useOnClickOutside"
 
 interface HeaderProps {
   siteTitle: String

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Menu} from "./nav.styled"
+import {Menu} from "./styled"
 import {Link} from 'gatsby'
 
 interface NavProps{

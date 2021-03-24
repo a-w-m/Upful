@@ -1,3 +1,4 @@
+const {template} = require("./src/snipcart/templates.tsx")
 module.exports = {
   siteMetadata: {
     title: `StoreFront`,
@@ -62,13 +63,18 @@ module.exports = {
     },
 
     {
-      resolve: "gatsby-plugin-snipcart",
+      resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
-        apiKey:
-          "ZWY0M2E5YjQtMGZkNi00MDc5LWI1OTMtN2RhNmExNWQ3ODJlNjM3NDQ4NTE1OTE0MDAwMTAz",
-        autopop: true,
+          version: '3.0.28',
+          publicApiKey: process.env.SNIPCART_API_KEY,
+          defaultLang: 'en',
+          currency: 'usd',
+          openCartOnAdd: true,
+          locales: "en",
+          innerHTML: `${template}`
       },
-    },
+  },
+
 
     "gatsby-transformer-remark",
     `gatsby-plugin-image`,
