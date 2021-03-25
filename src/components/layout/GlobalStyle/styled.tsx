@@ -15,8 +15,6 @@ export const globalCSS = css`
   --secondary-color: #4f4f4f;
   --border-color: #dda;
   --main-bg: #fff;
-  --cart-brown: #81550d;
-
 }
 
 

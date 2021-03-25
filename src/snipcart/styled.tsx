@@ -3,6 +3,8 @@ import {css} from 'styled-components'
 export const snipcart = css`
 :root{
 --cart-billing-verification-bg: #f9f5f5;
+--cart-brown: #81550d;
+
 }
 
 /*cart-background*/
@@ -72,7 +74,7 @@ div > .snipcart-item-line{
 //billing step 2
 .snipcart__box--title > .snipcart__box--badge-highlight {
 	background: var(--cart-brown);
-	color: #fff;
+	color: var(--main-bg);
 
 }
 
@@ -100,12 +102,12 @@ footer > .snipcart-cart-button {
 
 /*top border first cart item*/
 .snipcart-layout__content > .snipcart-cart__content{
-  border-top: 1px solid #dda;
+  border-top: 1px solid var(--border-color);
 }
 
 /*border-bottom-cart-item*/
 .snipcart-item-line> .snipcart-item-line__container{
-  border-bottom: 1px solid #dda;
+  border-bottom: 1px solid var(--border-color);
 }
 
 
@@ -148,6 +150,23 @@ footer > .snipcart-cart-button {
 
 .snipcart-item-line__variants > .snipcart-item-quantity > label{
   font-size: 1.4rem;
+}
+
+//order confirmation page
+
+//cart-icon
+.snipcart-order__details-title > svg > path{
+  fill: var(--cart-brown)
+}
+
+//billing-icon
+.snipcart-billing-completed__title > svg > path{
+  fill: var(--cart-brown)
+}
+
+//credit-card-icon
+.snipcart-order__title > svg > path {
+  fill: var(--cart-brown)
 }
 
 `
