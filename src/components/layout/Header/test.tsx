@@ -29,22 +29,22 @@ describe("Header component", () => {
   // })
 })
 
-describe("click outside toggle menu", () => {
-  test("Nav remains visible when clicking inside component ", () => {
-    render(<Header children="" />)
-    const Button = screen.getByRole("button")
-    const Nav = screen.getAllByRole("navigation", { hidden: true })[0]
-    fireEvent.click(Button)
-    fireEvent.click(Nav)
-    expect(Nav).toBeVisible()
-  })
+// describe("click outside toggle menu", () => {
+//   test("Nav remains visible when clicking inside component ", () => {
+//     render(<Header children="" />)
+//     const Button = screen.getByRole("button")
+//     const Nav = screen.getAllByRole("navigation", { hidden: true })[0]
+//     fireEvent.click(Button)
+//     fireEvent.click(Nav)
+//     expect(Nav).toBeVisible()
+//   })
 
-  test("Nav is not visible when clicking outside component", () => {
-    render(<Header children="" />)
-    const Button = screen.getByRole("button")
-    const Nav = screen.getAllByRole("navigation", { hidden: true })[0]
-    fireEvent.click(Button)
-    fireEvent.mouseDown(document.body)
-    expect(Nav).not.toBeVisible()
-  })
-})
+//   test("Nav is not visible when clicking outside component", () => {
+//     render(<Header children="" />)
+//     const Button = screen.getByRole("button")
+//     const Nav = screen.getAllByRole("navigation", { hidden: true })[0]
+//     fireEvent.click(Button)
+//     fireEvent.mouseDown(Button)
+//     expect(Nav).not.toBeVisible()
+//   })
+// })

@@ -13,7 +13,7 @@ exports[`ImageGallery Component matches snapshot 1`] = `
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="display: inline-block; opacity: 1;"
+        style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
       >
         <div
           style="max-width: 1px; display: block;"
@@ -66,7 +66,7 @@ exports[`ImageGallery Component matches snapshot 1`] = `
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="display: inline-block; opacity: 1;"
+        style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
       >
         <div
           style="max-width: 1px; display: block;"

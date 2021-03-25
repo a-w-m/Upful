@@ -13,7 +13,7 @@ exports[`ProductGrid component matches snapshot 1`] = `
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="display: inline-block;"
+        style="position: relative; overflow: hidden; display: inline-block;"
       >
         <div
           style="max-width: 1024px; display: block;"
@@ -75,7 +75,7 @@ exports[`ProductGrid component matches snapshot 1`] = `
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="display: inline-block;"
+        style="position: relative; overflow: hidden; display: inline-block;"
       >
         <div
           style="max-width: 1024px; display: block;"
@@ -137,7 +137,7 @@ exports[`ProductGrid component matches snapshot 1`] = `
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="display: inline-block;"
+        style="position: relative; overflow: hidden; display: inline-block;"
       >
         <div
           style="max-width: 1024px; display: block;"
@@ -199,7 +199,7 @@ exports[`ProductGrid component matches snapshot 1`] = `
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="display: inline-block;"
+        style="position: relative; overflow: hidden; display: inline-block;"
       >
         <div
           style="max-width: 1024px; display: block;"
@@ -261,7 +261,7 @@ exports[`ProductGrid component matches snapshot 1`] = `
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="display: inline-block;"
+        style="position: relative; overflow: hidden; display: inline-block;"
       >
         <div
           style="max-width: 1024px; display: block;"
@@ -330,7 +330,7 @@ exports[`ProductGrid component matches snapshot 1`] = `
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="display: inline-block;"
+        style="position: relative; overflow: hidden; display: inline-block;"
       >
         <div
           style="max-width: 1024px; display: block;"
@@ -399,7 +399,7 @@ exports[`ProductGrid component matches snapshot 1`] = `
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
         data-gatsby-image-wrapper=""
-        style="display: inline-block;"
+        style="position: relative; overflow: hidden; display: inline-block;"
       >
         <div
           style="max-width: 1024px; display: block;"

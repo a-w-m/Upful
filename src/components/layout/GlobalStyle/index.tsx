@@ -1,9 +1,9 @@
 import {createGlobalStyle} from 'styled-components'
-import {global} from "./styled"
+import {globalCSS} from "./styled"
 import {snipcart} from '../../../snipcart/styled'
 
 
 export const GlobalStyle = createGlobalStyle`
-${global}
+${globalCSS}
 ${snipcart}
 `

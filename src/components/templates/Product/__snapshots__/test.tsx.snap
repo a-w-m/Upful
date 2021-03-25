@@ -86,7 +86,7 @@ exports[`Product Component matches snapshot 1`] = `
         <div
           class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
           data-gatsby-image-wrapper=""
-          style="display: inline-block; opacity: 1;"
+          style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
         >
           <div
             style="max-width: 1px; display: block;"
@@ -144,7 +144,7 @@ exports[`Product Component matches snapshot 1`] = `
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
               >
                 <div
                   style="max-width: 1px; display: block;"
@@ -197,7 +197,7 @@ exports[`Product Component matches snapshot 1`] = `
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
               >
                 <div
                   style="max-width: 1px; display: block;"
@@ -250,7 +250,7 @@ exports[`Product Component matches snapshot 1`] = `
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
               >
                 <div
                   style="max-width: 1px; display: block;"
@@ -303,7 +303,7 @@ exports[`Product Component matches snapshot 1`] = `
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
               >
                 <div
                   style="max-width: 1px; display: block;"
@@ -356,7 +356,7 @@ exports[`Product Component matches snapshot 1`] = `
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
               >
                 <div
                   style="max-width: 1px; display: block;"
@@ -409,7 +409,7 @@ exports[`Product Component matches snapshot 1`] = `
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
               >
                 <div
                   style="max-width: 1px; display: block;"
@@ -462,7 +462,7 @@ exports[`Product Component matches snapshot 1`] = `
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
               >
                 <div
                   style="max-width: 1px; display: block;"
@@ -515,7 +515,7 @@ exports[`Product Component matches snapshot 1`] = `
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
               >
                 <div
                   style="max-width: 1px; display: block;"
@@ -637,16 +637,16 @@ exports[`Product Component matches snapshot 1`] = `
           </select>
         </div>
         <button
-          class="sc-fFubgz heOAWB snipcart-add-item"
+          class="sc-fFubgz bhOtJp snipcart-add-item"
           data-item-custom1-name="size"
           data-item-custom1-options="small|medium|large"
           data-item-custom2-name="color"
           data-item-custom2-options="blue|grey|black"
           data-item-description="Pietsie Campbell creates all of her garments out of deadstock, vintage fabrics, and natural fibers. Each collection is made in sunny California and embodies the effortlessly chic look we all strive for. Our favorite loose, flowing blouse in a cotton and linen blend. Slightly fitted across the shoulders. Wear tucked or loose, with the sleeves rolled up or down. Delicate pleating at shoulders, bell sleeves, pleated cuffs. Trapeze shape, easy fit. Pulls over, vintage shell buttons on a placket that ends mid way. Delicate hand-pleated detail on chest, stand-up prairie collar."
           data-item-id="pietsie-atlin-blouse"
-          data-item-image=""
+          data-item-image="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg"
           data-item-name="Pietsie Atlin Blouse"
-          data-item-price="240"
+          data-item-price="240.00"
           data-item-url="/pietsie-atlin-blouse/"
         >
           Add to Cart

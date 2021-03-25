@@ -1,7 +1,7 @@
 import {css} from 'styled-components'
 
 
-export const global = css`
+export const globalCSS = css`
 :root{
   font-size: 10px; 
   --main-font-size: 1.4rem;
