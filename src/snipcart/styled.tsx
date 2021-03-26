@@ -175,7 +175,7 @@ footer > .snipcart-cart-button {
 }
 
 //order-summary-box
-.snipcart-order__details >.snipcart-order__box {
+div>.snipcart-order__box {
 	margin-bottom: 1px;
 	border-bottom: 1px solid var(--border-color);
 }
