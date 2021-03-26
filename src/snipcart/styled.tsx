@@ -78,6 +78,12 @@ div > .snipcart-item-line{
 
 }
 
+//payment step 2
+.snipcart__box--title > .snipcart__box--badge {
+	background: var(--cart-brown);
+	color: var(--main-bg);
+}
+
 #snipcart-checkout-step-billing > .snipcart__box {
     background-color: var(--cart-billing-verification-bg)
 }
