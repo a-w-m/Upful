@@ -71,14 +71,13 @@ div > .snipcart-item-line{
     color: var(--cart-brown)
 }
 
-//billing step 2
-.snipcart__box--title > .snipcart__box--badge-highlight {
-	background: var(--cart-brown);
-	color: var(--main-bg);
+//cart-form submission checkmark
+.snipcart__box--title > .snipcart__box--badge > svg > path {
+	fill: var(--main-bg)
 
 }
 
-//payment step 2
+//billing step 1 and payment step 2
 .snipcart__box--title > .snipcart__box--badge {
 	background: var(--cart-brown);
 	color: var(--main-bg);
@@ -173,6 +172,12 @@ footer > .snipcart-cart-button {
 //credit-card-icon
 .snipcart-order__title > svg > path {
   fill: var(--cart-brown)
+}
+
+//order-summary-box
+.snipcart-order__details >.snipcart-order__box {
+	margin-bottom: 1px;
+	border-bottom: 1px solid var(--border-color);
 }
 
 `
