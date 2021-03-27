@@ -25,25 +25,11 @@ collections:
           media_folder: "images",
         }
       - { label: "Price", name: "price", widget: "number" }
-      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Description", name: "body", widget: "markdown" }
       - {
           label: "Featured",
           name: "featured",
           widget: "boolean",
           default: false,
         }
-      - label: "Custom Field"
-        name: "customField1"
-        widget: "object"
-        fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - label: "Values"
-            name: "values"
-            widget: "list"
-            fields:
-              - label: "Value"
-              - name: "value"
-              - widget: "object"
-                fields:
-                  - { label: Name, name: name, widget: string }
-                  - { label: Price Change, name: priceChange, widget: quantity }
+      
