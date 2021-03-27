@@ -9,6 +9,7 @@ import {
 import { graphql } from "gatsby"
 import { C } from "../components/interfaces"
 
+
 const IndexPage: React.FC<C.CategoryPage> = ({ data }) => {
   return (
     <Layout>
