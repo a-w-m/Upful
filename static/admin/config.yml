@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: develop # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow
 
 media_folder: static/assets
 public_folder: /assets
@@ -10,7 +9,7 @@ collections:
   - name: "clothing"
     label: "Clothing"
     folder: "src/markdown/products/clothing"
-    path: "{{slug}}/{{slug}}"
+    path: "{{slug}}/index"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
