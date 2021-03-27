@@ -9,8 +9,8 @@ public_folder: /assets
 collections:
   - name: "clothing"
     label: "Clothing"
-    folder: "src/markdown/products"
-    path: "clothing/{{slug}}/"
+    folder: "src/markdown/products/clothing"
+    path: "{{slug}}/"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
