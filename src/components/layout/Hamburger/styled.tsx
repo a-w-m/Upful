@@ -1,19 +1,19 @@
 import styled from "styled-components"
 
 export const Container = styled.button<{ open: boolean }>`
-  position: absolute;
-  top: 2.5%;
-  left: 2rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
+  width: 3rem;
   height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  padding-bottom: 0.1rem;
+  margin-left: 2rem;
 
   &:focus {
     outline: none;
@@ -21,12 +21,12 @@ export const Container = styled.button<{ open: boolean }>`
 
   div {
     width: 2.4rem;
-    height: .4rem;
+    height: 0.2rem;
     background: #000;
     border-radius: 1rem;
     transition: all 0.3s linear;
     position: relative;
-    transform-origin: .25rem;
+    transform-origin: 0.3rem;
 
     :first-child {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};

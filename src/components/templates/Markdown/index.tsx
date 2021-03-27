@@ -4,9 +4,9 @@ import SEO from "../../seo"
 import styled from "styled-components"
 
 export const Container = styled.div`
-& > * {
-    font-family: var(--main-font)
-}
+  & > * {
+    font-family: var(--main-font);
+  }
 `
 
 export interface MarkdownHTMLProps {
@@ -23,8 +23,8 @@ const Markdown: React.FC<MarkdownHTMLProps> = ({ data }) => {
   const { html } = data.file.childMarkdownRemark
   return (
     <Layout>
-      <SEO/>
-      <Container dangerouslySetInnerHTML={{ __html: html }}/>
+      <SEO />
+      <Container dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }

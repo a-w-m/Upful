@@ -89,5 +89,4 @@ const template = `<item-line showDescription="false">
 </div>
 </item-line>`
 
-
-module.exports = {template}
+module.exports = { template }

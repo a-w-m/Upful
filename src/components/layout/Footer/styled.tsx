@@ -1,21 +1,21 @@
 import styled from "styled-components"
 
 export const FooterContainer = styled.footer`
-grid-area: footer;
-display: flex;
+  grid-area: footer;
+  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   background-color: #153325;
-  padding: .5rem;
+  padding: 0.5rem;
 
-  & >nav{
-     margin: .5rem; 
+  & > nav {
+    margin: 0.5rem;
   }
 
-  & > div{
-      margin: .5rem;
+  & > div {
+    margin: 0.5rem;
   }
 `
 
@@ -46,12 +46,12 @@ export const TermsWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-a{
+  a {
     font-size: 1.2rem;
     color: #989898;
     text-decoration: none;
     line-height: 1rem;
-}
+  }
 `
 
 export const CopyrightWrapper = styled.div`
@@ -72,8 +72,8 @@ export const Address = styled.address`
   font-style: normal;
   line-height: 2.1rem;
 
-  a{
-      text-decoration: underline;
-      color: #989898;
+  a {
+    text-decoration: underline;
+    color: #989898;
   }
 `

@@ -47,22 +47,22 @@ const Options: React.FC<OptionProps> = ({
 export default Options
 
 export const query = graphql`
-fragment CustomFields on MarkdownRemark{
-  frontmatter{
-    customField1{
-      name
-      values{
+  fragment CustomFields on MarkdownRemark {
+    frontmatter {
+      customField1 {
         name
-        priceChange
-      }
-    }
-      customField2{
-        name
-        values{
+        values {
           name
           priceChange
         }
       }
+      customField2 {
+        name
+        values {
+          name
+          priceChange
+        }
+      }
+    }
   }
-}
 `

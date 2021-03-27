@@ -1,27 +1,77 @@
-import React  from 'react'
+import React from "react"
 import styled from "styled-components"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 
 export const HeaderContainer = styled.header`
-  
   margin-bottom: 1.45rem;
+  padding-top: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   display: flex;
   justify-content: space-between;
-  grid-area: header
+  grid-area: header;
+  flex-wrap: wrap;
+  align-items: flex-end;
 `
 
-export const TitleWrapper = styled.div`
-  margin: 0 auto;
+export const LogoContainer = styled.div`
   max-width: 960;
-  padding: 1.45rem 1.0875rem;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
 `
+
+export const LogoWrapper = styled.div`
+  flex-basis: 25%;
+`
+
 export const LinkWrapper = styled.h1`
   margin: 0;
   font-family: var(--main-font);
-
 `
 
-export const TitleLink = styled(props => <Link {...props}/>)`
- color: #000;
-text-decoration: none;
+export const TitleLink = styled(props => <Link {...props} />)`
+  color: #000;
+  text-decoration: none;
+`
+
+export const CartContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+`
+export const Checkout = styled.button`
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 1rem;
+  padding-left: 2.7rem;
+  color: #666;
+  font-family: Open Sans, sans-serif;
+  font-family: var(--fontFamily);
+  margin-left: 1rem;
+  font-weight: 700;
+`
+
+export const Count = styled.span`
+  align-self: flex-end;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2rem;
 `

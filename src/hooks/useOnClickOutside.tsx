@@ -1,24 +1,24 @@
-import React, {useEffect} from "react"
+import React, { useEffect } from "react"
 
-const useOnClickOutside = (ref:React.RefObject<HTMLInputElement>, handler:(event:Event)=> void): void =>  {
-    
-    useEffect(()=>{
-        const listener = (event:Event) =>{
+const useOnClickOutside = (
+  ref: React.RefObject<HTMLInputElement>,
+  handler: (event: Event) => void
+): void => {
+  useEffect(() => {
+    const listener = (event: Event) => {
+      if (!ref.current || ref.current.contains(event.target as HTMLElement)) {
+        return
+      }
 
-            if((!ref.current) || ref.current.contains(event.target as HTMLElement)){
-                return
-            }
+      handler(event)
+    }
 
-            handler(event)
-        }
+    document.addEventListener("mousedown", listener)
 
-        document.addEventListener('mousedown', listener)
-
-
-        return () =>{
-            document.removeEventListener('mousedown', listener)
-        }
-    }, [ref, handler])
+    return () => {
+      document.removeEventListener("mousedown", listener)
+    }
+  }, [ref, handler])
 }
 
 export default useOnClickOutside

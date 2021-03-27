@@ -12,10 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header"
 import Footer from "./Footer"
 
-
-import { Container, MainWrapper, Main} from "./styled"
-import {GlobalStyle} from "./GlobalStyle"
-
+import { Container, MainWrapper, Main } from "./styled"
+import { GlobalStyle } from "./GlobalStyle"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -34,16 +32,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <>
-    <GlobalStyle/>
-    <Container>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <MainWrapper>
-        <Main>{children}</Main>
-      </MainWrapper>
-      <Footer></Footer>
-    </Container>
-    
-
+      <GlobalStyle />
+      <Container>
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <MainWrapper>
+          <Main>{children}</Main>
+        </MainWrapper>
+        <Footer></Footer>
+      </Container>
     </>
   )
 }

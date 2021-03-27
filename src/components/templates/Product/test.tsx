@@ -6,7 +6,6 @@ import {
   pageQueryDataNullCustomFields,
 } from "../../../../__mocks__/mock-data"
 
-
 describe("Product Component", () => {
   test("matches snapshot", () => {
     const { container } = render(<Product data={pageQueryData.data} />)
@@ -37,12 +36,10 @@ describe("Product Component", () => {
     })
   })
 
-
-  test("Button has no custom value attributes when first rendered", ()=>{
+  test("Button has no custom value attributes when first rendered", () => {
     render(<Product data={pageQueryData.data} />)
     const button = screen.getByText("Add to Cart")
     expect(button).not.toHaveAttribute("data-item-custom1-value")
     expect(button).not.toHaveAttribute("data-item-custom2-value")
-
   })
 })

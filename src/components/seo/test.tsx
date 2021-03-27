@@ -19,7 +19,7 @@ describe("SEO component", () => {
 
   test("should render correct meta data for home page", () => {
     render(<SEO />)
-    const helmet:any = Helmet.peek()
+    const helmet: any = Helmet.peek()
 
     expect(helmet.title).toBe(siteTitle)
 

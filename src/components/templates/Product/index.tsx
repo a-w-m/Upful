@@ -61,10 +61,7 @@ const Product: React.FC<P.Product> = ({ data }) => {
           alt=""
           style={{ opacity: 1 }}
         />
-        <ImageGallery
-          images={images}
-          dispatch={dispatch}
-        ></ImageGallery>
+        <ImageGallery images={images} dispatch={dispatch}></ImageGallery>
 
         {customField1 && (
           <Options customField={customField1} dispatch={dispatch}></Options>
@@ -78,7 +75,10 @@ const Product: React.FC<P.Product> = ({ data }) => {
           data-item-price={price.toFixed(2)}
           data-item-name={title}
           data-item-description={description}
-          data-item-image={images[0].node.childImageSharp.gatsbyImageData.images.fallback?.src ||""}
+          data-item-image={
+            images[0].node.childImageSharp.gatsbyImageData.images.fallback
+              ?.src || ""
+          }
           data-item-url={`${slug}`}
           data-item-custom1-name={customField1?.name}
           data-item-custom1-options={createOptionsString(

@@ -1,4 +1,4 @@
-const {template} = require("./src/snipcart/templates.tsx")
+const { template } = require("./src/snipcart/templates.tsx")
 module.exports = {
   siteMetadata: {
     title: `StoreFront`,
@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/markdown/products/accessories`,
-        name: `accessories`
+        name: `accessories`,
       },
     },
 
@@ -29,7 +29,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/markdown/products/home`,
-        name: `home`
+        name: `home`,
       },
     },
 
@@ -37,7 +37,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/markdown/products/clothing`,
-        name: `clothing`
+        name: `clothing`,
       },
     },
 
@@ -45,7 +45,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/markdown/pages`,
-        name: `pages`
+        name: `pages`,
       },
     },
 
@@ -65,16 +65,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
-          version: '3.0.28',
-          publicApiKey: process.env.SNIPCART_API_KEY,
-          defaultLang: 'en',
-          currency: 'usd',
-          openCartOnAdd: true,
-          locales: "en",
-          innerHTML: `${template}`
+        version: "3.0.28",
+        publicApiKey: process.env.SNIPCART_API_KEY,
+        defaultLang: "en",
+        currency: "usd",
+        openCartOnAdd: true,
+        locales: "en",
+        innerHTML: `${template}`,
       },
-  },
-
+    },
 
     "gatsby-transformer-remark",
     `gatsby-plugin-image`,
@@ -84,11 +83,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Quicksand\:400, 700`,
-        ],
-        display: 'block'
-      }
+        fonts: [`Quicksand\:400, 700`],
+        display: "block",
+      },
     },
   ],
 }

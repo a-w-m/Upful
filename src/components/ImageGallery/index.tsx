@@ -1,5 +1,5 @@
 import React from "react"
-import {graphql} from 'gatsby'
+import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { P } from "../interfaces/index"
 import { Wrapper, UL, LI } from "./styled"
@@ -44,13 +44,13 @@ const ImageGallery: React.FC<Props> = props => {
 }
 
 export const imageQuery = graphql`
-  fragment ImageGalleryFragment on ImageSharp{
-  gatsbyImageData(
-    width: 1024
-    aspectRatio: 1
-    transformOptions: { fit: CONTAIN }
-    backgroundColor: "white"
-  )
+  fragment ImageGalleryFragment on ImageSharp {
+    gatsbyImageData(
+      width: 1024
+      aspectRatio: 1
+      transformOptions: { fit: CONTAIN }
+      backgroundColor: "white"
+    )
   }
 `
 

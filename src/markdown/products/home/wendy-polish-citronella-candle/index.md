@@ -10,6 +10,7 @@ description: "Made with 100% citronella essential oil from Sri Lanka.
 Hand poured in 8oz glass vessel, cotton wicks + soy wax. Estimated burn time: 60 hours. When the candle is complete, repurpose the glass for a beverage. Made in LA by Wendy Polish of Le Feu de Leu."
 tags: [home]
 ---
+
 Made with 100% citronella essential oil from Sri Lanka.
 
 Hand poured in 8oz glass vessel, cotton wicks + soy wax. Estimated burn time: 60 hours. When the candle is complete, repurpose the glass for a beverage. Made in LA by Wendy Polish of Le Feu de Leu.

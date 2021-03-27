@@ -7,7 +7,11 @@ const ProductGrid: React.FC<C.Grid> = props => {
   return (
     <Container>
       {props.edges.map((edge, index) => {
-        const { title, price, image } = edge.node.childMarkdownRemark.frontmatter
+        const {
+          title,
+          price,
+          image,
+        } = edge.node.childMarkdownRemark.frontmatter
         const { slug } = edge.node.childMarkdownRemark.fields
 
         return (
@@ -16,7 +20,7 @@ const ProductGrid: React.FC<C.Grid> = props => {
             price={price}
             image={image}
             slug={slug}
-            key = {index}
+            key={index}
           ></ProductThumbnail>
         )
       })}
@@ -24,4 +28,3 @@ const ProductGrid: React.FC<C.Grid> = props => {
   )
 }
 export default ProductGrid
-

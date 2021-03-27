@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -28,11 +28,10 @@ const SEO: React.FC<SEOProps> = props => {
           url
           keywords
           image
-          meta
-            {
-              name
-              content
-            }
+          meta {
+            name
+            content
+          }
         }
       }
     }

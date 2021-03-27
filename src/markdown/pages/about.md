@@ -7,9 +7,9 @@ id: about
 
 ## Bis neque iudicium visa sibi sed et
 
-Lorem markdownum *cursus*, largoque natorum; convivia Arethusa non, non. Est
+Lorem markdownum _cursus_, largoque natorum; convivia Arethusa non, non. Est
 studioque Pallas: dentes: suspicor Aeas poterat receptus tamen. Femina flos
-saepe et adspirate *glacies*. Carmen propioris genu ademptam umeris praeceps
+saepe et adspirate _glacies_. Carmen propioris genu ademptam umeris praeceps
 frustra clamore adhuc est digreditur alas?
 
 - Videntur fontibus freta imagine utimur
