@@ -15,7 +15,7 @@ collections:
   - fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "ID", name: "date", widget: "string" }
+      - { label: "ID", name: "id", widget: "string" }
       - { label: "Category", name: "category", widget: "string" }
       - {
           label: "Images",
