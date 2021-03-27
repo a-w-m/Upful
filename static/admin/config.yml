@@ -8,11 +8,11 @@ public_folder: /assets
 
 collections:
   - name: "products"
-  - label: "Products"
-  - folder: "src/markdown/products"
-  - path: "{{category}}/{{title}}"
-  - create: true
-  - fields:
+    label: "Products"
+    folder: "src/markdown/products"
+    path: "{{category}}/{{title}}"
+    create: true
+    fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "ID", name: "id", widget: "string" }
@@ -32,4 +32,3 @@ collections:
           widget: "boolean",
           default: false,
         }
-      
