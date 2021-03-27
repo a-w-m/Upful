@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: develop # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: products
+  - label: Products
+  - folder: /src/markdown/products
+  - path: '{{category}}/{{title}}'
+  - create: true
+  - slug: {{slug}}
+  - fields:      
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "ID", name: "date", widget: "string"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Images", name: "images", widget: "image", allow-multiple: true, media_folder: "images"}
+      - {label: "Price", name: "price", widget: "number"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - label: "Custom Field"
+        name: "customField1"
+        widget: "object"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - label: "Values" 
+            name: "values"
+            widget: "list"
+            fields: 
+              - label: "Value"
+              - name: "value"
+              - widget: "object"
+                fields:
+                  - {label: Name, name: name, widget: string}
+                  - {label: Price Change, name: priceChange, widget: quantity}
