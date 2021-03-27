@@ -9,7 +9,7 @@ public_folder: /assets
 collections:
   - name: products
   - label: Products
-  - folder: /src/markdown/products
+  - folder: "src/markdown/products"
   - path: '{{category}}/{{title}}'
   - create: true
   - slug: {{slug}}
