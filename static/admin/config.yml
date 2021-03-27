@@ -7,33 +7,43 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: products
-  - label: Products
+  - name: "products"
+  - label: "Products"
   - folder: "src/markdown/products"
-  - path: '{{category}}/{{title}}'
+  - path: "{{category}}/{{title}}"
   - create: true
-  - slug: {{slug}}
-  - fields:      
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "ID", name: "date", widget: "string"}
-      - {label: "Category", name: "category", widget: "string"}
-      - {label: "Images", name: "images", widget: "image", allow-multiple: true, media_folder: "images"}
-      - {label: "Price", name: "price", widget: "number"}
-      - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+  - fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "ID", name: "date", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - {
+          label: "Images",
+          name: "images",
+          widget: "image",
+          allow-multiple: true,
+          media_folder: "images",
+        }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
       - label: "Custom Field"
         name: "customField1"
         widget: "object"
         fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - label: "Values" 
+          - { label: "Name", name: "name", widget: "string" }
+          - label: "Values"
             name: "values"
             widget: "list"
-            fields: 
+            fields:
               - label: "Value"
               - name: "value"
               - widget: "object"
                 fields:
-                  - {label: Name, name: name, widget: string}
-                  - {label: Price Change, name: priceChange, widget: quantity}
+                  - { label: Name, name: name, widget: string }
+                  - { label: Price Change, name: priceChange, widget: quantity }
