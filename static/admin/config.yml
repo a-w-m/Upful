@@ -10,7 +10,7 @@ collections:
   - name: "clothing"
     label: "Clothing"
     folder: "src/markdown/products/clothing"
-    path: "{{slug}}/"
+    path: "{{slug}}/{{slug}}"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
