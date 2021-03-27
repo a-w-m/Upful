@@ -7,21 +7,19 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: "products"
-    label: "Products"
+  - name: "clothing"
+    label: "Clothing"
     folder: "src/markdown/products"
-    path: "{{category}}/{{title}}/{{title}}"
+    path: "clothing/{{slug}}/"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "ID", name: "id", widget: "string" }
-      - { label: "Category", name: "category", widget: "string" }
+      - { label: "ID", name: "id", widget: "string", default: "{{slug}}" }
       - {
-          label: "Images",
-          name: "images",
+          label: "Thumbnail Image",
+          name: "image",
           widget: "image",
-          allow-multiple: true,
           media_folder: "images",
         }
       - { label: "Price", name: "price", widget: "number" }
