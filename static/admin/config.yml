@@ -14,13 +14,18 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "ID", name: "id", widget: "string", default: "{{slug}}" }
+      - { label: "Id", name: "id", widget: "string" }
       - {
           label: "Thumbnail Image",
           name: "image",
           widget: "image",
           media_folder: "images",
         }
+      - label: "Gallery"
+      name: "galleryImages"
+      widget: "list"
+      field:
+        - {label: "Image", name: "image", widget: "image", media_folder: "images" }
       - { label: "Price", name: "price", widget: "number" }
       - { label: "Description", name: "body", widget: "markdown" }
       - {
