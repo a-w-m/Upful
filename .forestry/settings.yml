@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: src/markdown/products/clothing
+  path: src/markdown/products
   label: Content
   create: all
   match: "**/*"
