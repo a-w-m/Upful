@@ -22,10 +22,15 @@ collections:
           media_folder: "images",
         }
       - label: "Gallery"
-      name: "galleryImages"
-      widget: "list"
-      field:
-        - {label: "Image", name: "image", widget: "image", media_folder: "images" }
+        name: "galleryImages"
+        widget: "list"
+        field:
+          {
+            label: "Image",
+            name: "image",
+            widget: "image",
+            media_folder: "images",
+          }
       - { label: "Price", name: "price", widget: "number" }
       - { label: "Description", name: "body", widget: "markdown" }
       - {
