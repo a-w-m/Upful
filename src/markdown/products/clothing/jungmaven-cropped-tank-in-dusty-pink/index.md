@@ -1,10 +1,22 @@
 ---
 title: " Jungmaven Cropped Tank in Dusty Pink "
 date: 2021-03-27T23:31:18.938Z
-id: "{{slug}}"
+id: " Jungmaven Cropped Tank in Dusty Pink "
 image: images/midland_spring_0577_960x1408.webp
 price: 44
 featured: false
+customField:
+  values:
+    - customOption:
+        option: small
+        priceChange: 0
+    - customOption:
+        option: medium
+        priceChange: 0
+    - customOption:
+        option: large
+        priceChange: 0
+  field: Size
 ---
 <!--StartFragment-->
 
