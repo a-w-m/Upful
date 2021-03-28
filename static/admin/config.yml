@@ -48,11 +48,7 @@ collections:
             name: "values"
             widget: "list"
             fields:
-              - label: "Custom Option"
-                name: "customOption"
-                widget: "object"
-                fields:
-                  - { label: "Option", name: "option", widget: "string" }
-                  - { label: "Price Change", name: "priceChange", widget: "number" }
+              - { label: "Option", name: "option", widget: "string" }
+              - { label: "Price Change", name: "priceChange", widget: "number" }
 
 
