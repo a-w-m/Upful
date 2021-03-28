@@ -53,6 +53,6 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "Option", name: "option", widget: "string" }
-                  - { label: "Price Change", name: "priceChange", widget: "quantity" }
+                  - { label: "Price Change", name: "priceChange", widget: "number" }
 
 
