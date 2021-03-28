@@ -5,13 +5,8 @@ backend:
 media_folder: static/assets
 public_folder: /assets
 
-collections:
-  - name: "clothing"
-    label: "Clothing"
-    folder: "src/markdown/products/clothing"
-    path: "{{slug}}/index"
-    create: true
-    fields:
+
+product: &PRODUCT
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Id", name: "id", widget: "string" }
@@ -52,3 +47,25 @@ collections:
               - { label: "Price Change", name: "priceChange", widget: "number" }
 
 
+
+collections:
+  - label: "clothing"
+    name: "Clothing"
+    folder: "src/markdown/products/clothing"
+    path: "{{slug}}/index"
+    create: true
+    fields: *PRODUCT
+  - label: "accessories"
+    name: "Accessories"
+    folder: "src/markdown/products/accessories"
+    path: "{{slug}}/index"
+    create: true
+    fields: *PRODUCT
+  - label: "home"
+    name: "Home"
+    folder: "src/markdown/products/home"
+    path: "{{slug}}/index"
+    create: true
+    fields: *PRODUCT
+
+      
