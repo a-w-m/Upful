@@ -7,15 +7,12 @@ price: 44
 featured: false
 customField:
   values:
-    - customOption:
-        option: small
-        priceChange: 0
-    - customOption:
-        option: medium
-        priceChange: 0
-    - customOption:
-        option: large
-        priceChange: 0
+    - option: small
+      priceChange: 0
+    - option: medium
+      priceChange: 0
+    - option: "large "
+      priceChange: 0
   field: Size
 ---
 <!--StartFragment-->
