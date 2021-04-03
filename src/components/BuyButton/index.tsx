@@ -14,10 +14,11 @@ interface Props {
   "data-item-custom2-name"?: String
   "data-item-custom2-options"?: String
   "data-item-custom2-value"?: String
+  "data-item-weight": number
 }
 
 const BuyButton: React.FC<Props> = (props: Props) => {
-  return <Button className="snipcart-add-item" {...props}></Button>
+  return <Button className="snipcart-add-item" {...props} data-item-weight = {1.0}></Button>
 }
 
 export default BuyButton
