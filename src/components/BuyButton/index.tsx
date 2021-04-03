@@ -18,7 +18,7 @@ interface Props {
 }
 
 const BuyButton: React.FC<Props> = (props: Props) => {
-  return <Button className="snipcart-add-item" {...props} data-item-weight = {.12}></Button>
+  return <Button className="snipcart-add-item" {...props} data-item-weight = {200}></Button>
 }
 
 export default BuyButton
