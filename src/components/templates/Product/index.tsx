@@ -44,14 +44,13 @@ const Product: React.FC<P.Product> = ({ data }) => {
   const { html } = data.markdownRemark
   const images = data.allFile.edges
   const { slug } = data.markdownRemark.fields
-  const GATSBY_SECRET_API = process.env.GATSBY_SECRET_API || ""
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: images[0].node.childImageSharp.gatsbyImageData,
   })
 
   useEffect(()=>{
      async function fetchData (){
-       const res = await  fetch(`https://app.snipcart.com/api/products/${id}`, {headers: {'Accept': 'application/json', 'Authorization': `Basic${btoa(GATSBY_SECRET_API)}` }})
+       const res = await  fetch(`https://shipping--thirsty-blackwell-f130f4.netlify.app/.netlify/functions/getProductQuantity?id=${id}`)
        const data = res.json()
        console.log(data)
     }
