@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { Button } from "./styled"
 
 interface Props {
@@ -14,7 +14,7 @@ interface Props {
   "data-item-custom2-name"?: String
   "data-item-custom2-options"?: String
   "data-item-custom2-value"?: String
-  "data-item-weight": number
+  "data-item-weight"?: number
 }
 
 const BuyButton: React.FC<Props> = (props: Props) => {

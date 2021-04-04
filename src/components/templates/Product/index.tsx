@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useReducer, useState } from "react"
+import React, { useEffect, useReducer } from "react"
 import { graphql } from "gatsby"
 import Layout from "../../layout"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -44,10 +44,19 @@ const Product: React.FC<P.Product> = ({ data }) => {
   const { html } = data.markdownRemark
   const images = data.allFile.edges
   const { slug } = data.markdownRemark.fields
-
+  const GATSBY_SECRET_API = process.env.GATSBY_SECRET_API || ""
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: images[0].node.childImageSharp.gatsbyImageData,
   })
+
+  useEffect(()=>{
+     async function fetchData (){
+       const res = await  fetch(`https://app.snipcart.com/api/products/${id}`, {headers: {'Accept': 'application/json', 'Authorization': `Basic${btoa(GATSBY_SECRET_API)}` }})
+       const data = res.json()
+       console.log(data)
+    }
+    fetchData()
+  }, [])
 
   return (
     <Layout>
