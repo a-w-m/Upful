@@ -2,9 +2,8 @@ const GATSBY_SECRET_API = process.env.GATSBY_SECRET_API
 const secret = (Buffer.from(GATSBY_SECRET_API).toString('base64'))
 const fetch = require('node-fetch')
 
-exports.handler = async function ({queryStringParameters}) {
-  const {id} = queryStringParameters
-  const product = await getProduct(id)
+exports.handler = async function (event, context) {
+  // const product = await getProduct(id)
   
   return {
     statusCode: 200,
@@ -12,16 +11,16 @@ exports.handler = async function ({queryStringParameters}) {
   }
 }
 
-const getProduct = async function (id) {
+// const getProduct = async function (id) {
   
-  const res =   await fetch(`https://app.snipcart.com/api/products/${id}`, {
-    headers: {
-      Authorization: `Basic${secret}`,
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  })
+//   const res =   await fetch(`https://app.snipcart.com/api/products/${id}`, {
+//     headers: {
+//       Authorization: `Basic${secret}`,
+//       Accept: "application/json",
+//       "Content-Type": "application/json",
+//     },
+//   })
 
-  const data  = res.json()
-  return data
-}
+//   const data  = res.json()
+//   return data
+// }
