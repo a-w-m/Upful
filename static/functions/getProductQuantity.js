@@ -1,4 +1,5 @@
 const GATSBY_SECRET_API = process.env.GATSBY_SECRET_API 
+const fetch = require('node-fetch')
 
 exports.handler = async function ({queryStringParameters}) {
   const {id} = queryStringParameters
