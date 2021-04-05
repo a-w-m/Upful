@@ -55,6 +55,7 @@ const Product: React.FC<P.Product> = ({ data }) => {
       )
       const data = res.json()
       console.log(res)
+      
       console.log(data)
     }
     fetchData()
