@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
 
   const data = useStaticQuery(graphql`{
    allFile(
-      filter: {sourceInstanceName: {eq: "images"}, relativePath: {regex: "/gatsby/"}}
+      filter: {sourceInstanceName: {eq: "images"}, relativePath: {regex: "/Upfull/"}}
     ) {
       edges {
         node {
