@@ -7,8 +7,7 @@ import Nav from "../Nav"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 
-
-import { GatsbyImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { SnipcartContext } from "gatsby-plugin-snipcart-advanced/context.js"
 
 import {
@@ -33,20 +32,6 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
   const { state } = useContext(SnipcartContext)
   const { cartQuantity } = state
 
-  const data = useStaticQuery(graphql`{
-   allFile(
-      filter: {sourceInstanceName: {eq: "images"}, relativePath: {regex: "/Upfull/"}}
-    ) {
-      edges {
-        node {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, width: 250, placeholder: BLURRED)
-          }
-        }
-      }
-    }
-  }`)
-
   return (
     <HeaderContainer>
       <div ref={node}>
@@ -62,10 +47,11 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
       <LogoContainer>
         <LogoWrapper>
           <Link to="/">
-            <GatsbyImage
-              image = {data.allFile.edges[0].node.childImageSharp.gatsbyImageData}
+            <StaticImage
+              src="../../../images/upful-gold-frame-logo.png"
               alt="logo"
               style={{ borderRadius: "100%" }}
+              width={250}
             />
           </Link>
         </LogoWrapper>
@@ -81,9 +67,5 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
-
-
-
-
 
 export default Header
