@@ -15,7 +15,7 @@ import {
   DescriptionContents,
 } from "./styled"
 import { P } from "../../interfaces"
-import { createOptionsString } from "../../helpers/index"
+import { createOptionsString } from "../../../helpers/index"
 
 function reducer(state: P.State, action: P.Action): P.State {
   switch (action.type) {

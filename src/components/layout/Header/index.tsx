@@ -5,8 +5,10 @@ const { useState, useRef, useContext } = React
 import Hamburger from "../Hamburger"
 import Nav from "../Nav"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
-import { StaticImage } from "gatsby-plugin-image"
+
+import { GatsbyImage } from "gatsby-plugin-image"
 import { SnipcartContext } from "gatsby-plugin-snipcart-advanced/context.js"
 
 import {
@@ -31,6 +33,20 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
   const { state } = useContext(SnipcartContext)
   const { cartQuantity } = state
 
+  const data = useStaticQuery(graphql`{
+   allFile(
+      filter: {sourceInstanceName: {eq: "images"}, relativePath: {regex: "/gatsby/"}}
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED, width: 250, placeholder: BLURRED)
+          }
+        }
+      }
+    }
+  }`)
+
   return (
     <HeaderContainer>
       <div ref={node}>
@@ -46,12 +62,9 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
       <LogoContainer>
         <LogoWrapper>
           <Link to="/">
-            <StaticImage
-              src="../../../../assets/icons/upful-gold-frame-logo.png"
+            <GatsbyImage
+              image = {data.allFile.edges[0].node.childImageSharp.gatsbyImageData}
               alt="logo"
-              placeholder="blurred"
-              layout="constrained"
-              width={250}
               style={{ borderRadius: "100%" }}
             />
           </Link>
@@ -68,5 +81,9 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
+
+
+
 
 export default Header

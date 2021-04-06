@@ -1,4 +1,4 @@
-import { P } from "../interfaces"
+import { P } from "../components/interfaces"
 
 export const createOptionsString = (values: P.Values[]) => {
   if (values.length > 0) {
