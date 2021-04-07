@@ -39,5 +39,7 @@ const getProduct = async function (id) {
 
   const data = await res.json()
 
+  console.log(data)
+
   return data
 }
