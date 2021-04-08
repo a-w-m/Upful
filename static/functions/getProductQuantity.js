@@ -27,7 +27,7 @@ const getProduct = async function (id) {
   
   const res =   await fetch(`https://app.snipcart.com/api/products/${id}`, {
     headers: {
-      Authorization: `Basic${secret}`,
+      Authorization: `Basic ${secret}`,
       Accept: "application/json"
     },
   })
