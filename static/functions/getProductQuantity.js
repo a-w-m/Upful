@@ -23,12 +23,12 @@ exports.handler = async function (event, context) {
 }
 
 const getProduct = async function (id) {
+
   
   const res =   await fetch(`https://app.snipcart.com/api/products/${id}`, {
     headers: {
       Authorization: `Basic${secret}`,
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Accept: "application/json"
     },
   })
 
@@ -38,8 +38,6 @@ const getProduct = async function (id) {
   }
 
   const data = await res.json()
-
-  console.log(data)
 
   return data
 }

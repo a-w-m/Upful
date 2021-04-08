@@ -50,15 +50,13 @@ const Product: React.FC<P.Product> = ({ data }) => {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch(
-        `https://shipping--thirsty-blackwell-f130f4.netlify.app/.netlify/functions/getProductQuantity?id=${id}`
+      let res = await fetch(
+        `/.netlify/functions/getProductQuantity?id=${id}`
       )
-      const data = await res.json()
-      console.log(res)
-      
-      console.log(data)
+    return await res.json()
+       
     }
-    fetchData()
+    fetchData().then(res=>console.log(res))
   }, [])
 
   return (
