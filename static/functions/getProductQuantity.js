@@ -18,26 +18,27 @@ exports.handler = async function (event, context) {
 
   return {
       statusCode: 200,
-      body: JSON.stringify({data: product}),
+      body: JSON.stringify({id: product.userDefinedId, stock: product.stock}),
   }
 }
 
 const getProduct = async function (id) {
 
   
-  const res =   await fetch(`https://app.snipcart.com/api/products/${id}`, {
+  const result =   await fetch(`https://app.snipcart.com/api/products/${id}`, {
     headers: {
       Authorization: `Basic ${secret}`,
       Accept: "application/json"
     },
   })
 
-  if (!res.ok){
-    const message = `An error has occurred: ${res.status}`
-    throw new Error(message)
+  if (!result.ok){
+    const err = new Error(`An error has occurred: ${result.status}`)
+    err.statusCode = result.status
+    throw err
+
   }
 
-  const data = await res.json()
+  return await result.json()
 
-  return data
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react"
+import React, { SetStateAction, useEffect, useReducer } from "react"
 import { graphql } from "gatsby"
 import Layout from "../../layout"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -16,6 +16,7 @@ import {
 } from "./styled"
 import { P } from "../../interfaces"
 import { createOptionsString } from "../../../helpers/index"
+import useSnipcartApi from "../../../hooks/useSnipcartApi"
 
 function reducer(state: P.State, action: P.Action): P.State {
   switch (action.type) {
@@ -32,7 +33,8 @@ function reducer(state: P.State, action: P.Action): P.State {
   }
 }
 
-const Product: React.FC<P.Product> = ({ data }) => {
+
+const Product: React.FC<P.Product> = ({ data}) => {
   const {
     title,
     price,
@@ -44,20 +46,14 @@ const Product: React.FC<P.Product> = ({ data }) => {
   const { html } = data.markdownRemark
   const images = data.allFile.edges
   const { slug } = data.markdownRemark.fields
+  const [{stock}, isLoading] = useSnipcartApi(
+    {id, stock: 1 },
+    `/.netlify/functions/getProductQuantity?id=${id}`
+  )
   const [state, dispatch] = useReducer(reducer, {
-    imageSelected: images[0].node.childImageSharp.gatsbyImageData,
+    imageSelected: images[0].node.childImageSharp.gatsbyImageData
   })
 
-  useEffect(() => {
-    async function fetchData() {
-      let res = await fetch(
-        `/.netlify/functions/getProductQuantity?id=${id}`
-      )
-    return await res.json()
-       
-    }
-    fetchData().then(res=>console.log(res))
-  }, [])
 
   return (
     <Layout>
@@ -79,30 +75,30 @@ const Product: React.FC<P.Product> = ({ data }) => {
         {customField2 && (
           <Options customField={customField2} dispatch={dispatch}></Options>
         )}
-
-        <BuyButton
-          data-item-id={id}
-          data-item-price={price.toFixed(2)}
-          data-item-name={title}
-          data-item-description={description}
-          data-item-image={
-            images[0].node.childImageSharp.gatsbyImageData.images.fallback
-              ?.src || ""
-          }
-          data-item-url={`${slug}`}
-          data-item-custom1-name={customField1?.name}
-          data-item-custom1-options={createOptionsString(
-            customField1?.values ?? []
-          )}
-          data-item-custom1-value={state.customFieldSelected1}
-          data-item-custom2-name={customField2?.name}
-          data-item-custom2-options={createOptionsString(
-            customField2?.values ?? []
-          )}
-          data-item-custom2-value={state.customFieldSelected2}
-        >
-          Add to Cart
-        </BuyButton>
+        {!isLoading && (
+          <BuyButton
+            data-item-id={id}
+            data-item-price={price.toFixed(2)}
+            data-item-name={title}
+            data-item-description={description}
+            data-item-image={
+              images[0].node.childImageSharp.gatsbyImageData.images.fallback
+                ?.src || ""
+            }
+            data-item-url={`${slug}`}
+            data-item-max-quantity={stock}
+            data-item-custom1-name={customField1?.name}
+            data-item-custom1-options={createOptionsString(
+              customField1?.values ?? []
+            )}
+            data-item-custom1-value={state.customFieldSelected1}
+            data-item-custom2-name={customField2?.name}
+            data-item-custom2-options={createOptionsString(
+              customField2?.values ?? []
+            )}
+            data-item-custom2-value={state.customFieldSelected2}
+          ></BuyButton>
+        )}
 
         <DescriptionWrapper>
           <DescriptionHeading>Description</DescriptionHeading>

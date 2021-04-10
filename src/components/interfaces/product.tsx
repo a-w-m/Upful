@@ -1,4 +1,5 @@
 import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
+import {PageProps} from "gatsby"
 
 export interface CustomField {
   name: "size" | "color"
@@ -19,7 +20,7 @@ export interface State {
 
 export type Dispatch = React.Dispatch<Action>
 
-export type Action = ActionImage | ActionQuantity | ActionSize | ActionColor
+export type Action = ActionImage | ActionQuantity | ActionSize | ActionColor 
 
 export interface ActionImage {
   type: "image"
@@ -47,7 +48,7 @@ export interface Index {
   }
 }
 
-export interface Product {
+export interface Product extends PageProps {
   data: {
     markdownRemark: MarkdownRemark
     allFile: AllImageFiles
