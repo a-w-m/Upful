@@ -1,5 +1,7 @@
 import React, { useEffect } from "react"
 
+//hook to handle clicking outside the given component (RefObject)
+
 const useOnClickOutside = (
   ref: React.RefObject<HTMLInputElement>,
   handler: (event: Event) => void

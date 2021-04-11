@@ -18,6 +18,7 @@ export interface CategoryPage {
 export interface childMarkdownRemark {
   childMarkdownRemark: {
     frontmatter: {
+      id: string
       title: string
       price: number
       image: P.Image

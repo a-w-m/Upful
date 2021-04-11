@@ -8,6 +8,7 @@ const ProductGrid: React.FC<C.Grid> = props => {
     <Container>
       {props.edges.map((edge, index) => {
         const {
+          id,
           title,
           price,
           image,
@@ -16,6 +17,7 @@ const ProductGrid: React.FC<C.Grid> = props => {
 
         return (
           <ProductThumbnail
+            id = {id}
             title={title}
             price={price}
             image={image}

@@ -1,4 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect} from "react"
+
+/*generic function to make fetch requests to snipcart api:
+  - functions takes an initial state matching the given type
+*/
+
 
 function useSnipcartApi<T>(
   initialState: T,

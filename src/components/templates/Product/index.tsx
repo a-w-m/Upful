@@ -1,4 +1,5 @@
-import React, { SetStateAction, useEffect, useReducer } from "react"
+import React, { useContext, useReducer } from "react"
+import { Context } from "../../Provider"
 import { graphql } from "gatsby"
 import Layout from "../../layout"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -15,45 +16,39 @@ import {
   DescriptionContents,
 } from "./styled"
 import { P } from "../../interfaces"
-import { createOptionsString } from "../../../helpers/index"
-import useSnipcartApi from "../../../hooks/useSnipcartApi"
-
+import { createOptionsString, getStock } from "../../../helpers/index"
 function reducer(state: P.State, action: P.Action): P.State {
   switch (action.type) {
     case "image":
       return { ...state, imageSelected: action.payload }
-    case "size":
-      return { ...state, customFieldSelected1: action.payload }
-    case "color":
-      return { ...state, customFieldSelected2: action.payload }
-    case "quantity":
-      return { ...state, quantitySelected: action.payload }
+    case "customField":
+      return { ...state, customFieldSelected: action.payload }
     default:
       return { ...state }
   }
 }
 
-
-const Product: React.FC<P.Product> = ({ data}) => {
+const Product: React.FC<P.Product> = ({ data }) => {
   const {
     title,
     price,
     id,
     description,
-    customField1,
-    customField2,
+    customField,
   } = data.markdownRemark.frontmatter
   const { html } = data.markdownRemark
   const images = data.allFile.edges
   const { slug } = data.markdownRemark.fields
-  const [{stock}, isLoading] = useSnipcartApi(
-    {id, stock: 1 },
-    `/.netlify/functions/getProductQuantity?id=${id}`
-  )
+  const {stockArray, isLoading} = useContext(Context)
+  const stock = React.useMemo(()=>{
+    return getStock(stockArray, id)
+  }, [stockArray])
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: images[0].node.childImageSharp.gatsbyImageData
+  
   })
 
+ 
 
   return (
     <Layout>
@@ -69,11 +64,8 @@ const Product: React.FC<P.Product> = ({ data}) => {
         />
         <ImageGallery images={images} dispatch={dispatch}></ImageGallery>
 
-        {customField1 && (
-          <Options customField={customField1} dispatch={dispatch}></Options>
-        )}
-        {customField2 && (
-          <Options customField={customField2} dispatch={dispatch}></Options>
+        {customField && (
+          <Options customField={customField} dispatch={dispatch}></Options>
         )}
         {!isLoading && (
           <BuyButton
@@ -87,16 +79,12 @@ const Product: React.FC<P.Product> = ({ data}) => {
             }
             data-item-url={`${slug}`}
             data-item-max-quantity={stock}
-            data-item-custom1-name={customField1?.name}
+            data-item-custom1-name={customField?.name}
             data-item-custom1-options={createOptionsString(
-              customField1?.values ?? []
+              customField?.values?? []
             )}
-            data-item-custom1-value={state.customFieldSelected1}
-            data-item-custom2-name={customField2?.name}
-            data-item-custom2-options={createOptionsString(
-              customField2?.values ?? []
-            )}
-            data-item-custom2-value={state.customFieldSelected2}
+            data-item-custom1-value={state.customFieldSelected}
+        
           ></BuyButton>
         )}
 

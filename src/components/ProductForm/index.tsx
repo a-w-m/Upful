@@ -18,7 +18,7 @@ const Options: React.FC<OptionProps> = ({
   dispatch,
 }: OptionProps) => {
   const handleChange = (event: HTMLElementEvent<HTMLSelectElement>) => {
-    dispatch({ type: customField.name, payload: event.target.value })
+    dispatch({ type: "customField", payload: event.target.value })
   }
 
   return (

@@ -3,11 +3,13 @@ const secret = (Buffer.from(GATSBY_SECRET_API).toString('base64'))
 const fetch = require('node-fetch')
 
 exports.handler = async function (event, context) {
-  const {id} = event.queryStringParameters
   let product
+  let productStock
 
   try{
-    product = await getProduct(id)
+    product = await getProduct()
+    productStock = createProductQuantityArray(product.items)
+
   }
   catch (err){
     return{
@@ -18,14 +20,14 @@ exports.handler = async function (event, context) {
 
   return {
       statusCode: 200,
-      body: JSON.stringify({id: product.userDefinedId, stock: product.stock}),
+      body: JSON.stringify(productStock),
   }
 }
 
-const getProduct = async function (id) {
+const getProduct = async function () {
 
   
-  const result =   await fetch(`https://app.snipcart.com/api/products/${id}`, {
+  const result =   await fetch(`https://app.snipcart.com/api/products/`, {
     headers: {
       Authorization: `Basic ${secret}`,
       Accept: "application/json"
@@ -41,4 +43,11 @@ const getProduct = async function (id) {
 
   return await result.json()
 
+}
+
+const createProductQuantityArray = (data) =>{
+
+  return data.map(item =>{
+    return {id: item.userDefinedId, stock: item.stock}
+  })
 }
