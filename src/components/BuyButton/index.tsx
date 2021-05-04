@@ -15,7 +15,7 @@ interface Props {
   "data-item-custom2-options"?: String
   "data-item-custom2-value"?: String
   "data-item-weight"?: number
-  "data-item-max-quantity": number
+  "data-item-max-quantity"?: number
 }
 
 const BuyButton: React.FC<Props> = (props: Props) => {
@@ -23,9 +23,10 @@ const BuyButton: React.FC<Props> = (props: Props) => {
     <Button
       className="snipcart-add-item"
       {...props}
-      disabled={props["data-item-max-quantity"] > 0 ? false : true}
+      disabled={props["data-item-max-quantity"]=== undefined || props["data-item-max-quantity"] > 0 ?  false : true}
     >
-      {props["data-item-max-quantity"] > 0 ? "Add to Cart" : "Sold Out"}
+      {props["data-item-max-quantity"]=== undefined || props["data-item-max-quantity"] > 0 ?"Add to Cart" : "Sold Out"
+       }
     </Button>
   )
 }

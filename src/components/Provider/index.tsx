@@ -1,14 +1,25 @@
 import React, {createContext} from 'react'
 import useSnipcartApi from "../../hooks/useSnipcartApi"
 
-const initialContext = {stockArray: [{id: "", stock: 0}], isLoading: false}
+interface ApiData {
+    inventory: {
+    [key: string]: {
+        stock: number
+    }
+}
+    isLoading: boolean
+    isError: boolean
+
+}
+
+const initialContext:ApiData = {inventory: {"id": {stock: 0}}, isLoading: false, isError: false}
 export const Context = createContext(initialContext)
 
 
 const Provider:React.FC<{}>= (props) =>{
-const [stockArray, isLoading] = useSnipcartApi(initialContext.stockArray, `/.netlify/functions/getProductQuantity`)
+const [inventory, isLoading, isError] = useSnipcartApi(initialContext.inventory, `/.netlify/functions/getProductQuantity`)
     return(
-        <Context.Provider value = {{stockArray, isLoading}}>
+        <Context.Provider value = {{inventory, isLoading, isError}}>
                 {props.children}
         </Context.Provider>
     )

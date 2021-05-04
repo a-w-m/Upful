@@ -1,8 +1,10 @@
 import React, { useContext, useReducer } from "react"
 import { Context } from "../../Provider"
 import { graphql } from "gatsby"
-import Layout from "../../layout"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { P } from "../../interfaces"
+import { createOptionsString } from "../../../helpers/index"
+import Layout from "../../layout"
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
 import ImageGallery from "../../ImageGallery"
@@ -15,8 +17,7 @@ import {
   DescriptionHeading,
   DescriptionContents,
 } from "./styled"
-import { P } from "../../interfaces"
-import { createOptionsString, getStock } from "../../../helpers/index"
+
 function reducer(state: P.State, action: P.Action): P.State {
   switch (action.type) {
     case "image":
@@ -39,16 +40,10 @@ const Product: React.FC<P.Product> = ({ data }) => {
   const { html } = data.markdownRemark
   const images = data.allFile.edges
   const { slug } = data.markdownRemark.fields
-  const {stockArray, isLoading} = useContext(Context)
-  const stock = React.useMemo(()=>{
-    return getStock(stockArray, id)
-  }, [stockArray])
+  const { inventory, isLoading} = useContext(Context)
   const [state, dispatch] = useReducer(reducer, {
-    imageSelected: images[0].node.childImageSharp.gatsbyImageData
-  
+    imageSelected: images[0].node.childImageSharp.gatsbyImageData,
   })
-
- 
 
   return (
     <Layout>
@@ -78,13 +73,14 @@ const Product: React.FC<P.Product> = ({ data }) => {
                 ?.src || ""
             }
             data-item-url={`${slug}`}
-            data-item-max-quantity={stock}
+            data-item-max-quantity={
+            inventory[id]? inventory[id].stock : undefined
+            }
             data-item-custom1-name={customField?.name}
             data-item-custom1-options={createOptionsString(
-              customField?.values?? []
+              customField?.values ?? []
             )}
             data-item-custom1-value={state.customFieldSelected}
-        
           ></BuyButton>
         )}
 
