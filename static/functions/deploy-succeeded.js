@@ -7,7 +7,7 @@ exports.handler = async function (event, context){
     const body = JSON.parse(event.body)
     const arr = body.payload.title.split(" ")
     const slug = arr[arr.length-1]
-    const fetchUrl = `https://shipping--thirsty-blackwell-f130f4.netlify.app/${slug}`
+    const fetchUrl = `${body.payload.deploy_ssl_url}/${slug}`
     console.log(fetchUrl, body)
 
 
