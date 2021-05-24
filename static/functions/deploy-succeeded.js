@@ -8,7 +8,7 @@ exports.handler = async function (event, context){
     const arr = body.payload.title.split(" ")
     const slug = arr[arr.length-1]
     const fetchUrl = `${body.payload.ssl_url}/${slug}`
-    console.log(fetchUrl)
+    console.log(fetchUrl, body)
 
 
     fetch("https://app.snipcart.com/api/products", {
