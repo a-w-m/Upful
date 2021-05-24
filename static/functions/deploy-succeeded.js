@@ -3,8 +3,11 @@ const secret = (Buffer.from(GATSBY_SECRET_API).toString('base64'))
 const fetch = require('node-fetch')
 
 exports.handler = async function (event, context){
+
     const body = JSON.parse(event.body)
-    const fetchUrl = `${body.payload.ssl_url}/${body.payload.title}`
+    const arr = body.payload.title.split(" ")
+    const slug = arr[arr.length-1]
+    const fetchUrl = `${body.payload.ssl_url}/${slug}`
     console.log(body)
 
 
