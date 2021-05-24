@@ -1,7 +1,7 @@
 ---
-title: Beeswax Candle Kit
+title: Beeswax Candle Kits
 date: 2021-05-24T20:28:36.546Z
-id: Beeswax Candle Kit
+id: Beeswax Candle Kits
 image: images/image-1.webp
 price: 9
 featured: false
