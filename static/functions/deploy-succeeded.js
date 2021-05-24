@@ -4,7 +4,7 @@ const fetch = require('node-fetch')
 
 exports.handler = async function (event, context){
     console.log(event)
-    const fetchUrl = `${event.body.payload.deploy.deploy_ssl_url}/${event.body.payload.title}`
+    const fetchUrl = `${event.payload.deploy_ssl_url}/${event.payload.title}`
 
     fetch("https://app.snipcart.com/api/products", {
         method: "post",
