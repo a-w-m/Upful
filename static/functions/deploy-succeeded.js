@@ -5,7 +5,7 @@ const fetch = require('node-fetch')
 exports.handler = async function (event, context){
     const body = JSON.parse(event.body)
     const fetchUrl = `${body.payload.ssl_url}/${body.payload.title}`
-    console.log(fetchurl)
+    console.log(fetchUrl)
 
 
     fetch("https://app.snipcart.com/api/products", {
