@@ -20,7 +20,7 @@ exports.handler = async function (event, context) {
   })
     .then(response => response.json())
     .then(result => {
-      console.log(data)
+      console.log(result)
       return result
     })
     .then(result => ({
