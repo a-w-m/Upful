@@ -7,14 +7,15 @@ exports.handler = async function (event, context) {
   const arr = body.payload.title.split(" ")
   const slug = arr[arr.length - 1]
   const fetchUrl = `${body.payload.deploy_ssl_url}/${slug}`
-  console.log(fetchUrl, body)
-  const raw = `{fetchUrl:${fetchUrl}}`
+  const raw =  `{fetchUrl: '${fetchUrl}'}`
+  console.log(fetchUrl, body, raw)
 
   return fetch("https://app.snipcart.com/api/products", {
     method: "POST",
     headers: {
       Authorization: `Basic ${secret}`,
       Accept: "application/json",
+      "Content-Type": "application/json"
     },
     body: raw,
   })
