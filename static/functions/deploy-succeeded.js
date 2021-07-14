@@ -34,7 +34,7 @@ const splitCommitMsg = (body)=> {
 }
 
 const isNewProduct = (arr)=>{
-  return ((arr.length>1 ) && (arr[1] === 'CMS' && array[2] === 'Create'))
+  return ((arr.length>1 ) && (arr[0] === 'CMS' && array[1] === 'Create'))
 
 }
 
