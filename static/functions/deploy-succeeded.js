@@ -29,12 +29,11 @@ exports.handler = async function (event, context) {
 }
 
 const splitCommitMsg = (body)=> {
-  const arr = body.payload.title.split(" ")
-  return arr
+  return body.payload.title.split(" ")
 }
 
 const isNewProduct = (arr)=>{
-  return ((arr.length>1 ) && (arr[0] === 'CMS' && array[1] === 'Create'))
+  return ((arr.length>1 ) && (arr[0] === 'CMS' && arr[1] === 'Create'))
 
 }
 
