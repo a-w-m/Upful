@@ -4,31 +4,67 @@ const fetch = require("node-fetch")
 
 exports.handler = async function (event, context) {
   const body = JSON.parse(event.body)
-  const arr = body.payload.title.split(" ")
-  const slug = arr[arr.length - 1]
-  const fetchUrl = `${body.payload.deploy_ssl_url}/${slug}`
-  const raw =  `{fetchUrl: '${fetchUrl}'}`
-  console.log(fetchUrl, body, raw)
+  const commitMsgArray = splitCommitMsg(body)
 
-  return fetch("https://app.snipcart.com/api/products", {
+  if (isNewProduct(commitMsgArray)) {
+  const slug = getProductSlug(commitMsgArray)
+  const fetchBody = reqBody(body, slug)
+
+  try{
+    res = await PostProduct(fetchBody)
+  }
+  catch (err) {
+    return {
+      statusCode: err.statusCode || 500,
+      body: JSON.stringify({error: err.message})
+    }
+  }
+  return{
+    statusCode: 200,
+    body: "Product Sent to Inventory Dashboard"
+  }
+
+}
+
+}
+
+const splitCommitMsg = (body)=> {
+  const arr = body.payload.title.split(" ")
+  return arr
+}
+
+const isNewProduct = (arr)=>{
+  return ((arr.length>1 ) && (arr[1] === 'CMS' && array[2] === 'Create'))
+
+}
+
+const getProductSlug = (arr)=>{
+  return arr[arr.length - 1]
+}
+
+const reqBody = (body, slug)=>{
+  const fetchUrl = `${body.payload.deploy_ssl_url}/${slug}`
+  return `{fetchUrl: '${fetchUrl}'}`
+}
+
+const PostProduct = async(body)=>{
+
+  const result = await fetch("https://app.snipcart.com/api/products", {
     method: "POST",
     headers: {
       Authorization: `Basic ${secret}`,
       Accept: "application/json",
       "Content-Type": "application/json"
     },
-    body: raw,
+    body,
   })
-    .then(response => response.json())
-    .then(result => {
-      console.log(result)
-      return result
-    })
-    .then(result => ({
-      statusCode: 200,
-      body: "Product Sent to Inventory Dashboard",
-    }))
-    .catch(error => console.log("error", error))
 
-  console.log("TEST")
+  if (!result.ok){
+    const err = new Error(`An error has occurred: ${result.status}`)
+    err.statusCode = result.status
+    throw err
+  }
+
+  return await result.json()
+
 }

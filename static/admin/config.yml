@@ -2,12 +2,12 @@ backend:
   name: git-gateway
   branch: shipping # Branch to update (optional; defaults to master)
   commit_messages:
-    create: Create {{collection}} {{slug}}
-    update: Update {{collection}} “{{slug}}”
-    delete: Delete {{collection}} “{{slug}}”
-    uploadMedia: Upload “{{path}}”
-    deleteMedia: Delete “{{path}}”
-    openAuthoring: '{{message}}'
+    create: CMS Create {{collection}} {{slug}}
+    update: CMS Update {{collection}} “{{slug}}”
+    delete: CMS Delete {{collection}} “{{slug}}”
+    uploadMedia: CMS Upload “{{path}}”
+    deleteMedia: CMS Delete “{{path}}”
+    openAuthoring: CMS Message'{{message}}'
 
 media_folder: static/assets
 public_folder: /assets
