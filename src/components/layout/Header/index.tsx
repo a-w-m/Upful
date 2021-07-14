@@ -5,6 +5,7 @@ const { useState, useRef, useContext } = React
 import Hamburger from "../Hamburger"
 import Nav from "../Nav"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
 import { SnipcartContext } from "gatsby-plugin-snipcart-advanced/context.js"
@@ -47,12 +48,10 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
         <LogoWrapper>
           <Link to="/">
             <StaticImage
-              src="../../../../assets/icons/upful-gold-frame-logo.png"
+              src="../../../images/upful-gold-frame-logo.png"
               alt="logo"
-              placeholder="blurred"
-              layout="constrained"
-              width={250}
               style={{ borderRadius: "100%" }}
+              width={250}
             />
           </Link>
         </LogoWrapper>

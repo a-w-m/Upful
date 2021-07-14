@@ -20,6 +20,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/src/images`,
+        name: `images`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/src/markdown/products/accessories`,
         name: `accessories`,
       },
@@ -58,7 +66,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/Upfull.jpg`, // This path is relative to the root of the site.
       },
     },
 
@@ -79,6 +87,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
 
     {
       resolve: `gatsby-plugin-google-fonts`,

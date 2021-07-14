@@ -1,4 +1,4 @@
-import { P } from "../interfaces"
+import { P } from "../components/interfaces"
 
 export const createOptionsString = (values: P.Values[]) => {
   if (values.length > 0) {
@@ -8,12 +8,7 @@ export const createOptionsString = (values: P.Values[]) => {
       })
       .join("|")
   } else {
-    return
+    return 
   }
 }
 
-export const createFluidArray = (edges: P.ImageNode[]) => {
-  return edges.map(edge => {
-    return edge.node
-  })
-}

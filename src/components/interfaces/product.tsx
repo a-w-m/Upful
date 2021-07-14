@@ -1,7 +1,8 @@
 import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
+import {PageProps} from "gatsby"
 
 export interface CustomField {
-  name: "size" | "color"
+  name: string
   values: Values[]
 }
 
@@ -11,35 +12,25 @@ export interface Values {
 }
 
 export interface State {
-  customFieldSelected1?: string
-  customFieldSelected2?: string
+  customFieldSelected?: string
   quantitySelected?: number
   imageSelected: IGatsbyImageData
 }
 
 export type Dispatch = React.Dispatch<Action>
 
-export type Action = ActionImage | ActionQuantity | ActionSize | ActionColor
+export type Action = ActionImage | ActionCustomField
 
 export interface ActionImage {
   type: "image"
   payload: IGatsbyImageData
-}
+} 
 
-export interface ActionColor {
-  type: "color"
+export interface ActionCustomField {
+  type: "customField"
   payload: string
 }
 
-export interface ActionSize {
-  type: "size"
-  payload: string
-}
-
-export interface ActionQuantity {
-  type: "quantity"
-  payload: number
-}
 
 export interface Index {
   data: {
@@ -47,7 +38,7 @@ export interface Index {
   }
 }
 
-export interface Product {
+export interface Product extends PageProps {
   data: {
     markdownRemark: MarkdownRemark
     allFile: AllImageFiles
@@ -62,8 +53,7 @@ export interface MarkdownRemark {
     id: string
     description: string
     date: string
-    customField1: CustomField | null
-    customField2: CustomField | null
+    customField: CustomField | null
   }
   fields: {
     slug: string
@@ -94,6 +84,7 @@ export interface AllImageFiles {
 }
 
 export interface Thumbnail {
+  id: string
   title: string
   price: number
   slug: string

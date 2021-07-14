@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { Button } from "./styled"
 
 interface Props {
@@ -14,10 +14,21 @@ interface Props {
   "data-item-custom2-name"?: String
   "data-item-custom2-options"?: String
   "data-item-custom2-value"?: String
+  "data-item-weight"?: number
+  "data-item-max-quantity"?: number
 }
 
 const BuyButton: React.FC<Props> = (props: Props) => {
-  return <Button className="snipcart-add-item" {...props}></Button>
+  return (
+    <Button
+      className="snipcart-add-item"
+      {...props}
+      disabled={props["data-item-max-quantity"]=== undefined || props["data-item-max-quantity"] > 0 ?  false : true}
+    >
+      {props["data-item-max-quantity"]=== undefined || props["data-item-max-quantity"] > 0 ?"Add to Cart" : "Sold Out"
+       }
+    </Button>
+  )
 }
 
 export default BuyButton

@@ -12,6 +12,10 @@ export const PriceWrapper = styled.div`
   opacity: 0.5;
 `
 
+export const SoldOut = styled.span`
+  
+`
+
 export const ProductInfoContainer = styled.div`
   display: flex;
   flex-flow: column wrap;

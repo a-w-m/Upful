@@ -1,7 +1,10 @@
-import React, { useEffect, useMemo, useReducer, useState } from "react"
+import React, { useContext, useReducer } from "react"
+import { Context } from "../../Provider"
 import { graphql } from "gatsby"
-import Layout from "../../layout"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { P } from "../../interfaces"
+import { createOptionsString } from "../../../helpers/index"
+import Layout from "../../layout"
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
 import ImageGallery from "../../ImageGallery"
@@ -14,19 +17,13 @@ import {
   DescriptionHeading,
   DescriptionContents,
 } from "./styled"
-import { P } from "../../interfaces"
-import { createOptionsString } from "../../helpers/index"
 
 function reducer(state: P.State, action: P.Action): P.State {
   switch (action.type) {
     case "image":
       return { ...state, imageSelected: action.payload }
-    case "size":
-      return { ...state, customFieldSelected1: action.payload }
-    case "color":
-      return { ...state, customFieldSelected2: action.payload }
-    case "quantity":
-      return { ...state, quantitySelected: action.payload }
+    case "customField":
+      return { ...state, customFieldSelected: action.payload }
     default:
       return { ...state }
   }
@@ -38,13 +35,12 @@ const Product: React.FC<P.Product> = ({ data }) => {
     price,
     id,
     description,
-    customField1,
-    customField2,
+    customField,
   } = data.markdownRemark.frontmatter
   const { html } = data.markdownRemark
   const images = data.allFile.edges
   const { slug } = data.markdownRemark.fields
-
+  const { inventory, isLoading} = useContext(Context)
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: images[0].node.childImageSharp.gatsbyImageData,
   })
@@ -63,36 +59,30 @@ const Product: React.FC<P.Product> = ({ data }) => {
         />
         <ImageGallery images={images} dispatch={dispatch}></ImageGallery>
 
-        {customField1 && (
-          <Options customField={customField1} dispatch={dispatch}></Options>
+        {customField && (
+          <Options customField={customField} dispatch={dispatch}></Options>
         )}
-        {customField2 && (
-          <Options customField={customField2} dispatch={dispatch}></Options>
+        {!isLoading && (
+          <BuyButton
+            data-item-id={id}
+            data-item-price={price.toFixed(2)}
+            data-item-name={title}
+            data-item-description={description}
+            data-item-image={
+              images[0].node.childImageSharp.gatsbyImageData.images.fallback
+                ?.src || ""
+            }
+            data-item-url={`${slug}`}
+            data-item-max-quantity={
+            inventory[id]? inventory[id].stock : undefined
+            }
+            data-item-custom1-name={customField?.name}
+            data-item-custom1-options={createOptionsString(
+              customField?.values ?? []
+            )}
+            data-item-custom1-value={state.customFieldSelected}
+          ></BuyButton>
         )}
-
-        <BuyButton
-          data-item-id={id}
-          data-item-price={price.toFixed(2)}
-          data-item-name={title}
-          data-item-description={description}
-          data-item-image={
-            images[0].node.childImageSharp.gatsbyImageData.images.fallback
-              ?.src || ""
-          }
-          data-item-url={`${slug}`}
-          data-item-custom1-name={customField1?.name}
-          data-item-custom1-options={createOptionsString(
-            customField1?.values ?? []
-          )}
-          data-item-custom1-value={state.customFieldSelected1}
-          data-item-custom2-name={customField2?.name}
-          data-item-custom2-options={createOptionsString(
-            customField2?.values ?? []
-          )}
-          data-item-custom2-value={state.customFieldSelected2}
-        >
-          Add to Cart
-        </BuyButton>
 
         <DescriptionWrapper>
           <DescriptionHeading>Description</DescriptionHeading>
