@@ -2,12 +2,12 @@ import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby
 import {PageProps} from "gatsby"
 
 export interface CustomField {
-  name: string
+  field: string
   values: Values[]
 }
 
 export interface Values {
-  name: string
+  option: string
   priceChange: number
 }
 

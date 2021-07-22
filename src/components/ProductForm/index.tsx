@@ -23,9 +23,9 @@ const Options: React.FC<OptionProps> = ({
 
   return (
     <Container>
-      <Label htmlFor={customField.name}>{customField.name}</Label>
+      <Label htmlFor={customField.field}>{customField.field}</Label>
       <Select
-        id={customField.name}
+        id={customField.field}
         defaultValue={""}
         onChange={e => {
           handleChange(e)
@@ -34,8 +34,8 @@ const Options: React.FC<OptionProps> = ({
         <option value="">select an option</option>
         {customField.values.map((value: any) => {
           return (
-            <option value={value.name} key={value.name}>
-              {value.name}
+            <option value={value.option} key={value.option}>
+              {value.option}
             </option>
           )
         })}
@@ -49,17 +49,10 @@ export default Options
 export const query = graphql`
   fragment CustomFields on MarkdownRemark {
     frontmatter {
-      customField1 {
-        name
+      customField {
+        field
         values {
-          name
-          priceChange
-        }
-      }
-      customField2 {
-        name
-        values {
-          name
+          option
           priceChange
         }
       }

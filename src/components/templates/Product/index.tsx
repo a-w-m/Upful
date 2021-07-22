@@ -76,7 +76,7 @@ const Product: React.FC<P.Product> = ({ data }) => {
             data-item-max-quantity={
             inventory[id]? inventory[id].stock : undefined
             }
-            data-item-custom1-name={customField?.name}
+            data-item-custom1-name={customField?.field}
             data-item-custom1-options={createOptionsString(
               customField?.values ?? []
             )}
