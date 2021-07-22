@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import device from "../mediaQuery"
 import { Link } from "gatsby"
 
 export const HeaderContainer = styled.header`
@@ -12,6 +13,19 @@ export const HeaderContainer = styled.header`
   grid-area: header;
   flex-wrap: wrap;
   align-items: flex-end;
+
+  @media ${device.laptop}{
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+`
+
+export const HamburgerNavContainer = styled.div`
+@media ${device.laptop}{
+  order: 1;
+  flex-basis: 100%;
+}
+
 `
 
 export const LogoContainer = styled.div`
@@ -23,6 +37,10 @@ export const LogoContainer = styled.div`
 
 export const LogoWrapper = styled.div`
   flex-basis: 25%;
+
+  @media ${device.laptop} {
+    flex-basis: 15%;
+  }
 `
 
 export const LinkWrapper = styled.h1`

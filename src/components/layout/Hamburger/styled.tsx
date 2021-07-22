@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import device from "../mediaQuery"
 
 export const Container = styled.button<{ open: boolean }>`
   position: relative;
@@ -40,5 +41,9 @@ export const Container = styled.button<{ open: boolean }>`
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
+  }
+
+  @media ${device.laptop}{
+    display: none;
   }
 `
