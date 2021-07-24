@@ -12,6 +12,10 @@ customField:
   values:
     - option: small
       priceChange: 0
+    - option: med
+      priceChange: 0
+    - option: large
+      priceChange: 0
 ---
 <!--StartFragment-->
 
