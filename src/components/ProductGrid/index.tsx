@@ -1,7 +1,7 @@
 import React from "react"
 import { C } from "../interfaces"
 import ProductThumbnail from "../ProductThumbnail"
-import { Container } from "./style"
+import { Container } from "./styled"
 
 const ProductGrid: React.FC<C.Grid> = props => {
   return (

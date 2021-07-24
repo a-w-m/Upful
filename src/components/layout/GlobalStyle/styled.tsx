@@ -14,7 +14,7 @@ export const globalCSS = css`
     --footer-bg-color: #81550a;
     --pagination-link-hover: #204b37;
     --secondary-color: #4f4f4f;
-    --border-color: #dda;
+    --border-color: rgb(235, 235, 235);
     --main-bg: #fff;
   }
 
