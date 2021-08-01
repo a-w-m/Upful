@@ -28,7 +28,6 @@ const Options: React.FC<OptionProps> = ({
       {customField.values.map(value => {
         return (
           <>
-           <Label htmlFor={value.option}>
             <Input
               type="radio"
               id={value.option}
@@ -37,6 +36,7 @@ const Options: React.FC<OptionProps> = ({
               name={customField.field}
               onChange={e => handleChange(e)}
             ></Input>
+           <Label htmlFor={value.option}>
 
             {value.option}</Label>
           </>
