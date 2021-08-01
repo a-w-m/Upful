@@ -14,13 +14,13 @@ export const Button = styled.button<ButtonProps>`
   color: var(--header-nav-link-hover);
   line-height: 1.4rem;
   border: 0.1rem solid var(--main-brown);
-  margin: 0 0 1.4rem;
-  padding: 1.2rem 3.2rem;
+  padding: 1.5rem 3.2rem;
   transition: all 0.15 ease;
   border-radius: 0rem;
   opacity: ${props=> props["data-item-max-quantity"]=== undefined || props["data-item-max-quantity"] > 0 ? 1 : 0.3};
   user-select: ${props=> props["data-item-max-quantity"]=== undefined || props["data-item-max-quantity"] > 0 ?"auto" : "none"};
   width: 100%;
+  text-transform: uppercase;
 
 
  @media ${device.laptop}{

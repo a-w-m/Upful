@@ -77,6 +77,8 @@ export const ProductForm = styled.div`
   align-items: flex-start;
   justify-content: space-around;
   width: 100%;
+  padding: 0 0 4rem 0;
+  row-gap: 3rem;
 
   @media ${device.laptop}{
     grid-area: form;

@@ -43,5 +43,6 @@ export const Container = styled.form`
   padding: 1.2rem 0;
   justify-content: space-around;
   row-gap: 1rem;
+  margin: 0;
 
 `
