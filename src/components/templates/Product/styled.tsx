@@ -38,6 +38,8 @@ export const TitleContainer = styled.section`
   align-items: flex-start;
   justify-self: flex-start;
   flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
 
   @media ${device.laptop} {
     align-self: start;
@@ -48,18 +50,22 @@ export const TitleContainer = styled.section`
 `
 
 export const Title = styled.h1`
-  font-size: 2.2rem;
+  font-size: 3.6rem;
   line-height: 3rem;
   font-family: var(--main-font);
+  letter-spacing: .1rem;
+  font-weight: 500;
+  margin: 0;
 
   @media ${device.laptop} {
     font-size: 3.2rem;
   }
 `
 export const BasePrice = styled.div`
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 2.25rem;
   color: var(--secondary-color);
+  padding: 1.5rem 0 0 0;
 
   @media ${device.laptop} {
     font-size: 1.8rem;

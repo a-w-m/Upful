@@ -63,16 +63,22 @@ const Product: React.FC<P.Product> = ({ data }) => {
         image={imgURL}
       />
       <ProductContainer>
-        <TitleContainer>
-          <Title>{title}</Title>
-          <BasePrice> ${price.toFixed(2)}</BasePrice>
-        </TitleContainer>
         <GatsbyImage
           image={state.imageSelected}
           alt=""
           style={{ opacity: 1 }}
         />
         <ImageGallery images={images} dispatch={dispatch}></ImageGallery>
+
+        <TitleContainer>
+        <BasePrice> ${price.toFixed(2)}</BasePrice>
+        <Title>{title}</Title>
+        </TitleContainer>
+
+        <DescriptionWrapper>
+          {/* <DescriptionHeading>Description</DescriptionHeading> */}
+          <DescriptionContents dangerouslySetInnerHTML={{ __html: html }} />
+        </DescriptionWrapper>
 
         <ProductForm>
           {customField && (
@@ -107,10 +113,7 @@ const Product: React.FC<P.Product> = ({ data }) => {
           <ShareButton title = {title} path = {path} image ={imgURL}/>
         </ShareButtonWrapper>
 
-        <DescriptionWrapper>
-          <DescriptionHeading>Description</DescriptionHeading>
-          <DescriptionContents dangerouslySetInnerHTML={{ __html: html }} />
-        </DescriptionWrapper>
+    
       </ProductContainer>
     </Layout>
   )
