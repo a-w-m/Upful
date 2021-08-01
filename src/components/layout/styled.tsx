@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const MainWrapper = styled.div`
   margin: 0 auto;
   width: auto;
-  padding: 1.5rem 2.1rem 1rem 2.1rem;
+  padding: 2rem 2rem 6.4rem 2rem;
   grid-area: main;
 `
 
