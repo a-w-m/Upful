@@ -12,8 +12,8 @@ const Category: React.FC<C.CategoryPage> = ({ data, pageContext }) => {
   return (
     <Layout>
       <Container>
-        <CategoryHeading>{category.toUpperCase()}</CategoryHeading>
-        <ProductGrid edges={data.allFile.edges} />
+        <CategoryHeading>{category}</CategoryHeading>
+        <ProductGrid edges={data.allFile.edges}/>
         {numPages > 1 && (
           <Pagination
             currentPage={currentPage}

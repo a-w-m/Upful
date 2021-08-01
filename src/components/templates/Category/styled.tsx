@@ -8,6 +8,7 @@ export const CategoryHeading = styled.h1`
   text-align: center;
   margin: 0 auto;
   padding: 1rem 1rem;
+  text-transform: uppercase;
 
 `
 
