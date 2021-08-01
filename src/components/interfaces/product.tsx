@@ -41,24 +41,30 @@ export interface Index {
 export interface Product extends PageProps {
   data: {
     markdownRemark: MarkdownRemark
-    allFile: AllImageFiles
-  }
+    site: SiteMetaData
+    }
 }
 
+export interface SiteMetaData {
+  url: string
+}
 export interface MarkdownRemark {
   frontmatter: {
     title: string
     price: number
     image: Image
     id: string
-    description: string
     date: string
     customField: CustomField | null
+    galleryImages: Image[]
   }
   fields: {
     slug: string
   }
   html: string
+  parent: {
+    sourceInstanceName: string
+  }
 }
 
 export interface AllMarkdownRemark {

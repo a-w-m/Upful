@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from "react"
+import React, { useContext, useReducer, useRef } from "react"
 import { Context } from "../../Provider"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -34,50 +34,56 @@ function reducer(state: P.State, action: P.Action): P.State {
   }
 }
 
-const Product: React.FC<P.Product> = ({ data }) => {
+const Product: React.FC<P.Product> = ({ data, location }) => {
   const {
     title,
     price,
     id,
-    description,
+    image,
+    galleryImages,
     customField,
   } = data.markdownRemark.frontmatter
   const { html } = data.markdownRemark
-  const images = data.allFile.edges
   const { slug } = data.markdownRemark.fields
-  const url = `https://thirsty-blackwell-f130f4-a0b44b.netlify.live`
-  const path = url+slug
+  const url = data.site.url || location.hostname
+  const path = url + slug
   const { inventory, isLoading } = useContext(Context)
   const [state, dispatch] = useReducer(reducer, {
-    imageSelected: images[0].node.childImageSharp.gatsbyImageData,
+    imageSelected: image.childImageSharp.gatsbyImageData,
   })
+  const ref = useRef<HTMLDivElement>(null)
+  const description = ref.current
+    ? ref.current.innerText
+    : "Upful - Made with full irations"
+
   const imgURL = `${url}${state.imageSelected.images.fallback?.src}`
 
+  console.log(data)
 
   return (
     <Layout>
-      <SEO
-        title={title}
-        description={description}
-        url={url+slug}
-        image={imgURL}
-      />
+      <SEO title={title} description={description} url={path} image={imgURL} />
       <ProductContainer>
         <GatsbyImage
           image={state.imageSelected}
           alt=""
           style={{ opacity: 1 }}
         />
-        <ImageGallery images={images} dispatch={dispatch}></ImageGallery>
+        <ImageGallery
+          images={[image].concat(galleryImages)}
+          dispatch={dispatch}
+        ></ImageGallery>
 
         <TitleContainer>
-        <BasePrice> ${price.toFixed(2)}</BasePrice>
-        <Title>{title}</Title>
+          <BasePrice> ${price.toFixed(2)}</BasePrice>
+          <Title>{title}</Title>
         </TitleContainer>
 
         <DescriptionWrapper>
-          {/* <DescriptionHeading>Description</DescriptionHeading> */}
-          <DescriptionContents dangerouslySetInnerHTML={{ __html: html }} />
+          <DescriptionContents
+            ref={ref}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </DescriptionWrapper>
 
         <ProductForm>
@@ -92,8 +98,7 @@ const Product: React.FC<P.Product> = ({ data }) => {
               data-item-name={title}
               data-item-description={description}
               data-item-image={
-                images[0].node.childImageSharp.gatsbyImageData.images.fallback
-                  ?.src || ""
+                image.childImageSharp.gatsbyImageData.images.fallback?.src || ""
               }
               data-item-url={`${slug}`}
               data-item-max-quantity={
@@ -110,17 +115,15 @@ const Product: React.FC<P.Product> = ({ data }) => {
 
         <ShareButtonWrapper>
           <EmailButton title={title} />
-          <ShareButton title = {title} path = {path} image ={imgURL}/>
+          <ShareButton title={title} path={path} image={imgURL} />
         </ShareButtonWrapper>
-
-    
       </ProductContainer>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query($slug: String!, $pathRegex: String!) {
+  query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       ...Frontmatter
       ...CustomFields
@@ -128,15 +131,16 @@ export const query = graphql`
       fields {
         slug
       }
+      parent {
+        ... on File {
+          sourceInstanceName
+        }
+      }
     }
 
-    allFile(filter: { relativeDirectory: { regex: $pathRegex } }) {
-      edges {
-        node {
-          childImageSharp {
-            ...ImageGalleryFragment
-          }
-        }
+    site {
+      siteMetadata {
+        url
       }
     }
   }
@@ -150,6 +154,16 @@ export const frontmatterQuery = graphql`
       id
       description
       date
+      image {
+        childImageSharp {
+          ...ImageGalleryFragment
+        }
+      }
+      galleryImages {
+        childImageSharp {
+          ...ImageGalleryFragment
+        }
+      }
     }
   }
 `
