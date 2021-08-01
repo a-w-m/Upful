@@ -4,7 +4,7 @@ export const createOptionsString = (values: P.Values[]) => {
   if (values.length > 0) {
     return values
       .map(value => {
-        return value.name
+        return value.option
       })
       .join("|")
   } else {
