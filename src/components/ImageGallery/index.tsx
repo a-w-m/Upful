@@ -46,9 +46,8 @@ const ImageGallery: React.FC<Props> = props => {
 export const imageQuery = graphql`
   fragment ImageGalleryFragment on ImageSharp {
     gatsbyImageData(
-      width: 1024
-      aspectRatio: 1
-      transformOptions: { fit: CONTAIN }
+      layout: CONSTRAINED
+      transformOptions: { fit: COVER }
       backgroundColor: "white"
     )
   }

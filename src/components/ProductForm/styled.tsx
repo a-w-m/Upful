@@ -14,7 +14,6 @@ export const Input = styled.input.attrs({type: "radio"})`
 `
 
 export const Label = styled.label`
-	width: 10rem;
 	height: 4rem;
 	justify-content: center;
 	font-size: 1.4rem;
@@ -22,6 +21,7 @@ export const Label = styled.label`
 	display: flex;
 	position: relative;
   border: .1rem solid rgb(235, 235, 235);
+  flex: 0 0 30%;
 
   &:focus,
   &:checked + label {
@@ -29,13 +29,19 @@ export const Label = styled.label`
   } 
 `
 
-export const Container = styled.div`
+export const Field = styled.span`
+font-size: 1.4rem;
+flex-basis: 100%;
+`
+
+export const Container = styled.form`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  width: calc(100 * 0.75%);
+  width: 100%;
   padding: 1.2rem 0;
-  gap: 1rem;
-
+  justify-content: space-around;
+  row-gap: 1rem;
 
 `

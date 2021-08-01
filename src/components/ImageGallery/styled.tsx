@@ -1,7 +1,13 @@
 import styled from "styled-components"
+import device from "../layout/mediaQuery"
 export const Wrapper = styled.div`
   width: auto;
   height: auto;
+
+  @media ${device.laptop}{
+    grid-area: gallery;
+    justify-self: center;
+  }
 `
 export const UL = styled.ul`
   width: 100%;
@@ -9,6 +15,7 @@ export const UL = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  gap: 1.4rem;
 
   & > li {
     list-style: none;

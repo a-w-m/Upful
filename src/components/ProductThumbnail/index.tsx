@@ -18,7 +18,7 @@ const ProductThumbnail: React.FC<P.Thumbnail> = props => {
       {!isLoading && <ProductInfoContainer>
         <H3>{title}</H3>
         <PriceWrapper>{price.toFixed(2)}</PriceWrapper>
-        {(inventory[id]?.stock <=0) &&<SoldOut>Sold Out </SoldOut> }
+        {(inventory[id]?.stock <=0) &&<SoldOut>Sold Out</SoldOut> }
       </ProductInfoContainer>}
     </Article>
   )

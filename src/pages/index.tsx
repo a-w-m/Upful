@@ -13,7 +13,6 @@ import { C } from "../components/interfaces"
 const IndexPage: React.FC<C.CategoryPage> = ({ data }) => {
   return (
     <Layout>
-      <SEO />
       <Container>
         <CategoryHeading>FEATURED GOODS</CategoryHeading>
         <ProductGrid edges={data.allFile.edges} />

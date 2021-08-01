@@ -10,13 +10,14 @@ export const HeaderContainer = styled.header`
   padding-right: 3rem;
   display: flex;
   justify-content: space-between;
-  grid-area: header;
   flex-wrap: wrap;
   align-items: flex-end;
 
   @media ${device.laptop}{
     justify-content: flex-end;
     gap: 2rem;
+    grid-area: header;
+
   }
 `
 

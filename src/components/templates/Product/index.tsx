@@ -5,14 +5,19 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { P } from "../../interfaces"
 import { createOptionsString } from "../../../helpers/index"
 import Layout from "../../layout"
+import SEO from "../../seo"
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
 import ImageGallery from "../../ImageGallery"
+import ShareButton from "../../ShareButton"
+import EmailButton from "../../EmailButton"
 import {
   ProductContainer,
+  ProductForm,
   TitleContainer,
   Title,
   BasePrice,
+  ShareButtonWrapper,
   DescriptionWrapper,
   DescriptionHeading,
   DescriptionContents,
@@ -40,13 +45,23 @@ const Product: React.FC<P.Product> = ({ data }) => {
   const { html } = data.markdownRemark
   const images = data.allFile.edges
   const { slug } = data.markdownRemark.fields
-  const { inventory, isLoading} = useContext(Context)
+  const url = `https://thirsty-blackwell-f130f4-a0b44b.netlify.live`
+  const path = url+slug
+  const { inventory, isLoading } = useContext(Context)
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: images[0].node.childImageSharp.gatsbyImageData,
   })
+  const imgURL = `${url}${state.imageSelected.images.fallback?.src}`
+
 
   return (
     <Layout>
+      <SEO
+        title={title}
+        description={description}
+        url={url+slug}
+        image={imgURL}
+      />
       <ProductContainer>
         <TitleContainer>
           <Title>{title}</Title>
@@ -59,30 +74,38 @@ const Product: React.FC<P.Product> = ({ data }) => {
         />
         <ImageGallery images={images} dispatch={dispatch}></ImageGallery>
 
-        {customField && (
-          <Options customField={customField} dispatch={dispatch}></Options>
-        )}
-        {!isLoading && (
-          <BuyButton
-            data-item-id={id}
-            data-item-price={price.toFixed(2)}
-            data-item-name={title}
-            data-item-description={description}
-            data-item-image={
-              images[0].node.childImageSharp.gatsbyImageData.images.fallback
-                ?.src || ""
-            }
-            data-item-url={`${slug}`}
-            data-item-max-quantity={
-            inventory[id]? inventory[id].stock : undefined
-            }
-            data-item-custom1-name={customField?.field}
-            data-item-custom1-options={createOptionsString(
-              customField?.values ?? []
-            )}
-            data-item-custom1-value={state.customFieldSelected}
-          ></BuyButton>
-        )}
+        <ProductForm>
+          {customField && (
+            <Options customField={customField} dispatch={dispatch}></Options>
+          )}
+
+          {!isLoading && (
+            <BuyButton
+              data-item-id={id}
+              data-item-price={price.toFixed(2)}
+              data-item-name={title}
+              data-item-description={description}
+              data-item-image={
+                images[0].node.childImageSharp.gatsbyImageData.images.fallback
+                  ?.src || ""
+              }
+              data-item-url={`${slug}`}
+              data-item-max-quantity={
+                inventory[id] ? inventory[id].stock : undefined
+              }
+              data-item-custom1-name={customField?.field}
+              data-item-custom1-options={createOptionsString(
+                customField?.values ?? []
+              )}
+              data-item-custom1-value={state.customFieldSelected}
+            ></BuyButton>
+          )}
+        </ProductForm>
+
+        <ShareButtonWrapper>
+          <EmailButton title={title} />
+          <ShareButton title = {title} path = {path} image ={imgURL}/>
+        </ShareButtonWrapper>
 
         <DescriptionWrapper>
           <DescriptionHeading>Description</DescriptionHeading>

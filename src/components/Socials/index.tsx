@@ -1,16 +1,12 @@
 import React from 'react'
-import {FacebookIcon, TwitterIcon, InstagramIcon, PinterestIcon} from "../Icons/index"
+import {Facebook, Twitter, Instagram, Pinterest} from "../Icons/index"
+import InstagramIcon from '../Icons/Instagram'
 import { SocialsContainer } from './styled'
 
-const Socials: React.FC<{}> = ()=>{
+const ShareToSocialMedia: React.FC<{}> = ()=>{
 return(
-    <SocialsContainer>
-    <FacebookIcon/>
-    <TwitterIcon/>
-    <InstagramIcon/>
-    <PinterestIcon/>
-    </SocialsContainer>
+    <Instagram></Instagram>
 )
 }
 
-export default Socials
+export default ShareToSocialMedia

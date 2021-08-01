@@ -11,7 +11,6 @@ const Category: React.FC<C.CategoryPage> = ({ data, pageContext }) => {
   const { category, numPages, currentPage } = pageContext
   return (
     <Layout>
-      <SEO />
       <Container>
         <CategoryHeading>{category.toUpperCase()}</CategoryHeading>
         <ProductGrid edges={data.allFile.edges} />

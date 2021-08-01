@@ -1,6 +1,6 @@
 import React, { ChangeEvent, Dispatch } from "react"
 import { graphql } from "gatsby"
-import { Container, Label, Input } from "./styled"
+import { Container, Label, Input, Field } from "./styled"
 import { P } from "../interfaces/index"
 
 interface OptionProps {
@@ -23,10 +23,12 @@ const Options: React.FC<OptionProps> = ({
 
   console.log(customField.values)
   return (
-    <Container>
+    <Container name = {`Select ${customField.field}`}>
+      <Field> {customField.field} </Field>
       {customField.values.map(value => {
         return (
           <>
+           <Label htmlFor={value.option}>
             <Input
               type="radio"
               id={value.option}
@@ -36,10 +38,10 @@ const Options: React.FC<OptionProps> = ({
               onChange={e => handleChange(e)}
             ></Input>
 
-            <Label htmlFor={value.option}> {value.option}</Label>
+            {value.option}</Label>
           </>
         )
-      })}
+            })}
     </Container>
   )
 }

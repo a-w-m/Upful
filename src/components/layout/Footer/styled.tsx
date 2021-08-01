@@ -8,7 +8,7 @@ export const FooterContainer = styled.footer`
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  background-color: #153325;
+  background: var(--main-brown);
   padding: 0.5rem;
 
   & > nav {
@@ -20,7 +20,6 @@ export const FooterContainer = styled.footer`
   }
 
   @media ${device.laptop}{
-    background: var(--main-brown);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
