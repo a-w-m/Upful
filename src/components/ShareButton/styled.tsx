@@ -14,8 +14,10 @@ export const Button = styled.button<{open?: boolean}>`
     background: none;
     border: none;
     cursor: pointer;
-    padding-top: 1.6rem;
+    padding: 2rem 0;
     width: 100%;
+    border-top: .1rem solid var(--border-color);
+    border-bottom: .1rem solid var(--border-color);
 
 
 
