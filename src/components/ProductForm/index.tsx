@@ -29,7 +29,7 @@ const Options: React.FC<OptionProps> = ({
         return (
           <>
             <Input
-              checked = {index == 1 ? true: false}
+              checked = {index == Math.floor(customField.values.length/2) ? true: false}
               type="radio"
               id={value.option}
               value={value.option}
