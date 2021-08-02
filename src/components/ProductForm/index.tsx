@@ -25,10 +25,11 @@ const Options: React.FC<OptionProps> = ({
   return (
     <Container name = {`Select ${customField.field}`}>
       <Field> {customField.field} </Field>
-      {customField.values.map(value => {
+      {customField.values.map((value, index) => {
         return (
           <>
             <Input
+              checked = {index == 1 ? true: false}
               type="radio"
               id={value.option}
               value={value.option}
