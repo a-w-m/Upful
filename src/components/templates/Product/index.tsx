@@ -6,6 +6,7 @@ import { P } from "../../interfaces"
 import { createOptionsString } from "../../../helpers/index"
 import Layout from "../../layout"
 import SEO from "../../seo"
+import ProductNav from "../../ProductNav"
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
 import ImageGallery from "../../ImageGallery"
@@ -43,6 +44,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
     galleryImages,
     customField,
   } = data.markdownRemark.frontmatter
+  const collection = data.markdownRemark.parent.sourceInstanceName
   const { html } = data.markdownRemark
   const { slug } = data.markdownRemark.fields
   const url = data.site.url || location.hostname
@@ -64,6 +66,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
     <Layout>
       <SEO title={title} description={description} url={path} image={imgURL} />
       <ProductContainer>
+        <ProductNav title = {title} collection = {collection}></ProductNav>
         <GatsbyImage
           image={state.imageSelected}
           alt=""
