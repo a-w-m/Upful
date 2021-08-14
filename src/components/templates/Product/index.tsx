@@ -60,7 +60,6 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
 
   const imgURL = `${url}${state.imageSelected.images.fallback?.src}`
 
-  console.log(data)
 
   return (
     <Layout>
@@ -91,7 +90,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
 
         <ProductForm>
           {customField && (
-            <Options customField={customField} dispatch={dispatch}></Options>
+            <Options customField={customField} dispatch={dispatch} selected = {state.customFieldSelected}></Options>
           )}
 
           {!isLoading && (

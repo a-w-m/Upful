@@ -7,7 +7,8 @@ export const Input = styled.input.attrs({type: "radio"})`
 	position: absolute;
 
 &:checked + label{
-  background-color: var(--main-brown)
+  background-color: var(--main-brown);
+  color: var(--color-bg)
 }
 
 
@@ -41,7 +42,7 @@ export const Container = styled.form`
   align-items: center;
   width: 100%;
   padding: 1.2rem 0;
-  justify-content: space-around;
+  justify-content: space-between;
   row-gap: 1rem;
   margin: 0;
 

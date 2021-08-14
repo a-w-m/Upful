@@ -12,7 +12,7 @@ customField:
   values:
     - option: small
       priceChange: 0
-    - option: med
+    - option: medium
       priceChange: 0
     - option: large
       priceChange: 0

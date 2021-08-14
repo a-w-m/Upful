@@ -6,6 +6,7 @@ import { P } from "../interfaces/index"
 interface OptionProps {
   dispatch: P.Dispatch
   customField: P.CustomField
+  selected?: string
 }
 
 type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
@@ -16,15 +17,15 @@ type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
 const Options: React.FC<OptionProps> = ({
   customField,
   dispatch,
+  selected
 }: OptionProps) => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: "customField", payload: event.target.value })
   }
 
-  console.log(customField.values)
   return (
     <Container name = {`Select ${customField.field}`}>
-      <Field> {customField.field} </Field>
+      <Field>{`${customField.field} | ${selected? selected: ""}`}</Field>
       {customField.values.map((value, index) => {
         return (
           <>
