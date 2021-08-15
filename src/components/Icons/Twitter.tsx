@@ -1,6 +1,6 @@
 import React from "react"
 
-export const TwitterIcon: React.FC<{}> = () => {
+const TwitterIcon: React.FC<{}> = () => {
   return (
     <svg
       className ="svg-icon icon-share-twitter "

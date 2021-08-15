@@ -1,6 +1,6 @@
 import React from "react"
 
-export const PinterestIcon: React.FC<{}> = () => {
+const PinterestIcon: React.FC<{}> = () => {
   return (
     <svg
       className="svg-icon icon-share-pinterest "
