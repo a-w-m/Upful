@@ -45,10 +45,6 @@ product: &PRODUCT
         name: "productOptions"
         widget: "list"
         fields:
-          - label: "Product Option"
-            name: "productOption"
-            widget: "object"
-            fields: 
               - { label: "Custom Field", name: "customField", widget: "string" }
               - label: "Options"
                 name: "options"
