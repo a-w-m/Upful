@@ -14,32 +14,17 @@ const Footer: React.FC<{}> = () => {
   return (
     <FooterContainer>
       <FooterNav>
-        <Heading>Categories</Heading>
-        <Link to="/about/">About Us</Link>
         <Link to="/clothing/">Clothing</Link>
         <Link to="/home/">Home</Link>
         <Link to="/accessories/">Accessories</Link>
+        <Link to="/about/">About Us</Link>
+        <Link to="/returns">Returns</Link>
       </FooterNav>
-      <ContactWrapper>
-        <Heading>Contact</Heading>
-        <Address>
-          StoreFront
-          <br />
-          555 Santa Monica Blvd.
-          <br />
-          Los Angeles, CA 90210
-        </Address>
-
         <Address>
           <a href="mailto:howdy@storefront.com">howdy@storefront.com</a>
         </Address>
-      </ContactWrapper>
-      <TermsWrapper>
-        <Heading>Terms & Conditions</Heading>
-        <Link to="/returns">Returns</Link>
-      </TermsWrapper>
       <CopyrightWrapper>
-        © StoreFront {new Date(Date.now()).getFullYear()}
+        © Upful {new Date(Date.now()).getFullYear()} Made with full Irations
       </CopyrightWrapper>
     </FooterContainer>
   )

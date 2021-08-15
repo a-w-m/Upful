@@ -8,12 +8,13 @@ export const globalCSS = css`
     --sub-heading-font-size: 1.5rem;
     --main-font: "Quicksand";
     --main-green: #153325;
+    --main-brown: #81550d;
     --link-text-color: #fff;
-    --nav-link-hover: #956;
-    --footer-bg-color: #153325;
+    --header-nav-link-hover: #956;
+    --footer-bg-color: #81550a;
     --pagination-link-hover: #204b37;
     --secondary-color: #4f4f4f;
-    --border-color: #dda;
+    --border-color: rgb(235, 235, 235);
     --main-bg: #fff;
   }
 

@@ -5,7 +5,6 @@ const { useState, useRef, useContext } = React
 import Hamburger from "../Hamburger"
 import Nav from "../Nav"
 import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
 
 import { StaticImage } from "gatsby-plugin-image"
 import { SnipcartContext } from "gatsby-plugin-snipcart-advanced/context.js"
@@ -17,6 +16,8 @@ import {
   CartContainer,
   Checkout,
   Count,
+  HamburgerNavContainer
+  
 } from "./styled"
 import { Cart } from "../../Icons/"
 import useOnClickOutside from "../../../hooks/useOnClickOutside"
@@ -34,10 +35,10 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
 
   return (
     <HeaderContainer>
-      <div ref={node}>
+      <HamburgerNavContainer ref={node}>
         <Hamburger open={open} setOpen={setOpen} />
         <Nav open={open} />
-      </div>
+      </HamburgerNavContainer>
       <CartContainer>
         <Checkout className="snipcart-checkout">
           <Cart />

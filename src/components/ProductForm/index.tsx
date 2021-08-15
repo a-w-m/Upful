@@ -1,11 +1,12 @@
 import React, { ChangeEvent, Dispatch } from "react"
 import { graphql } from "gatsby"
-import { Container, Label, Select } from "./styled"
+import { Container, Label, Input, Field } from "./styled"
 import { P } from "../interfaces/index"
 
 interface OptionProps {
   dispatch: P.Dispatch
   customField: P.CustomField
+  selected?: string
 }
 
 type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
@@ -16,30 +17,33 @@ type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
 const Options: React.FC<OptionProps> = ({
   customField,
   dispatch,
+  selected
 }: OptionProps) => {
-  const handleChange = (event: HTMLElementEvent<HTMLSelectElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: "customField", payload: event.target.value })
   }
 
   return (
-    <Container>
-      <Label htmlFor={customField.name}>{customField.name}</Label>
-      <Select
-        id={customField.name}
-        defaultValue={""}
-        onChange={e => {
-          handleChange(e)
-        }}
-      >
-        <option value="">select an option</option>
-        {customField.values.map((value: any) => {
-          return (
-            <option value={value.name} key={value.name}>
-              {value.name}
-            </option>
-          )
-        })}
-      </Select>
+    <Container name = {`Select ${customField.field}`}>
+      <Field>{`${customField.field} | ${selected? selected: ""}`}</Field>
+      {customField.values.map((value, index) => {
+        return (
+          <>
+            <Input
+              checked = {index == Math.floor(customField.values.length/2) ? true: false}
+              type="radio"
+              id={value.option}
+              value={value.option}
+              key={value.option}
+              name={customField.field}
+              onChange={e => handleChange(e)}
+            ></Input>
+           <Label htmlFor={value.option}>
+
+            {value.option}</Label>
+          </>
+        )
+            })}
     </Container>
   )
 }
@@ -49,17 +53,10 @@ export default Options
 export const query = graphql`
   fragment CustomFields on MarkdownRemark {
     frontmatter {
-      customField1 {
-        name
+      customField {
+        field
         values {
-          name
-          priceChange
-        }
-      }
-      customField2 {
-        name
-        values {
-          name
+          option
           priceChange
         }
       }

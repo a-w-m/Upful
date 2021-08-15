@@ -1,25 +1,49 @@
 import styled from "styled-components"
+import device from "../layout/mediaQuery"
 
-export const Select = styled.select`
-  font-size: 1.5rem;
-  width: 100%;
-  max-width: 28rem;
-  height: 3.2rem;
-  line-height: 2rem;
-  box-shadow: 0 0.1rem 0.6rem rgb(34, 34, 34, 0.15);
-  padding-left: 1.2rem;
-  margin: 1rem 0;
+
+export const Input = styled.input.attrs({type: "radio"})`
+	opacity: 0;
+	position: absolute;
+
+&:checked + label{
+  background-color: var(--main-brown);
+  color: var(--color-bg)
+}
+
+
 `
 
 export const Label = styled.label`
-  font-size: 1.4rem;
-  color: var(--secondary-color);
+	height: 4rem;
+	justify-content: center;
+	font-size: 1.4rem;
+	align-items: center;
+	display: flex;
+	position: relative;
+  border: .1rem solid rgb(235, 235, 235);
+  flex: 0 0 30%;
+
+  &:focus,
+  &:checked + label {
+    background-color: var(--main-brown);
+  } 
 `
 
-export const Container = styled.div`
+export const Field = styled.span`
+font-size: 1.4rem;
+flex-basis: 100%;
+`
+
+export const Container = styled.form`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  width: calc(100 * 0.75%);
+  width: 100%;
   padding: 1.2rem 0;
+  justify-content: space-between;
+  row-gap: 1rem;
+  margin: 0;
+
 `

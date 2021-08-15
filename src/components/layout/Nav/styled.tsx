@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import device from "../mediaQuery"
 
 export const Menu = styled.nav<{ open: boolean }>`
   display: flex;
@@ -17,6 +18,17 @@ export const Menu = styled.nav<{ open: boolean }>`
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
   z-index: 9;
 
+  @media ${device.laptop}{
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    height: 2rem;
+    transform: none;
+    visibility: visible;  
+    background: none;
+    gap: 2rem;
+  }
+
   a {
     font-size: 2rem;
     text-transform: uppercase;
@@ -27,9 +39,14 @@ export const Menu = styled.nav<{ open: boolean }>`
     color: #000;
     text-decoration: none;
     transition: color 0.3s linear;
+
+    @media ${device.laptop}{
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
   }
 
   a:hover {
-    color: var(--nav-link-hover);
+    color: var(--header-nav-link-hover);
   }
 `

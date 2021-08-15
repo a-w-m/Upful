@@ -8,9 +8,13 @@ galleryImages:
 price: 74
 featured: false
 customField:
-  field: size
+  field: Size
   values:
     - option: small
+      priceChange: 0
+    - option: medium
+      priceChange: 0
+    - option: large
       priceChange: 0
 ---
 <!--StartFragment-->

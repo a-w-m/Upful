@@ -2,12 +2,12 @@ import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby
 import {PageProps} from "gatsby"
 
 export interface CustomField {
-  name: string
+  field: string
   values: Values[]
 }
 
 export interface Values {
-  name: string
+  option: string
   priceChange: number
 }
 
@@ -41,24 +41,30 @@ export interface Index {
 export interface Product extends PageProps {
   data: {
     markdownRemark: MarkdownRemark
-    allFile: AllImageFiles
-  }
+    site: SiteMetaData
+    }
 }
 
+export interface SiteMetaData {
+  url: string
+}
 export interface MarkdownRemark {
   frontmatter: {
     title: string
     price: number
     image: Image
     id: string
-    description: string
     date: string
     customField: CustomField | null
+    galleryImages: Image[]
   }
   fields: {
     slug: string
   }
   html: string
+  parent: {
+    sourceInstanceName: string
+  }
 }
 
 export interface AllMarkdownRemark {

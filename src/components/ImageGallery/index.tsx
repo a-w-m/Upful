@@ -5,7 +5,7 @@ import { P } from "../interfaces/index"
 import { Wrapper, UL, LI } from "./styled"
 
 interface Props {
-  images: P.ImageNode[]
+  images: P.Image[]
   dispatch: P.Dispatch
 }
 const ImageGallery: React.FC<Props> = props => {
@@ -25,12 +25,12 @@ const ImageGallery: React.FC<Props> = props => {
               onClick={() => {
                 dispatch({
                   type: "image",
-                  payload: image.node.childImageSharp.gatsbyImageData,
+                  payload: image.childImageSharp.gatsbyImageData,
                 })
               }}
             >
               <GatsbyImage
-                image={image.node.childImageSharp.gatsbyImageData}
+                image={image.childImageSharp.gatsbyImageData}
                 alt=""
                 style={{ opacity: 1 }}
                 loading={"eager"}
@@ -46,9 +46,8 @@ const ImageGallery: React.FC<Props> = props => {
 export const imageQuery = graphql`
   fragment ImageGalleryFragment on ImageSharp {
     gatsbyImageData(
-      width: 1024
-      aspectRatio: 1
-      transformOptions: { fit: CONTAIN }
+      layout: CONSTRAINED
+      transformOptions: { fit: COVER }
       backgroundColor: "white"
     )
   }

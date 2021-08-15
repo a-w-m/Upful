@@ -1,18 +1,24 @@
-import React, { useContext, useReducer } from "react"
+import React, { useContext, useReducer, useRef } from "react"
 import { Context } from "../../Provider"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { P } from "../../interfaces"
 import { createOptionsString } from "../../../helpers/index"
 import Layout from "../../layout"
+import SEO from "../../seo"
+import ProductNav from "../../ProductNav"
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
 import ImageGallery from "../../ImageGallery"
+import ShareButton from "../../ShareButton"
+import EmailButton from "../../EmailButton"
 import {
   ProductContainer,
+  ProductForm,
   TitleContainer,
   Title,
   BasePrice,
+  ShareButtonWrapper,
   DescriptionWrapper,
   DescriptionHeading,
   DescriptionContents,
@@ -29,72 +35,97 @@ function reducer(state: P.State, action: P.Action): P.State {
   }
 }
 
-const Product: React.FC<P.Product> = ({ data }) => {
+const Product: React.FC<P.Product> = ({ data, location }) => {
   const {
     title,
     price,
     id,
-    description,
+    image,
+    galleryImages,
     customField,
   } = data.markdownRemark.frontmatter
+  const collection = data.markdownRemark.parent.sourceInstanceName
   const { html } = data.markdownRemark
-  const images = data.allFile.edges
   const { slug } = data.markdownRemark.fields
-  const { inventory, isLoading} = useContext(Context)
+  const url = data.site.url || location.hostname
+  const path = url + slug
+  const { inventory, isLoading } = useContext(Context)
   const [state, dispatch] = useReducer(reducer, {
-    imageSelected: images[0].node.childImageSharp.gatsbyImageData,
+    imageSelected: image.childImageSharp.gatsbyImageData,
   })
+  const ref = useRef<HTMLDivElement>(null)
+  const description = ref.current
+    ? ref.current.innerText
+    : "Upful - Made with full irations"
+
+  const imgURL = `${url}${state.imageSelected.images.fallback?.src}`
+
 
   return (
     <Layout>
+      <SEO title={title} description={description} url={path} image={imgURL} />
       <ProductContainer>
-        <TitleContainer>
-          <Title>{title}</Title>
-          <BasePrice> ${price.toFixed(2)}</BasePrice>
-        </TitleContainer>
+        <ProductNav title = {title} collection = {collection}></ProductNav>
         <GatsbyImage
           image={state.imageSelected}
           alt=""
           style={{ opacity: 1 }}
         />
-        <ImageGallery images={images} dispatch={dispatch}></ImageGallery>
+        <ImageGallery
+          images={[image].concat(galleryImages)}
+          dispatch={dispatch}
+        ></ImageGallery>
 
-        {customField && (
-          <Options customField={customField} dispatch={dispatch}></Options>
-        )}
-        {!isLoading && (
-          <BuyButton
-            data-item-id={id}
-            data-item-price={price.toFixed(2)}
-            data-item-name={title}
-            data-item-description={description}
-            data-item-image={
-              images[0].node.childImageSharp.gatsbyImageData.images.fallback
-                ?.src || ""
-            }
-            data-item-url={`${slug}`}
-            data-item-max-quantity={
-            inventory[id]? inventory[id].stock : undefined
-            }
-            data-item-custom1-name={customField?.name}
-            data-item-custom1-options={createOptionsString(
-              customField?.values ?? []
-            )}
-            data-item-custom1-value={state.customFieldSelected}
-          ></BuyButton>
-        )}
+        <TitleContainer>
+          <BasePrice> ${price.toFixed(2)}</BasePrice>
+          <Title>{title}</Title>
+        </TitleContainer>
 
         <DescriptionWrapper>
-          <DescriptionHeading>Description</DescriptionHeading>
-          <DescriptionContents dangerouslySetInnerHTML={{ __html: html }} />
+          <DescriptionContents
+            ref={ref}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </DescriptionWrapper>
+
+        <ProductForm>
+          {customField && (
+            <Options customField={customField} dispatch={dispatch} selected = {state.customFieldSelected}></Options>
+          )}
+
+          {!isLoading && (
+            <BuyButton
+              data-item-id={id}
+              data-item-price={price.toFixed(2)}
+              data-item-name={title}
+              data-item-description={description}
+              data-item-image={
+                image.childImageSharp.gatsbyImageData.images.fallback?.src || ""
+              }
+              data-item-url={`${slug}`}
+              data-item-max-quantity={
+                inventory[id] ? inventory[id].stock : undefined
+              }
+              data-item-custom1-name={customField?.field}
+              data-item-custom1-options={createOptionsString(
+                customField?.values ?? []
+              )}
+              data-item-custom1-value={state.customFieldSelected}
+            ></BuyButton>
+          )}
+        </ProductForm>
+
+        <ShareButtonWrapper>
+          <EmailButton title={title} />
+          <ShareButton title={title} path={path} image={imgURL} />
+        </ShareButtonWrapper>
       </ProductContainer>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query($slug: String!, $pathRegex: String!) {
+  query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       ...Frontmatter
       ...CustomFields
@@ -102,15 +133,16 @@ export const query = graphql`
       fields {
         slug
       }
+      parent {
+        ... on File {
+          sourceInstanceName
+        }
+      }
     }
 
-    allFile(filter: { relativeDirectory: { regex: $pathRegex } }) {
-      edges {
-        node {
-          childImageSharp {
-            ...ImageGalleryFragment
-          }
-        }
+    site {
+      siteMetadata {
+        url
       }
     }
   }
@@ -124,6 +156,16 @@ export const frontmatterQuery = graphql`
       id
       description
       date
+      image {
+        childImageSharp {
+          ...ImageGalleryFragment
+        }
+      }
+      galleryImages {
+        childImageSharp {
+          ...ImageGalleryFragment
+        }
+      }
     }
   }
 `

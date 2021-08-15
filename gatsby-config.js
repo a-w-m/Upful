@@ -1,10 +1,10 @@
 const { template } = require("./src/snipcart/templates.tsx")
 module.exports = {
   siteMetadata: {
-    title: `StoreFront`,
-    description: `Knick Knacks`,
+    title: `Upful`,
+    description: "Hand-crafted and made with Iration",
     author: `@a-w-m`,
-    url: "http://localhost",
+    url: "",
     keywords: ["e-commerce"],
     meta: [{ name: "meta", content: "meta" }],
     image: "image",
