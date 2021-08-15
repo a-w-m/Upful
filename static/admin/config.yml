@@ -41,17 +41,21 @@ product: &PRODUCT
           widget: "boolean",
           default: false,
         }
-      - label: "Custom Field"
-        name: "customField"
-        widget: "object"
+      - label: "Product Options"
+        name: "productOptions"
+        widget: "list"
         fields:
-          - { label: "Field", name: "field", widget: "string" }
-          - label: "Values"
-            name: "values"
-            widget: "list"
-            fields:
-              - { label: "Option", name: "option", widget: "string" }
-              - { label: "Price Change", name: "priceChange", widget: "number" }
+          - label: "Product Option"
+            name: "productOption"
+            widget: "object"
+            fields: 
+              - { label: "Custom Field", name: "customField", widget: "string" }
+              - label: "Options"
+                name: "options"
+                widget: "list"
+                fields:
+                  - { label: "option", name: "option", widget: "string" }
+                  - { label: "Price Change", name: "priceChange", widget: "number" }
 
 
 
