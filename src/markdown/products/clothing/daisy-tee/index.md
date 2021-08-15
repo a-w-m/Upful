@@ -6,7 +6,7 @@ image: images/image-1.webp
 galleryImages:
   - images/image-2.webp
 price: 74
-featured: false
+featured: true
 customField:
   field: Size
   values:
