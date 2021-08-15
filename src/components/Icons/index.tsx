@@ -1,3 +1,4 @@
+import React from 'react'
 export { default as ChevronLeft } from "./ChevronLeft"
 export { default as ChevronRight } from "./ChevronRight"
 export { default as Cart } from "./Cart"
