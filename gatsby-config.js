@@ -25,21 +25,21 @@ module.exports = {
       },
     },
 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/markdown/products/accessories`,
-        name: `accessories`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/markdown/products/accessories`,
+    //     name: `accessories`,
+    //   },
+    // },
 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/markdown/products/home`,
-        name: `home`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/markdown/products/home`,
+    //     name: `home`,
+    //   },
+    // },
 
     {
       resolve: `gatsby-source-filesystem`,
