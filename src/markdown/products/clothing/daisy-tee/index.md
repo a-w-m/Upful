@@ -7,15 +7,23 @@ galleryImages:
   - images/image-2.webp
 price: 74
 featured: true
-customField:
-  field: Size
-  values:
-    - option: small
-      priceChange: 0
-    - option: medium
-      priceChange: 0
-    - option: large
-      priceChange: 0
+productOptions:
+    -  customField: Size
+       options:
+        - option: small
+          priceChange: -5
+        - option: medium
+          priceChange: 0
+        - option: large
+          priceChange: 0
+    -   customField: Color
+        options: 
+        - option: black
+          priceChange: 10
+        - option: cream
+          priceChange: 0
+        - option: pink
+          priceChange: 0
 ---
 <!--StartFragment-->
 

@@ -7,15 +7,7 @@ galleryImages:
   - images/image-2.webp
 price: 175
 featured: true
-customField:
-  field: size
-  values:
-    - option: small
-      priceChange: 0
-    - option: med
-      priceChange: 0
-    - option: large
-      priceChange: 0
+productOptions: []
 ---
 <!--StartFragment-->
 
