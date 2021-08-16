@@ -1,20 +1,22 @@
 import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
 import {PageProps} from "gatsby"
 
-export interface CustomField {
-  field: string
-  values: Values[]
+export interface ProductOption {
+  customField: string
+  options: Options[]
 }
 
-export interface Values {
+export interface Options {
   option: string
   priceChange: number
 }
 
 export interface State {
-  customFieldSelected?: string
   quantitySelected?: number
   imageSelected: IGatsbyImageData
+  optionsSelected: {
+    [name: string]: Options
+  }  | null
 }
 
 export type Dispatch = React.Dispatch<Action>
@@ -22,13 +24,17 @@ export type Dispatch = React.Dispatch<Action>
 export type Action = ActionImage | ActionCustomField
 
 export interface ActionImage {
-  type: "image"
+  type: "SET_IMAGE"
   payload: IGatsbyImageData
 } 
 
 export interface ActionCustomField {
-  type: "customField"
-  payload: string
+  type: "SET_PRODUCT_OPTION"
+  payload: {
+    customField: string
+    option: string
+    priceChange: number
+  }
 }
 
 
@@ -55,8 +61,8 @@ export interface MarkdownRemark {
     image: Image
     id: string
     date: string
-    customField: CustomField | null
     galleryImages: Image[]
+    productOptions: ProductOption[] 
   }
   fields: {
     slug: string

@@ -3,7 +3,7 @@ import { Context } from "../../Provider"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { P } from "../../interfaces"
-import { createOptionsString } from "../../../helpers/index"
+import { createOptionsSelected, calculateTotalPriceChange } from "../../../helpers/index"
 import Layout from "../../layout"
 import SEO from "../../seo"
 import ProductNav from "../../ProductNav"
@@ -20,16 +20,17 @@ import {
   BasePrice,
   ShareButtonWrapper,
   DescriptionWrapper,
-  DescriptionHeading,
   DescriptionContents,
 } from "./styled"
 
 function reducer(state: P.State, action: P.Action): P.State {
   switch (action.type) {
-    case "image":
+    case "SET_IMAGE":
       return { ...state, imageSelected: action.payload }
-    case "customField":
-      return { ...state, customFieldSelected: action.payload }
+    case "SET_PRODUCT_OPTION":
+      const optionsSelected = {...state.optionsSelected}
+      optionsSelected[`${action.payload.customField}`] = {option: action.payload.option, priceChange: action.payload.priceChange}
+      return { ...state, optionsSelected }
     default:
       return { ...state }
   }
@@ -42,7 +43,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
     id,
     image,
     galleryImages,
-    customField,
+    productOptions,
   } = data.markdownRemark.frontmatter
   const collection = data.markdownRemark.parent.sourceInstanceName
   const { html } = data.markdownRemark
@@ -50,8 +51,11 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
   const url = data.site.url || location.hostname
   const path = url + slug
   const { inventory, isLoading } = useContext(Context)
+
+  const optionsSelected = createOptionsSelected(productOptions)
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: image.childImageSharp.gatsbyImageData,
+    optionsSelected  
   })
   const ref = useRef<HTMLDivElement>(null)
   const description = ref.current
@@ -59,6 +63,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
     : "Upful - Made with full irations"
 
   const imgURL = `${url}${state.imageSelected.images.fallback?.src}`
+
 
 
   return (
@@ -77,7 +82,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
         ></ImageGallery>
 
         <TitleContainer>
-          <BasePrice> ${price.toFixed(2)}</BasePrice>
+          <BasePrice> ${(price + calculateTotalPriceChange(state.optionsSelected)).toFixed(2)}</BasePrice>
           <Title>{title}</Title>
         </TitleContainer>
 
@@ -89,8 +94,8 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
         </DescriptionWrapper>
 
         <ProductForm>
-          {customField && (
-            <Options customField={customField} dispatch={dispatch} selected = {state.customFieldSelected}></Options>
+          {state.optionsSelected && (
+            <Options productOptions={productOptions} dispatch={dispatch} selected = {state.optionsSelected}></Options>
           )}
 
           {!isLoading && (
@@ -106,11 +111,8 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
               data-item-max-quantity={
                 inventory[id] ? inventory[id].stock : undefined
               }
-              data-item-custom1-name={customField?.field}
-              data-item-custom1-options={createOptionsString(
-                customField?.values ?? []
-              )}
-              data-item-custom1-value={state.customFieldSelected}
+              productOptions = {productOptions}
+              optionsSelected = {state.optionsSelected}
             ></BuyButton>
           )}
         </ProductForm>

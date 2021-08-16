@@ -5,8 +5,8 @@ import { P } from "../interfaces/index"
 
 interface OptionProps {
   dispatch: P.Dispatch
-  customField: P.CustomField
-  selected?: string
+  productOptions: P.ProductOption[]
+  selected: {[name: string]: P.Options} | null
 }
 
 type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
@@ -14,37 +14,51 @@ type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
   currentTarget: T
 }
 
-const Options: React.FC<OptionProps> = ({
-  customField,
-  dispatch,
-  selected
-}: OptionProps) => {
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: "customField", payload: event.target.value })
+const Options: React.FC<OptionProps> = props => {
+  
+  const { dispatch, productOptions, selected } = props
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>, priceChange: number) => {
+    dispatch({ type: "SET_PRODUCT_OPTION", payload: {customField: event.target.name,  option: event.target.value, priceChange}})
   }
 
   return (
-    <Container name = {`Select ${customField.field}`}>
-      <Field>{`${customField.field} | ${selected? selected: ""}`}</Field>
-      {customField.values.map((value, index) => {
+    <>
+      {productOptions.map(productOption => {
         return (
-          <>
-            <Input
-              checked = {index == Math.floor(customField.values.length/2) ? true: false}
-              type="radio"
-              id={value.option}
-              value={value.option}
-              key={value.option}
-              name={customField.field}
-              onChange={e => handleChange(e)}
-            ></Input>
-           <Label htmlFor={value.option}>
-
-            {value.option}</Label>
-          </>
-        )
+          <Container name={`Select ${productOption.customField}`}>
+          <Field>{`${productOption.customField} | ${
+            selected ? selected[`${productOption.customField}`]['option'] : ""
+          }`}</Field>
+            {productOption.options.map(({ option, priceChange }) => {
+              return (
+                  <>
+                  <Input
+                    type="radio"
+                    id={option}
+                    value={option}
+                    key={option}
+                    name={productOption.customField}
+                    onChange={e => handleChange(e, priceChange)}
+                  ></Input>
+                  <Label htmlFor={option}>{option}</Label>
+                </>
+              )
             })}
-    </Container>
+          </Container>
+        )
+      })}
+    </>
+
+    // <Container name = {`Select ${productOptions}`}>
+    //   {customField.options.map((option, index) => {
+    //     return (
+    //       <>
+
+    //       </>
+    //     )
+    //         })}
+    // </Container>
   )
 }
 
@@ -53,9 +67,9 @@ export default Options
 export const query = graphql`
   fragment CustomFields on MarkdownRemark {
     frontmatter {
-      customField {
-        field
-        values {
+      productOptions {
+        customField
+        options {
           option
           priceChange
         }

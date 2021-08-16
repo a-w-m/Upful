@@ -24,7 +24,7 @@ const ImageGallery: React.FC<Props> = props => {
               key={index}
               onClick={() => {
                 dispatch({
-                  type: "image",
+                  type: "SET_IMAGE",
                   payload: image.childImageSharp.gatsbyImageData,
                 })
               }}
