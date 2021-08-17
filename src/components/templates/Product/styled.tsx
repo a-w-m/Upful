@@ -15,17 +15,15 @@ export const ProductContainer = styled.div`
     display: grid;
     grid-gap: 1rem 2rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .2fr .2fr .3fr 1fr .1fr;
+    grid-template-rows: .05fr auto auto auto 1fr .1fr;
     grid-template-areas:
-      "image title"
-      "image form"
-      "image share"
-      "image description"
-      "gallery description";
+      "nav ."
+      "gallery title"
+      "gallery form"
+      "gallery  share"
+      "gallery description"
+      ". description";
 
-    & > .gatsby-image-wrapper {
-      grid-area: image;
-    }
   }
 `
 
@@ -46,6 +44,7 @@ export const TitleContainer = styled.section`
     width: 100%;
     border-bottom: 0.1rem solid var(--border-color);
     padding: 1rem 1rem;
+    grid-area: title;
   }
 `
 

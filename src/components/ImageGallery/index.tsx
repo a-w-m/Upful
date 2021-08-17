@@ -7,9 +7,10 @@ import { Wrapper, UL, LI } from "./styled"
 interface Props {
   images: P.Image[]
   dispatch: P.Dispatch
+  selected: P.State['imageSelected']
 }
 const ImageGallery: React.FC<Props> = props => {
-  const { images, dispatch } = props
+  const { images, dispatch, selected } = props
 
   if (images.length <= 1) {
     return null
@@ -17,6 +18,10 @@ const ImageGallery: React.FC<Props> = props => {
 
   return (
     <Wrapper>
+        <GatsbyImage
+          image={selected}
+          alt=""
+        />
       <UL>
         {images.map((image, index) => {
           return (
@@ -47,8 +52,7 @@ export const imageQuery = graphql`
   fragment ImageGalleryFragment on ImageSharp {
     gatsbyImageData(
       layout: CONSTRAINED
-      transformOptions: { fit: COVER }
-      backgroundColor: "white"
+      height: 1024
     )
   }
 `

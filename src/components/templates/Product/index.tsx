@@ -71,14 +71,10 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
       <SEO title={title} description={description} url={path} image={imgURL} />
       <ProductContainer>
         <ProductNav title = {title} collection = {collection}></ProductNav>
-        <GatsbyImage
-          image={state.imageSelected}
-          alt=""
-          style={{ opacity: 1 }}
-        />
         <ImageGallery
           images={[image].concat(galleryImages)}
           dispatch={dispatch}
+          selected = {state.imageSelected}
         ></ImageGallery>
 
         <TitleContainer>
@@ -109,7 +105,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
               }
               data-item-url={`${slug}`}
               data-item-max-quantity={
-                inventory[id] ? inventory[id].stock : undefined
+                inventory[id] ? inventory[id].stock : 1
               }
               productOptions = {productOptions}
               optionsSelected = {state.optionsSelected}

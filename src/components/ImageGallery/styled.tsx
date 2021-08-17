@@ -3,10 +3,15 @@ import device from "../layout/mediaQuery"
 export const Wrapper = styled.div`
   width: auto;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 
   @media ${device.laptop}{
     grid-area: gallery;
     justify-self: center;
+    align-self: flex-start;
+    
   }
 `
 export const UL = styled.ul`

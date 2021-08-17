@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Link from 'gatsby'
-
+import device from "../layout/mediaQuery"
 export const Wrapper = styled.nav`
 display: flex;
 gap: 1rem;
@@ -9,6 +8,11 @@ justify-content: flex-start;
 align-items: end;
 width: 100%;
 height: 1.8rem;
+
+
+@media ${device.laptop}{
+    grid-area: nav;
+}
 
 & > a{
     font-size: 1rem;
@@ -35,4 +39,5 @@ height: 1.8rem;
     vertical-align:baseline;
 
 }
+
 `
