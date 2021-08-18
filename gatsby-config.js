@@ -25,27 +25,51 @@ module.exports = {
       },
     },
 
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/src/markdown/products/accessories`,
-    //     name: `accessories`,
-    //   },
-    // },
-
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/src/markdown/products/home`,
-    //     name: `home`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/meta`,
+        name: `meta`,
+      },
+    },
 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/markdown/products/clothing`,
-        name: `clothing`,
+        path: `${__dirname}/src/markdown/products/kids`,
+        name: `kids`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/products/mommy-and-me`,
+        name: `mommy and me`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/products/men`,
+        name: `men`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/products/home-goods`,
+        name: `home goods`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/products/women`,
+        name: `women`,
       },
     },
 

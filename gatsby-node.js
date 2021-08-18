@@ -37,7 +37,7 @@ async function paginate({ graphql, actions, category }) {
 
     const count = data.allFile.edges.length
     const perPage = 48
-    const numPages = Math.ceil(count / perPage)
+    const numPages = Math.ceil(count / perPage) === 0 ? 1 : Math.ceil(count / perPage) 
 
     Array.from({ length: numPages }).forEach((_, i) => {
       /*
@@ -62,10 +62,22 @@ async function paginate({ graphql, actions, category }) {
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-  //the graphql function returns a promise
-
   const { createPage } = actions
-  const categories = ["accessories", "clothing", "home"]
+
+  //the graphql function returns a promise
+  const categoryData = await graphql(`
+    query MyQuery {
+      file(sourceInstanceName: { eq: "meta" }) {
+        childMarkdownRemark {
+          frontmatter {
+            categories
+          }
+        }
+      }
+    }
+  `)
+  console.log(categoryData)
+
   const products = await graphql(`
     query {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/products/" } }) {
@@ -91,9 +103,11 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  const promises = categories.map(async category => {
-    await paginate({ graphql, actions, category })
-  })
+  const promises = categoryData.data.file.childMarkdownRemark.frontmatter.categories.map(
+    async category => {
+      await paginate({ graphql, actions, category })
+    }
+  )
 
   await Promise.all(promises)
 }
