@@ -1,7 +1,7 @@
 import React, { ChangeEvent, Dispatch } from "react"
 import { graphql } from "gatsby"
 import { Container, Label, Input, Field } from "./styled"
-import { P } from "../interfaces/index"
+import { P } from "../../interfaces/index"
 
 interface OptionProps {
   dispatch: P.Dispatch

@@ -1,9 +1,9 @@
 import React from "react"
-import Markdown, { MarkdownHTMLProps } from "../components/templates/Markdown"
+import StoreInfo, { StoreInfoHTMLProps } from "../components/templates/StoreInfo"
 import { graphql } from "gatsby"
 
-const Returns: React.FC<MarkdownHTMLProps> = ({ data }) => {
-  return <Markdown data={data} />
+const Returns: React.FC<StoreInfoHTMLProps> = ({ data }) => {
+  return <StoreInfo data={data} />
 }
 export const query = graphql`
   {

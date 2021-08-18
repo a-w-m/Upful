@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { P } from "../interfaces/index"
+import { P } from "../../interfaces/index"
 import { Wrapper, UL, LI } from "./styled"
 
 interface Props {

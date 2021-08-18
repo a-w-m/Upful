@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../../layout"
-import SEO from "../../seo"
+import SEO from "../../SEO"
 import styled from "styled-components"
 
 export const Container = styled.div`
@@ -9,7 +9,7 @@ export const Container = styled.div`
   }
 `
 
-export interface MarkdownHTMLProps {
+export interface StoreInfoHTMLProps {
   data: {
     file: {
       childMarkdownRemark: {
@@ -19,7 +19,7 @@ export interface MarkdownHTMLProps {
   }
 }
 
-const Markdown: React.FC<MarkdownHTMLProps> = ({ data }) => {
+const StoreInfo: React.FC<StoreInfoHTMLProps> = ({ data }) => {
   const { html } = data.file.childMarkdownRemark
   return (
     <Layout>
@@ -29,4 +29,4 @@ const Markdown: React.FC<MarkdownHTMLProps> = ({ data }) => {
   )
 }
 
-export default Markdown
+export default StoreInfo

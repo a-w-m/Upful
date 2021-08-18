@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../../layout"
-import SEO from "../../seo"
+import SEO from "../../SEO"
 import { graphql } from "gatsby"
 import ProductGrid from "../../ProductGrid"
 import Pagination from "../../Pagination"
 import { CategoryHeading, Container } from "./styled"
-import { C } from "../../interfaces/"
+import { C } from "../../../interfaces"
 
 const Category: React.FC<C.CategoryPage> = ({ data, pageContext }) => {
   const { category, numPages, currentPage } = pageContext

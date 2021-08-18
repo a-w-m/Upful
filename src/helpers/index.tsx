@@ -1,4 +1,4 @@
-import { P } from "../components/interfaces"
+import { P } from "../interfaces"
 
 /*
   - receives array of options and returns a string formatted for Snipcart's custom-options API

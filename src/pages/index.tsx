@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 import ProductGrid from "../components/ProductGrid"
 import {
   CategoryHeading,
   Container,
 } from "../components/templates/Category/styled"
 import { graphql } from "gatsby"
-import { C } from "../components/interfaces"
+import { C } from "../interfaces"
 
 
 const IndexPage: React.FC<C.CategoryPage> = ({ data }) => {

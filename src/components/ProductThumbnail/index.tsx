@@ -2,7 +2,7 @@ import React, {useContext} from "react"
 import {Context} from "../Provider"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { P } from "../interfaces"
+import { P } from "../../interfaces"
 import { Article, H3, PriceWrapper, ProductInfoContainer, SoldOut } from "./styled"
 
 

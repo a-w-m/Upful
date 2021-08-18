@@ -1,6 +1,6 @@
 import React from "react"
 import { Button } from "./styled"
-import {P} from "../interfaces/index"
+import {P} from "../../interfaces/index"
 import {createCustomOptionsProps, createOptionsString} from "../../helpers"
 
 interface Props {

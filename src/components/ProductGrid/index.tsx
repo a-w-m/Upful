@@ -1,5 +1,5 @@
 import React from "react"
-import { C } from "../interfaces"
+import { C } from "../../interfaces"
 import ProductThumbnail from "../ProductThumbnail"
 import { Container } from "./styled"
 

@@ -1,4 +1,4 @@
-import { P, C } from "../src/components/interfaces"
+import { P, C } from "../src/interfaces"
 
 const constrained: "constrained" = "constrained"
 
