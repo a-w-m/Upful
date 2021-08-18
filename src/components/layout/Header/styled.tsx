@@ -4,10 +4,7 @@ import device from "../mediaQuery"
 import { Link } from "gatsby"
 
 export const HeaderContainer = styled.header`
-  margin-bottom: 1.45rem;
-  padding-top: 2rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -21,7 +18,8 @@ export const HeaderContainer = styled.header`
   }
 `
 
-export const HamburgerNavContainer = styled.div`
+export const HamburgerNavContainer = styled.div<{open: boolean}>`
+width: ${({open})=> open? "100%": "auto"};
 @media ${device.laptop}{
   order: 1;
   flex-basis: 100%;
@@ -57,7 +55,6 @@ export const TitleLink = styled(props => <Link {...props} />)`
 export const CartContainer = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding-right: 2rem;
 `
 export const Checkout = styled.button`
   text-align: center;
@@ -80,11 +77,9 @@ export const Checkout = styled.button`
   -webkit-box-align: center;
   align-items: center;
   font-size: 1rem;
-  padding-left: 2.7rem;
   color: #666;
   font-family: Open Sans, sans-serif;
   font-family: var(--fontFamily);
-  margin-left: 1rem;
   font-weight: 700;
 `
 

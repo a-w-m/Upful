@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
 
   return (
     <HeaderContainer>
-      <HamburgerNavContainer ref={node}>
+      <HamburgerNavContainer ref={node} open ={open}>
         <Hamburger open={open} setOpen={setOpen} />
         <Nav open={open} />
       </HamburgerNavContainer>

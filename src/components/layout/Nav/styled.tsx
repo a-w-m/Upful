@@ -5,11 +5,12 @@ export const Menu = styled.nav<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background: #f4f4f4;
   height: 100vh;
+  width: 100vw;
   text-align: left;
-  padding: 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;

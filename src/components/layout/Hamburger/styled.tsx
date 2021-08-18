@@ -1,7 +1,13 @@
 import styled from "styled-components"
 import device from "../mediaQuery"
 
-export const Container = styled.button<{ open: boolean }>`
+export const Container = styled.div<{open: boolean}>`
+display: flex;
+width: ${({open})=> open ? "100%" : "auto"};
+justify-content: ${({open})=> open? "flex-end": "flex-start"}
+`
+
+export const Button = styled.button<{ open: boolean }>`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -14,7 +20,6 @@ export const Container = styled.button<{ open: boolean }>`
   padding: 0;
   z-index: 10;
   padding-bottom: 0.1rem;
-  margin-left: 2rem;
 
   &:focus {
     outline: none;

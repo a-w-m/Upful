@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   position: relative;
+  padding: 2rem;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
@@ -11,13 +12,14 @@ export const Container = styled.div`
     "main"
     "footer";
   overflow: scroll;
+  row-gap: 2rem;
   font-family: var(--main-font);
 `
 
 export const MainWrapper = styled.div`
   margin: 0 auto;
   width: auto;
-  padding: 2rem 2rem 6.4rem 2rem;
+  padding-bottom: 6.4rem;
   grid-area: main;
 `
 

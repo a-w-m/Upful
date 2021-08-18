@@ -1,5 +1,5 @@
 import React, { SetStateAction, Dispatch } from "react"
-import { Container } from "./styled"
+import { Container, Button } from "./styled"
 
 interface HamburgerProps {
   open: boolean
@@ -10,17 +10,18 @@ const Hamburger: React.FC<HamburgerProps> = props => {
   const { open, setOpen } = props
 
   return (
-    <Container
-      type="button"
-      aria-label="open navigation"
-      aria-controls="link-list"
-      aria-expanded="false"
-      open={open}
-      onClick={() => setOpen(!open)}
-    >
+      <Container open = {open} onClick = {()=> setOpen(prev=>!prev)}>
+      <Button
+        type="button"
+        aria-label="open navigation"
+        aria-controls="link-list"
+        aria-expanded="false"
+        open={open}
+      >
       <div />
       <div />
       <div />
+    </Button>
     </Container>
   )
 }
