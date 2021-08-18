@@ -1,5 +1,9 @@
 import { P } from "../components/interfaces"
 
+/*
+  - receives array of options and returns a string formatted for Snipcart's custom-options API
+*/
+
 export const createOptionsString = (options: P.Options[]) => {
   if (options.length > 0) {
     return options
@@ -18,6 +22,10 @@ export const createOptionsString = (options: P.Options[]) => {
   }
 }
 
+/*
+  - receives array of productOptions and the selected options object from state
+  - returns an object that contains the data for Snipcart custom option API
+*/
 export const createCustomOptionsProps = (
   productOptions: P.ProductOption[],
   optionsSelected: P.State["optionsSelected"]
@@ -34,6 +42,11 @@ export const createCustomOptionsProps = (
   return res
 }
 
+/*
+  - receives array of productOptions
+  - returns an object that describes the product options that the user selects
+*/
+
 export const createOptionsSelected = (productOptions: P.ProductOption[]) => {
   let res: { [name: string]: { option: string; priceChange: number } } = {}
   if (productOptions.length > 0) {
@@ -46,6 +59,10 @@ export const createOptionsSelected = (productOptions: P.ProductOption[]) => {
   return res
 }
 
+/*
+  - receives object containing the options the user selects
+  - returns the total value of the product's price change
+*/
 export const calculateTotalPriceChange = (
   optionsSelected: P.State["optionsSelected"]
 ) => {
@@ -61,4 +78,13 @@ export const calculateTotalPriceChange = (
   }
 
   return 0
+}
+
+
+/*
+  -convert html to plain text
+*/
+
+export function convertHTMLtoPlaintext(html:string): string {
+  return html.replace(/<[^>]+>/g, '');
 }

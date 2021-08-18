@@ -7,11 +7,11 @@ import useOnClickOutside from "../../hooks/useOnClickOutside"
 interface ShareButtonProps {
   title: string
   path: string
-  image: string
+  imageURL: string
 }
 
 const ShareButton: React.FC<ShareButtonProps> = props => {
-  const { title, path, image } = props
+  const { title, path, imageURL } = props
   const ref = useRef(null)
   const [isOpen, setOpen] = useState(false)
   useOnClickOutside(ref, () => setOpen(false))
@@ -35,7 +35,7 @@ const ShareButton: React.FC<ShareButtonProps> = props => {
           <Twitter />
         </a>
         <a
-          href={`http://pinterest.com/pin/create/button/?url=${path}&media=${image}&description=${title}`}
+          href={`http://pinterest.com/pin/create/button/?url=${path}&media=${imageURL}&description=${title}`}
           target="_blank"
         >
           <Pinterest />

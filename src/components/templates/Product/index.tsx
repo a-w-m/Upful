@@ -1,9 +1,9 @@
 import React, { useContext, useReducer, useRef } from "react"
 import { Context } from "../../Provider"
 import { graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { getSrc } from "gatsby-plugin-image"
 import { P } from "../../interfaces"
-import { createOptionsSelected, calculateTotalPriceChange } from "../../../helpers/index"
+import { createOptionsSelected, calculateTotalPriceChange, convertHTMLtoPlaintext } from "../../../helpers/index"
 import Layout from "../../layout"
 import SEO from "../../seo"
 import ProductNav from "../../ProductNav"
@@ -37,6 +37,7 @@ function reducer(state: P.State, action: P.Action): P.State {
 }
 
 const Product: React.FC<P.Product> = ({ data, location }) => {
+
   const {
     title,
     price,
@@ -48,22 +49,20 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
   const collection = data.markdownRemark.parent.sourceInstanceName
   const { html } = data.markdownRemark
   const { slug } = data.markdownRemark.fields
-  const url = data.site.url || location.hostname
+  
+  const url = data.site.url || `https://${location.hostname}`
   const path = url + slug
-  const { inventory, isLoading } = useContext(Context)
-
   const optionsSelected = createOptionsSelected(productOptions)
+
+
+  const { inventory, isLoading } = useContext(Context)
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: image.childImageSharp.gatsbyImageData,
     optionsSelected  
   })
-  const ref = useRef<HTMLDivElement>(null)
-  const description = ref.current
-    ? ref.current.innerText
-    : "Upful - Made with full irations"
-
-  const imgURL = `${url}${state.imageSelected.images.fallback?.src}`
-
+ 
+  const description = convertHTMLtoPlaintext(html)
+  const imgURL = `${url}${getSrc(state.imageSelected)}`
 
 
   return (
@@ -84,7 +83,6 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
 
         <DescriptionWrapper>
           <DescriptionContents
-            ref={ref}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </DescriptionWrapper>
@@ -115,7 +113,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
 
         <ShareButtonWrapper>
           <EmailButton title={title} />
-          <ShareButton title={title} path={path} image={imgURL} />
+          <ShareButton title={title} path={path} imageURL ={imgURL} />
         </ShareButtonWrapper>
       </ProductContainer>
     </Layout>
