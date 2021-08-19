@@ -6,7 +6,7 @@ import { P } from "../../interfaces/index"
 interface OptionProps {
   dispatch: P.Dispatch
   productOptions: P.ProductOption[]
-  selected: {[name: string]: P.Options} | null
+  selected: { [name: string]: P.Options } | null
 }
 
 type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
@@ -15,11 +15,20 @@ type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
 }
 
 const Options: React.FC<OptionProps> = props => {
-  
   const { dispatch, productOptions, selected } = props
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>, priceChange: number) => {
-    dispatch({ type: "SET_PRODUCT_OPTION", payload: {customField: event.target.name,  option: event.target.value, priceChange}})
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement>,
+    priceChange: number
+  ) => {
+    dispatch({
+      type: "SET_PRODUCT_OPTION",
+      payload: {
+        customField: event.target.name,
+        option: event.target.value,
+        priceChange,
+      },
+    })
   }
 
   return (
@@ -27,12 +36,12 @@ const Options: React.FC<OptionProps> = props => {
       {productOptions.map(productOption => {
         return (
           <Container name={`Select ${productOption.customField}`}>
-          <Field>{`${productOption.customField} | ${
-            selected ? selected[`${productOption.customField}`]['option'] : ""
-          }`}</Field>
+            <Field>{`${productOption.customField} | ${
+              selected ? selected[`${productOption.customField}`]["option"] : ""
+            }`}</Field>
             {productOption.options.map(({ option, priceChange }) => {
               return (
-                  <>
+                <>
                   <Input
                     type="radio"
                     id={option}
@@ -49,16 +58,6 @@ const Options: React.FC<OptionProps> = props => {
         )
       })}
     </>
-
-    // <Container name = {`Select ${productOptions}`}>
-    //   {customField.options.map((option, index) => {
-    //     return (
-    //       <>
-
-    //       </>
-    //     )
-    //         })}
-    // </Container>
   )
 }
 
