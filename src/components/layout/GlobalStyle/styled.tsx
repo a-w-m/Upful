@@ -34,7 +34,7 @@ export const globalCSS = css`
     -webkit-text-size-adjust: 100%;
     font: 112.5%/1.45em var(---main-font), sans-serif;
     box-sizing: border-box;
-    overflow-y: scroll;
+    overflow: hidden;
   }
   body {
     margin: 0;

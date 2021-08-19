@@ -8,7 +8,7 @@ export const Menu = styled.nav<{ open: boolean }>`
   align-items: center;
   background: #f4f4f4;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   text-align: left;
   position: fixed;
   top: 0;
@@ -28,6 +28,7 @@ export const Menu = styled.nav<{ open: boolean }>`
     visibility: visible;  
     background: none;
     gap: 2rem;
+    width: 100%;
   }
 
   a {
