@@ -4,13 +4,13 @@ import device from "../layout/mediaQuery"
 export const Container = styled.div`
   display: grid;
   width: auto;
-  grid-auto-rows: auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   padding: 2rem 0;
-  grid-gap: 2.1rem;
+  grid-gap: 2rem;
+  justify-content: center;
 
 @media ${device.laptop} {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, .25fr));
   padding: 2rem 2rem;
 }
 `
