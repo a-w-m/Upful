@@ -25,7 +25,7 @@ export const query = graphql`
   {
     allFile(
       filter: {
-        childMarkdownRemark: { frontmatter: { tags: { in: "featured" } } }
+        childMarkdownRemark: { frontmatter: { featured: { eq: true } } }
       }
     ) {
       edges {
