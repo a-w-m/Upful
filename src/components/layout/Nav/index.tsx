@@ -15,27 +15,27 @@ const Nav: React.FC<NavProps> = props => {
         categories: [string]
       }
     }
-  }} = useStaticQuery(graphql`
-  query MyQuery {
-    file(sourceInstanceName: {eq: "meta"}) {
-      childMarkdownRemark {
-        frontmatter {
-          categories
-        }
-      }
-    }
-  }
-  `)
+  }} = useStaticQuery (categoryQuery) 
 
   console.log(data)
   return (
     <Menu open={open}>
-      {/* <Link to="/about/">About</Link> */}
        {data.file.childMarkdownRemark.frontmatter.categories.map(category=>{
-         return <Link to={`/${category}/`}>{category.toUpperCase()}</Link>
+         return <Link to={`/${category}/`} key ={category}>{category.toUpperCase()}</Link>
        })}
     </Menu>
   )
 }
+
+export const categoryQuery = graphql`
+query  {
+  file(sourceInstanceName: {eq: "meta"}) {
+    childMarkdownRemark {
+      frontmatter {
+        categories
+      }
+    }
+  }
+}`
 
 export default Nav
