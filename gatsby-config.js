@@ -33,13 +33,13 @@ module.exports = {
       },
     },
 
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/src/markdown/products/kids`,
-    //     name: `kids`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown/products/kids`,
+        name: `kids`,
+      },
+    },
 
     // {
     //   resolve: `gatsby-source-filesystem`,
