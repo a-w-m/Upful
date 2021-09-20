@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/SEO"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 import ProductGrid from "../components/ProductGrid"
 import {
   CategoryHeading,
@@ -13,6 +13,7 @@ import { C } from "../interfaces"
 const IndexPage: React.FC<C.CategoryPage> = ({ data }) => {
   return (
     <Layout>
+      <Seo/>
       <Container>
         <CategoryHeading>FEATURED GOODS</CategoryHeading>
         <ProductGrid edges={data.allFile.edges} />

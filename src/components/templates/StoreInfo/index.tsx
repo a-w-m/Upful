@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../../layout"
-import SEO from "../../SEO"
+import Layout from "../../Layout"
+import Seo from "../../Seo"
 import styled from "styled-components"
 
 export const Container = styled.div`
@@ -23,7 +23,7 @@ const StoreInfo: React.FC<StoreInfoHTMLProps> = ({ data }) => {
   const { html } = data.file.childMarkdownRemark
   return (
     <Layout>
-      <SEO />
+      <Seo />
       <Container dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )

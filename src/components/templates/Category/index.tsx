@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../../layout"
-import SEO from "../../SEO"
+import Layout from "../../Layout"
+import Seo from "../../Seo"
 import { graphql } from "gatsby"
 import ProductGrid from "../../ProductGrid"
 import Pagination from "../../Pagination"
@@ -11,6 +11,7 @@ const Category: React.FC<C.CategoryPage> = ({ data, pageContext }) => {
   const { category, numPages, currentPage } = pageContext
   return (
     <Layout>
+      <Seo/>
       <Container>
         <CategoryHeading>{category}</CategoryHeading>
         <ProductGrid edges={data.allFile.edges}/>

@@ -19,7 +19,7 @@ import {
   HamburgerNavContainer
   
 } from "./styled"
-import { Cart } from "../../Icons/"
+import { Cart } from "../../Icons"
 import useOnClickOutside from "../../../hooks/useOnClickOutside"
 
 interface HeaderProps {

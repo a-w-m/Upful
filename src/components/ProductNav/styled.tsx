@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import device from "../layout/mediaQuery"
+import device from "../Layout/mediaQuery"
 export const Wrapper = styled.nav`
 display: flex;
 gap: 1rem;

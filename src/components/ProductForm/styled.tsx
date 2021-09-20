@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import device from "../layout/mediaQuery"
+import device from "../Layout/mediaQuery"
 
 
 export const Input = styled.input.attrs({type: "radio"})`

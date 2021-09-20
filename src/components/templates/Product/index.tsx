@@ -4,8 +4,8 @@ import { graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
 import { P } from "../../../interfaces"
 import { createOptionsSelected, calculateTotalPriceChange, convertHTMLtoPlaintext } from "../../../helpers/index"
-import Layout from "../../layout"
-import SEO from "../../SEO"
+import Layout from "../../Layout"
+import Seo from "../../Seo"
 import ProductNav from "../../ProductNav"
 import Options from "../../ProductForm/"
 import BuyButton from "../../BuyButton/"
@@ -67,7 +67,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={description} url={path} image={imgURL} />
+      <Seo title={title} description={description} url={path} image={imgURL} />
       <ProductContainer>
         <ProductNav title = {title} collection = {collection}></ProductNav>
         <ImageGallery

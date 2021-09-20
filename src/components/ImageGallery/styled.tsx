@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import device from "../layout/mediaQuery"
+import device from "../Layout/mediaQuery"
 export const Wrapper = styled.div`
   width: auto;
   height: auto;
