@@ -76,8 +76,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  console.log(categoryData)
-
+  
   const products = await graphql(`
     query {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/products/" } }) {
