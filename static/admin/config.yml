@@ -57,23 +57,39 @@ product: &PRODUCT
 
 
 collections:
-  - label: "clothing"
-    name: "Clothing"
+  - label: "Clothing"
+    name: "clothing"
     folder: "src/markdown/products/clothing"
     path: "{{slug}}/index"
     create: true
     fields: *PRODUCT
-  - label: "accessories"
-    name: "Accessories"
+  - label: "Accessories"
+    name: "accessories"
     folder: "src/markdown/products/accessories"
     path: "{{slug}}/index"
     create: true
     fields: *PRODUCT
-  - label: "home"
-    name: "Home"
+  - label: "Home"
+    name: "home"
     folder: "src/markdown/products/home"
     path: "{{slug}}/index"
     create: true
     fields: *PRODUCT
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "src/markdown/pages/about.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Content, name: content, widget: markdown}
+          - { label: "Image", name: "image", widget: "image", media_folder: "images",}
+      - label: "Returns Page"
+        name: "returns"
+        file: "src/markdown/pages/returns.md"
+        fields:
+          - {label: Title, name: title, widget: markdown}
+          - {label: Content, name: content, widget: markdown}
 
       
