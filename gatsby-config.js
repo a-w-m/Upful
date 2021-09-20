@@ -33,21 +33,21 @@ module.exports = {
       },
     },
 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/markdown/products/kids`,
-        name: `kids`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/markdown/products/kids`,
+    //     name: `kids`,
+    //   },
+    // },
 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/markdown/products/mommy-and-me`,
-        name: `mommy and me`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/markdown/products/mommy-and-me`,
+    //     name: `mommy and me`,
+    //   },
+    // },
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -57,13 +57,13 @@ module.exports = {
       },
     },
 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/markdown/products/home-goods`,
-        name: `home goods`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/markdown/products/home-goods`,
+    //     name: `home goods`,
+    //   },
+    // },
 
     {
       resolve: `gatsby-source-filesystem`,

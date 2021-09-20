@@ -71,7 +71,19 @@ collections:
     fields: *PRODUCT
   - label: "Home"
     name: "home"
-    folder: "src/markdown/products/home"
+    folder: "src/markdown/products/home-goods"
+    path: "{{slug}}/index"
+    create: true
+    fields: *PRODUCT
+  - label: "Kids"
+    name: "kids"
+    folder: "src/markdown/products/kids"
+    path: "{{slug}}/index"
+    create: true
+    fields: *PRODUCT
+  - label: "Mommy and Me"
+    name: "mommy-and-me"
+    folder: "src/markdown/products/mommy-and-me"
     path: "{{slug}}/index"
     create: true
     fields: *PRODUCT
