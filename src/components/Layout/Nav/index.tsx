@@ -21,7 +21,7 @@ const Nav: React.FC<NavProps> = props => {
   return (
     <Menu open={open}>
        {data.file.childMarkdownRemark.frontmatter.categories.map(category=>{
-         return <Link to={`/${category}/`} key ={category}>{category.toUpperCase()}</Link>
+         return <Link to={`/${category.replace(/\s+/g, "-")}/`} key ={category}>{category.toUpperCase()}</Link>
        })}
     </Menu>
   )
