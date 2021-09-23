@@ -20,7 +20,7 @@ export interface StoreInfoHTMLProps {
 }
 
 const StoreInfo: React.FC<StoreInfoHTMLProps> = ({ data }) => {
-  const { html } = data.file.childMarkdownRemark
+  const { html } = data?.file?.childMarkdownRemark
   return (
     <Layout>
       <Seo />

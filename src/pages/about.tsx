@@ -9,7 +9,7 @@ export const query = graphql`
   {
     file(
       sourceInstanceName: { eq: "pages" }
-      relativePath: { eq: "about.md" }
+      relativeDirectory: { eq: "about" }
     ) {
       childMarkdownRemark {
         html
