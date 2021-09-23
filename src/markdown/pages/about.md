@@ -1,6 +1,10 @@
 ---
-title: About
+title: About Us
 id: about
+content: Our goal is to use our love for textiles to create bespoke vintage
+  clothing, accessories and home goods. We are here for you every step of the
+  way to make sure you find the perfect product.
+image: https://i.pinimg.com/564x/4f/00/be/4f00bece02200cf7d0921cabf11a7bac.jpg
 ---
 
 # Carpe diem
