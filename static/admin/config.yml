@@ -95,13 +95,13 @@ collections:
         file: "src/markdown/pages/about/index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Content, name: content, widget: markdown}
+          - {label: Body, name: body, widget: markdown}
           - { label: "Image", name: "image", widget: "image", media_folder: "images",}
       - label: "Returns Page"
         name: "returns"
         file: "src/markdown/pages/returns/index.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Content, name: content, widget: markdown}
+          - {label: Body, name: body, widget: markdown}
 
       

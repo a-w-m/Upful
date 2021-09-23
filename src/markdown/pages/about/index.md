@@ -5,5 +5,3 @@ content: Our goal is to use our love for textiles to create bespoke vintage
   way to make sure you find the perfect product.
 image: images/image-1.jpg
 ---
-
-html
