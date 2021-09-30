@@ -13,6 +13,11 @@ media_folder: static/assets
 public_folder: /assets
 
 
+page: &Page
+      - {label: Title, name: title, widget: string}
+      - {label: Body, name: body, widget: markdown}
+      - { label: "Image", name: "image", widget: "image", media_folder: "images",}
+
 product: &PRODUCT
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
@@ -93,15 +98,11 @@ collections:
       - label: "About Page"
         name: "about"
         file: "src/markdown/pages/about/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
-          - { label: "Image", name: "image", widget: "image", media_folder: "images",}
+        fields: *Page
       - label: "Returns Page"
         name: "returns"
         file: "src/markdown/pages/returns/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
+        fields: *Page
+
 
       
