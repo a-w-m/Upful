@@ -36,3 +36,11 @@ export interface childMarkdownRemarkNode {
 export interface Grid {
   edges: childMarkdownRemarkNode[]
 }
+
+export interface MenuLinks {
+  site: {
+    siteMetadata: {
+      menuLinks: Array<{ name: string; link: string }>
+    }
+  }
+}

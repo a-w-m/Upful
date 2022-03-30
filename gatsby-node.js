@@ -64,19 +64,22 @@ async function paginate({ graphql, actions, category }) {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  //the graphql function returns a promise
+  // query menu links from siteMetadata object in gatsby.congig
+  // the graphql function returns a promise
   const categoryData = await graphql(`
-    query MyQuery {
-      file(sourceInstanceName: { eq: "meta" }) {
-        childMarkdownRemark {
-          frontmatter {
-            categories
+    query {
+      site{
+        siteMetadata{
+          menuLinks{
+            name
+            link
           }
         }
       }
     }
   `)
   
+  //query slug for each product page
   const products = await graphql(`
     query {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/products/" } }) {
@@ -102,9 +105,9 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  const promises = categoryData.data.file.childMarkdownRemark.frontmatter.categories.map(
-    async category => {
-      await paginate({ graphql, actions, category })
+  const promises = categoryData.data.site.siteMetadata.menuLinks.map(
+    async ({name}) => {
+      await paginate({ graphql, actions, category:name })
     }
   )
 

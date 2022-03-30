@@ -8,6 +8,16 @@ module.exports = {
     keywords: ["e-commerce"],
     meta: [{ name: "meta", content: "meta" }],
     image: "image",
+    menuLinks: [
+      {
+        name: "women",
+        link: "/women/",
+      },
+      { name: "men", link: "/men/" },
+      { name: "kids", link: "/kids/" },
+      { name: "home goods", link: "/home-goods/" },
+      { name: "mommy and me", link: "/mommy-and-me/" },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -111,7 +121,6 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-
 
     {
       resolve: `gatsby-plugin-google-fonts`,

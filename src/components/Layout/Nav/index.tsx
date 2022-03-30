@@ -1,41 +1,42 @@
 import React from "react"
 import { Menu } from "./styled"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import {P} from "../../../interfaces"
+import {C} from "../../../interfaces"
 
 interface NavProps {
   open: boolean
 }
+
 const Nav: React.FC<NavProps> = props => {
   const { open } = props
 
-  const data: {file: {
-    childMarkdownRemark:{
-      frontmatter:{
-        categories: [string]
-      }
-    }
-  }} = useStaticQuery (categoryQuery) 
+  const data: C.MenuLinks = useStaticQuery(categoryQuery)
 
   console.log(data)
   return (
     <Menu open={open}>
-       {data.file.childMarkdownRemark.frontmatter.categories.map(category=>{
-         return <Link to={`/${category.replace(/\s+/g, "-")}/`} key ={category}>{category.toUpperCase()}</Link>
-       })}
+      {data.site.siteMetadata.menuLinks.map(category => {
+        return (
+          <Link to={category.link} key={category.name}>
+            {category.name.toUpperCase()}
+          </Link>
+        )
+      })}
     </Menu>
   )
 }
 
 export const categoryQuery = graphql`
-query  {
-  file(sourceInstanceName: {eq: "meta"}) {
-    childMarkdownRemark {
-      frontmatter {
-        categories
+  {
+    site {
+      siteMetadata {
+        menuLinks {
+          link
+          name
+        }
       }
     }
   }
-}`
+`
 
 export default Nav

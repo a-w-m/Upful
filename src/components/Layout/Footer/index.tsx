@@ -2,26 +2,19 @@ import React from "react"
 import { FooterContainer, FooterNav, CopyrightWrapper, Address } from "./styled"
 import { Link, useStaticQuery } from "gatsby"
 import { categoryQuery } from "../Nav"
+import {C} from "../../../interfaces"
 
 const Footer: React.FC<{}> = () => {
-  const data: {
-    file: {
-      childMarkdownRemark: {
-        frontmatter: {
-          categories: [string]
-        }
-      }
-    }
-  } = useStaticQuery(categoryQuery)
+  const data: C.MenuLinks = useStaticQuery(categoryQuery)
 
   return (
     <FooterContainer>
       <FooterNav>
-        {data.file.childMarkdownRemark.frontmatter.categories.map(category => {
-          return <Link to={`/${category}/`} key ={category}>{category}</Link>
+        {data.site.siteMetadata.menuLinks.map(category => {
+          return <Link to={category.link} key ={category.name}>{category.name}</Link>
         })}
-        <Link to="/about/">About Us</Link>
-        <Link to="/returns">Returns</Link>
+        <Link to="/about/">about</Link>
+        <Link to="/returns">returns</Link>
       </FooterNav>
       <Address>
         <a href="mailto:howdy@storefront.com">howdy@storefront.com</a>
