@@ -92,26 +92,29 @@ collections:
         fields: *Page
   - label: "Settings"
     name: "settings"
-    file: "src/markdown/meta/index.json"
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: string }
-      - { label: Author, name: author, widget: string }
-      - { label: Url, name: url, widget: string }
-      - { label: Keywords, name: keywords, widget: list }
-      - {
-          label: "Image",
-          name: "image",
-          widget: "image",
-          media_folder: "images",
-        }
-      - label: Menu Links
-        name: menuLinks
-        widget: list
-        field:
-          - label: Object
-            name: Object
-            widget: object
+    files:
+      - label: "Settings"
+      - name: "settings"
+      - file: "src/markdown/meta/index.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Author, name: author, widget: string }
+          - { label: Url, name: url, widget: string }
+          - { label: Keywords, name: keywords, widget: list }
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              media_folder: "images",
+            }
+          - label: Menu Links
+            name: menuLinks
+            widget: list
             fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Link, name: link, widget: string }
+              - label: Object
+                name: Object
+                widget: object
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Link, name: link, widget: string }
