@@ -94,8 +94,8 @@ collections:
     name: "settings"
     files:
       - label: "Settings"
-      - name: "settings"
-      - file: "src/markdown/meta/index.json"
+        name: "settings"
+        file: "src/markdown/meta/index.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Description, name: description, widget: string }
