@@ -12,54 +12,41 @@ backend:
 media_folder: static/assets
 public_folder: /assets
 
-
 page: &Page
-      - {label: Title, name: title, widget: string}
-      - {label: Body, name: body, widget: markdown}
-      - { label: "Image", name: "image", widget: "image", media_folder: "images",}
+  - { label: Title, name: title, widget: string }
+  - { label: Body, name: body, widget: markdown }
+  - { label: "Image", name: "image", widget: "image", media_folder: "images" }
 
 product: &PRODUCT
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Id", name: "id", widget: "string" }
-      - {
-          label: "Thumbnail Image",
-          name: "image",
-          widget: "image",
-          media_folder: "images",
-        }
-      - label: "Gallery"
-        name: "galleryImages"
+  - { label: "Title", name: "title", widget: "string" }
+  - { label: "Date", name: "date", widget: "datetime" }
+  - { label: "Id", name: "id", widget: "string" }
+  - {
+      label: "Thumbnail Image",
+      name: "image",
+      widget: "image",
+      media_folder: "images",
+    }
+  - label: "Gallery"
+    name: "galleryImages"
+    widget: "list"
+    field:
+      { label: "Image", name: "image", widget: "image", media_folder: "images" }
+  - { label: "Price", name: "price", widget: "number" }
+  - { label: "Description", name: "body", widget: "markdown" }
+  - { label: "Featured", name: "featured", widget: "boolean", default: false }
+  - label: "Product Options"
+    name: "productOptions"
+    widget: "list"
+    default: []
+    fields:
+      - { label: "Custom Field", name: "customField", widget: "string" }
+      - label: "Options"
+        name: "options"
         widget: "list"
-        field:
-          {
-            label: "Image",
-            name: "image",
-            widget: "image",
-            media_folder: "images",
-          }
-      - { label: "Price", name: "price", widget: "number" }
-      - { label: "Description", name: "body", widget: "markdown" }
-      - {
-          label: "Featured",
-          name: "featured",
-          widget: "boolean",
-          default: false,
-        }
-      - label: "Product Options"
-        name: "productOptions"
-        widget: "list"
-        default: []
         fields:
-              - { label: "Custom Field", name: "customField", widget: "string" }
-              - label: "Options"
-                name: "options"
-                widget: "list"
-                fields:
-                  - { label: "option", name: "option", widget: "string" }
-                  - { label: "Price Change", name: "priceChange", widget: "number" }
-
-
+          - { label: "option", name: "option", widget: "string" }
+          - { label: "Price Change", name: "priceChange", widget: "number" }
 
 collections:
   - label: "Clothing"
@@ -103,6 +90,28 @@ collections:
         name: "returns"
         file: "src/markdown/pages/returns/index.md"
         fields: *Page
-
-
-      
+  - label: "Settings"
+    name: "settings"
+    file: "src/markdown/meta/index.json"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
+      - { label: Author, name: author, widget: string }
+      - { label: Url, name: url, widget: string }
+      - { label: Keywords, name: keywords, widget: list }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          media_folder: "images",
+        }
+      - label: Menu Links
+        name: menuLinks
+        widget: list
+        field:
+          - label: Object
+            name: Object
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Link, name: link, widget: string }
