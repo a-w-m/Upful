@@ -1,24 +1,8 @@
 const { template } = require("./src/snipcart/templates.tsx")
+const metadata = require("./src/markdown/meta")
+
 module.exports = {
-  siteMetadata: {
-    title: `Upful`,
-    description: "Hand-crafted and made with Iration",
-    author: `@a-w-m`,
-    url: "",
-    keywords: ["e-commerce"],
-    meta: [{ name: "meta", content: "meta" }],
-    image: "image",
-    menuLinks: [
-      {
-        name: "women",
-        link: "/women/",
-      },
-      { name: "men", link: "/men/" },
-      { name: "kids", link: "/kids/" },
-      { name: "home goods", link: "/home-goods/" },
-      { name: "mommy and me", link: "/mommy-and-me/" },
-    ],
-  },
+  siteMetadata: metadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
 
