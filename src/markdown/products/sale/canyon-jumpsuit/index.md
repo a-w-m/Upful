@@ -1,13 +1,14 @@
 ---
+price: 175
+galleryImages:
+  - images/image-2.webp
 title: Canyon Jumpsuit
 date: 2021-07-14T19:53:33.909Z
 id: canyon-jumpsuit
-image: images/image-1.webp
-galleryImages:
-  - images/image-2.webp
-price: 175
+thumbnail: images/image-1.webp
 featured: true
 productOptions: []
+image: images/image-1.webp
 ---
 <!--StartFragment-->
 
