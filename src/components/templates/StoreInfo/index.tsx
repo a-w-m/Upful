@@ -1,32 +1,49 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../../Layout"
 import Seo from "../../Seo"
-import styled from "styled-components"
-
-export const Container = styled.div`
-  & > * {
-    font-family: var(--main-font);
-  }
-`
+import { Container, CategoryHeading, Wrapper } from "./styled"
+import { P } from "../../../interfaces/index"
 
 export interface StoreInfoHTMLProps {
   data: {
-    file: {
-      childMarkdownRemark: {
-        html: string
+    markdownRemark: {
+      frontmatter: {
+        title: string
       }
+      html: string
     }
   }
 }
 
 const StoreInfo: React.FC<StoreInfoHTMLProps> = ({ data }) => {
-  const { html } = data?.file?.childMarkdownRemark
+  const { html } = data.markdownRemark
+  const { title } = data.markdownRemark.frontmatter
   return (
     <Layout>
       <Seo />
-      <Container dangerouslySetInnerHTML={{ __html: html }} />
+      <Container>
+        <CategoryHeading>{title}</CategoryHeading> 
+        <Wrapper dangerouslySetInnerHTML={{ __html: html }} />
+      </Container>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query ($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+      html
+    }
+  }
+`
 
 export default StoreInfo
