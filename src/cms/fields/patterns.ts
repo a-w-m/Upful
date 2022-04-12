@@ -39,5 +39,5 @@ export const productDefaults = [
 export const pageDefaults = [
   F.stringField("Title", "title"),
   F.markdownField("Body", "body"),
-  F.imageField("Image", "image", "images")
+  F.imageField("Image", "image", "images", false)
 ]
