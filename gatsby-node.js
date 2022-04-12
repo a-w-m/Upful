@@ -94,6 +94,23 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  // query slug for each general page node
+
+  const generalPages = await graphql(`
+  query {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/pages/" } }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`)
+
+
   products.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
@@ -104,6 +121,16 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  generalPages.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`src/components/templates/StoreInfo/index.tsx`),
+      context: {slug: node.fields.slug}
+    })
+  })
+
+  
 
   const promises = categoryData.data.site.siteMetadata.menuLinks.map(
     async ({name}) => {
