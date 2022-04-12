@@ -21,7 +21,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/index.ts`,
         manualInit: true,
         enableIdentityWidget: true,
-       },
+      },
     },
 
     {
@@ -114,7 +114,19 @@ module.exports = {
       },
     },
 
-    "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
