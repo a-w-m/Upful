@@ -9,7 +9,7 @@ In-store purchases can be exchanged for store credit or new item within 14 days 
 
 Web shop clothing can be returned for refund within 14 days and in exact condition of purchase. Goods such as ceramics, books, apothecary can only be exchanged for store credit.  All sale items are final sale.
 
-To return items, simply send them back to us at Upful with a note as to why you are returning.  We will issue you a credit as soon as the item is received.
+To return items, simply send them back to our Upful store with a note as to why you are returning.  We will issue you a credit as soon as the item is received.
 
 ## VINTAGE
 
