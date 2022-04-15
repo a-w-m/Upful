@@ -1,19 +1,6 @@
-{
-  "title": "Upful",
-  "description": "Hand-crafted and made with Iration",
-  "author": "@awm",
-  "url": "upful.shop",
-  "keywords": [
-    "e-commerce"
-  ],
-  "meta": [
-    {
-      "name": "meta",
-      "content": "meta"
-    }
-  ],
-  "image": "image",
-  "menuLinks": {
+"image": "image",
+"menuLinks": {
+  "categories": {
     "categories": [
       {
         "name": "women",
@@ -28,7 +15,8 @@
         "link": "/kids/"
       },
       {
-        "name": "vk"
+        "name": "vk",
+        "link": "/vk/"
       }
     ],
     "general": [
