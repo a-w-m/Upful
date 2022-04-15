@@ -1,48 +1,21 @@
-{
-  "title": "Upful",
-  "description": "Hand-crafted and made with Iration",
-  "author": "Amrey",
-  "url": "upful.shop",
-  "keywords": [
-    "e-commerce"
-  ],
-  "meta": [
-    {
-      "name": "meta",
-      "content": "meta"
-    }
-  ],
-  "image": "image",
-  "menuLinks": {
-    "categories": [
-      {
-        "name": "women",
-        "link": "/women/"
-      },
-      {
-        "name": "men",
-        "link": "/men/"
-      },
-      {
-        "name": "kids",
-        "link": "/kids/"
-      },
-      {
-        "category": {
-          "name": "home",
-          "link": "/home/"
-        }
-      }
-    ],
-    "general": [
-      {
-        "name": "about",
-        "link": "/about/"
-      },
-      {
-        "name": "returns",
-        "link": "/returns/"
-      }
-    ]
+[
+  {
+    "name": "women",
+    "link": "/women/"
+  },
+  {
+    "name": "men",
+    "link": "/men/"
+  },
+  {
+    "name": "kids",
+    "link": "/kids/"
+  },
+  {
+    "category": {
+      "name": "home",
+      "link": "/home/"
+    },
+    "name": "try"
   }
-}
+]
