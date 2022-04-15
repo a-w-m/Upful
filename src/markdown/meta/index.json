@@ -26,6 +26,12 @@
       {
         "name": "kids",
         "link": "/kids/"
+      },
+      {
+        "category": {
+          "name": "home",
+          "link": "/home/"
+        }
       }
     ],
     "general": [
