@@ -6,6 +6,9 @@
   },
   "isModification": null,
   "raw": "{\n  \"title\": \"Upful\",\n  \"description\": \"Hand-crafted and made with Iration\",\n  \"author\": \"@awm\",\n  \"url\": \"upful.shop\",\n  \"keywords\": [\n    \"e-commerce\"\n  ],\n  \"meta\": [\n    {\n      \"name\": \"meta\",\n      \"content\": \"meta\"\n    }\n  ],\n  \"image\": \"image\",\n  \"menuLinks\": {\n    \"categories\": [\n      {\n        \"name\": \"women\",\n        \"link\": \"/women/\"\n      },\n      {\n        \"name\": \"men\",\n        \"link\": \"/men/\"\n      },\n      {\n        \"name\": \"kids\",\n        \"link\": \"/kids/\"\n      },\n      {\n        \"name\": \"vk\"\n      }\n    ],\n    \"general\": [\n      {\n        \"name\": \"about\",\n        \"link\": \"/about/\"\n      },\n      {\n        \"name\": \"returns\",\n        \"link\": \"/returns/\"\n      }\n    ]\n  }\n}",
+  "keywords": [
+    "vintage"
+  ],
   "data": {
     "title": "Upful",
     "description": "Hand-crafted and made with Iration",
@@ -51,13 +54,29 @@
       ]
     }
   },
-  "author": "",
+  "author": "@awm",
   "slug": "settings",
+  "url": "upful.shop",
   "newRecord": false,
   "status": "",
   "mediaFiles": [],
   "label": "Setttings",
+  "title": "Upful",
+  "menuLinks": {
+    "categories": [
+      {
+        "name": "women"
+      },
+      {
+        "name": "men"
+      },
+      {
+        "name": "kids"
+      }
+    ]
+  },
   "updatedOn": "",
+  "description": "Only upful vibes",
   "i18n": {},
   "collection": "settings"
 }
