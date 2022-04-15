@@ -1,45 +1,63 @@
 {
-  "title": "Upful",
-  "description": "Hand-crafted and made with Iration",
-  "author": "@awm",
-  "url": "upful.shop",
-  "keywords": [
-    "e-commerce"
-  ],
-  "meta": [
-    {
-      "name": "meta",
-      "content": "meta"
-    }
-  ],
-  "image": "image",
-  "menuLinks": {
-    "categories": [
+  "partial": false,
+  "path": "src/markdown/meta/index.json",
+  "meta": {
+    "path": "src/markdown/meta/index.json"
+  },
+  "isModification": null,
+  "raw": "{\n  \"title\": \"Upful\",\n  \"description\": \"Hand-crafted and made with Iration\",\n  \"author\": \"@awm\",\n  \"url\": \"upful.shop\",\n  \"keywords\": [\n    \"e-commerce\"\n  ],\n  \"meta\": [\n    {\n      \"name\": \"meta\",\n      \"content\": \"meta\"\n    }\n  ],\n  \"image\": \"image\",\n  \"menuLinks\": {\n    \"categories\": [\n      {\n        \"name\": \"women\",\n        \"link\": \"/women/\"\n      },\n      {\n        \"name\": \"men\",\n        \"link\": \"/men/\"\n      },\n      {\n        \"name\": \"kids\",\n        \"link\": \"/kids/\"\n      },\n      {\n        \"name\": \"vk\"\n      }\n    ],\n    \"general\": [\n      {\n        \"name\": \"about\",\n        \"link\": \"/about/\"\n      },\n      {\n        \"name\": \"returns\",\n        \"link\": \"/returns/\"\n      }\n    ]\n  }\n}",
+  "data": {
+    "title": "Upful",
+    "description": "Hand-crafted and made with Iration",
+    "author": "@awm",
+    "url": "upful.shop",
+    "keywords": [
+      "e-commerce"
+    ],
+    "meta": [
       {
-        "name": "women",
-        "link": "/women/"
-      },
-      {
-        "name": "men",
-        "link": "/men/"
-      },
-      {
-        "name": "kids",
-        "link": "/kids/"
-      },
-      {
-        "name": "vk"
+        "name": "meta",
+        "content": "meta"
       }
     ],
-    "general": [
-      {
-        "name": "about",
-        "link": "/about/"
-      },
-      {
-        "name": "returns",
-        "link": "/returns/"
-      }
-    ]
-  }
+    "image": "image",
+    "menuLinks": {
+      "categories": [
+        {
+          "name": "women",
+          "link": ""
+        },
+        {
+          "name": "men",
+          "link": ""
+        },
+        {
+          "name": "kids",
+          "link": ""
+        },
+        {
+          "name": "vk"
+        }
+      ],
+      "general": [
+        {
+          "name": "about",
+          "link": "/about/"
+        },
+        {
+          "name": "returns",
+          "link": "/returns/"
+        }
+      ]
+    }
+  },
+  "author": "",
+  "slug": "settings",
+  "newRecord": false,
+  "status": "",
+  "mediaFiles": [],
+  "label": "Setttings",
+  "updatedOn": "",
+  "i18n": {},
+  "collection": "settings"
 }
