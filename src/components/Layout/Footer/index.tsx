@@ -1,20 +1,30 @@
 import React from "react"
 import { FooterContainer, FooterNav, CopyrightWrapper, Address } from "./styled"
-import { Link, useStaticQuery } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { categoryQuery } from "../Nav"
-import {C} from "../../../interfaces"
+import { C } from "../../../interfaces"
 
 const Footer: React.FC<{}> = () => {
-  const data: C.MenuLinks = useStaticQuery(categoryQuery)
+  const categoryData: C.MenuLinks = useStaticQuery(categoryQuery)
+  const generalPageData = useStaticQuery(generalPagesQuery)
 
   return (
     <FooterContainer>
       <FooterNav>
-        {data.site.siteMetadata.menuLinks.map(category => {
-          return <Link to={category.link} key ={category.name}>{category.name}</Link>
+        {categoryData.site.siteMetadata.menuLinks.categories.map(category => {
+          return (
+            <Link to={category.slug} key={category.name}>
+              {category.name}
+            </Link>
+          )
         })}
-        <Link to="/about/">about</Link>
-        <Link to="/returns">returns</Link>
+        {generalPageData.allMarkdownRemark.edges.map((page: any) => {
+          return (
+            <Link to={page.node.fields.slug} key={page.node.frontmatter.title}>
+              {page.node.frontmatter.title.toLowerCase()}
+            </Link>
+          )
+        })}
       </FooterNav>
       <Address>
         <a href="mailto:howdy@storefront.com">howdy@storefront.com</a>
@@ -25,5 +35,22 @@ const Footer: React.FC<{}> = () => {
     </FooterContainer>
   )
 }
+
+export const generalPagesQuery = graphql`
+  query {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/pages/" } }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
 
 export default Footer

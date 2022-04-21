@@ -40,7 +40,11 @@ export interface Grid {
 export interface MenuLinks {
   site: {
     siteMetadata: {
-      menuLinks: Array<{ name: string; link: string }>
+      menuLinks: {
+        categories: Array<{ name: string; slug: string }>
+        general: Array<{ name: string; link: string }>
+
+      }
     }
   }
 }

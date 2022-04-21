@@ -12,12 +12,11 @@ const Nav: React.FC<NavProps> = props => {
 
   const data: C.MenuLinks = useStaticQuery(categoryQuery)
 
-  console.log(data)
   return (
     <Menu open={open}>
-      {data.site.siteMetadata.menuLinks.map(category => {
+      {data.site.siteMetadata.menuLinks.categories.map(category => {
         return (
-          <Link to={category.link} key={category.name}>
+          <Link to={category.slug} key={category.name}>
             {category.name.toUpperCase()}
           </Link>
         )
@@ -27,16 +26,18 @@ const Nav: React.FC<NavProps> = props => {
 }
 
 export const categoryQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        menuLinks {
-          link
+{
+  site {
+    siteMetadata {
+      menuLinks {
+        categories {
           name
+          slug
         }
       }
     }
   }
+}
 `
 
 export default Nav
