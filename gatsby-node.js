@@ -17,7 +17,7 @@ async function paginate({ graphql, actions, category }) {
     "src/components/templates/Category/index.tsx"
   )
 
-  //query markdown nodes in category created by gatsby-source-filesystem
+  //query markdown nodes by category created by gatsby-source-filesystem
   try {
     const { data } = await graphql(`
   {
@@ -64,19 +64,20 @@ async function paginate({ graphql, actions, category }) {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // query menu links from siteMetadata object in gatsby.congig
-  // the graphql function returns a promise
+  // query menu links from siteMetadata object in gatsby.config
   const categoryData = await graphql(`
     query {
-      site{
-        siteMetadata{
-          menuLinks{
-            name
-            link
+      site {
+        siteMetadata {
+          menuLinks {
+            categories {
+              name
+              slug
+            } 
           }
         }
       }
-    }
+    }    
   `)
   
   //query slug for each product page
@@ -95,7 +96,6 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   // query slug for each general page node
-
   const generalPages = await graphql(`
   query {
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/pages/" } }) {
@@ -132,7 +132,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   
 
-  const promises = categoryData.data.site.siteMetadata.menuLinks.map(
+  const promises = categoryData.data.site.siteMetadata.menuLinks.categories.map(
     async ({name}) => {
       await paginate({ graphql, actions, category:name })
     }

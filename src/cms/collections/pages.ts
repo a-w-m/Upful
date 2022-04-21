@@ -1,8 +1,8 @@
-import { collectionDefaults, pageDefaults } from "../fields/patterns"
+import { folderCollectionDefaults, pageDefaults } from "../fields/patterns"
 import {CmsCollection} from 'netlify-cms-core'
 
 export const pages:CmsCollection = {
-  ...collectionDefaults(
+  ...folderCollectionDefaults(
     "Pages",
     "pages",
     "src/markdown/pages",

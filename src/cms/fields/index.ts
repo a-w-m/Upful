@@ -130,6 +130,12 @@ export const booleanField = (
     }
   }
 
+  export const hiddenField = (label: string, name:string):CmsField=>{
+    return {
+      label, name, widget: "hidden", 
+    }
+  }
+
 
 
 

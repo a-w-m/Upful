@@ -1,8 +1,8 @@
-import { collectionDefaults, productDefaults } from "../fields/patterns"
+import { folderCollectionDefaults, productDefaults } from "../fields/patterns"
 import {CmsCollection} from 'netlify-cms-core'
 
 export const products:CmsCollection = {
-  ...collectionDefaults(
+  ...folderCollectionDefaults(
     "Products",
     "products",
     "src/markdown/products",
