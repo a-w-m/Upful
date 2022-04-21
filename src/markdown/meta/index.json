@@ -8,8 +8,8 @@
   ],
   "meta": [
     {
-      "name": "meta",
-      "content": "meta"
+      "name": "metas",
+      "content": "metas"
     }
   ],
   "image": "image",
@@ -17,19 +17,23 @@
     "categories": [
       {
         "name": "women",
-        "link": "/women/"
+        "link": "/women/",
+        "slug": "/women/"
       },
       {
         "name": "men",
-        "link": "/men/"
+        "link": "/men/",
+        "slug": "/men/"
       },
       {
         "name": "kids",
-        "link": "/kids/"
+        "link": "/kids/",
+        "slug": "/kids/"
       },
       {
         "name": "shoes ",
-        "link": "/shoes /"
+        "link": "/shoes /",
+        "slug": "/shoes /"
       }
     ],
     "general": [
