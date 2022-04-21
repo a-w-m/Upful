@@ -1,6 +1,16 @@
 const { template } = require("./src/snipcart/templates.tsx")
 const metadata = require("./src/markdown/meta")
 
+let source = metadata.menuLinks.categories.map(category=>{
+  return {
+    resolve: `gatsby-source-filesystem`,
+    options:{
+      path:`${__dirname}/src/markdown/products/${category.name}/`,
+      name: category.name
+    }
+  }
+})
+
 module.exports = {
   siteMetadata: metadata,
   plugins: [
@@ -40,45 +50,7 @@ module.exports = {
       },
     },
 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/markdown/products/kids`,
-        name: `kids`,
-      },
-    },
-
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/src/markdown/products/mommy-and-me`,
-    //     name: `mommy and me`,
-    //   },
-    // },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/markdown/products/men`,
-        name: `men`,
-      },
-    },
-
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/src/markdown/products/home-goods`,
-    //     name: `home goods`,
-    //   },
-    // },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/markdown/products/women`,
-        name: `women`,
-      },
-    },
+    ...source,
 
     {
       resolve: `gatsby-source-filesystem`,
