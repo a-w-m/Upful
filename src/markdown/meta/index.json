@@ -17,33 +17,19 @@
     "categories": [
       {
         "name": "women",
-        "link": "/women/",
         "slug": "/women/"
       },
       {
         "name": "men",
-        "link": "/men/",
         "slug": "/men/"
       },
       {
         "name": "kids",
-        "link": "/kids/",
         "slug": "/kids/"
       },
       {
         "name": "shoes ",
-        "link": "/shoes /",
         "slug": "/shoes /"
-      }
-    ],
-    "general": [
-      {
-        "name": "about",
-        "link": "/about/"
-      },
-      {
-        "name": "returns",
-        "link": "/returns/"
       }
     ]
   }
