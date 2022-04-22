@@ -1,5 +1,5 @@
 import CMS from "netlify-cms-app"
-import collections from "./collections/"
+import collections from "./collections"
 
 //declare netlify cms events
 //supported events are prePublish, postPublish, preUnpublish, postUnpublish, preSave and postSave.
@@ -12,7 +12,7 @@ CMS.registerEventListener({
       let categories = entry.get("data").get("menuLinks").get("categories")
 
       //create a new array where each element now includes a slug property
-      let addLinks = categories.map((ele: any) => {
+      let addLinks = categories.map((ele) => {
         return ele.set("slug", `/${ele.get("name")}/`)
       })
 
