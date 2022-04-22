@@ -1,20 +1,18 @@
-import { folderCollectionDefaults, productDefaults } from "../fields/patterns"
-import {CmsCollection} from 'netlify-cms-core'
+import { productDefaults } from "../fields/patterns"
+import { CmsCollection } from "netlify-cms-core"
 
-export const products:CmsCollection = {
-  ...folderCollectionDefaults(
-    "Products",
-    "products",
-    "src/markdown/products",
-    "{{slug}}/index",
-    true
-  ),
+// declare collection object
+
+export const products: CmsCollection = {
+  label: "Products",
+  name: "products",
+  folder: "src/markdown/products",
+  path: "{{slug}}/index",
+  create: true,
   label_singular: "Product",
   nested: {
-    depth:100
+    depth: 100,
   },
-  fields: [
-    ...productDefaults
-  ],
-  meta: { path: { widget: 'string', label: 'Path', index_file: 'index' } }
+  fields: [...productDefaults],
+  meta: { path: { widget: "string", label: "Path", index_file: "index" } },
 }

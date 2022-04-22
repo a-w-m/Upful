@@ -1,15 +1,21 @@
 import CMS from "netlify-cms-app"
 import collections from "./collections"
 
+// extend global window type to include CMS_MANUAL_INIT property
+
 declare global {
   interface Window {
-      CMS_MANUAL_INIT: boolean;
+    CMS_MANUAL_INIT: boolean
   }
 }
-window.CMS_MANUAL_INIT = true 
-//declare netlify cms events
-//supported events are prePublish, postPublish, preUnpublish, postUnpublish, preSave and postSave.
+// This global flag enables manual initialization
 
+window.CMS_MANUAL_INIT = true
+
+// declare netlify cms events
+// supported events are prePublish, postPublish, preUnpublish, postUnpublish, preSave and postSave
+
+// add slug key to settings entry upon save
 CMS.registerEventListener({
   name: "preSave",
   handler: ({ entry }) => {
@@ -18,7 +24,7 @@ CMS.registerEventListener({
       let categories = entry.get("data").get("menuLinks").get("categories")
 
       //create a new array where each element now includes a slug property
-      let addLinks = categories.map((ele:any) => {
+      let addLinks = categories.map((ele: any) => {
         return ele.set("slug", `/${ele.get("name")}/`)
       })
 
@@ -36,7 +42,19 @@ CMS.registerEventListener({
   },
 })
 
-//manually initialize cms with config object
+// assign dynamic value to id field
+CMS.registerEventListener({
+  name: "preSave",
+  handler: ({ entry }) => {
+    if (entry.get("collection") === "products") {
+      let title: string = entry.get("data").get("title")
+      let id: string = title.split(" ").join("-").toLowerCase()
+      return entry.get("data").set("id", id)
+    }
+  },
+})
+
+// manually initialize cms with config object
 
 CMS.init({
   config: {

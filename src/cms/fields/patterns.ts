@@ -1,48 +1,44 @@
 import * as F from "../fields"
+import {CmsField} from 'netlify-cms-core'
 
-export const folderCollectionDefaults = (
-  label: string,
-  name: string,
-  folder: string,
-  path: string,
-  create: boolean
-) => ({
-  label,
-  name,
-  folder,
-  path,
-  create,
-})
 
-export const fileCollectionDefaults = (label: string, name: string) => {
-  return { label, name }
-}
-
-export const productDefaults = [
+// default fields for product entry
+export const productDefaults: Array<CmsField> = [
   F.stringField("Title", "title"),
   F.dateTimeField("Date", "date"),
-  F.stringField("Id", "id"),
-  F.imageField("Thumbnail", "thumbnail", "images"),
-  F.listField("Gallery", "gallery", F.imageField("Image", "image", "/images", false)),
+  F.hiddenField("Id", "id"),
+  F.imageField("Featured Image", "thumbnail", "images"),
+  F.listField(
+    "Gallery",
+    "galleryImages",
+    F.imageField("Image", "image", "images", false)
+  ),
   F.numberField("Price", "price"),
   F.markdownField("Description", "body"),
-  F.booleanField("Featured", "featured", false),
-  F.nestedListField("Product Options", "productOptions", [
-    F.stringField("Custom Field", "customField"),
-    F.nestedListField("Options", "options", [
-      F.stringField("Option", "option"),
-      F.numberField("Price Change", "priceChange"),
-    ]),
-  ], false),
+  F.booleanField("Featured Product?", "featured", false),
+  F.nestedListField(
+    "Product Options",
+    "productOptions",
+    [
+      F.stringField("Custom Field", "customField"),
+      F.nestedListField("Options", "options", [
+        F.stringField("Option", "option"),
+        F.numberField("Price Change", "priceChange"),
+      ]),
+    ],
+    false
+  ),
 ]
 
-export const pageDefaults = [
+// default field for page entry
+export const pageDefaults: Array<CmsField> = [
   F.stringField("Title", "title"),
   F.markdownField("Body", "body"),
   F.imageField("Image", "image", "images", false),
 ]
 
-export const settingsDefaults = [
+// default fields for settings entry
+export const settingsDefaults: Array<CmsField> = [
   F.stringField("Title", "title"),
   F.stringField("Description", "description"),
   F.stringField("Author", "author"),

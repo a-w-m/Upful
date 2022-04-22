@@ -1,5 +1,10 @@
 import {CmsField} from 'netlify-cms-core'
 
+type ChooseURL  = {
+  choose_url: boolean
+}
+
+type CmsImageField = CmsField & ChooseURL
 
 
 export const dateTimeField = (label: string, name: string, required = true):CmsField=>{
@@ -70,6 +75,7 @@ export const listField = (
     name,
     widget: "list",
     field,
+    default: [],
     required,
   }
 }
@@ -84,7 +90,8 @@ export const nestedListField =  (
     label,
     name,
     widget: "list",
-    fields,
+    fields, 
+    default: [],
     required,
   }
 }
@@ -106,13 +113,17 @@ export const objectField = (
 
 export const imageField = ( label: string,
     name: string,
-     media_folder: string, required = true,): CmsField=>{
+     media_folder: string, required = true,): CmsImageField  =>{
         return{
             label,
             name,
             widget: "image",
             media_folder,
+            choose_url: false,
             required, 
+            config:{
+
+            }
         }
 
 }
@@ -126,6 +137,7 @@ export const booleanField = (
       label,
       name,
       widget: "boolean",
+      default: false,
       required,
     }
   }

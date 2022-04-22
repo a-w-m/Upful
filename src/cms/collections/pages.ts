@@ -1,16 +1,15 @@
-import { folderCollectionDefaults, pageDefaults } from "../fields/patterns"
-import {CmsCollection} from 'netlify-cms-core'
+import { pageDefaults } from "../fields/patterns"
+import { CmsCollection } from "netlify-cms-core"
 
-export const pages:CmsCollection = {
-  ...folderCollectionDefaults(
-    "Pages",
-    "pages",
-    "src/markdown/pages",
-    "{{slug}}/index",
-    true
-  ),
+// declare Pages collection object
+
+export const pages: CmsCollection = {
+  label: "Pages",
+  name: "pages",
+  folder: "src/markdown/pages",
+  path: "{{slug}}/index",
+  create: true,
+
   label_singular: "Page",
-  fields: [
-    ...pageDefaults
-  ],
+  fields: [...pageDefaults],
 }
