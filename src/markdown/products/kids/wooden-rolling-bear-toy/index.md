@@ -2,7 +2,7 @@
 title: Wooden Rolling Bear Toy
 date: 2021-09-20T19:21:23.152Z
 id: wooden-rolling-bear-toy
-image: images/image-1.webp
+thumbnail: images/image-1.webp
 galleryImages:
   - images/image-2.webp
 price: 35

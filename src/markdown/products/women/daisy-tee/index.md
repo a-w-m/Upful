@@ -2,7 +2,7 @@
 title: Daisy Tee
 date: 2021-07-14T20:17:12.479Z
 id: daisy-tee
-image: images/image-1.webp
+thumbnail: images/image-1.webp
 galleryImages:
   - images/image-2.webp
 price: 74

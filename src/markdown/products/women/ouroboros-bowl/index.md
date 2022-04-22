@@ -2,7 +2,7 @@
 title: Ouroboros Bowl
 date: 2021-08-18T19:53:33.909Z
 id: ouroboros-bowl
-image: images/image-1.webp
+thumbnail: images/image-1.webp
 galleryImages:
   - images/image-2.webp
 price: 150
