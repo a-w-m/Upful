@@ -1,18 +1,18 @@
 {
-  "title": "Upful",
-  "description": "Hand-crafted and made with Iration",
-  "author": "@aw",
-  "url": "upful.shop",
-  "keywords": [
-    "e-commerce"
-  ],
   "meta": [
     {
       "name": "meta",
       "content": "meta"
     }
   ],
-  "image": "image",
+  "keywords": [
+    "e-commerce"
+  ],
+  "author": "@aw",
+  "logo": "/src/images/logo/upful-gold-frame-logo.png",
+  "url": "upful.shop",
+  "favicon": "/src/images/favicon/upfull.jpg",
+  "title": "Upful",
   "menuLinks": {
     "categories": [
       {
@@ -28,5 +28,7 @@
         "slug": "/shoes/"
       }
     ]
-  }
+  },
+  "image": "image",
+  "description": "Hand-crafted and made with Iration"
 }
