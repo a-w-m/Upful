@@ -48,8 +48,8 @@ export const settingsDefaults: Array<CmsField> = [
     F.stringField("Name", "name"),
     F.stringField("Content", "content"),
   ]),
-  F.imageField("Logo", "logo", "src/images/logo", false),
-  F.imageField("Favicon", "favicon", "src/images/favicon", false),
+  F.imageField("Logo", "logo", "/src/images/logo/", false),
+  F.imageField("Favicon", "favicon", "/src/images/favicon/", false),
   F.objectField(
     "MenuLinks",
     "menuLinks",
