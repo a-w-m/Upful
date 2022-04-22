@@ -6,6 +6,7 @@ id: test-test
 thumbnail: images/image-1.webp
 gallery: []
 price: 165
+featured: false
 productOptions: []
 ---
 tester
