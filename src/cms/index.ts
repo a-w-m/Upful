@@ -12,7 +12,7 @@ CMS.registerEventListener({
       let categories = entry.get("data").get("menuLinks").get("categories")
 
       //create a new array where each element now includes a slug property
-      let addLinks = categories.map((ele) => {
+      let addLinks = categories.map((ele:any) => {
         return ele.set("slug", `/${ele.get("name")}/`)
       })
 

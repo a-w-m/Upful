@@ -28,7 +28,7 @@ module.exports = {
          * One convention is to place your Netlify CMS customization code in a
          * `src/cms` directory.
          */
-        modulePath: `${__dirname}/src/cms/index.js`,
+        modulePath: `${__dirname}/src/cms/index.ts`,
         manualInit: true,
         enableIdentityWidget: true,
       },
