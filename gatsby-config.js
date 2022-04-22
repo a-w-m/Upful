@@ -31,7 +31,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/index.ts`,
         manualInit: true,
         enableIdentityWidget: true,
-        publicPath: 'static/admin'
+        publicPath: 'static/'
       },
     },
 
