@@ -22,6 +22,10 @@
       {
         "name": "kids",
         "slug": "/kids/"
+      },
+      {
+        "name": "shoes",
+        "slug": "/shoes/"
       }
     ]
   }
