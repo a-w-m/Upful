@@ -1,6 +1,12 @@
 import CMS from "netlify-cms-app"
 import collections from "./collections"
 
+declare global {
+  interface Window {
+      CMS_MANUAL_INIT: boolean;
+  }
+}
+window.CMS_MANUAL_INIT = true 
 //declare netlify cms events
 //supported events are prePublish, postPublish, preUnpublish, postUnpublish, preSave and postSave.
 
