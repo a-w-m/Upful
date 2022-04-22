@@ -5,16 +5,12 @@ import { P } from "../../interfaces/index"
 import { Wrapper, UL, LI } from "./styled"
 
 interface Props {
-  images: P.Image[]
+  galleryImages: P.Image[]
   dispatch: P.Dispatch
   selected: P.State['imageSelected']
 }
 const ImageGallery: React.FC<Props> = props => {
-  const { images, dispatch, selected } = props
-
-  if (images.length <= 1) {
-    return null
-  }
+  const { galleryImages, dispatch, selected } = props
 
   return (
     <Wrapper>
@@ -23,7 +19,7 @@ const ImageGallery: React.FC<Props> = props => {
           alt=""
         />
       <UL>
-        {images.map((image, index) => {
+        {galleryImages.map((image, index) => {
           return (
             <LI
               key={index}

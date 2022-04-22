@@ -42,7 +42,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
     title,
     price,
     id,
-    image,
+    thumbnail,
     galleryImages,
     productOptions,
   } = data.markdownRemark.frontmatter
@@ -57,13 +57,14 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
 
   const { inventory, isLoading } = useContext(Context)
   const [state, dispatch] = useReducer(reducer, {
-    imageSelected: image.childImageSharp.gatsbyImageData,
+    imageSelected: thumbnail.childImageSharp.gatsbyImageData,
     optionsSelected  
   })
  
   const description = convertHTMLtoPlaintext(html)
   const imgURL = `${url}${getSrc(state.imageSelected)}`
 
+  console.log(thumbnail)
 
   return (
     <Layout>
@@ -71,7 +72,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
       <ProductContainer>
         <ProductNav title = {title} collection = {collection}></ProductNav>
         <ImageGallery
-          images={[image].concat(galleryImages)}
+          galleryImages={[thumbnail].concat(galleryImages)}
           dispatch={dispatch}
           selected = {state.imageSelected}
         ></ImageGallery>
@@ -99,7 +100,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
               data-item-name={title}
               data-item-description={description}
               data-item-image={
-                image.childImageSharp.gatsbyImageData.images.fallback?.src || ""
+                thumbnail.childImageSharp.gatsbyImageData.images.fallback?.src || ""
               }
               data-item-url={`${slug}`}
               data-item-max-quantity={
@@ -152,7 +153,7 @@ export const frontmatterQuery = graphql`
       id
       description
       date
-      image {
+      thumbnail {
         childImageSharp {
           ...ImageGalleryFragment
         }

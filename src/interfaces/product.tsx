@@ -58,7 +58,7 @@ export interface MarkdownRemark {
   frontmatter: {
     title: string
     price: number
-    image: Image
+    thumbnail: Image
     id: string
     date: string
     galleryImages: Image[]
@@ -100,5 +100,5 @@ export interface Thumbnail {
   title: string
   price: number
   slug: string
-  image: Image
+  thumbnail: Image
 }

@@ -21,7 +21,7 @@ export interface childMarkdownRemark {
       id: string
       title: string
       price: number
-      image: P.Image
+      thumbnail: P.Image
     }
     fields: {
       slug: string

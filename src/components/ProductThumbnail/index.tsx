@@ -8,12 +8,12 @@ import { Article, H3, PriceWrapper, ProductInfoContainer, SoldOut } from "./styl
 
 
 const ProductThumbnail: React.FC<P.Thumbnail> = props => {
-  const { id, title, price, image, slug } = props
+  const { id, title, price, thumbnail, slug } = props
   const {inventory, isLoading} = useContext(Context)
   return (
     <Article>
       <Link to={slug}>
-        <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt="" />
+        <GatsbyImage image={thumbnail.childImageSharp.gatsbyImageData} alt="" />
       </Link>
       {!isLoading && <ProductInfoContainer>
         <H3>{title}</H3>
@@ -32,7 +32,7 @@ export const thumbnailQuery = graphql`
       id
       title
       price
-      image {
+      thumbnail {
         childImageSharp {
           ...ThumbnailImage
         }
