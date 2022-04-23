@@ -42,8 +42,6 @@ export interface MenuLinks {
     siteMetadata: {
       menuLinks: {
         categories: Array<{ name: string; slug: string }>
-        general: Array<{ name: string; link: string }>
-
       }
     }
   }

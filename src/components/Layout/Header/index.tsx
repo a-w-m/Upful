@@ -4,10 +4,10 @@ const { useState, useRef, useContext } = React
 
 import Hamburger from "../Hamburger"
 import Nav from "../Nav"
-import { Link } from "gatsby"
-
-import { StaticImage } from "gatsby-plugin-image"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { SnipcartContext } from "gatsby-plugin-snipcart-advanced/context.js"
+import { P } from "../../../interfaces"
 
 import {
   HeaderContainer,
@@ -26,6 +26,13 @@ interface HeaderProps {
   siteTitle: String
 }
 
+interface Data {
+  file:{
+    id: string,
+    childImageSharp: P.Image['childImageSharp']
+  }
+}
+
 const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
   const node = useRef(null)
   const [open, setOpen] = useState(false)
@@ -33,6 +40,18 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
   const { state } = useContext(SnipcartContext)
   const { cartQuantity } = state
 
+  const data: Data = useStaticQuery(graphql`
+    {
+      file(sourceInstanceName: {eq: "images"}, relativeDirectory: {eq: "logo"}) {
+        id
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 250)
+        }
+      }
+    }
+  `)
+
+  
   return (
     <HeaderContainer>
       <HamburgerNavContainer ref={node} open ={open}>
@@ -48,11 +67,10 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
       <LogoContainer>
         <LogoWrapper>
           <Link to="/">
-            <StaticImage
-              src="../../../images/upful-gold-frame-logo.png"
+            <GatsbyImage
+              image={data.file.childImageSharp.gatsbyImageData}
               alt="logo"
               style={{ borderRadius: "100%" }}
-              width={250}
             />
           </Link>
         </LogoWrapper>
@@ -68,5 +86,6 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
 
 export default Header
