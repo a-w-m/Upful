@@ -1,9 +1,8 @@
-import React, { useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 
 /*generic function to make fetch requests to snipcart api:
   - functions takes an initial state matching the given type
 */
-
 
 function useSnipcartApi<T>(
   initialState: T,
@@ -16,17 +15,26 @@ function useSnipcartApi<T>(
 
   useEffect(() => {
     async function fetchData() {
-      try {
-        const res = await fetch(url)
-        const data = await res.json()
-        setResult(data)
-        setIsLoading(false)
-      } catch (err) {
-        setIsError(true)
+      const res = await fetch(url, {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      })
+      
+      if (!res.ok) {
+        const err = new Error(`An error has occurred: ${res.status}`)
         throw err
       }
+
+      const data = await res.json()
+      setResult(data)
+      setIsLoading(false)
     }
-    fetchData()
+    fetchData().catch(() => {
+      setIsError(true)
+      setIsLoading(false)
+    })
   }, [])
 
   return [result, isLoading, isError, setUrl]
