@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import device from "../mediaQuery"
+import { Link } from "gatsby"
 
 export const Menu = styled.nav<{ open: boolean }>`
   display: flex;
@@ -19,36 +20,43 @@ export const Menu = styled.nav<{ open: boolean }>`
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
   z-index: 9;
 
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     flex-direction: row;
     align-items: center;
     position: static;
     height: 2rem;
     transform: none;
-    visibility: visible;  
+    visibility: visible;
     background: none;
     gap: 2rem;
     width: 100%;
   }
 
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    padding-left: 2rem;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s linear;
-
-    @media ${device.laptop}{
-      font-size: 1.7rem;
-      font-weight: 400;
+  /*Remove logo from hamburger menu*/
+  & > a:nth-child(1) {
+    display: none;
+    @media ${device.laptop} {
+      display: block;
     }
   }
+`
 
-  a:hover {
+export const NavLink = styled(Link)`
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  padding-left: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s linear;
+
+  @media ${device.laptop} {
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+  &:hover {
     color: var(--header-nav-link-hover);
   }
 `

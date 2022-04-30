@@ -1,6 +1,7 @@
 import React from "react"
-import { Menu } from "./styled"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Menu, NavLink } from "./styled"
+import Logo from "../Logo"
+import { graphql, useStaticQuery } from "gatsby"
 import {C} from "../../../interfaces"
 
 interface NavProps {
@@ -14,11 +15,12 @@ const Nav: React.FC<NavProps> = props => {
 
   return (
     <Menu open={open}>
+      <Logo/>
       {data.site.siteMetadata.menuLinks.categories.map(category => {
         return (
-          <Link to={category.slug} key={category.name}>
+          <NavLink to={category.slug} key={category.name}>
             {category.name.toUpperCase()}
-          </Link>
+          </NavLink>
         )
       })}
     </Menu>

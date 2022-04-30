@@ -15,11 +15,17 @@ export const HeaderContainer = styled.header`
     gap: 2rem;
     grid-area: header;
 
+    /*remove logo from header at laptop width  */
+    & > a:nth-child(2){
+      display: none;
+    }
+
   }
 `
 
 export const HamburgerNavContainer = styled.div<{open: boolean}>`
 width: ${({open})=> open? "100%": "auto"};
+align-self: flex-start;
 @media ${device.laptop}{
   order: 1;
   flex-basis: 100%;
@@ -55,6 +61,7 @@ export const TitleLink = styled(props => <Link {...props} />)`
 export const CartContainer = styled.div`
   display: flex;
   justify-content: flex-end;
+  align-self: flex-start;
 `
 export const Checkout = styled.button`
   text-align: center;
