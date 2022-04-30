@@ -1,6 +1,6 @@
 import React from "react"
-import { FooterContainer, FooterNav, CopyrightWrapper, Address } from "./styled"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { FooterContainer, FooterNav, CopyrightWrapper, Address, FooterLink } from "./styled"
+import { useStaticQuery, graphql } from "gatsby"
 import { C } from "../../../interfaces"
 
 const Footer: React.FC<{}> = () => {
@@ -27,16 +27,16 @@ const Footer: React.FC<{}> = () => {
       <FooterNav>
         {footerData.site.siteMetadata.menuLinks.categories.map(category => {
           return (
-            <Link to={category.slug} key={category.name}>
+            <FooterLink to={category.slug} key={category.name}>
               {category.name}
-            </Link>
+            </FooterLink>
           )
         })}
         {footerData.allMarkdownRemark.edges.map(page => {
           return (
-            <Link to={page.node.fields.slug} key={page.node.frontmatter.title}>
+            <FooterLink to={page.node.fields.slug} key={page.node.frontmatter.title}>
               {page.node.frontmatter.title.toLowerCase()}
-            </Link>
+            </FooterLink>
           )
         })}
       </FooterNav>

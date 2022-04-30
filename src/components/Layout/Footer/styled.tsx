@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import device from "../mediaQuery"
+import { Link } from "gatsby"
 
 export const FooterContainer = styled.footer`
   grid-area: footer;
@@ -50,6 +51,10 @@ export const FooterNav = styled.nav`
     flex-shrink: 0;
     gap: 2rem;
   }
+`
+
+export const FooterLink = styled(Link)`
+
 `
 
 export const ContactWrapper = styled.div`
