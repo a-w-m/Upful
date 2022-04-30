@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Templates</title>
+  </head>
+
+  <body>
+    <div id="snipcart-templates">
+      <item-line showDescription="false">
+        <!-- The template must have a single root element -->
+        <div class="root">
+          <li
+            :class="{'snipcart-item-line': true, 'snipcart-item-line--cart-edit': editingCart}"
+          >
+            <flash-message
+              type="info"
+              icon="box"
+              v-if="stockLimitReached"
+              :title="$localize('errors.quantity_revised')"
+            ></flash-message>
+            <flash-message
+              type="error"
+              icon="box"
+              v-if="outOfStock"
+              :title="$localize('errors.quantity_out_of_stock')"
+            ></flash-message>
+            <div class="snipcart-item-line__container">
+              <figure class="snipcart-item-line__media" v-if="showLargeImage">
+                <item-image class="snipcart-item-line__image"></item-image>
+              </figure>
+              <div class="snipcart-item-line__product">
+                <div class="snipcart-item-line__header">
+                  <figure
+                    class="snipcart-item-line__media snipcart-item-line__media--small"
+                    v-if="showSmallImage"
+                  >
+                    <item-image class="snipcart-item-line__image"></item-image>
+                  </figure>
+
+                  <h2
+                    class="snipcart-item-line__title snipcart__font--xlarge snipcart__font--secondary snipcart__font--black"
+                  >
+                    {{ item.name }}
+                  </h2>
+
+                  <span class = "snipcart-remove-item"
+                    label="item.remove_item"
+                    styling="danger"
+                    @click="removeItem"
+                  >Remove</span>
+                </div>
+
+                <div class="snipcart-item-line__content">
+                  <div class="snipcart-item-line__body">
+                    <div class="snipcart-item-line__info">
+                      <!-- <item-description v-if="showDescription"></item-description> -->
+                    </div>
+                    <div class="snipcart-item-line__variants">
+                      <div>
+                        <item-plans
+                          :item="item"
+                          v-if="!adding && isSubscribable"
+                        ></item-plans>
+                        <item-custom-fields v-if="!adding"></item-custom-fields>
+                      </div>
+                      <item-quantity
+                        class="snipcart-item-line__quantity"
+                        v-if="!adding && !isSubscribable"
+                        :disabled="outOfStock || isSubscribable"
+                      ></item-quantity>
+                      <div
+                        class="snipcart-form__field snipcart-form__field--plan snipcart-form__field--plan--billed-on"
+                        v-if="isSubscribable && !adding"
+                      >
+                        <span class="snipcart-form__label snipcart__font--tiny">
+                          {{$localize('subscription.payment_amount')}}
+                        </span>
+                        <div class="snipcart-form__field--plan__readonly">
+                          <item-price
+                            :item="item"
+                            :selected-plan="selectedPlan"
+                          >
+                          </item-price>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </div>
+      </item-line>
+      <cart-header>
+        <div>
+          <header class="snipcart-cart-header" v-if="!loading">
+            <close-cart-action
+              class="snipcart-cart-header__close-button snipcart-modal__close"
+            >
+              <icon class="snipcart-modal__close-icon" name="back-arrow"></icon>
+              <span class="snipcart-modal__close-title snipcart__font--std">
+                {{ backButtonTitle || $localize('actions.continue_shopping') }}
+              </span>
+            </close-cart-action>
+
+            <media name="tablet, large" v-if="title">
+              <h3
+                class="snipcart-cart-header__title snipcart__font--black snipcart__font--secondary"
+              >
+                Your Cart
+              </h3>
+            </media>
+
+            <div class="snipcart-cart-header__options">
+              <sign-in-action
+                tag="a"
+                href="#/dashboard"
+                class="snipcart-cart-header__option snipcart-cart-header__sign-in"
+                v-if="showAccountMenu"
+              >
+                <icon name="user" class="snipcart-cart-header__icon"></icon>
+                {{ $localize('signin_form.signin')}}
+              </sign-in-action>
+
+              <sign-out-action
+                class="snipcart-cart-header__option snipcart-cart-header__sign-out"
+                v-if="showAccountMenu"
+              >
+                <icon name="sign-out" class="snipcart-cart-header__icon"></icon>
+                {{ $localize('customer_dashboard.sign_out')}}
+              </sign-out-action>
+
+              <customer-account-link
+                tag="a"
+                href="#/dashboard"
+                class="snipcart-cart-header__option snipcart-cart-header__customer-account"
+                v-if="showAccountMenu && showAccountLink"
+              >
+                <icon name="user" class="snipcart-cart-header__icon"></icon>
+                {{ $localize('customer_dashboard.my_account') }}
+              </customer-account-link>
+
+              <show-detailed-cart-action
+                class="snipcart-cart-header__option snipcart-cart-header__count snipcart__font--secondary snipcart__font--bold"
+                v-if="showItemsCount"
+              >
+                <icon name="cart" class="snipcart-cart-header__icon"></icon>
+                <template v-if="!hasSubscription"> {{ itemsCount }} </template>
+              </show-detailed-cart-action>
+            </div>
+
+            <media
+              name="mobile, tablet"
+              class="snipcart-modal__header-summary"
+              v-if="showSummary && !loading"
+            >
+              <div
+                class="snipcart-modal__header-summary-title snipcart__font--large snipcart__font--secondary snipcart__font--bold"
+                @click.prevent="toggleSummary"
+              >
+                <icon name="cart" class="snipcart-cart-header__icon"></icon>
+                <span> {{ cart.total | money(cart.currency) }} </span>
+                <icon
+                  :name="summaryIcon"
+                  class="snipcart-cart-header__icon snipcart__icon--medium"
+                ></icon>
+              </div>
+
+              <cart-summary
+                class="snipcart-cart-summary--small"
+                v-if="summaryVisible"
+                @close="closeSummary"
+              >
+              </cart-summary>
+            </media>
+          </header>
+          <header class="snipcart-cart-header" v-else>
+            <close-cart-action class="snipcart-modal__close">
+              <icon class="snipcart-modal__close-icon" name="back-arrow"></icon>
+              <span class="snipcart-modal__close-title snipcart__font--std">
+                {{ $localize('actions.continue_shopping') }}
+              </span>
+            </close-cart-action>
+          </header>
+        </div>
+      </cart-header>
+    </div>
+  </body>
+</html>

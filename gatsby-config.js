@@ -77,13 +77,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-snipcart-advanced`,
       options: {
-        version: "3.3.2",
+        version: "3.4.0",
         publicApiKey: process.env.SNIPCART_API_KEY,
         defaultLang: "en",
         currency: "usd",
         openCartOnAdd: true,
+        useSideCart: true,
         locales: "en",
-        innerHTML: `${template}`,
+        templatesUrl: `/snipcart-templates.html`,
       },
     },
 
