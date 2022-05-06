@@ -22,6 +22,7 @@ export interface childMarkdownRemark {
       title: string
       price: number
       thumbnail: P.Image
+      galleryImages: P.Image[]
     }
     fields: {
       slug: string
@@ -34,7 +35,7 @@ export interface childMarkdownRemarkNode {
 }
 
 export interface Grid {
-  edges: childMarkdownRemarkNode[]
+  edges: childMarkdownRemarkNode[] 
 }
 
 export interface MenuLinks {

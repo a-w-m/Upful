@@ -13,7 +13,7 @@ const ProductNav: React.FC<Props> = (props)=>{
     const {collection, title} = props
 return(
     <Wrapper>
-        <Link to = {"/index"}>
+        <Link to = {"/"}>
             HOME
         </Link>
         <ChevronRight></ChevronRight>

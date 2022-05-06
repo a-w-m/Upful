@@ -1,5 +1,5 @@
 import React, { useContext, useReducer, useRef } from "react"
-import { Context } from "../../Provider"
+import { useInventory } from "../../Provider"
 import { graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
 import { P } from "../../../interfaces"
@@ -55,7 +55,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
   const optionsSelected = createOptionsSelected(productOptions)
 
 
-  const { inventory, isLoading } = useContext(Context)
+  const {inventory, loading}  = useInventory()
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: thumbnail.childImageSharp.gatsbyImageData,
     optionsSelected  
@@ -93,7 +93,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
             <Options productOptions={productOptions} dispatch={dispatch} selected = {state.optionsSelected}></Options>
           )}
 
-          {!isLoading && (
+          {!loading && (
             <BuyButton
               data-item-id={id}
               data-item-price={price.toFixed(2)}
@@ -104,7 +104,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
               }
               data-item-url={`${slug}`}
               data-item-max-quantity={
-                inventory[id] ? inventory[id].stock : 1
+                inventory[id] ? inventory[id].stock : 0
               }
               productOptions = {productOptions}
               optionsSelected = {state.optionsSelected}
@@ -151,7 +151,6 @@ export const frontmatterQuery = graphql`
       title
       price
       id
-      description
       date
       thumbnail {
         childImageSharp {

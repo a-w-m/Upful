@@ -1,28 +1,49 @@
-import React, {createContext} from 'react'
-import useSnipcartApi from "../../hooks/useSnipcartApi"
+import React, { createContext, useContext } from "react"
+import useSnipcartApi, { ApiData, Dispatch } from "../../hooks/useSnipcartApi"
 
-interface ApiData {
-    inventory: {
-    [key: string]: {
-        stock: number
+// type custom Provider component to receive child nodes
+type SnipcartApiProviderProps = {
+  children: React.ReactNode
+}
+
+//create Context
+const SnipcartApiContext = createContext<
+  | {
+      state: ApiData
+      dispatch: Dispatch
     }
-}
-    isLoading: boolean
-    isError: boolean
+  | undefined
+>(undefined)
 
-}
+//get Provider
+const { Provider } = SnipcartApiContext
 
-const initialContext:ApiData = {inventory: {"id": {stock: 0}}, isLoading: false, isError: false}
-export const Context = createContext(initialContext)
+const SnipcartApiProvider = ({ children }: SnipcartApiProviderProps) => {
+  const [state, dispatch] = useSnipcartApi(
+    `/.netlify/functions/getProductQuantity`
+  )
 
+  console.log(state)
 
-const Provider:React.FC<{}>= (props) =>{
-const [inventory, isLoading, isError] = useSnipcartApi(initialContext.inventory, `/.netlify/functions/getProductQuantity`)
-    return(
-        <Context.Provider value = {{inventory, isLoading, isError}}>
-                {props.children}
-        </Context.Provider>
-    )
+  return <Provider value={{ state, dispatch }}>{children}</Provider>
 }
 
-export default Provider
+const useInventory = () => {
+  const context = useContext(SnipcartApiContext)
+  if (context === undefined) {
+    throw new Error("SnipcartApiProvider is missing")
+  } else {
+    return context.state
+  }
+}
+
+const useSetInventory = () => {
+  const context = useContext(SnipcartApiContext)
+  if (context === undefined) {
+    throw new Error("SnipcartApiProvider is missing")
+  } else {
+    return context.dispatch
+  }
+}
+
+export { SnipcartApiProvider, useSetInventory, useInventory }

@@ -12,6 +12,7 @@ const ProductGrid: React.FC<C.Grid> = props => {
           title,
           price,
           thumbnail,
+          galleryImages
         } = edge.node.childMarkdownRemark.frontmatter
         const { slug } = edge.node.childMarkdownRemark.fields
 
@@ -23,6 +24,7 @@ const ProductGrid: React.FC<C.Grid> = props => {
             thumbnail={thumbnail}
             slug={slug}
             key={index}
+            galleryImages ={galleryImages}
           ></ProductThumbnail>
         )
       })}

@@ -101,4 +101,5 @@ export interface Thumbnail {
   price: number
   slug: string
   thumbnail: Image
+  galleryImages: Image[]
 }
