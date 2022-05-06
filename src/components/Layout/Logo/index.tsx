@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { LogoWrapper, LogoLink } from "./styled"
+import { LogoLink } from "./styled"
 import { P } from "../../../interfaces"
 
 interface Data {

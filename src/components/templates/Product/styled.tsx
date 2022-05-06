@@ -3,6 +3,7 @@ import device from "../../Layout/mediaQuery"
 
 export const ProductContainer = styled.div`
   display: grid;
+  padding: 0 1rem;
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
   width: auto;
@@ -10,8 +11,12 @@ export const ProductContainer = styled.div`
   align-items: flex-start;
   justify-items: center;
   align-content: center;
-
+  @media ${device.tablet}{
+    margin-top: 2rem;
+  }
   @media ${device.laptop} {
+    padding: 0 3rem;
+    margin-top: 4rem;
     display: grid;
     grid-gap: 1rem 2rem;
     grid-template-columns: 1fr 1fr;
