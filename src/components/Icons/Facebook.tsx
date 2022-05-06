@@ -14,9 +14,9 @@ const FacebookIcon: React.FC<{}> = () => {
 
       <path
         fill="currentColor"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M7.861 9.007H5.394V18H1.737V9.007H0V5.829h1.738V3.772C1.737 2.3 2.421 0 5.427 0l2.709.01v3.085H6.17c-.321 0-.775.165-.775.866v1.868h2.786l-.32 3.178z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       ></path>
     </svg>
   )

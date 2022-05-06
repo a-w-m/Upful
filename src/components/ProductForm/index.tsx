@@ -35,23 +35,22 @@ const Options: React.FC<OptionProps> = props => {
     <>
       {productOptions.map(productOption => {
         return (
-          <Container name={`Select ${productOption.customField}`}>
+          <Container name={`Select ${productOption.customField}`} key= {productOption.customField}>
             <Field>{`${productOption.customField} | ${
               selected ? selected[`${productOption.customField}`]["option"] : ""
             }`}</Field>
             {productOption.options.map(({ option, priceChange }) => {
               return (
-                <>
+                <React.Fragment key={option}>
                   <Input
                     type="radio"
                     id={option}
                     value={option}
-                    key={option}
                     name={productOption.customField}
                     onChange={e => handleChange(e, priceChange)}
                   ></Input>
                   <Label htmlFor={option}>{option}</Label>
-                </>
+                </React.Fragment>
               )
             })}
           </Container>
