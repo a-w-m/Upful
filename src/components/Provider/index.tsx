@@ -23,8 +23,6 @@ const SnipcartApiProvider = ({ children }: SnipcartApiProviderProps) => {
     `/.netlify/functions/getProductQuantity`
   )
 
-  console.log(state)
-
   return <Provider value={{ state, dispatch }}>{children}</Provider>
 }
 

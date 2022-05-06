@@ -64,8 +64,6 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
   const description = convertHTMLtoPlaintext(html)
   const imgURL = `${url}${getSrc(state.imageSelected)}`
 
-  console.log(thumbnail)
-
   return (
     <Layout>
       <Seo title={title} description={description} url={path} image={imgURL} />
