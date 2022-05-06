@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 export const LogoWrapper = styled.div`
   flex-basis: 10%;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     flex-basis: 10%;
   }
 `
@@ -13,7 +13,7 @@ export const LogoWrapper = styled.div`
 export const LogoLink = styled(Link)`
   width: 50%;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     flex-basis: 10%;
   }
 `

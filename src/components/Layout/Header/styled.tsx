@@ -10,12 +10,12 @@ export const HeaderContainer = styled.header`
   flex-wrap: wrap;
   align-items: flex-end;
 
-  @media ${device.laptop}{
+  @media ${device.tablet}{
     justify-content: flex-end;
     gap: 2rem;
     grid-area: header;
 
-    /*remove logo from header at laptop width  */
+    /*remove logo from header at tablet width and larger */
     & > a:nth-child(2){
       display: none;
     }

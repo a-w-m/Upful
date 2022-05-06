@@ -20,7 +20,7 @@ export const Menu = styled.nav<{ open: boolean }>`
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
   z-index: 9;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     flex-direction: row;
     align-items: center;
     position: static;
@@ -35,7 +35,7 @@ export const Menu = styled.nav<{ open: boolean }>`
   /*Remove logo from hamburger menu*/
   & > a:nth-child(1) {
     display: none;
-    @media ${device.laptop} {
+    @media ${device.tablet} {
       display: block;
     }
   }
@@ -52,7 +52,7 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   transition: color 0.3s linear;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     font-size: 1.7rem;
     font-weight: 400;
   }
