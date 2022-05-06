@@ -9,7 +9,10 @@ export const CategoryHeading = styled.h1`
   margin: 0 auto;
   padding: 1rem 1rem;
   text-transform: uppercase;
-
+  @media ${device.laptop} {
+    margin-top: 4rem;
+    padding: 0;
+  }
 `
 
 export const Container = styled.div`
@@ -17,7 +20,7 @@ export const Container = styled.div`
   grid-auto-rows: auto;
   grid-gap: 2rem;
 
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     grid-gap: 4rem;
   }
 `
