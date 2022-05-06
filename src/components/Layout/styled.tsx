@@ -1,8 +1,8 @@
 import styled from "styled-components"
+import device from "./mediaQuery"
 
 export const Container = styled.div`
   position: relative;
-  padding: 2rem;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
@@ -19,8 +19,11 @@ export const Container = styled.div`
 export const MainWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
-  padding-bottom: 6.4rem;
+  padding: 0rem 2rem;
   grid-area: main;
+  @media ${device.laptop}{
+    padding: 0 4rem;
+  }
 `
 
 export const Main = styled.main``

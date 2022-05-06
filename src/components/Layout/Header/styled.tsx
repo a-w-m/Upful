@@ -9,6 +9,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-end;
+  padding: 2rem 2rem 0rem 2rem;
 
   @media ${device.tablet}{
     justify-content: flex-end;
@@ -20,6 +21,10 @@ export const HeaderContainer = styled.header`
       display: none;
     }
 
+  }
+
+  @media ${device.laptop}{
+    padding: 2rem 4rem 0rem 4rem;
   }
 `
 
