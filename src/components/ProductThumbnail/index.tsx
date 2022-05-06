@@ -15,8 +15,7 @@ const ProductThumbnail: React.FC<P.Thumbnail> = props => {
   const { id, title, price, thumbnail, galleryImages, slug } = props
   const { inventory, loading } = useInventory()
   const dispatch = useSetInventory()
-  const [isHover, setIsHover] = useState(false)
-
+  const [isHover, setIsHover] = useState(false)  
   //add product to inventory if missing
   useEffect(() => {
     if (inventory[id] === undefined) {
@@ -48,10 +47,10 @@ const ProductThumbnail: React.FC<P.Thumbnail> = props => {
       {!loading && (
         <ProductInfoContainer>
           <H3>{title}</H3>
-          <PriceWrapper stock={inventory[id].stock}>
+          <PriceWrapper stock={inventory[id]?.stock}>
             {price.toFixed(2)}
           </PriceWrapper>
-          {inventory[id].stock === 0 && <SoldOut>Sold Out</SoldOut>}
+          {inventory[id]?.stock === 0 && <SoldOut>Sold Out</SoldOut>}
         </ProductInfoContainer>
       )}
     </Article>
