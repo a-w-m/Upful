@@ -9,11 +9,10 @@ import {
 import { graphql } from "gatsby"
 import { C } from "../interfaces"
 
-
 const IndexPage: React.FC<C.CategoryPage> = ({ data }) => {
   return (
     <Layout>
-      <Seo/>
+      <Seo />
       <Container>
         <CategoryHeading>FEATURED GOODS</CategoryHeading>
         <ProductGrid edges={data.allFile.edges} />

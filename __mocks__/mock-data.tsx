@@ -19,8 +19,7 @@ export const pageQueryData: P.Product = {
               },
               images: {
                 fallback: {
-                  src:
-                    "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
+                  src: "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
                   srcSet:
                     "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w",
                   sizes: "100vw",
@@ -95,8 +94,7 @@ export const pageQueryData: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg",
+                    src: "/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg",
                     srcSet:
                       "/static/d6c0fcb2853b21bbbc34c6cbfe062d14/5d47b/pietsie-atlin-4.jpg 150w,\n/static/d6c0fcb2853b21bbbc34c6cbfe062d14/1e7db/pietsie-atlin-4.jpg 300w,\n/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg 600w",
                     sizes: "100vw",
@@ -127,8 +125,7 @@ export const pageQueryData: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg",
+                    src: "/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg",
                     srcSet:
                       "/static/a414d5b3121133600f7cb6cdef8673da/fa2a5/pietsie-atlin-7.jpg 150w,\n/static/a414d5b3121133600f7cb6cdef8673da/cdddd/pietsie-atlin-7.jpg 300w,\n/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg 600w",
                     sizes: "100vw",
@@ -159,8 +156,7 @@ export const pageQueryData: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg",
+                    src: "/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg",
                     srcSet:
                       "/static/597520e19b6aa9cfc80a981e4e8386de/fa2a5/elaina_midland-3.jpg 150w,\n/static/597520e19b6aa9cfc80a981e4e8386de/cdddd/elaina_midland-3.jpg 300w,\n/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg 600w",
                     sizes: "100vw",
@@ -191,8 +187,7 @@ export const pageQueryData: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg",
+                    src: "/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg",
                     srcSet:
                       "/static/5de9f409a5a5abb0a95569ed12d4c3e9/f1a3a/elaina_midland-4.jpg 150w,\n/static/5de9f409a5a5abb0a95569ed12d4c3e9/81bf6/elaina_midland-4.jpg 300w,\n/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg 600w",
                     sizes: "100vw",
@@ -223,8 +218,7 @@ export const pageQueryData: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg",
+                    src: "/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg",
                     srcSet:
                       "/static/ddeb0faace7a650dc777dcc61914b1de/96deb/pietsie-atlin-6.jpg 150w,\n/static/ddeb0faace7a650dc777dcc61914b1de/0fdf4/pietsie-atlin-6.jpg 300w,\n/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg 600w",
                     sizes: "100vw",
@@ -255,8 +249,7 @@ export const pageQueryData: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg",
+                    src: "/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg",
                     srcSet:
                       "/static/6767260d2590b3fb8d50c6b995c829a8/72c97/pietsie-atlin-5.jpg 150w,\n/static/6767260d2590b3fb8d50c6b995c829a8/4a85a/pietsie-atlin-5.jpg 300w,\n/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg 600w",
                     sizes: "100vw",
@@ -287,8 +280,7 @@ export const pageQueryData: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg",
+                    src: "/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg",
                     srcSet:
                       "/static/cf70b8d2ec726c940b9c1d1caede05e9/fa2a5/elaina_midland-2.jpg 150w,\n/static/cf70b8d2ec726c940b9c1d1caede05e9/cdddd/elaina_midland-2.jpg 300w,\n/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg 600w",
                     sizes: "100vw",
@@ -319,8 +311,7 @@ export const pageQueryData: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
+                    src: "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
                     srcSet:
                       "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w",
                     sizes: "100vw",
@@ -362,8 +353,7 @@ export const pageQueryDataNullCustomFields: P.Product = {
               },
               images: {
                 fallback: {
-                  src:
-                    "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
+                  src: "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
                   srcSet:
                     "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w",
                   sizes: "100vw",
@@ -406,8 +396,7 @@ export const pageQueryDataNullCustomFields: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg",
+                    src: "/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg",
                     srcSet:
                       "/static/d6c0fcb2853b21bbbc34c6cbfe062d14/5d47b/pietsie-atlin-4.jpg 150w,\n/static/d6c0fcb2853b21bbbc34c6cbfe062d14/1e7db/pietsie-atlin-4.jpg 300w,\n/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg 600w",
                     sizes: "100vw",
@@ -438,8 +427,7 @@ export const pageQueryDataNullCustomFields: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg",
+                    src: "/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg",
                     srcSet:
                       "/static/a414d5b3121133600f7cb6cdef8673da/fa2a5/pietsie-atlin-7.jpg 150w,\n/static/a414d5b3121133600f7cb6cdef8673da/cdddd/pietsie-atlin-7.jpg 300w,\n/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg 600w",
                     sizes: "100vw",
@@ -470,8 +458,7 @@ export const pageQueryDataNullCustomFields: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg",
+                    src: "/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg",
                     srcSet:
                       "/static/597520e19b6aa9cfc80a981e4e8386de/fa2a5/elaina_midland-3.jpg 150w,\n/static/597520e19b6aa9cfc80a981e4e8386de/cdddd/elaina_midland-3.jpg 300w,\n/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg 600w",
                     sizes: "100vw",
@@ -502,8 +489,7 @@ export const pageQueryDataNullCustomFields: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg",
+                    src: "/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg",
                     srcSet:
                       "/static/5de9f409a5a5abb0a95569ed12d4c3e9/f1a3a/elaina_midland-4.jpg 150w,\n/static/5de9f409a5a5abb0a95569ed12d4c3e9/81bf6/elaina_midland-4.jpg 300w,\n/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg 600w",
                     sizes: "100vw",
@@ -534,8 +520,7 @@ export const pageQueryDataNullCustomFields: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg",
+                    src: "/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg",
                     srcSet:
                       "/static/ddeb0faace7a650dc777dcc61914b1de/96deb/pietsie-atlin-6.jpg 150w,\n/static/ddeb0faace7a650dc777dcc61914b1de/0fdf4/pietsie-atlin-6.jpg 300w,\n/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg 600w",
                     sizes: "100vw",
@@ -566,8 +551,7 @@ export const pageQueryDataNullCustomFields: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg",
+                    src: "/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg",
                     srcSet:
                       "/static/6767260d2590b3fb8d50c6b995c829a8/72c97/pietsie-atlin-5.jpg 150w,\n/static/6767260d2590b3fb8d50c6b995c829a8/4a85a/pietsie-atlin-5.jpg 300w,\n/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg 600w",
                     sizes: "100vw",
@@ -598,8 +582,7 @@ export const pageQueryDataNullCustomFields: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg",
+                    src: "/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg",
                     srcSet:
                       "/static/cf70b8d2ec726c940b9c1d1caede05e9/fa2a5/elaina_midland-2.jpg 150w,\n/static/cf70b8d2ec726c940b9c1d1caede05e9/cdddd/elaina_midland-2.jpg 300w,\n/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg 600w",
                     sizes: "100vw",
@@ -630,8 +613,7 @@ export const pageQueryDataNullCustomFields: P.Product = {
                 },
                 images: {
                   fallback: {
-                    src:
-                      "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
+                    src: "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
                     srcSet:
                       "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w",
                     sizes: "100vw",
@@ -668,8 +650,7 @@ export const imageGalleryData: P.ImageNode[] = [
           },
           images: {
             fallback: {
-              src:
-                "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
+              src: "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
               srcSet:
                 "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w",
               sizes: "100vw",
@@ -700,8 +681,7 @@ export const imageGalleryData: P.ImageNode[] = [
           },
           images: {
             fallback: {
-              src:
-                "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
+              src: "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg",
               srcSet:
                 "/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,\n/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w",
               sizes: "100vw",
@@ -738,8 +718,7 @@ export const ProductGridData: C.Grid = {
                   backgroundColor: "#c8b8b8",
                   images: {
                     fallback: {
-                      src:
-                        "/static/68a4441c5612cb09d427b074118d500f/67ded/image-1.webp",
+                      src: "/static/68a4441c5612cb09d427b074118d500f/67ded/image-1.webp",
                       srcSet:
                         "/static/68a4441c5612cb09d427b074118d500f/22bfc/image-1.webp 256w,\n/static/68a4441c5612cb09d427b074118d500f/d689f/image-1.webp 512w,\n/static/68a4441c5612cb09d427b074118d500f/67ded/image-1.webp 1024w",
                       sizes: "(min-width: 1024px) 1024px, 100vw",
@@ -771,8 +750,7 @@ export const ProductGridData: C.Grid = {
                   backgroundColor: "#d8d8d8",
                   images: {
                     fallback: {
-                      src:
-                        "/static/ccd6bc14b1549c89087b0efe229ed9d1/67ded/image-1.webp",
+                      src: "/static/ccd6bc14b1549c89087b0efe229ed9d1/67ded/image-1.webp",
                       srcSet:
                         "/static/ccd6bc14b1549c89087b0efe229ed9d1/22bfc/image-1.webp 256w,\n/static/ccd6bc14b1549c89087b0efe229ed9d1/d689f/image-1.webp 512w,\n/static/ccd6bc14b1549c89087b0efe229ed9d1/67ded/image-1.webp 1024w",
                       sizes: "(min-width: 1024px) 1024px, 100vw",
@@ -804,8 +782,7 @@ export const ProductGridData: C.Grid = {
                   backgroundColor: "#181808",
                   images: {
                     fallback: {
-                      src:
-                        "/static/989a6a99cc516636b6331550f9fb7f4a/67ded/image-1.webp",
+                      src: "/static/989a6a99cc516636b6331550f9fb7f4a/67ded/image-1.webp",
                       srcSet:
                         "/static/989a6a99cc516636b6331550f9fb7f4a/22bfc/image-1.webp 256w,\n/static/989a6a99cc516636b6331550f9fb7f4a/d689f/image-1.webp 512w,\n/static/989a6a99cc516636b6331550f9fb7f4a/67ded/image-1.webp 1024w",
                       sizes: "(min-width: 1024px) 1024px, 100vw",
@@ -837,8 +814,7 @@ export const ProductGridData: C.Grid = {
                   backgroundColor: "#d8d8d8",
                   images: {
                     fallback: {
-                      src:
-                        "/static/c244bd9394710eb5129c1548210e5e4d/67ded/image-1.webp",
+                      src: "/static/c244bd9394710eb5129c1548210e5e4d/67ded/image-1.webp",
                       srcSet:
                         "/static/c244bd9394710eb5129c1548210e5e4d/22bfc/image-1.webp 256w,\n/static/c244bd9394710eb5129c1548210e5e4d/d689f/image-1.webp 512w,\n/static/c244bd9394710eb5129c1548210e5e4d/67ded/image-1.webp 1024w",
                       sizes: "(min-width: 1024px) 1024px, 100vw",
@@ -870,8 +846,7 @@ export const ProductGridData: C.Grid = {
                   backgroundColor: "#c8b8b8",
                   images: {
                     fallback: {
-                      src:
-                        "/static/51f281e08f63efa0f34578e0375ca050/24f4c/image-1.jpg",
+                      src: "/static/51f281e08f63efa0f34578e0375ca050/24f4c/image-1.jpg",
                       srcSet:
                         "/static/51f281e08f63efa0f34578e0375ca050/68974/image-1.jpg 256w,\n/static/51f281e08f63efa0f34578e0375ca050/3c367/image-1.jpg 512w,\n/static/51f281e08f63efa0f34578e0375ca050/24f4c/image-1.jpg 1024w",
                       sizes: "(min-width: 1024px) 1024px, 100vw",
@@ -910,8 +885,7 @@ export const ProductGridData: C.Grid = {
                   backgroundColor: "#888888",
                   images: {
                     fallback: {
-                      src:
-                        "/static/9133de778bf79dcab3543f7c92a97773/24f4c/image-1.jpg",
+                      src: "/static/9133de778bf79dcab3543f7c92a97773/24f4c/image-1.jpg",
                       srcSet:
                         "/static/9133de778bf79dcab3543f7c92a97773/68974/image-1.jpg 256w,\n/static/9133de778bf79dcab3543f7c92a97773/3c367/image-1.jpg 512w,\n/static/9133de778bf79dcab3543f7c92a97773/24f4c/image-1.jpg 1024w",
                       sizes: "(min-width: 1024px) 1024px, 100vw",
@@ -950,8 +924,7 @@ export const ProductGridData: C.Grid = {
                   backgroundColor: "#c8c8b8",
                   images: {
                     fallback: {
-                      src:
-                        "/static/5cf000df3c225771c1133e8683ca2595/24f4c/image-1.jpg",
+                      src: "/static/5cf000df3c225771c1133e8683ca2595/24f4c/image-1.jpg",
                       srcSet:
                         "/static/5cf000df3c225771c1133e8683ca2595/68974/image-1.jpg 256w,\n/static/5cf000df3c225771c1133e8683ca2595/3c367/image-1.jpg 512w,\n/static/5cf000df3c225771c1133e8683ca2595/24f4c/image-1.jpg 1024w",
                       sizes: "(min-width: 1024px) 1024px, 100vw",

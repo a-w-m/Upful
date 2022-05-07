@@ -27,13 +27,14 @@ const Logo: React.FC<{}> = () => {
   `)
 
   return (
-      <LogoLink to="/">
-        <GatsbyImage
-          image={data.file.childImageSharp.gatsbyImageData}
-          alt="logo"
-          style={{ borderRadius: "100%" }}
-        />
-      </LogoLink>  )
+    <LogoLink to="/">
+      <GatsbyImage
+        image={data.file.childImageSharp.gatsbyImageData}
+        alt="logo"
+        style={{ borderRadius: "100%" }}
+      />
+    </LogoLink>
+  )
 }
 
 export default Logo

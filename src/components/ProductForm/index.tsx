@@ -35,7 +35,10 @@ const Options: React.FC<OptionProps> = props => {
     <>
       {productOptions.map(productOption => {
         return (
-          <Container name={`Select ${productOption.customField}`} key= {productOption.customField}>
+          <Container
+            name={`Select ${productOption.customField}`}
+            key={productOption.customField}
+          >
             <Field>{`${productOption.customField} | ${
               selected ? selected[`${productOption.customField}`]["option"] : ""
             }`}</Field>

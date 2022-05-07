@@ -1,6 +1,5 @@
 import * as F from "../fields"
-import {CmsField} from 'netlify-cms-core'
-
+import { CmsField } from "netlify-cms-core"
 
 // default fields for product entry
 export const productDefaults: Array<CmsField> = [

@@ -22,5 +22,4 @@ const PinterestIcon: React.FC<{}> = () => {
   )
 }
 
-
 export default PinterestIcon

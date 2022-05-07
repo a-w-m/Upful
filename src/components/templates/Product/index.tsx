@@ -3,7 +3,11 @@ import { useInventory } from "../../Provider"
 import { graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
 import { P } from "../../../interfaces"
-import { createOptionsSelected, calculateTotalPriceChange, convertHTMLtoPlaintext } from "../../../helpers/index"
+import {
+  createOptionsSelected,
+  calculateTotalPriceChange,
+  convertHTMLtoPlaintext,
+} from "../../../helpers/index"
 import Layout from "../../Layout"
 import Seo from "../../Seo"
 import ProductNav from "../../ProductNav"
@@ -28,8 +32,11 @@ function reducer(state: P.State, action: P.Action): P.State {
     case "SET_IMAGE":
       return { ...state, imageSelected: action.payload }
     case "SET_PRODUCT_OPTION":
-      const optionsSelected = {...state.optionsSelected}
-      optionsSelected[`${action.payload.customField}`] = {option: action.payload.option, priceChange: action.payload.priceChange}
+      const optionsSelected = { ...state.optionsSelected }
+      optionsSelected[`${action.payload.customField}`] = {
+        option: action.payload.option,
+        priceChange: action.payload.priceChange,
+      }
       return { ...state, optionsSelected }
     default:
       return { ...state }
@@ -37,30 +44,22 @@ function reducer(state: P.State, action: P.Action): P.State {
 }
 
 const Product: React.FC<P.Product> = ({ data, location }) => {
-
-  const {
-    title,
-    price,
-    id,
-    thumbnail,
-    galleryImages,
-    productOptions,
-  } = data.markdownRemark.frontmatter
+  const { title, price, id, thumbnail, galleryImages, productOptions } =
+    data.markdownRemark.frontmatter
   const collection = data.markdownRemark.parent.sourceInstanceName
   const { html } = data.markdownRemark
   const { slug } = data.markdownRemark.fields
-  
+
   const url = data.site.url || `https://${location.hostname}`
   const path = url + slug
   const optionsSelected = createOptionsSelected(productOptions)
 
-
-  const {inventory, loading}  = useInventory()
+  const { inventory, loading } = useInventory()
   const [state, dispatch] = useReducer(reducer, {
     imageSelected: thumbnail.childImageSharp.gatsbyImageData,
-    optionsSelected  
+    optionsSelected,
   })
- 
+
   const description = convertHTMLtoPlaintext(html)
   const imgURL = `${url}${getSrc(state.imageSelected)}`
 
@@ -68,27 +67,35 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
     <Layout>
       <Seo title={title} description={description} url={path} image={imgURL} />
       <ProductContainer>
-        <ProductNav title = {title} collection = {collection}></ProductNav>
+        <ProductNav title={title} collection={collection}></ProductNav>
         <ImageGallery
           galleryImages={[thumbnail].concat(galleryImages)}
           dispatch={dispatch}
-          selected = {state.imageSelected}
+          selected={state.imageSelected}
         ></ImageGallery>
 
         <TitleContainer>
-          <BasePrice> ${(price + calculateTotalPriceChange(state.optionsSelected)).toFixed(2)}</BasePrice>
+          <BasePrice>
+            {" "}
+            $
+            {(price + calculateTotalPriceChange(state.optionsSelected)).toFixed(
+              2
+            )}
+          </BasePrice>
           <Title>{title}</Title>
         </TitleContainer>
 
         <DescriptionWrapper>
-          <DescriptionContents
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <DescriptionContents dangerouslySetInnerHTML={{ __html: html }} />
         </DescriptionWrapper>
 
         <ProductForm>
           {state.optionsSelected && (
-            <Options productOptions={productOptions} dispatch={dispatch} selected = {state.optionsSelected}></Options>
+            <Options
+              productOptions={productOptions}
+              dispatch={dispatch}
+              selected={state.optionsSelected}
+            ></Options>
           )}
 
           {!loading && (
@@ -98,21 +105,20 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
               data-item-name={title}
               data-item-description={description}
               data-item-image={
-                thumbnail.childImageSharp.gatsbyImageData.images.fallback?.src || ""
+                thumbnail.childImageSharp.gatsbyImageData.images.fallback
+                  ?.src || ""
               }
               data-item-url={`${slug}`}
-              data-item-max-quantity={
-                inventory[id] ? inventory[id].stock : 0
-              }
-              productOptions = {productOptions}
-              optionsSelected = {state.optionsSelected}
+              data-item-max-quantity={inventory[id] ? inventory[id].stock : 0}
+              productOptions={productOptions}
+              optionsSelected={state.optionsSelected}
             ></BuyButton>
           )}
         </ProductForm>
 
         <ShareButtonWrapper>
           <EmailButton title={title} />
-          <ShareButton title={title} path={path} imageURL ={imgURL} />
+          <ShareButton title={title} path={path} imageURL={imgURL} />
         </ShareButtonWrapper>
       </ProductContainer>
     </Layout>
@@ -120,7 +126,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       ...Frontmatter
       ...CustomFields

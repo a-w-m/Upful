@@ -23,7 +23,7 @@ const StoreInfo: React.FC<StoreInfoHTMLProps> = ({ data }) => {
     <Layout>
       <Seo />
       <Container>
-        <CategoryHeading>{title}</CategoryHeading> 
+        <CategoryHeading>{title}</CategoryHeading>
         <Wrapper dangerouslySetInnerHTML={{ __html: html }} />
       </Container>
     </Layout>

@@ -2,7 +2,7 @@ import React from "react"
 import { Menu, NavLink } from "./styled"
 import Logo from "../Logo"
 import { graphql, useStaticQuery } from "gatsby"
-import {C} from "../../../interfaces"
+import { C } from "../../../interfaces"
 
 interface NavProps {
   open: boolean
@@ -15,7 +15,7 @@ const Nav: React.FC<NavProps> = props => {
 
   return (
     <Menu open={open}>
-      <Logo/>
+      <Logo />
       {data.site.siteMetadata.menuLinks.categories.map(category => {
         return (
           <NavLink to={category.slug} key={category.name}>
@@ -28,18 +28,18 @@ const Nav: React.FC<NavProps> = props => {
 }
 
 export const categoryQuery = graphql`
-{
-  site {
-    siteMetadata {
-      menuLinks {
-        categories {
-          name
-          slug
+  {
+    site {
+      siteMetadata {
+        menuLinks {
+          categories {
+            name
+            slug
+          }
         }
       }
     }
   }
-}
 `
 
 export default Nav

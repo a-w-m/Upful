@@ -9,8 +9,8 @@ export const Container = styled.div`
   grid-gap: 2rem;
   justify-content: center;
 
-@media ${device.tablet} {
-  grid-template-columns: repeat(6, 1fr);
-  padding: 2rem 2rem;
-}
+  @media ${device.tablet} {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 2rem 2rem;
+  }
 `

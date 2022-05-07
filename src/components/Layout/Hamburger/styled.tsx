@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import device from "../mediaQuery"
 
-export const Container = styled.div<{open: boolean}>`
-display: flex;
-width: ${({open})=> open ? "100%" : "auto"};
-justify-content: ${({open})=> open? "flex-end": "flex-start"}`
+export const Container = styled.div<{ open: boolean }>`
+  display: flex;
+  width: ${({ open }) => (open ? "100%" : "auto")};
+  justify-content: ${({ open }) => (open ? "flex-end" : "flex-start")};
+`
 
 export const Button = styled.button<{ open: boolean }>`
   position: relative;
@@ -47,7 +48,7 @@ export const Button = styled.button<{ open: boolean }>`
     }
   }
 
-  @media ${device.tablet}{
+  @media ${device.tablet} {
     display: none;
   }
 `

@@ -1,5 +1,5 @@
 import { IGatsbyImageData } from "gatsby-plugin-image/dist/src/components/gatsby-image.browser"
-import {PageProps} from "gatsby"
+import { PageProps } from "gatsby"
 
 export interface ProductOption {
   customField: string
@@ -16,7 +16,7 @@ export interface State {
   imageSelected: IGatsbyImageData
   optionsSelected: {
     [name: string]: Options
-  }  | null
+  } | null
 }
 
 export type Dispatch = React.Dispatch<Action>
@@ -26,7 +26,7 @@ export type Action = ActionImage | ActionCustomField
 export interface ActionImage {
   type: "SET_IMAGE"
   payload: IGatsbyImageData
-} 
+}
 
 export interface ActionCustomField {
   type: "SET_PRODUCT_OPTION"
@@ -36,7 +36,6 @@ export interface ActionCustomField {
     priceChange: number
   }
 }
-
 
 export interface Index {
   data: {
@@ -48,7 +47,7 @@ export interface Product extends PageProps {
   data: {
     markdownRemark: MarkdownRemark
     site: SiteMetaData
-    }
+  }
 }
 
 export interface SiteMetaData {
@@ -62,7 +61,7 @@ export interface MarkdownRemark {
     id: string
     date: string
     galleryImages: Image[]
-    productOptions: ProductOption[] 
+    productOptions: ProductOption[]
   }
   fields: {
     slug: string

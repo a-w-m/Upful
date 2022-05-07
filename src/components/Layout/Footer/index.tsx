@@ -1,5 +1,11 @@
 import React from "react"
-import { FooterContainer, FooterNav, CopyrightWrapper, Address, FooterLink } from "./styled"
+import {
+  FooterContainer,
+  FooterNav,
+  CopyrightWrapper,
+  Address,
+  FooterLink,
+} from "./styled"
 import { useStaticQuery, graphql } from "gatsby"
 import { C } from "../../../interfaces"
 
@@ -34,7 +40,10 @@ const Footer: React.FC<{}> = () => {
         })}
         {footerData.allMarkdownRemark.edges.map(page => {
           return (
-            <FooterLink to={page.node.fields.slug} key={page.node.frontmatter.title}>
+            <FooterLink
+              to={page.node.fields.slug}
+              key={page.node.frontmatter.title}
+            >
               {page.node.frontmatter.title.toLowerCase()}
             </FooterLink>
           )

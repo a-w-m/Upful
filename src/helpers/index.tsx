@@ -35,7 +35,8 @@ export const createCustomOptionsProps = (
     productOptions.forEach((ele, index) => {
       const num = index + 1
       res[`data-item-custom${num}-name`] = ele.customField
-      res[`data-item-custom${num}-value`] = optionsSelected[ele.customField].option
+      res[`data-item-custom${num}-value`] =
+        optionsSelected[ele.customField].option
       res[`data-item-custom${num}-options`] = createOptionsString(ele.options)
     })
   }
@@ -80,11 +81,10 @@ export const calculateTotalPriceChange = (
   return 0
 }
 
-
 /*
   -convert html to plain text
 */
 
-export function convertHTMLtoPlaintext(html:string): string {
-  return html.replace(/<[^>]+>/g, '');
+export function convertHTMLtoPlaintext(html: string): string {
+  return html.replace(/<[^>]+>/g, "")
 }

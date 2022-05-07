@@ -1,13 +1,13 @@
 const { template } = require("./src/snipcart/templates.tsx")
 const metadata = require("./src/markdown/meta")
 
-let source = metadata.menuLinks.categories.map(category=>{
+let source = metadata.menuLinks.categories.map(category => {
   return {
     resolve: `gatsby-source-filesystem`,
-    options:{
-      path:`${__dirname}/src/markdown/products/${category.name}/`,
-      name: category.name
-    }
+    options: {
+      path: `${__dirname}/src/markdown/products/${category.name}/`,
+      name: category.name,
+    },
   }
 })
 
@@ -31,7 +31,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/index.ts`,
         manualInit: true,
         enableIdentityWidget: true,
-        publicPath: 'admin'
+        publicPath: "admin",
       },
     },
 
@@ -70,7 +70,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: metadata.favicon.replace("/", ""),  // set favicon icon, this path is relative to the root of the site.
+        icon: metadata.favicon.replace("/", ""), // set favicon icon, this path is relative to the root of the site.
       },
     },
 

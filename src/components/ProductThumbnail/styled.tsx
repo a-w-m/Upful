@@ -11,18 +11,17 @@ export const Article = styled.article`
   } */
 
   /* handle widow/orphan grid items: https://css-irl.info/controlling-leftover-grid-items/ */
-  
+
   /* Dealing with single possible orphan on mobileS, M, L, 4 column grid */
-  &:last-child:nth-child(2n-1){
+  &:last-child:nth-child(2n-1) {
     grid-column-end: -2;
-    @media ${device.tablet}{
+    @media ${device.tablet} {
       grid-column-end: auto;
     }
   }
 
-
- /* Dealing with orphan grid items for tablet, laptop, and laptopL, 6 column grid */
- /* Dealing with 2 orphan items */
+  /* Dealing with orphan grid items for tablet, laptop, and laptopL, 6 column grid */
+  /* Dealing with 2 orphan items */
 
   &:last-child:nth-child(3n - 1) {
     @media ${device.tablet} {

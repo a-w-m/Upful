@@ -3,7 +3,7 @@ import React from "react"
 const TwitterIcon: React.FC<{}> = () => {
   return (
     <svg
-      className ="svg-icon icon-share-twitter "
+      className="svg-icon icon-share-twitter "
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"

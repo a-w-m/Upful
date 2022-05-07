@@ -21,7 +21,7 @@ export const MainWrapper = styled.div`
   width: 100%;
   padding: 0rem 2rem;
   grid-area: main;
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     padding: 0 4rem;
   }
 `

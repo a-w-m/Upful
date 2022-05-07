@@ -11,10 +11,10 @@ const Category: React.FC<C.CategoryPage> = ({ data, pageContext }) => {
   const { category, numPages, currentPage } = pageContext
   return (
     <Layout>
-      <Seo/>
+      <Seo />
       <Container>
         <CategoryHeading>{category}</CategoryHeading>
-        <ProductGrid edges={data.allFile.edges}/>
+        <ProductGrid edges={data.allFile.edges} />
         {numPages > 1 && (
           <Pagination
             currentPage={currentPage}
@@ -28,7 +28,7 @@ const Category: React.FC<C.CategoryPage> = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query($skip: Int! = 0, $category: String!, $limit: Int!) {
+  query ($skip: Int! = 0, $category: String!, $limit: Int!) {
     allFile(
       filter: {
         sourceInstanceName: { eq: $category }

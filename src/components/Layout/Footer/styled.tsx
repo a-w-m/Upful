@@ -20,7 +20,7 @@ export const FooterContainer = styled.footer`
     margin: 0.5rem;
   }
 
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -33,29 +33,22 @@ export const FooterNav = styled.nav`
   justify-content: center;
   align-items: center;
 
-
   a {
     font-size: 1.2rem;
     text-decoration: none;
     line-height: 2.1rem;
     color: var(--link-text-color);
-
-
   }
 
-
-
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     flex-direction: row;
-    flex-basis: 100%; 
+    flex-basis: 100%;
     flex-shrink: 0;
     gap: 2rem;
   }
 `
 
-export const FooterLink = styled(Link)`
-
-`
+export const FooterLink = styled(Link)``
 
 export const ContactWrapper = styled.div`
   display: flex;
@@ -98,10 +91,10 @@ export const Address = styled.address`
 
   a {
     text-decoration: underline;
-      color: var(--link-text-color);
+    color: var(--link-text-color);
   }
 
-  @media ${device.laptop}{
-    flex-basis: 100%; 
+  @media ${device.laptop} {
+    flex-basis: 100%;
   }
 `

@@ -7,24 +7,19 @@ const ProductGrid: React.FC<C.Grid> = props => {
   return (
     <Container>
       {props.edges.map((edge, index) => {
-        const {
-          id,
-          title,
-          price,
-          thumbnail,
-          galleryImages
-        } = edge.node.childMarkdownRemark.frontmatter
+        const { id, title, price, thumbnail, galleryImages } =
+          edge.node.childMarkdownRemark.frontmatter
         const { slug } = edge.node.childMarkdownRemark.fields
 
         return (
           <ProductThumbnail
-            id = {id}
+            id={id}
             title={title}
             price={price}
             thumbnail={thumbnail}
             slug={slug}
             key={index}
-            galleryImages ={galleryImages}
+            galleryImages={galleryImages}
           ></ProductThumbnail>
         )
       })}

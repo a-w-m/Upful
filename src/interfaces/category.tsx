@@ -35,7 +35,7 @@ export interface childMarkdownRemarkNode {
 }
 
 export interface Grid {
-  edges: childMarkdownRemarkNode[] 
+  edges: childMarkdownRemarkNode[]
 }
 
 export interface MenuLinks {

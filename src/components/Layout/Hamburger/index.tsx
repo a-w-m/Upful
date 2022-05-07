@@ -10,7 +10,7 @@ const Hamburger: React.FC<HamburgerProps> = props => {
   const { open, setOpen } = props
 
   return (
-      <Container open = {open} onClick = {()=> setOpen(prev=>!prev)}>
+    <Container open={open} onClick={() => setOpen(prev => !prev)}>
       <Button
         type="button"
         aria-label="open navigation"
@@ -18,10 +18,10 @@ const Hamburger: React.FC<HamburgerProps> = props => {
         aria-expanded="false"
         open={open}
       >
-      <div />
-      <div />
-      <div />
-    </Button>
+        <div />
+        <div />
+        <div />
+      </Button>
     </Container>
   )
 }

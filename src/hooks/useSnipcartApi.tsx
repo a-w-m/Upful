@@ -31,7 +31,12 @@ function reducer(state: ApiData, action: Action): ApiData {
     case "SET_ERROR":
       return { ...state, error: true, loading: false }
     case "SET_INVENTORY":
-      return { ...state, error: false, loading: false, inventory:{...state.inventory, ...action.data}}
+      return {
+        ...state,
+        error: false,
+        loading: false,
+        inventory: { ...state.inventory, ...action.data },
+      }
     default:
       throw new Error()
   }
@@ -43,10 +48,8 @@ const initialState: ApiData = {
   inventory: {},
 }
 
-function useSnipcartApi(
-url:string): [ApiData, Dispatch] {
+function useSnipcartApi(url: string): [ApiData, Dispatch] {
   const [state, dispatch] = useReducer(reducer, initialState)
-
 
   useEffect(() => {
     async function fetchData() {
@@ -63,16 +66,15 @@ url:string): [ApiData, Dispatch] {
       }
 
       const data = await res.json()
-      dispatch({type: 'SET_INVENTORY', data: data})
-      dispatch({type: 'SET_LOADING'})
+      dispatch({ type: "SET_INVENTORY", data: data })
+      dispatch({ type: "SET_LOADING" })
     }
     fetchData().catch(() => {
-      dispatch({type: 'SET_ERROR'})
+      dispatch({ type: "SET_ERROR" })
     })
   }, [])
 
   return [state, dispatch]
-
 }
 
 export default useSnipcartApi

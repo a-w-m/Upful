@@ -37,7 +37,8 @@ async function paginate({ graphql, actions, category }) {
 
     const count = data.allFile.edges.length
     const perPage = 48
-    const numPages = Math.ceil(count / perPage) === 0 ? 1 : Math.ceil(count / perPage) 
+    const numPages =
+      Math.ceil(count / perPage) === 0 ? 1 : Math.ceil(count / perPage)
 
     Array.from({ length: numPages }).forEach((_, i) => {
       /*
@@ -73,13 +74,13 @@ exports.createPages = async ({ graphql, actions }) => {
             categories {
               name
               slug
-            } 
+            }
           }
         }
       }
-    }    
+    }
   `)
-  
+
   //query slug for each product page
   const products = await graphql(`
     query {
@@ -97,19 +98,18 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // query slug for each general page node
   const generalPages = await graphql(`
-  query {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/pages/" } }) {
-      edges {
-        node {
-          fields {
-            slug
+    query {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/pages/" } }) {
+        edges {
+          node {
+            fields {
+              slug
+            }
           }
         }
       }
     }
-  }
-`)
-
+  `)
 
   products.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
@@ -126,15 +126,13 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`src/components/templates/StoreInfo/index.tsx`),
-      context: {slug: node.fields.slug}
+      context: { slug: node.fields.slug },
     })
   })
 
-  
-
   const promises = categoryData.data.site.siteMetadata.menuLinks.categories.map(
-    async ({name}) => {
-      await paginate({ graphql, actions, category:name })
+    async ({ name }) => {
+      await paginate({ graphql, actions, category: name })
     }
   )
 

@@ -15,7 +15,7 @@ const ProductThumbnail: React.FC<P.Thumbnail> = props => {
   const { id, title, price, thumbnail, galleryImages, slug } = props
   const { inventory, loading } = useInventory()
   const dispatch = useSetInventory()
-  const [isHover, setIsHover] = useState(false)  
+  const [isHover, setIsHover] = useState(false)
   //add product to inventory if missing
   useEffect(() => {
     if (inventory[id] === undefined) {

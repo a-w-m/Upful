@@ -18,32 +18,36 @@ const ShareButton: React.FC<ShareButtonProps> = props => {
 
   return (
     <>
-      <Button open={isOpen} type="button" onClick={() => {setOpen(true)}}>
-        <ShareIcon/>
+      <Button
+        open={isOpen}
+        type="button"
+        onClick={() => {
+          setOpen(true)
+        }}
+      >
+        <ShareIcon />
         <TextWrapper>Share This</TextWrapper>
         <SocialsContainer ref={ref} open={isOpen}>
-        <a
-          href={`http://www.facebook.com/sharer.php?u=${path}`}
-          target="_blank"
-        >
-          <Facebook />
-        </a>
-        <a
-          href={`https://twitter.com/intent/tweet?url=${path}`}
-          target="_blank"
-        >
-          <Twitter />
-        </a>
-        <a
-          href={`http://pinterest.com/pin/create/button/?url=${path}&media=${imageURL}&description=${title}`}
-          target="_blank"
-        >
-          <Pinterest />
-        </a>
-      </SocialsContainer>
-        
+          <a
+            href={`http://www.facebook.com/sharer.php?u=${path}`}
+            target="_blank"
+          >
+            <Facebook />
+          </a>
+          <a
+            href={`https://twitter.com/intent/tweet?url=${path}`}
+            target="_blank"
+          >
+            <Twitter />
+          </a>
+          <a
+            href={`http://pinterest.com/pin/create/button/?url=${path}&media=${imageURL}&description=${title}`}
+            target="_blank"
+          >
+            <Pinterest />
+          </a>
+        </SocialsContainer>
       </Button>
-     
     </>
   )
 }

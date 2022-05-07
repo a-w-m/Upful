@@ -11,7 +11,7 @@ export const ProductContainer = styled.div`
   align-items: flex-start;
   justify-items: center;
   align-content: center;
-  @media ${device.tablet}{
+  @media ${device.tablet} {
     margin-top: 2rem;
   }
   @media ${device.laptop} {
@@ -20,7 +20,7 @@ export const ProductContainer = styled.div`
     display: grid;
     grid-gap: 1rem 2rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: .05fr auto auto auto 1fr .1fr;
+    grid-template-rows: 0.05fr auto auto auto 1fr 0.1fr;
     grid-template-areas:
       "nav ."
       "gallery title"
@@ -28,7 +28,6 @@ export const ProductContainer = styled.div`
       "gallery  share"
       "gallery description"
       ". description";
-
   }
 `
 
@@ -57,7 +56,7 @@ export const Title = styled.h1`
   font-size: 3.6rem;
   line-height: 3rem;
   font-family: var(--main-font);
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-weight: 500;
   margin: 0;
 
@@ -84,7 +83,7 @@ export const ProductForm = styled.div`
   padding: 0 0 4rem 0;
   row-gap: 3rem;
 
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     grid-area: form;
     height: 100%;
   }
@@ -95,7 +94,7 @@ export const DescriptionWrapper = styled.section`
   flex-direction: column;
   align-items: flex-start;
   @media ${device.laptop} {
-    grid-area:description;
+    grid-area: description;
   }
 `
 
@@ -111,17 +110,16 @@ export const DescriptionHeading = styled.h2`
   padding: 1.4rem 0;
   margin: 0;
 
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     font-size: 1.8rem;
-    
   }
 `
 export const DescriptionContents = styled.div`
   font-size: 1.4rem;
-  padding: 1.4rem .8rem;
+  padding: 1.4rem 0.8rem;
   text-align: justify;
 
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     font-size: 1.6rem;
   }
 `
@@ -133,7 +131,7 @@ export const ShareButtonWrapper = styled.div`
   align-items: flex-start;
   width: 100%;
 
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     grid-area: share;
     align-self: end;
   }

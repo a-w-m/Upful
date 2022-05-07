@@ -4,38 +4,35 @@ import device from "../mediaQuery"
 import { Link } from "gatsby"
 
 export const HeaderContainer = styled.header`
-  
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-end;
   padding: 2rem 2rem 0rem 2rem;
 
-  @media ${device.tablet}{
+  @media ${device.tablet} {
     justify-content: flex-end;
     gap: 2rem;
     grid-area: header;
 
     /*remove logo from header at tablet width and larger */
-    & > a:nth-child(2){
+    & > a:nth-child(2) {
       display: none;
     }
-
   }
 
-  @media ${device.laptop}{
+  @media ${device.laptop} {
     padding: 2rem 4rem 0rem 4rem;
   }
 `
 
-export const HamburgerNavContainer = styled.div<{open: boolean}>`
-width: ${({open})=> open? "100%": "auto"};
-align-self: flex-start;
-@media ${device.laptop}{
-  order: 1;
-  flex-basis: 100%;
-}
-
+export const HamburgerNavContainer = styled.div<{ open: boolean }>`
+  width: ${({ open }) => (open ? "100%" : "auto")};
+  align-self: flex-start;
+  @media ${device.laptop} {
+    order: 1;
+    flex-basis: 100%;
+  }
 `
 
 export const LogoContainer = styled.div`

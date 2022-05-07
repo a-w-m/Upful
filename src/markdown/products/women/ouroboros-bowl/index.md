@@ -9,4 +9,5 @@ price: 150
 featured: true
 productOptions: []
 ---
+
 Sara Winkle is a Los Angeles based potter whose work is inspired by the Southwest desert. The Ouroboros Bowl is a Hand Thrown Ceramic Bowl with 10.5 inch diameter. Made in Topanga, CA.

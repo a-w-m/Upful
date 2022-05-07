@@ -6,9 +6,8 @@
 
 // You can delete this file if you're not using it
 
-
 exports.onRenderBody = ({ setBodyAttributes }) => {
-    setBodyAttributes({
-      className: "snipcart-overwrite",
-    })
-  }
+  setBodyAttributes({
+    className: "snipcart-overwrite",
+  })
+}
