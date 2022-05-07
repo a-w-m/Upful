@@ -1,5 +1,5 @@
 ---
-path: undefined/mardi-dress-in-majorelle
+path: undefined/mardi-dress-in-majorelle/mardi-dress-in-majorelle
 title: Mardi Dress in Majorelle
 date: 2022-05-07T19:00:45.933Z
 id: mardi-dress-in-majorelle
