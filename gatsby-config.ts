@@ -1,17 +1,18 @@
-const { template } = require("./src/snipcart/templates.tsx")
-const metadata = require("./src/markdown/meta")
+import { GatsbyConfig } from "gatsby"
+import metadata from "./src/markdown/meta/index.json"
+import path from "path"
 
 let source = metadata.menuLinks.categories.map(category => {
   return {
     resolve: `gatsby-source-filesystem`,
     options: {
-      path: `${__dirname}/src/markdown/products/${category.name}/`,
+      path: path.resolve(`src/markdown/products${category.slug}`),
       name: category.name,
     },
   }
 })
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: metadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,7 +29,7 @@ module.exports = {
          * One convention is to place your Netlify CMS customization code in a
          * `src/cms` directory.
          */
-        modulePath: `${__dirname}/src/cms/index.ts`,
+        modulePath: path.resolve(`src/cms/index.ts`),
         manualInit: true,
         enableIdentityWidget: true,
         publicPath: "admin",
@@ -38,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images`,
+        path: path.resolve(`src/images`),
         name: `images`,
       },
     },
@@ -46,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/markdown/meta`,
+        path: path.resolve(`src/markdown/meta`),
         name: `meta`,
       },
     },
@@ -56,7 +57,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/markdown/pages`,
+        path: path.resolve(`src/markdown/pages`),
         name: `pages`,
       },
     },
@@ -114,3 +115,5 @@ module.exports = {
     },
   ],
 }
+
+export default config

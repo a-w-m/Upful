@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../../Layout"
 import Seo from "../../Seo"
 import { Container, CategoryHeading, Wrapper } from "./styled"
-import { P } from "../../../interfaces/index"
 
 export interface StoreInfoHTMLProps {
   data: {
@@ -35,11 +34,6 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
       }
       html
     }

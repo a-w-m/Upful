@@ -1,7 +1,12 @@
-const path = require("path")
-const { createFilePath } = require("gatsby-source-filesystem")
+import { Actions, CreatePagesArgs, GatsbyNode } from "gatsby"
+import path from "path"
+import { createFilePath } from "gatsby-source-filesystem"
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+export const onCreateNode: GatsbyNode["onCreateNode"] = ({
+  node,
+  getNode,
+  actions,
+}) => {
   //create node slug and new field on node
   const { createNodeField } = actions
 
@@ -11,15 +16,32 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-async function paginate({ graphql, actions, category }) {
+const paginate = async ({
+  graphql,
+  actions,
+  category,
+}: {
+  graphql: CreatePagesArgs["graphql"]
+  actions: Actions
+  category: string
+}) => {
+  type DATA = {
+    errors?: any
+    data?: {
+      allFile: {
+        edges: [{ id: string }]
+      }
+    }
+  }
+
   //page template
   const categoryTemplate = path.resolve(
     "src/components/templates/Category/index.tsx"
   )
 
   //query markdown nodes by category created by gatsby-source-filesystem
-  try {
-    const { data } = await graphql(`
+
+  const res: DATA = await graphql(`
   {
       allFile(
         filter: {sourceInstanceName: { eq: "${category}"}, internal: { mediaType: { eq: "text/markdown" }} }
@@ -35,8 +57,9 @@ async function paginate({ graphql, actions, category }) {
       
   `)
 
-    const count = data.allFile.edges.length
-    const perPage = 48
+  const perPage = 48
+  const count = res.data?.allFile.edges.length
+  if (count) {
     const numPages =
       Math.ceil(count / perPage) === 0 ? 1 : Math.ceil(count / perPage)
 
@@ -57,16 +80,49 @@ async function paginate({ graphql, actions, category }) {
         },
       })
     })
-  } catch (err) {
-    throw new Error("There was an error")
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+export const createPages: GatsbyNode["createPages"] = async ({
+  graphql,
+  actions,
+}) => {
   const { createPage } = actions
 
+  //declare types
+  type CategoryData = {
+    errors?: any
+    data?: {
+      site: {
+        siteMetadata: {
+          menuLinks: {
+            categories: Array<{ name: string; slug: string }>
+          }
+        }
+      }
+    }
+  }
+
+  type Products = {
+    errors?: any
+    data?: {
+      allMarkdownRemark: {
+        edges: Array<{ node: { fields: { slug: string } } }>
+      }
+    }
+  }
+
+  type GeneralPages = {
+    errors?: any
+    data?: {
+      allMarkdownRemark: {
+        edges: Array<{ node: { fields: { slug: string } } }>
+      }
+    }
+  }
+
   // query menu links from siteMetadata object in gatsby.config
-  const categoryData = await graphql(`
+  const categoryData: CategoryData = await graphql(`
     query {
       site {
         siteMetadata {
@@ -82,7 +138,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   //query slug for each product page
-  const products = await graphql(`
+  const products: Products = await graphql(`
     query {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/products/" } }) {
         edges {
@@ -97,7 +153,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   // query slug for each general page node
-  const generalPages = await graphql(`
+  const generalPages: GeneralPages = await graphql(`
     query {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/pages/" } }) {
         edges {
@@ -111,7 +167,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  products.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  products.data?.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`src/components/templates/Product/index.tsx`),
@@ -122,7 +178,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  generalPages.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  generalPages.data?.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`src/components/templates/StoreInfo/index.tsx`),
@@ -130,48 +186,13 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  const promises = categoryData.data.site.siteMetadata.menuLinks.categories.map(
-    async ({ name }) => {
-      await paginate({ graphql, actions, category: name })
-    }
-  )
-
-  await Promise.all(promises)
-}
-
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
-  const typeDefs = `
-    type MarkdownRemark implements Node {
-      frontmatter: Frontmatter!
-      fields: Field!
-    }  
-
-    type Field {
-      slug: String!
-    }
-    type Frontmatter @infer {
-      title: String
-      price: Float
-      id: String
-      image: File @fileByRelativePath
-      description: String
-      date: String
-      customField1: CustomField
-      customField2: CustomField
-      tags: [String]
-
-    }
-
-    type CustomField {
-      name: String!
-      values: [Values]!
-    }
-
-    type Values {
-      name: String!
-      priceChange: Int!
-    }
-  `
-  createTypes(typeDefs)
+  const promises =
+    categoryData.data?.site.siteMetadata.menuLinks.categories.map(
+      async ({ name }) => {
+        await paginate({ graphql, actions, category: name })
+      }
+    )
+  if (promises) {
+    await Promise.all(promises)
+  }
 }
