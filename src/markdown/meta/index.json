@@ -5,7 +5,9 @@
       "content": "meta"
     }
   ],
-  "keywords": ["e-commerce"],
+  "keywords": [
+    "e-commerce"
+  ],
   "author": "@aw",
   "logo": "/src/images/logo/upful-gold-frame-logo.png",
   "url": "upful.shop",
@@ -20,10 +22,6 @@
       {
         "name": "kids",
         "slug": "/kids/"
-      },
-      {
-        "name": "shoes",
-        "slug": "/shoes/"
       }
     ]
   },
