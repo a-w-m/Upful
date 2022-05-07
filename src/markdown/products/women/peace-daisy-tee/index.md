@@ -1,7 +1,7 @@
 ---
-title: "Peace Daisy Tee "
+title: Peace Daisy Tee
 date: 2022-05-07T16:39:38.897Z
-id: peace-daisy-tee-
+id: peace-daisy-tee
 thumbnail: images/image-1.webp
 galleryImages:
   - images/image-2.jpg
