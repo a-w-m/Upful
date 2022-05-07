@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react"
-import { useInventory } from "../components/Provider"
+import React, { useEffect, useReducer } from "react"
 
 /*generic function to make fetch requests to snipcart api:
   - functions takes an initial state matching the given type
@@ -67,7 +66,6 @@ function useSnipcartApi(url: string): [ApiData, Dispatch] {
 
       const data = await res.json()
       dispatch({ type: "SET_INVENTORY", data: data })
-      dispatch({ type: "SET_LOADING" })
     }
     fetchData().catch(() => {
       dispatch({ type: "SET_ERROR" })
