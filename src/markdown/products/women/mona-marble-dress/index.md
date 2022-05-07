@@ -1,7 +1,7 @@
 ---
-title: "Mona Marble Dress "
+title: Mona Marble Dress
 date: 2022-05-07T15:35:17.371Z
-id: mona-marble-dress-
+id: mona-marble-dress
 thumbnail: images/image-1.webp
 galleryImages:
   - images/image-2.webp
