@@ -11,6 +11,8 @@ export const snipcart = css`
     --cart-badge-borderColor: transparent;
     --cart-input-borderColor: rgb(217, 217, 217);
     --cart-input-checked-bgColor: #00beff;
+    --cart-disabled-bgColor: #D1D2DA;
+    --cart-disabled-color: #8f99a3;
   }
 
   /*remove item custom element*/
@@ -46,6 +48,21 @@ export const snipcart = css`
     font-weight: 300;
   }
 
+  /* increment button */
+  .snipcart-overwrite .snipcart-item-quantity__quantity .snipcart-button-icon{
+    background-color: var(--cart-disabled-bgColor);//var(--cart-input-checked-bgColor);
+    color: #000;
+    &:hover, &:focus, &:active{
+      background-color: var(--cart-input-checked-bgColor);
+    }
+  }
+
+  .snipcart-overwrite .snipcart-item-quantity__quantity .snipcart-button-icon.is-secondary[disabled]{
+    &:hover, &:focus, &:active{
+      background-color: var(--cart-disabled-bgColor);
+    }
+  }
+
   /* overwrite billing/shipping background and border */
   .snipcart-overwrite .snipcart-billing-completed,
   .snipcart-overwrite .snipcart-shipping-completed {
@@ -79,12 +96,17 @@ export const snipcart = css`
   */
 
   #snipcart {
-    /*Buttons*/
+
+    /* Buttons */
+
+    /* Primary */
 
     /* Default */
     --color-buttonPrimary: var(--cart-main-white);
     --borderColor-buttonPrimary: var(--cart-main-brown);
     --bgColor-buttonPrimary: var(--cart-main-brown);
+
+    
 
     /* Hover */
     --color-buttonPrimary-hover: var(--cart-main-white);
@@ -103,6 +125,39 @@ export const snipcart = css`
     --borderColor-buttonPrimary-focus: var(--cart-secondary-brown);
     --bgColor-buttonPrimary-focus: var(--cart-secondary-brown);
     --shadow-buttonPrimary-focus: var(--cart-secondary-brown);
+
+    /* Disabled */
+  --borderColor-buttonPrimary-disabled:var(--cart-disabled-bgColor);
+  --bgColor-buttonPrimary-disabled:var(--cart-disabled-bgColor);
+
+    /* Secondary */
+
+    /* Default */
+
+    --color-buttonSecondary: var(--cart-main-white);
+    --borderColor-buttonSecondary: var(--cart-main-brown);
+    --bgColor-buttonSecondary: var(--cart-main-brown);
+    /* Hover */
+    --color-buttonSecondary-hover: var(--cart-main-white);
+    --borderColor-buttonSecondary-hover: var(--cart-secondary-brown);
+    --bgColor-buttonSecondary-hover: var(--cart-secondary-brown);
+    --shadow-buttonSecondary-hover: var(--cart-secondary-brown);
+
+    /* Active */
+    --color-buttonSecondary-active: var(--cart-main-white);
+    --borderColor-buttonSecondary-active: var(--cart-secondary-brown);
+    --bgColor-buttonSecondary-active: var(--cart-secondary-brown);
+    --shadow-buttonSecondary-active: var(--cart-secondary-brown);
+
+    /* Focus */
+    --color-buttonSecondary-focus: var(--cart-main-white);
+    --borderColor-buttonSecondary-focus: var(--cart-secondary-brown);
+    --bgColor-buttonSecondary-focus: var(--cart-secondary-brown);
+    --shadow-buttonSecondary-focus: var(--cart-secondary-brown);
+    /* Disabled */
+    --color-buttonSecondary-disabled: var(--cart-disabled-color);
+    --borderColor-buttonSecondary-disabled:var(--cart-disabled-bgColor);
+    --bgColor-buttonSecondary-disabled:var(--cart-disabled-bgColor);
 
     /* ----------------------- 
         PART: Input
@@ -162,7 +217,7 @@ export const snipcart = css`
     /*Globals*/
 
     --color-icon: var(--cart-main-brown);
-    --bgColor-default: #fff;
-    --bgColor-modal: #fff;
+    --bgColor-default: var(--cart-main-white);
+    --bgColor-modal: var(--cart-main-white);
   }
 `
