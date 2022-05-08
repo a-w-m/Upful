@@ -7,7 +7,6 @@ export const products: CmsCollection = {
   label: "Products",
   name: "products",
   folder: "src/markdown/products",
-  path: "{{slug}}/index",
   create: true,
   label_singular: "Product",
   nested: {

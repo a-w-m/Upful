@@ -29,7 +29,7 @@ const paginate = async ({
     errors?: any
     data?: {
       allFile: {
-        edges: [{ id: string }]
+        edges: { id: string }[]
       }
     }
   }
@@ -57,7 +57,7 @@ const paginate = async ({
       
   `)
 
-  const perPage = 48
+  const perPage = 6
   const count = res.data?.allFile.edges.length
   if (count) {
     const numPages =
@@ -196,3 +196,41 @@ export const createPages: GatsbyNode["createPages"] = async ({
     await Promise.all(promises)
   }
 }
+
+export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
+  ({ actions }) => {
+    const { createTypes } = actions
+    const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter!
+      fields: Field!
+    }  
+
+    type Field {
+      slug: String!
+    }
+
+    type Frontmatter @dontInfer {
+      title: String
+      price: Float
+      id: String
+      thumbnail: File @fileByRelativePath
+      galleryImages: [File] @fileByRelativePath
+      descriptions: String
+      featured: Boolean
+      productOptions: [CustomField]
+      date: Date
+    }
+
+    type CustomField {
+      customField: String!
+      options: [Option]
+    }
+
+    type Option{
+      option: String
+      priceChange: Int
+    }
+  `
+    createTypes(typeDefs)
+  }
