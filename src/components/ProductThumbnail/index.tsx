@@ -21,7 +21,7 @@ const ProductThumbnail: React.FC<P.Thumbnail> = props => {
     if (inventory[id] === undefined) {
       dispatch({
         type: "SET_INVENTORY",
-        data: { ...inventory, [id]: { stock: 0 } },
+        data: { ...inventory, [id]: { stock: 1} },
       })
     }
   }, [inventory.id])
