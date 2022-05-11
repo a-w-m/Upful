@@ -8,8 +8,9 @@ price: 440
 featured: true
 productOptions: []
 ---
+
 The Virginia dress is a one of a kind creation made from hand selected vintage table cloth. High neckline, side pockets, and tie back with keyhole opening.
 
-100% Vintage Cotton.  Made in the USA.
+100% Vintage Cotton. Made in the USA.
 
 Elaina is 5'9" wearing the S.

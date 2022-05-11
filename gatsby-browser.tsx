@@ -8,6 +8,8 @@ import React from "react"
 import { GatsbyBrowser } from "gatsby"
 import { SnipcartApiProvider } from "./src/components/Provider"
 
-export const wrapRootElement: GatsbyBrowser["wrapRootElement"] = ({element}) => {
+export const wrapRootElement: GatsbyBrowser["wrapRootElement"] = ({
+  element,
+}) => {
   return <SnipcartApiProvider>{element}</SnipcartApiProvider>
 }

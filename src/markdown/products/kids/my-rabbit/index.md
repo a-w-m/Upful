@@ -9,6 +9,7 @@ price: 14
 featured: true
 productOptions: []
 ---
+
 This teeny tiny bunny comes with green flower printed fabric and a cute bow.
 
 Made with 100% cotton with polyester filling

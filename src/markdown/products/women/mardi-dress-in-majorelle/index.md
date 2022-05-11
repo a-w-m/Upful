@@ -8,10 +8,11 @@ price: 330
 featured: true
 productOptions: []
 ---
-Mid-length dress with full sleeves and fitted bodice.  the elegant flowing skirt and puffed sleeves are easy and romantic.
+
+Mid-length dress with full sleeves and fitted bodice. the elegant flowing skirt and puffed sleeves are easy and romantic.
 
 Single layered, regular weight cotton gauze with crinkled effect
 
-100% Cotton imported from Japan.  Made in USA
+100% Cotton imported from Japan. Made in USA
 
 Machine wash gentle cycle / Hand wash / Tumble dry low

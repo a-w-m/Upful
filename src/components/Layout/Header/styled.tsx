@@ -10,14 +10,11 @@ export const HeaderContainer = styled.header`
   align-items: flex-end;
   padding: 2rem 2rem 0rem 2rem;
 
-
-
   @media ${device.tablet} {
     justify-content: flex-end;
     gap: 2rem;
     grid-area: header;
     padding: 4rem 4rem 0rem 4rem;
-
 
     /*remove logo from header at tablet width and larger */
     & > a:nth-child(2) {
@@ -32,8 +29,6 @@ export const HeaderContainer = styled.header`
   @media ${device.laptopL} {
     padding: 4rem 4rem 0rem 4rem;
   }
-
-
 `
 
 export const HamburgerNavContainer = styled.div<{ open: boolean }>`

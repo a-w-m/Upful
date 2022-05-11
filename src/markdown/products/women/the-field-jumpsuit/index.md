@@ -19,4 +19,5 @@ productOptions:
         priceChange: 0
     customField: Size
 ---
+
 Tailored yet comfortable with a gathered yolk collar and a true waistband, the Field jumpsuit is effortless, strong, and feminine. 100% Italian linen dyed in a rich apricot color that wears Spring to Fall. Two side pockets and two back pockets for all your do-dads plus an optional belt sash if you want to dress it up. A slight flare pant to throw it back to the ladies of the 70's.

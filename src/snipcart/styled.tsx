@@ -11,7 +11,7 @@ export const snipcart = css`
     --cart-badge-borderColor: transparent;
     --cart-input-borderColor: rgb(217, 217, 217);
     --cart-input-checked-bgColor: #00beff;
-    --cart-disabled-bgColor: #D1D2DA;
+    --cart-disabled-bgColor: #d1d2da;
     --cart-disabled-color: #8f99a3;
   }
 
@@ -49,16 +49,24 @@ export const snipcart = css`
   }
 
   /* increment button */
-  .snipcart-overwrite .snipcart-item-quantity__quantity .snipcart-button-icon{
-    background-color: var(--cart-disabled-bgColor);//var(--cart-input-checked-bgColor);
+  .snipcart-overwrite .snipcart-item-quantity__quantity .snipcart-button-icon {
+    background-color: var(
+      --cart-disabled-bgColor
+    ); //var(--cart-input-checked-bgColor);
     color: #000;
-    &:hover, &:focus, &:active{
+    &:hover,
+    &:focus,
+    &:active {
       background-color: var(--cart-input-checked-bgColor);
     }
   }
 
-  .snipcart-overwrite .snipcart-item-quantity__quantity .snipcart-button-icon.is-secondary[disabled]{
-    &:hover, &:focus, &:active{
+  .snipcart-overwrite
+    .snipcart-item-quantity__quantity
+    .snipcart-button-icon.is-secondary[disabled] {
+    &:hover,
+    &:focus,
+    &:active {
       background-color: var(--cart-disabled-bgColor);
     }
   }
@@ -96,7 +104,6 @@ export const snipcart = css`
   */
 
   #snipcart {
-
     /* Buttons */
 
     /* Primary */
@@ -105,8 +112,6 @@ export const snipcart = css`
     --color-buttonPrimary: var(--cart-main-white);
     --borderColor-buttonPrimary: var(--cart-main-brown);
     --bgColor-buttonPrimary: var(--cart-main-brown);
-
-    
 
     /* Hover */
     --color-buttonPrimary-hover: var(--cart-main-white);
@@ -127,8 +132,8 @@ export const snipcart = css`
     --shadow-buttonPrimary-focus: var(--cart-secondary-brown);
 
     /* Disabled */
-  --borderColor-buttonPrimary-disabled:var(--cart-disabled-bgColor);
-  --bgColor-buttonPrimary-disabled:var(--cart-disabled-bgColor);
+    --borderColor-buttonPrimary-disabled: var(--cart-disabled-bgColor);
+    --bgColor-buttonPrimary-disabled: var(--cart-disabled-bgColor);
 
     /* Secondary */
 
@@ -156,8 +161,8 @@ export const snipcart = css`
     --shadow-buttonSecondary-focus: var(--cart-secondary-brown);
     /* Disabled */
     --color-buttonSecondary-disabled: var(--cart-disabled-color);
-    --borderColor-buttonSecondary-disabled:var(--cart-disabled-bgColor);
-    --bgColor-buttonSecondary-disabled:var(--cart-disabled-bgColor);
+    --borderColor-buttonSecondary-disabled: var(--cart-disabled-bgColor);
+    --bgColor-buttonSecondary-disabled: var(--cart-disabled-bgColor);
 
     /* ----------------------- 
         PART: Input
