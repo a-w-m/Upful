@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailButton component matches snapshot 1`] = `
+<a
+  class="sc-eCYdqJ TwdGX"
+  href="mailto:howdy@upful.com?Subject=test-email"
+>
+  <svg
+    class="svg-icon icon-mail "
+    fill="none"
+    height="20"
+    viewBox="0 0 27 22"
+    width="27"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Mail Icon
+    </title>
+    <path
+      clip-rule="evenodd"
+      d="M1.458 1.5h24.084v17H1.458v-17zM0 0H27v20H0V0zm3.461 4.608l9.72 7.222.427.317.427-.317 9.72-7.222-.854-1.216-9.293 6.905-9.293-6.905-.854 1.216z"
+      fill="currentColor"
+      fill-rule="evenodd"
+      transform="translate(0 1)"
+    />
+  </svg>
+  <span
+    class="sc-dkzDqf eWJTSj"
+  >
+    Email us about this product
+  </span>
+</a>
+`;

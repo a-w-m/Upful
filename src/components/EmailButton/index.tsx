@@ -1,6 +1,6 @@
 import React from "react"
 import { Email } from "../Icons/index"
-import { Button, TextWrapper, MailToLink } from "./styled"
+import {TextWrapper, MailToLink } from "./styled"
 
 interface EmailButtonProps {
   title: string
