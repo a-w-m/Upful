@@ -29,7 +29,7 @@ const ImageGallery: React.FC<Props> = props => {
             >
               <GatsbyImage
                 image={image.childImageSharp.gatsbyImageData}
-                alt=""
+                alt="gallery image"
                 style={{ opacity: 1 }}
                 loading={"eager"}
               ></GatsbyImage>

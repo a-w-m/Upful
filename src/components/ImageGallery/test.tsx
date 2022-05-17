@@ -1,37 +1,42 @@
 import React from "react"
-import { fireEvent, render, screen } from "@testing-library/react"
+import { fireEvent, render } from "@testing-library/react"
 import ImageGallery from "./index"
-import { imageGalleryData } from "../../../__mocks__/mock-data"
+import { getImageGalleryData } from "../../../__mocks__/mock-data"
+
+const mockDispatch = jest.fn()
+
+const props = {
+  galleryImages: getImageGalleryData(),
+  dispatch: mockDispatch,
+  selected: getImageGalleryData()[0].childImageSharp.gatsbyImageData,
+}
 
 describe("ImageGallery Component", () => {
-  const mockDispatch = jest.fn()
-
   test("matches snapshot", () => {
-    const { container } = render(
-      <ImageGallery
-        images={imageGalleryData}
-        dispatch={mockDispatch}
-      ></ImageGallery>
-    )
+    const { container } = render(<ImageGallery {...props}></ImageGallery>)
     expect(container.firstChild).toMatchSnapshot()
   })
 
   test("dispatch is called when gallery image is clicked ", () => {
-    render(
-      <ImageGallery
-        images={imageGalleryData}
-        dispatch={mockDispatch}
-      ></ImageGallery>
-    )
-    const image = screen.getAllByRole("listitem")[0]
+    const {getAllByRole} = render(<ImageGallery {...props}></ImageGallery>)
+    const image = getAllByRole("listitem")[0]
     fireEvent.click(image)
     expect(mockDispatch).toHaveBeenCalledTimes(1)
   })
 })
 
-test("no list rendered when no images supplied", () => {
-  const { container } = render(
-    <ImageGallery images={[]} dispatch={jest.fn()}></ImageGallery>
+test("component renders gallery Images", () => {
+  const { getAllByAltText } = render(<ImageGallery {...props}></ImageGallery>)
+
+  expect(getAllByAltText("gallery image").length).toEqual(
+    getImageGalleryData().length
   )
-  expect(container.firstChild).toBeNull()
+})
+
+test("component does not render images if galleryImages array is empty", () => {
+  const { queryAllByAltText } = render(
+    <ImageGallery {...props} galleryImages={[]}></ImageGallery>
+  )
+  expect(queryAllByAltText("gallery images").length).toEqual(0)
+  
 })
