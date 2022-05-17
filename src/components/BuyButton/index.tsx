@@ -1,7 +1,7 @@
 import React from "react"
 import { Button } from "./styled"
 import { P } from "../../interfaces/index"
-import { createCustomOptionsProps, createOptionsString } from "../../helpers"
+import { createCustomOptionsProps } from "../../helpers"
 
 interface Props {
   "data-item-id": String
