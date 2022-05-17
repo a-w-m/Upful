@@ -2,15 +2,15 @@
 
 exports[`BuyButton Component matches snapshot 1`] = `
 <button
-  class="sc-bdfBwQ ifjoCf snipcart-add-item"
-  data-item-custom1-name=""
-  data-item-custom1-options=""
-  data-item-custom1-value=""
+  class="sc-bczRLJ bZchrX snipcart-add-item"
   data-item-description=""
   data-item-id=""
   data-item-image=""
+  data-item-max-quantity="1"
   data-item-name=""
-  data-item-price="0"
+  data-item-price="10"
   data-item-url=""
-/>
+>
+  Add to Cart
+</button>
 `;
