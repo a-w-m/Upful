@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmailButton component matches snapshot 1`] = `
+exports[`Email should match snapshot 1`] = `
 <a
   class="sc-eCYdqJ TwdGX"
   href="mailto:howdy@upful.com?Subject=test-email"
 >
   <svg
+    aria-label="contact email link icon"
     class="svg-icon icon-mail "
     fill="none"
     height="20"
+    role="img"
     viewBox="0 0 27 22"
     width="27"
     xmlns="http://www.w3.org/2000/svg"

@@ -9,6 +9,8 @@ const EmailIcon: React.FC<{}> = () => {
       height="20"
       fill="none"
       viewBox="0 0 27 22"
+      role={"img"}
+      aria-label= {'contact email link icon'}
     >
       <title>Mail Icon</title>
 

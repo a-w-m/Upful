@@ -10,7 +10,6 @@ const EmailButton: React.FC<EmailButtonProps> = ({ title }) => {
   return (
     <MailToLink href={`mailto:howdy@upful.com?Subject=${title}`}>
       <Email />
-
       <TextWrapper>Email us about this product</TextWrapper>
     </MailToLink>
   )
