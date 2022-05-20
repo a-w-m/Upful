@@ -18,45 +18,54 @@ const props = {
 }
 
 describe("BuyButton Component", () => {
-  test("matches snapshot", () => {
+
+  it("matches snapshot", () => {
     const { container } = render(<BuyButton {...props}></BuyButton>)
     expect(container.firstChild).toMatchSnapshot()
   })
 
-  test("component disabled attribute set to false if max-quantity is greater than 0", () => {
+  it("should not be disabled if max-quantity is greater than 0", () => {
     render(<BuyButton {...props}></BuyButton>)
-    const queryByRole = screen.queryByRole("button")
-    expect(queryByRole?.hasAttribute("disabled").valueOf()).toBe(false)
+    const button = screen.queryByRole("button")
+    expect(button).not.toBeDisabled()
   })
 
-  test("component renders 'Sold Out' if max-quantity is greater than 0", () => {
-    const { queryByText } = render(<BuyButton {...props}></BuyButton>)
-    expect(queryByText("Add to Cart")).toBeTruthy()
+  it("should display 'Add to Cart' if max-quantity is greater than 0", () => {
+    render(<BuyButton {...props}></BuyButton>)
+    const button = screen.getByRole("button", {name: /Add to Cart/})
+    expect(button).toBeInTheDocument()
   })
 
-  test("component does not render 'Sold Out' if max-quantity is greater than 0", () => {
-    const { queryByText } = render(<BuyButton {...props}></BuyButton>)
-    expect(queryByText("Sold Out")).toBeNull()
+  it("should not display 'Sold Out' if max-quantity is greater than 0", () => {
+    render(<BuyButton {...props}></BuyButton>)
+    const button = screen.queryByRole("button", {name: /Sold Out/})
+    expect(button).toBeNull()
   })
 
-  test("component disabled attribute set to true if max-quantity is not greater than 0", () => {
-    const { queryByRole } = render(
+  it("should be disabled if max-quantity is not greater than 0", () => {
+    render(
       <BuyButton {...props} data-item-max-quantity={0}></BuyButton>
     )
-    expect(queryByRole("button")?.hasAttribute("disabled").valueOf()).toBe(true)
+    const button = screen.getByRole("button")
+
+    expect(button).toBeDisabled()
   })
 
-  test("component renders 'Sold Out' if max-quantity is not greater than 0", () => {
-    const { queryByText } = render(
+  it("component renders 'Sold Out' if max-quantity is not greater than 0", () => {
+    render(
       <BuyButton {...props} data-item-max-quantity={0}></BuyButton>
     )
-    expect(queryByText("Sold Out")).toBeTruthy()
+    const button = screen.getByRole("button", {name: /Sold Out/})
+
+    expect(button).toBeInTheDocument()
   })
 
-  test("component does not render 'Add to Cart' if max-quantity is not greater than 0", () => {
-    const { queryByText } = render(
+  it("component does not render 'Add to Cart' if max-quantity is not greater than 0", () => {
+   render(
       <BuyButton {...props} data-item-max-quantity={0}></BuyButton>
     )
-    expect(queryByText("Add to Cart")).toBeNull()
+    const button = screen.queryByRole("button", {name: /Add to Cart/})
+
+    expect(button).toBeNull()
   })
 })
