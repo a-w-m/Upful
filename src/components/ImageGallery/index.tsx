@@ -14,7 +14,7 @@ const ImageGallery: React.FC<Props> = props => {
 
   return (
     <Wrapper>
-      <GatsbyImage image={selected} alt="" />
+      <GatsbyImage image={selected} alt="selected image" />
       <UL>
         {galleryImages.map((image, index) => {
           return (

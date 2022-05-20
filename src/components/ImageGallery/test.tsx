@@ -1,5 +1,6 @@
 import React from "react"
-import { fireEvent, render } from "@testing-library/react"
+import { render, screen, waitFor } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 import ImageGallery from "./index"
 import { getImageGalleryData } from "../../../__mocks__/mock-data"
 
@@ -11,32 +12,38 @@ const props = {
   selected: getImageGalleryData()[0].childImageSharp.gatsbyImageData,
 }
 
-describe("ImageGallery Component", () => {
-  test("matches snapshot", () => {
+describe("ImageGallery", () => {
+  it("should match snapshot", () => {
     const { container } = render(<ImageGallery {...props}></ImageGallery>)
     expect(container.firstChild).toMatchSnapshot()
   })
 
-  test("dispatch is called when gallery image is clicked ", () => {
-    const {getAllByRole} = render(<ImageGallery {...props}></ImageGallery>)
-    const image = getAllByRole("listitem")[0]
-    fireEvent.click(image)
+  it("should display the default selected image", () => {
+    render(<ImageGallery {...props}></ImageGallery>)
+    const image = screen.getByRole("img", { name: /selected/ })
+
+    expect(image).toBeInTheDocument
+  })
+
+  it("should display no gallery images if none received in props", () => {
+    render(<ImageGallery {...props} galleryImages={[]}></ImageGallery>)
+    const images = screen.queryAllByRole("img", { name: /gallery/ })
+
+    expect(images).toHaveLength(0)
+  })
+
+  it("should display all the images received in props", () => {
+    render(<ImageGallery {...props}></ImageGallery>)
+    const images = screen.getAllByRole("img", { name: /gallery/ })
+    expect(images.length).toEqual(getImageGalleryData().length)
+  })
+
+ 
+  it("should call dispatch function when user clicks gallery image", async () => {
+    const user = userEvent.setup()
+    render(<ImageGallery {...props}></ImageGallery>)
+    const image = screen.getAllByRole("listitem")[0]
+    await user.click(image)
     expect(mockDispatch).toHaveBeenCalledTimes(1)
   })
-})
-
-test("component renders gallery Images", () => {
-  const { getAllByAltText } = render(<ImageGallery {...props}></ImageGallery>)
-
-  expect(getAllByAltText("gallery image").length).toEqual(
-    getImageGalleryData().length
-  )
-})
-
-test("component does not render images if galleryImages array is empty", () => {
-  const { queryAllByAltText } = render(
-    <ImageGallery {...props} galleryImages={[]}></ImageGallery>
-  )
-  expect(queryAllByAltText("gallery images").length).toEqual(0)
-  
 })

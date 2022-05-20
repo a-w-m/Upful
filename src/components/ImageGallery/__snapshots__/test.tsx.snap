@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ImageGallery Component matches snapshot 1`] = `
+exports[`ImageGallery should match snapshot 1`] = `
 <div
   class="sc-bczRLJ kCFnfR"
 >
@@ -26,7 +26,7 @@ exports[`ImageGallery Component matches snapshot 1`] = `
       style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
     />
     <img
-      alt=""
+      alt="selected image"
       data-gatsby-image-ssr=""
       data-main-image=""
       data-src="/static/aa05fbd83fc037cca94b893c63038518/ecde2/image-2.webp"
