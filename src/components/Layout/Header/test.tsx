@@ -1,87 +1,63 @@
 import React from "react"
-import { render, fireEvent} from "@testing-library/react"
-import { SnipcartContext } from "gatsby-plugin-snipcart-advanced/context.js"
+import { render, screen, act } from "test-utils"
+import userEvent from "@testing-library/user-event"
 import Header from "."
+import { SnipcartContextProvider } from "test-utils"
 
-const state = {
-  ready: false,
-  userStatus: "SignedOut",
-  cartQuantity: 0,
-  cartTotal: 0,
-  cartSubTotal: 0,
-}
+//wrap render function with SnipcartContextProvider to make SnipcartContext available in tests
 
-const Provider = ()=> <SnipcartContext.Provider value = {{state}}></SnipcartContext.Provider>
+beforeEach(() => {
+  render(<Header siteTitle={""} />, { wrapper: SnipcartContextProvider })
+})
 
-describe("Header component", () => {
-  test("if snapshot matches", () => {
-    const { container } = render(
-        <Header siteTitle={""} />
-    , {wrapper: Provider}
-    )
-    expect(container.firstChild).toMatchSnapshot()
+describe("Header", () => {
+
+  it("should match snapshot", () => {
+    const header = screen.getByRole("banner")
+    expect(header).toMatchSnapshot()
   })
 
-  test("if toggle button is visible in default view", () => {
-    const { getByRole } = render(
-      <SnipcartContext.Provider value={{ state }}>
-        <Header siteTitle={""} />
-      </SnipcartContext.Provider>
-    )
-
-    expect(getByRole("button", { name: "open navigation" })).toBeVisible()
+  it("should display navigation toggle button", () => {
+    const nav = screen.getByRole("button", { name: "open navigation" })
+    expect(nav).toBeInTheDocument()
   })
 
-  test("if logo is in the document", () => {
-    const { getByRole } = render(
-      <SnipcartContext.Provider value={{ state }}>
-        <Header siteTitle={""} />
-      </SnipcartContext.Provider>
-    )
-    expect(getByRole("img", { name: "logo" })).toBeInTheDocument()
+  it("should display logo", () => {
+    const logo = screen.getByRole("img", { name: /logo/ })
+    expect(logo).toBeInTheDocument()
   })
 
-  test("if snipcart cart is in the document", ()=>{
-    const {getByRole} = render(
-      <SnipcartContext.Provider value={{ state }}>
-        <Header siteTitle={""} />
-      </SnipcartContext.Provider>
-    )
-
-    expect(getByRole("button", {name: "snipcart-checkout"})).toBeInTheDocument();
+  it("should display snipcart cart button ", () => {
+    const cartbutton = screen.getByRole("button", {
+      name: "snipcart-checkout",
+    })
+    expect(cartbutton).toBeInTheDocument()
   })
 
-  test("if nav element is not visible in default view", () => {
-    const { getAllByRole } = render(
-      <SnipcartContext.Provider value={{ state }}>
-        <Header siteTitle={""} />
-      </SnipcartContext.Provider>
-    )
-    const Nav = getAllByRole("navigation", { hidden: true })[0]
-    expect(Nav).not.toBeVisible()
+  it("should not display navigation menu in default view", () => {
+    const nav = screen.queryByRole("navigation", { hidden: true })
+    expect(nav).not.toBeVisible()
   })
-  test("if clicking toggle button makes nav element visible", () => {
-    const { getAllByRole } = render(
-      <SnipcartContext.Provider value={{ state }}>
-        <Header siteTitle={""} />
-      </SnipcartContext.Provider>
-    )
-    const Button = getAllByRole("button")[0]
-    const Nav = getAllByRole("navigation", { hidden: true })[0]
-    fireEvent.click(Button)
-    expect(Nav).toBeVisible()
+})
+describe("when user clicks toggle button", () => {
+
+  it("should display navigation menu when user clicks toggle button", async () => {
+    const user = userEvent.setup()
+    const button = screen.getByRole("button", {
+      name: /open navigation/,
+    })
+    const nav = screen.getByRole("navigation", { hidden: true })
+    await user.click(button)
+    expect(nav).toBeVisible()
   })
 
-  test("if clicking toggle button a second time makes nav element not visible", () => {
-    const { getAllByRole } = render(
-      <SnipcartContext.Provider value={{ state }}>
-        <Header siteTitle={""} />
-      </SnipcartContext.Provider>
-    )
-    const Button = getAllByRole("button")[0]
-    const Nav = getAllByRole("navigation", { hidden: true })[0]
-    fireEvent.click(Button)
-    fireEvent.click(Button)
-    expect(Nav).not.toBeVisible()
+  it("it should not display navigation when user clicks toggle button a second time", async () => {
+    const user = userEvent.setup()
+    const button = screen.getByRole("button", {
+      name: /open navigation/,
+    })
+    const nav = screen.queryByRole("navigation", { hidden: true })
+    await user.dblClick(button)
+    expect(nav).not.toBeVisible()
   })
 })
