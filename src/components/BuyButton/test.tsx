@@ -20,8 +20,9 @@ const props = {
 describe("BuyButton Component", () => {
 
   it("matches snapshot", () => {
-    const { container } = render(<BuyButton {...props}></BuyButton>)
-    expect(container.firstChild).toMatchSnapshot()
+    render(<BuyButton {...props}></BuyButton>)
+    const button = screen.getByRole("button")
+    expect(button).toMatchSnapshot()
   })
 
   it("should not be disabled if max-quantity is greater than 0", () => {
