@@ -35,7 +35,11 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
       </HamburgerNavContainer>
       <Logo />
       <CartContainer>
-        <Checkout className="snipcart-checkout">
+        <Checkout
+          className="snipcart-checkout"
+          type="button"
+          aria-label="snipcart-checkout"
+        >
           <Cart />
         </Checkout>
         <Count>{cartQuantity}</Count>

@@ -1,50 +1,87 @@
 import React from "react"
-import { fireEvent, render, screen } from "@testing-library/react"
-import Header from ".."
+import { render, fireEvent} from "@testing-library/react"
+import { SnipcartContext } from "gatsby-plugin-snipcart-advanced/context.js"
+import Header from "."
+
+const state = {
+  ready: false,
+  userStatus: "SignedOut",
+  cartQuantity: 0,
+  cartTotal: 0,
+  cartSubTotal: 0,
+}
+
+const Provider = ()=> <SnipcartContext.Provider value = {{state}}></SnipcartContext.Provider>
 
 describe("Header component", () => {
-  test("matches snapshot", () => {
-    const { container } = render(<Header children="" />)
+  test("if snapshot matches", () => {
+    const { container } = render(
+        <Header siteTitle={""} />
+    , {wrapper: Provider}
+    )
     expect(container.firstChild).toMatchSnapshot()
   })
 
-  test("renders Header with correct site title", () => {
-    render(<Header children="" />)
+  test("if toggle button is visible in default view", () => {
+    const { getByRole } = render(
+      <SnipcartContext.Provider value={{ state }}>
+        <Header siteTitle={""} />
+      </SnipcartContext.Provider>
+    )
 
-    expect(screen.getByText("StoreFront")).toBeInTheDocument()
+    expect(getByRole("button", { name: "open navigation" })).toBeVisible()
   })
 
-  // test("displays toggle menu on small screens", ()=>{
-  //   render(<Header children="" />)
+  test("if logo is in the document", () => {
+    const { getByRole } = render(
+      <SnipcartContext.Provider value={{ state }}>
+        <Header siteTitle={""} />
+      </SnipcartContext.Provider>
+    )
+    expect(getByRole("img", { name: "logo" })).toBeInTheDocument()
+  })
 
-  //   expect(screen.getByAltText("toggle-menu")).toBeInTheDocument()
+  test("if snipcart cart is in the document", ()=>{
+    const {getByRole} = render(
+      <SnipcartContext.Provider value={{ state }}>
+        <Header siteTitle={""} />
+      </SnipcartContext.Provider>
+    )
 
-  // })
+    expect(getByRole("button", {name: "snipcart-checkout"})).toBeInTheDocument();
+  })
 
-  // test("does not display toggle menu on large screens", ()=>{
-  //   render(<Header children="" />)
+  test("if nav element is not visible in default view", () => {
+    const { getAllByRole } = render(
+      <SnipcartContext.Provider value={{ state }}>
+        <Header siteTitle={""} />
+      </SnipcartContext.Provider>
+    )
+    const Nav = getAllByRole("navigation", { hidden: true })[0]
+    expect(Nav).not.toBeVisible()
+  })
+  test("if clicking toggle button makes nav element visible", () => {
+    const { getAllByRole } = render(
+      <SnipcartContext.Provider value={{ state }}>
+        <Header siteTitle={""} />
+      </SnipcartContext.Provider>
+    )
+    const Button = getAllByRole("button")[0]
+    const Nav = getAllByRole("navigation", { hidden: true })[0]
+    fireEvent.click(Button)
+    expect(Nav).toBeVisible()
+  })
 
-  //   expect(screen.queryAllByAltText("toggle-menu")).toBeNull()
-
-  // })
+  test("if clicking toggle button a second time makes nav element not visible", () => {
+    const { getAllByRole } = render(
+      <SnipcartContext.Provider value={{ state }}>
+        <Header siteTitle={""} />
+      </SnipcartContext.Provider>
+    )
+    const Button = getAllByRole("button")[0]
+    const Nav = getAllByRole("navigation", { hidden: true })[0]
+    fireEvent.click(Button)
+    fireEvent.click(Button)
+    expect(Nav).not.toBeVisible()
+  })
 })
-
-// describe("click outside toggle menu", () => {
-//   test("Nav remains visible when clicking inside component ", () => {
-//     render(<Header children="" />)
-//     const Button = screen.getByRole("button")
-//     const Nav = screen.getAllByRole("navigation", { hidden: true })[0]
-//     fireEvent.click(Button)
-//     fireEvent.click(Nav)
-//     expect(Nav).toBeVisible()
-//   })
-
-//   test("Nav is not visible when clicking outside component", () => {
-//     render(<Header children="" />)
-//     const Button = screen.getByRole("button")
-//     const Nav = screen.getAllByRole("navigation", { hidden: true })[0]
-//     fireEvent.click(Button)
-//     fireEvent.mouseDown(Button)
-//     expect(Nav).not.toBeVisible()
-//   })
-// })
