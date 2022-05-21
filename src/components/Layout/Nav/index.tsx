@@ -14,7 +14,7 @@ const Nav: React.FC<NavProps> = props => {
   const data: C.MenuLinks = useStaticQuery(categoryQuery)
 
   return (
-    <Menu open={open}>
+    <Menu open={open} id = {"menu"}>
       <Logo />
       {data.site.siteMetadata.menuLinks.categories.map(category => {
         return (
