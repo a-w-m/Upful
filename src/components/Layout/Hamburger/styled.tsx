@@ -25,7 +25,7 @@ export const Button = styled.button<{ open: boolean }>`
     outline: none;
   }
 
-  div {
+  span {
     width: 2.4rem;
     height: 0.2rem;
     background: #000;
