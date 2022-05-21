@@ -9,6 +9,8 @@ const ChevronLeft: React.FC<{}> = () => {
       fill="currentColor"
       className="bi bi-chevron-left"
       viewBox="0 0 16 16"
+      role = {"img"}
+      aria-label = {"previous page icon"}
     >
       <path
         fillRule="evenodd"
