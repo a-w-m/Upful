@@ -9,6 +9,8 @@ const TwitterIcon: React.FC<{}> = () => {
       height="20"
       fill="none"
       viewBox="0 0 20 17"
+      role = "img"
+      aria-label = "twitter icon"
     >
       <title>Share Twitter Icon</title>
 

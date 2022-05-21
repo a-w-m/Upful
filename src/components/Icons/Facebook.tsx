@@ -9,6 +9,8 @@ const FacebookIcon: React.FC<{}> = () => {
       height="18"
       fill="none"
       viewBox="0 0 9 18"
+      role = "img"
+      aria-label = "facebook icon"
     >
       <title>Share Facebook Icon</title>
 

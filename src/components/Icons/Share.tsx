@@ -8,6 +8,8 @@ const ShareIcon: React.FC<{}> = () => {
       height="21"
       fill="none"
       viewBox="0 0 18 21"
+      role = "img"
+      aria-label = "share icon"
     >
       <title>Share Icon</title>
 

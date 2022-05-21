@@ -9,6 +9,8 @@ const PinterestIcon: React.FC<{}> = () => {
       height="20"
       fill="none"
       viewBox="0 0 20 20"
+      role = "img"
+      aria-label = "pinterest icon"
     >
       <title>Share Pinterest Icon</title>
 
