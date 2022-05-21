@@ -8,13 +8,13 @@ const mockData = {
   category: "TEST",
 }
 
-describe("Pagination component", () => {
-  test("matches snapshot", () => {
+describe("Pagination", () => {
+  it("matches snapshot", () => {
     const { container } = render(<Pagination {...mockData} />)
     expect(container.firstChild).toMatchSnapshot()
   })
 
-  test("displays pagination information", () => {
+  it("should display the current page", () => {
     render(<Pagination {...mockData} />)
     const pageInfo = screen.getByText(
       `Page ${mockData.currentPage} of ${mockData.numPages}`
@@ -22,25 +22,34 @@ describe("Pagination component", () => {
     expect(pageInfo).toBeInTheDocument()
   })
 
-  test("previous page link not visible on first page", () => {
+  it("should not display previous page link when on first page", () => {
     render(<Pagination {...mockData} />)
-    const pageLinks = screen.queryAllByRole("link")
-    expect(pageLinks.length).toEqual(1)
-    expect(pageLinks[0]).toHaveAttribute("href", `/${mockData.category}/2/`)
+    const previousLink = screen.queryByRole("link", { name: /previous/ })
+    expect(previousLink).toBeNull()
   })
 
-  test("pagination links both visible", () => {
-    render(<Pagination {...mockData} currentPage={mockData.currentPage + 1} />)
-    const pageLinks = screen.queryAllByRole("link")
-    expect(pageLinks.length).toEqual(2)
-    expect(pageLinks[0]).toHaveAttribute("href", `/${mockData.category}/`)
-    expect(pageLinks[1]).toHaveAttribute("href", `/${mockData.category}/3/`)
+  it("should link to category page when the previous page is the first page", () => {
+    render(<Pagination {...mockData} currentPage={mockData.currentPage+1} />)
+    const previous = screen.getByRole("link", { name: /previous/ })
+    expect(previous).toHaveAttribute('href', `/${mockData.category}/`)
   })
 
-  test("next page link not visible on last page", () => {
+  it("should link to previous numbered page when the previous page is not the first page", () => {
     render(<Pagination {...mockData} currentPage={mockData.numPages} />)
-    const pageLinks = screen.queryAllByRole("link")
-    expect(pageLinks.length).toEqual(1)
-    expect(pageLinks[0]).toHaveAttribute("href", `/${mockData.category}/2/`)
+    const previous = screen.getByRole("link", { name: /previous/ })
+    expect(previous).toHaveAttribute('href', `/${mockData.category}/${mockData.numPages-1}/`)
+  })
+
+  it("should not display next page link when on last page", () => {
+    render(<Pagination {...mockData} currentPage={mockData.numPages} />)
+    const next = screen.queryByRole("link", {name: /next/})
+    expect(next).toBeNull()
+  })
+
+  it("should link to the next page when not on last page", ()=>{
+    render(<Pagination {...mockData} />)
+    const next = screen.queryByRole("link", {name: /next/})
+    expect(next).toHaveAttribute('href', `/${mockData.category}/${mockData.currentPage+1}/`)
+
   })
 })
