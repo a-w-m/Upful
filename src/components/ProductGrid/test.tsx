@@ -3,9 +3,8 @@ import { render, screen } from "test-utils"
 import ProductGrid from "./index"
 import { getProductaGridData } from "../../../__mocks__/mock-data"
 
-jest.mock("../../hooks/useSnipcartApi", () => ({
-  __esModule: true,
-  default: jest.fn(() => {
+jest.mock("../../hooks/useSnipcartApi", () => {
+  return jest.fn().mockImplementation(() => {
     return [
       {
         error: false,
@@ -14,8 +13,9 @@ jest.mock("../../hooks/useSnipcartApi", () => ({
       },
       jest.fn(),
     ]
-  }),
-}))
+  })
+})
+
 
 describe("ProductGrid", () => {
   const mockData = getProductaGridData()
