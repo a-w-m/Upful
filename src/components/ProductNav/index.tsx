@@ -13,9 +13,9 @@ const ProductNav: React.FC<Props> = props => {
   return (
     <Wrapper>
       <Link to={"/"}>HOME</Link>
-      <ChevronRight></ChevronRight>
+      <ChevronRight title ="" hidden ={true}></ChevronRight>
       <Link to={`/${collection}`}>{collection}</Link>
-      <ChevronRight></ChevronRight>
+      <ChevronRight title ="" hidden = {true}></ChevronRight>
       <span>{title}</span>
     </Wrapper>
   )
