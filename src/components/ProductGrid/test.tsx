@@ -1,21 +1,7 @@
 import React from "react"
-import { render, screen } from "test-utils"
+import { render, screen } from "src/utils/test/test-utils"
 import ProductGrid from "./index"
-import { getProductaGridData } from "../../../__mocks__/mock-data"
-
-jest.mock("../../hooks/useSnipcartApi", () => {
-  return jest.fn().mockImplementation(() => {
-    return [
-      {
-        error: false,
-        loading: false,
-        inventory: {},
-      },
-      jest.fn(),
-    ]
-  })
-})
-
+import { getProductaGridData } from "../../utils/test/data"
 
 describe("ProductGrid", () => {
   const mockData = getProductaGridData()
