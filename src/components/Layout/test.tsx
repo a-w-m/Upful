@@ -1,18 +1,17 @@
 import React from "react"
-import { render, screen } from "@testing-library/react"
+//import custom render function wrapped in context providers
+import { render, screen } from "src/utils/test/test-utils"
 import Layout from "."
-import {SnipcartContextProvider} from "test-utils"
 
 
 describe("Layout", () => {
   const child = <h1>child</h1>
   beforeEach(()=>{
-  render(<Layout children= {child}/>, {wrapper: SnipcartContextProvider})
+  render(<Layout children= {child}/>)
   })
 
   it("should match snapshot", () => {
-    const {container} = render(<Layout children={child} />, {wrapper: SnipcartContextProvider})
-    expect(container.firstChild).toMatchSnapshot()
+    expect(document.body).toMatchSnapshot()
 
   })
 
