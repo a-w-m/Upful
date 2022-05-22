@@ -28,7 +28,7 @@ describe("ProductNav", ()=>{
     })
     
     it ("should display two right chevrons", ()=>{
-        const chevrons = screen.getAllByRole('img', {name: /chevron-right/})
+        const chevrons = screen.getAllByRole('img', {hidden: true})
         expect(chevrons).toHaveLength(2)
     })
 })
