@@ -1,7 +1,7 @@
 import React from "react"
 import { render, screen } from "src/utils/test/test-utils"
 import ProductGrid from "./index"
-import { getProductaGridData } from "../../utils/test/data"
+import { getProductaGridData } from "src/utils/test/data/"
 
 describe("ProductGrid", () => {
   const mockData = getProductaGridData()
