@@ -4,7 +4,7 @@ import Product from "./index"
 import {
   pageQueryData,
   pageQueryDataNullCustomFields,
-} from "../../../../__mocks__/mock-data"
+} from "../../../utils/test/data"
 
 describe("Product Component", () => {
   test("matches snapshot", () => {

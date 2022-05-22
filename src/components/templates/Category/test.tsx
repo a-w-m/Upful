@@ -4,7 +4,7 @@ import Category from "./index"
 import {
   CategoryPageContext,
   CategoryPageContextWithPagination,
-} from "../../../../__mocks__/mock-data"
+} from "../../../utils/test/data"
 
 describe("Category component", () => {
   test("matches snapshot", () => {

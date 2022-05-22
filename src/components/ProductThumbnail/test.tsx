@@ -1,7 +1,7 @@
 import React from "react"
 import { render, screen } from "@testing-library/react"
 import ProductThumbnail from "./index"
-import { imageGalleryData } from "../../../__mocks__/mock-data"
+import { imageGalleryData } from "../../utils/test/data"
 
 const price = 10
 const title = "Pietsie Atlin Blouse"

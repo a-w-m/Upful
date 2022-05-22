@@ -2,7 +2,7 @@ import React from "react"
 import { render, screen, waitFor } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import ImageGallery from "./index"
-import { getImageGalleryData } from "../../../__mocks__/mock-data"
+import { getImageGalleryData } from "../../utils/test/data"
 
 const mockDispatch = jest.fn()
 

@@ -2,7 +2,7 @@ import React from "react"
 import { cleanup, fireEvent, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import Option from "./index"
-import { getProductFormData } from "../../../__mocks__/mock-data"
+import { getProductFormData } from "../../utils/test/data"
 
 describe("Option", () => {
   const dispatchMock = jest.fn()
