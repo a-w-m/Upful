@@ -1,19 +1,34 @@
 import React from "react"
-import { render, screen } from "@testing-library/react"
+import { render, screen } from "test-utils"
 import ProductGrid from "./index"
-import { ProductGridData } from "../../../__mocks__/mock-data"
+import { getProductaGridData } from "../../../__mocks__/mock-data"
 
-describe("ProductGrid component", () => {
-  test("matches snapshot", () => {
-    const { container } = render(
-      <ProductGrid {...ProductGridData}></ProductGrid>
-    )
-    expect(container.firstChild).toMatchSnapshot()
+jest.mock("../../hooks/useSnipcartApi", () => ({
+  __esModule: true,
+  default: jest.fn(() => {
+    return [
+      {
+        error: false,
+        loading: false,
+        inventory: {},
+      },
+      jest.fn(),
+    ]
+  }),
+}))
+
+describe("ProductGrid", () => {
+  const mockData = getProductaGridData()
+  beforeEach(() => {
+    render(<ProductGrid {...mockData} />)
   })
 
-  test("renders correct number of thumbnails", () => {
-    render(<ProductGrid {...ProductGridData}></ProductGrid>)
-    const thumbnails = screen.getAllByRole("article")
-    expect(thumbnails.length).toEqual(ProductGridData.edges.length)
+  it("should match snapshot", () => {
+    expect(document.body).toMatchSnapshot()
+  })
+
+  it("should display all products passed as props", () => {
+    const products = screen.getAllByRole("article")
+    expect(products).toHaveLength(mockData.edges.length)
   })
 })
