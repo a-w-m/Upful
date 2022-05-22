@@ -41,7 +41,7 @@ const ProductThumbnail: React.FC<P.Thumbnail> = props => {
               ? galleryImages[0].childImageSharp.gatsbyImageData
               : thumbnail.childImageSharp.gatsbyImageData
           }
-          alt=""
+          alt= "thumbnail"
         />
       </Link>
       {!loading && (
