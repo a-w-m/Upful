@@ -20,8 +20,16 @@ const getSnipcartApiData: () => {
 } = () => ({
   state: {
     error: false,
-    loading: true,
-    inventory: {},
+    loading: false,
+    inventory: {
+      "easy-sweatpant-in-natural":{
+        stock:0
+      },
+      "haori-coat-in-washed-denim":{
+        stock: 1
+      }
+      
+    },
   },
   dispatch: jest.fn(),
 })

@@ -1,5 +1,5 @@
 import { C } from "src/interfaces"
-const getProductaGridData: () => C.Grid = () => ({
+const getProductGridData: () => C.Grid = () => ({
   edges: [
     {
       node: {
@@ -393,4 +393,5 @@ const getProductaGridData: () => C.Grid = () => ({
   ],
 })
 
-export { getProductaGridData }
+
+export { getProductGridData }
