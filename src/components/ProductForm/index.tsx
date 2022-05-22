@@ -1,4 +1,4 @@
-import React, { ChangeEvent, Dispatch } from "react"
+import React, { ChangeEvent } from "react"
 import { graphql } from "gatsby"
 import { Container, Label, Input, Field } from "./styled"
 import { P } from "../../interfaces/index"
@@ -39,7 +39,7 @@ const Options: React.FC<OptionProps> = props => {
             name={`Select ${productOption.customField}`}
             key={productOption.customField}
           >
-            <Field>{`${productOption.customField} | ${
+            <Field aria-label = 'selected option'>{`${productOption.customField} | ${
               selected ? selected[`${productOption.customField}`]["option"] : ""
             }`}</Field>
             {productOption.options.map(({ option, priceChange }) => {
