@@ -1,13 +1,11 @@
 import React from "react"
-import { render, screen, act } from "test-utils"
+//import custom render function wrapped in context providers
+import { render, screen } from "src/utils/test/test-utils"
 import userEvent from "@testing-library/user-event"
 import Header from "."
-import { SnipcartContextProvider } from "test-utils"
-
-//wrap render function with SnipcartContextProvider to make SnipcartContext available in tests
 
 beforeEach(() => {
-  render(<Header siteTitle={""} />, { wrapper: SnipcartContextProvider })
+  render(<Header siteTitle={""} />)
 })
 
 describe("Header", () => {
@@ -18,7 +16,7 @@ describe("Header", () => {
   })
 
   it("should display navigation toggle button", () => {
-    const nav = screen.getByRole("button", { name: "open navigation" })
+    const nav = screen.getByRole("button", { name: /toggle navigation/ })
     expect(nav).toBeInTheDocument()
   })
 
@@ -44,7 +42,7 @@ describe("when user clicks toggle button", () => {
   it("should display navigation menu when user clicks toggle button", async () => {
     const user = userEvent.setup()
     const button = screen.getByRole("button", {
-      name: /open navigation/,
+      name: /toggle navigation/,
     })
     const nav = screen.getByRole("navigation", { hidden: true })
     await user.click(button)
@@ -54,7 +52,7 @@ describe("when user clicks toggle button", () => {
   it("it should not display navigation when user clicks toggle button a second time", async () => {
     const user = userEvent.setup()
     const button = screen.getByRole("button", {
-      name: /open navigation/,
+      name: /toggle navigation/,
     })
     const nav = screen.queryByRole("navigation", { hidden: true })
     await user.dblClick(button)

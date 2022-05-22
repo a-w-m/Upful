@@ -11,19 +11,20 @@ exports[`Header should match snapshot 1`] = `
       class="sc-bczRLJ iKPXgD"
     >
       <button
-        aria-controls="link-list"
+        aria-controls="menu"
         aria-expanded="false"
-        aria-label="open navigation"
-        class="sc-gsnTZi fBeffH"
+        aria-label="toggle navigation"
+        class="sc-gsnTZi jUeZLU"
         type="button"
       >
-        <div />
-        <div />
-        <div />
+        <span />
+        <span />
+        <span />
       </button>
     </div>
     <nav
       class="sc-dkzDqf ckAmYP"
+      id="menu"
     >
       <a
         class="sc-eCYdqJ kRVJaY"
