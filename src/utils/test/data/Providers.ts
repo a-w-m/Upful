@@ -31,7 +31,9 @@ const getSnipcartApiData: () => {
       
     },
   },
-  dispatch: jest.fn(),
+  dispatch: jest.fn().mockImplementation(()=>{
+    return 'TEST DISPATCH'
+  }),
 })
 
 export { getSnipcartApiData, getSnipcartContextData }
