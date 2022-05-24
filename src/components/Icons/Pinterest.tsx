@@ -9,10 +9,11 @@ const PinterestIcon: React.FC<{}> = () => {
       height="20"
       fill="none"
       viewBox="0 0 20 20"
-      role = "img"
-      aria-label = "pinterest icon"
+      aria-hidden = "true"
+      focusable = "false"
+      data-testid = "Pinterest Icon"
     >
-      <title>Share Pinterest Icon</title>
+      <title>Share to Pinterest</title>
 
       <path
         fill="currentColor"
