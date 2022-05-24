@@ -62,9 +62,9 @@ describe("Thumbnail Component", () => {
     const user = userEvent.setup()
     const productThumbnail = screen.getByRole("img", { name: /thumbnail/ })
     await user.hover(productThumbnail)
-    waitFor(() => {
-      expect(productThumbnail).toHaveAttribute(
-        "src",
+    await waitFor(() => {
+      return expect(productThumbnail).toHaveAttribute(
+        "data-src",
         getProductGridData().edges[1].node.childMarkdownRemark.frontmatter
           .galleryImages[0].childImageSharp.gatsbyImageData.images.fallback?.src
       )
@@ -76,9 +76,10 @@ describe("Thumbnail Component", () => {
     const productThumbnail = screen.getByRole("img", { name: /thumbnail/ })
     await user.hover(productThumbnail)
     await user.unhover(productThumbnail)
-    waitFor(() => {
-      expect(productThumbnail).toHaveAttribute(
-        "src",
+    await waitFor(() => {
+
+     expect(productThumbnail).toHaveAttribute(
+        "data-src",
         getProductGridData().edges[1].node.childMarkdownRemark.frontmatter
           .thumbnail.childImageSharp.gatsbyImageData.images.fallback?.src
       )
