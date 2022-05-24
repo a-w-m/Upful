@@ -1,5 +1,5 @@
 import React from "react"
-import { cleanup, fireEvent, render, screen } from "@testing-library/react"
+import { cleanup, render, screen, waitFor } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import Option from "./index"
 import { getProductFormData } from "../../utils/test/data"
@@ -48,13 +48,13 @@ describe("Option", () => {
     const option = screen.getByRole("radio", { name: /large/i })
     await user.click(option)
     const selected = screen.getByText(/Size | Large/)
-    expect(selected).toBeInTheDocument()
+    await waitFor(()=>expect(selected).toBeInTheDocument())
   })
 
   it("should call dispatch when user clicks option", async () => {
     const user = userEvent.setup()
     const option = screen.getByRole("radio", { name: /large/i })
     await user.click(option)
-    expect(dispatchMock).toHaveBeenCalledTimes(1)
+    await waitFor(()=>expect(dispatchMock).toHaveBeenCalledTimes(1))
   })
 })
