@@ -26,23 +26,26 @@ const ShareButton: React.FC<ShareButtonProps> = props => {
         }}
       >
         <ShareIcon />
-        <TextWrapper>Share This</TextWrapper>
+        <TextWrapper>Share Product</TextWrapper>
         <SocialsContainer ref={ref} open={isOpen}>
           <a
             href={`http://www.facebook.com/sharer.php?u=${path}`}
             target="_blank"
+            aria-label="Share to Facebook"
           >
             <Facebook />
           </a>
           <a
             href={`https://twitter.com/intent/tweet?url=${path}`}
             target="_blank"
+            aria-label="Share to Twitter"
           >
             <Twitter />
           </a>
           <a
             href={`http://pinterest.com/pin/create/button/?url=${path}&media=${imageURL}&description=${title}`}
             target="_blank"
+            aria-label="Share to Pinterest"
           >
             <Pinterest />
           </a>
