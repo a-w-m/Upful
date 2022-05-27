@@ -43,10 +43,14 @@ export interface Index {
   }
 }
 
-export interface Product extends PageProps {
+type PartialPageProps = Partial<PageProps>
+
+export interface Product extends PartialPageProps {
   data: {
     markdownRemark: MarkdownRemark
-    site: SiteMetaData
+    site: {
+      siteMetadata: SiteMetaData
+    }
   }
 }
 
