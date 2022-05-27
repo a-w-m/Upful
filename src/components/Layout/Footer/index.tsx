@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { C } from "../../../interfaces"
 
 const Footer: React.FC<{}> = () => {
+  
   interface Data {
     allMarkdownRemark: {
       edges: {
@@ -23,7 +24,7 @@ const Footer: React.FC<{}> = () => {
         }
       }[]
     }
-    site: C.MenuLinks["site"]
+    site:C.FooterLinks["site"]
   }
 
   const footerData: Data = useStaticQuery(footerQuery)
@@ -50,7 +51,7 @@ const Footer: React.FC<{}> = () => {
         })}
       </FooterNav>
       <Address>
-        <a href="mailto:howdy@storefront.com">howdy@storefront.com</a>
+        <a href={footerData.site.siteMetadata.email}>{footerData.site.siteMetadata.email}</a>
       </Address>
       <CopyrightWrapper>
         © Upful {new Date(Date.now()).getFullYear()} Made with full Irations
@@ -75,6 +76,7 @@ export const footerQuery = graphql`
     }
     site {
       siteMetadata {
+        email
         menuLinks {
           categories {
             name

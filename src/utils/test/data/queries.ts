@@ -33,6 +33,7 @@ const getSiteQuery = () => ({
     siteMetadata: {
       title: "Upful",
       description: "Hand-crafted and made with Iration",
+      email: "contact@upful.shop",
       author: "@aw",
       url: "upful.shop",
       keywords: ["e-commerce"],

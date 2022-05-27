@@ -37,9 +37,9 @@ exports[`Footer  should match snapshot 1`] = `
     class="sc-iBkjds iJBCgR"
   >
     <a
-      href="mailto:howdy@storefront.com"
+      href="contact@upful.shop"
     >
-      howdy@storefront.com
+      contact@upful.shop
     </a>
   </address>
   <div

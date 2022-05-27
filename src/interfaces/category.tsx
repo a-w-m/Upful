@@ -47,3 +47,13 @@ export interface MenuLinks {
     }
   }
 }
+
+export interface FooterLinks{
+  site:{
+    siteMetadata:{
+      email: string
+      menuLinks:MenuLinks["site"]["siteMetadata"]["menuLinks"]
+    }
+  }
+}
+
