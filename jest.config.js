@@ -12,13 +12,14 @@ module.exports = {
       `gatsby-plugin-utils/$1`,
     ], // Workaround for https://github.com/facebook/jest/issues/9771
   },
+  moduleDirectories: ['node_modules', __dirname],
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
   globals: {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
-  setupFiles: [`<rootDir>/loadershim.js`],
+  setupFiles: [`<rootDir>/loadershim.js`, `<rootDir>/src/utils/test/setup.ts`], 
   setupFilesAfterEnv: ["<rootDir>/setup-test-env.js"],
   testEnvironment: 'jsdom'
 }
