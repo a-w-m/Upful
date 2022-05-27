@@ -1,753 +1,728 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product Component matches snapshot 1`] = `
+exports[`Product should match snapshot 1`] = `
 <div
-  class="sc-crrsfI izmpdG"
+  class="sc-dIouRR DzqZm"
 >
   <header
-    class="sc-dlfnbm edAUkJ"
+    class="sc-jSMfEi fWJutG"
   >
-    <div>
-      <button
-        aria-controls="link-list"
-        aria-expanded="false"
-        aria-label="open navigation"
-        class="sc-bdfBwQ fwZoWG"
-        type="button"
+    <div
+      class="sc-gKXOVf bRgbNH"
+    >
+      <div
+        class="sc-bczRLJ iKPXgD"
       >
-        <div />
-        <div />
-        <div />
-      </button>
+        <button
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="toggle navigation"
+          class="sc-gsnTZi jUeZLU"
+          type="button"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
       <nav
-        class="sc-gsTCUz gmiPDZ"
+        aria-label="Main"
+        class="sc-dkzDqf ckAmYP"
+        id="menu"
       >
         <a
-          href="/about/"
+          class="sc-eCYdqJ kRVJaY"
+          href="/"
         >
-          About Us
+          <div
+            class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            data-gatsby-image-wrapper=""
+            style="position: relative; overflow: hidden; display: inline-block; vertical-align: top; border-radius: 100%;"
+          >
+            <div
+              style="max-width: 250px; display: block;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                role="presentation"
+                src="data:image/svg+xml;charset=utf-8,%3Csvg height='250' width='250' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                style="max-width: 100%; display: block; position: static;"
+              />
+            </div>
+            <div
+              aria-hidden="true"
+              data-placeholder-image=""
+              style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+            />
+            <picture>
+              <source
+                data-srcset="/static/55955cd5db9ac5b9496eb4fb43c87585/74c72/upful-gold-frame-logo.webp 63w,/static/55955cd5db9ac5b9496eb4fb43c87585/d66e1/upful-gold-frame-logo.webp 125w,/static/55955cd5db9ac5b9496eb4fb43c87585/e7160/upful-gold-frame-logo.webp 250w,/static/55955cd5db9ac5b9496eb4fb43c87585/5f169/upful-gold-frame-logo.webp 500w"
+                sizes="(min-width: 250px) 250px, 100vw"
+                type="image/webp"
+              />
+              <img
+                alt="logo"
+                data-gatsby-image-ssr=""
+                data-main-image=""
+                data-src="/static/55955cd5db9ac5b9496eb4fb43c87585/de391/upful-gold-frame-logo.png"
+                data-srcset="/static/55955cd5db9ac5b9496eb4fb43c87585/6a639/upful-gold-frame-logo.png 63w,/static/55955cd5db9ac5b9496eb4fb43c87585/2fd20/upful-gold-frame-logo.png 125w,/static/55955cd5db9ac5b9496eb4fb43c87585/de391/upful-gold-frame-logo.png 250w,/static/55955cd5db9ac5b9496eb4fb43c87585/82c11/upful-gold-frame-logo.png 500w"
+                decoding="async"
+                loading="lazy"
+                sizes="(min-width: 250px) 250px, 100vw"
+                style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+              />
+            </picture>
+            <noscript />
+            <script
+              type="module"
+            >
+              const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}
+            </script>
+          </div>
         </a>
         <a
-          href="/clothing/"
+          class="sc-hKMtZM cdOabJ"
+          href="/women/"
         >
-          Clothing
+          WOMEN
         </a>
         <a
-          href="/home/"
+          class="sc-hKMtZM cdOabJ"
+          href="/kids/"
         >
-          Home
-        </a>
-        <a
-          href="/accessories/"
-        >
-          Accessories
+          KIDS
         </a>
       </nav>
     </div>
-    <div
-      class="sc-hKgILt fEkVZL"
-    >
-      <h1
-        class="sc-eCssSg fvUBXx"
-      >
-        <a
-          class="sc-jSgupP eywEqP"
-          href="/"
-        >
-          StoreFront
-        </a>
-      </h1>
-    </div>
-  </header>
-  <div
-    class="sc-dQppl fDjYVG"
-  >
-    <main
-      class="sc-bqyKva jzRrKO"
+    <a
+      class="sc-eCYdqJ kRVJaY"
+      href="/"
     >
       <div
-        class="sc-hHftDr casNS"
+        class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+        data-gatsby-image-wrapper=""
+        style="position: relative; overflow: hidden; display: inline-block; vertical-align: top; border-radius: 100%;"
       >
-        <section
-          class="sc-dmlrTW eOBpvq"
-        >
-          <h1
-            class="sc-kfzAmx fxDDfl"
-          >
-            Pietsie Atlin Blouse
-          </h1>
-          <div
-            class="sc-fKFyDc dZMseF"
-          >
-             $
-            240.00
-          </div>
-        </section>
         <div
-          class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
-          data-gatsby-image-wrapper=""
-          style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
+          style="max-width: 250px; display: block;"
         >
-          <div
-            style="max-width: 1px; display: block;"
-          >
-            <img
-              alt=""
-              aria-hidden="true"
-              role="presentation"
-              src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.1933333333333334' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-              style="max-width: 100%; display: block; position: static;"
-            />
-          </div>
           <img
             alt=""
             aria-hidden="true"
-            data-placeholder-image=""
-            decoding="async"
-            src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABs5cclPYuYZuES2C//8QAHRAAAgICAwEAAAAAAAAAAAAAAgMBBAAREhMUIv/aAAgBAQABBQJrRUMW1yWXz+t4Bcgs1pYXjbtIdav/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAdEAACAgMAAwAAAAAAAAAAAAABAgARECFREnGB/9oACAEBAAY/AraAb3hV+4Ddnmp3yC6r3FUm6n//xAAcEAEAAwEAAwEAAAAAAAAAAAABABEhQRAxUXH/2gAIAQEAAT8h0VrQHZWgfXj8uRxAK4GPrzy0KYaa8RLED3P/2gAMAwEAAgADAAAAECfPf//EABURAQEAAAAAAAAAAAAAAAAAABEg/9oACAEDAQE/EGP/xAAXEQADAQAAAAAAAAAAAAAAAAABEBEh/9oACAECAQE/EAMVX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACExQRBxsYH/2gAIAQEAAT8QI0EAqpjx024IL0x8Ehd2e1nwcEUcj8xBKG/pkD8NIADpxREqAMYXaVBDm5//2Q=="
-            style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+            role="presentation"
+            src="data:image/svg+xml;charset=utf-8,%3Csvg height='250' width='250' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+            style="max-width: 100%; display: block; position: static;"
           />
-          <picture>
-            <source
-              sizes="100vw"
-              srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/8cca9/pietsie-atlin-4.webp 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/b81ad/pietsie-atlin-4.webp 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/9ceb8/pietsie-atlin-4.webp 600w"
-              type="image/webp"
-            />
-            <img
-              alt=""
-              data-gatsby-image-ssr=""
-              data-main-image=""
-              data-src="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg"
-              data-srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/5d47b/pietsie-atlin-4.jpg 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/1e7db/pietsie-atlin-4.jpg 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg 600w"
-              decoding="async"
-              loading="lazy"
-              sizes="100vw"
-              style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-            />
-          </picture>
-          <noscript />
-          <script
-            type="module"
-          >
-            const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-          </script>
         </div>
         <div
-          class="sc-bkzZxe cwWlJK"
+          aria-hidden="true"
+          data-placeholder-image=""
+          style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+        />
+        <picture>
+          <source
+            data-srcset="/static/55955cd5db9ac5b9496eb4fb43c87585/74c72/upful-gold-frame-logo.webp 63w,/static/55955cd5db9ac5b9496eb4fb43c87585/d66e1/upful-gold-frame-logo.webp 125w,/static/55955cd5db9ac5b9496eb4fb43c87585/e7160/upful-gold-frame-logo.webp 250w,/static/55955cd5db9ac5b9496eb4fb43c87585/5f169/upful-gold-frame-logo.webp 500w"
+            sizes="(min-width: 250px) 250px, 100vw"
+            type="image/webp"
+          />
+          <img
+            alt="logo"
+            data-gatsby-image-ssr=""
+            data-main-image=""
+            data-src="/static/55955cd5db9ac5b9496eb4fb43c87585/de391/upful-gold-frame-logo.png"
+            data-srcset="/static/55955cd5db9ac5b9496eb4fb43c87585/6a639/upful-gold-frame-logo.png 63w,/static/55955cd5db9ac5b9496eb4fb43c87585/2fd20/upful-gold-frame-logo.png 125w,/static/55955cd5db9ac5b9496eb4fb43c87585/de391/upful-gold-frame-logo.png 250w,/static/55955cd5db9ac5b9496eb4fb43c87585/82c11/upful-gold-frame-logo.png 500w"
+            decoding="async"
+            loading="lazy"
+            sizes="(min-width: 250px) 250px, 100vw"
+            style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+          />
+        </picture>
+        <noscript />
+        <script
+          type="module"
         >
+          const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}
+        </script>
+      </div>
+    </a>
+    <div
+      class="sc-kDDrLX fsOTBx"
+    >
+      <button
+        aria-label="snipcart-checkout"
+        class="sc-iqcoie ingRrx snipcart-checkout"
+        type="button"
+      >
+        <svg
+          class="snipcart-cart-header__icon   snipcart__icon"
+          fill="none"
+          viewBox="0 0 64 64"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M51.714 20.47L55 60H9l3.286-39.53h9.857v-6.588C22.143 8.424 26.556 4 32 4c5.444 0 9.857 4.424 9.857 9.882v6.589h9.857zM25.43 13.883v16.47h-3.286v-6.587h-6.834l-2.737 32.94h38.856l-2.737-32.94h-6.834v6.588h-3.286v-16.47c0-3.634-2.947-6.589-6.571-6.589-3.624 0-6.571 2.955-6.571 6.588zm3.285 9.883V20.47h6.572v3.294h-6.572z"
+            fill="#81550d"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+      <span
+        class="sc-crXcEl iMYtNW"
+      >
+        0
+      </span>
+    </div>
+  </header>
+  <div
+    class="sc-hHLeRK bMSYlC"
+  >
+    <main
+      class="sc-dmRaPn"
+    >
+      <div
+        class="sc-gXmSlM jWqIi"
+      >
+        <nav
+          aria-label="Product"
+          class="sc-kgflAQ jkKcFr"
+        >
+          <a
+            href="/"
+          >
+            HOME
+          </a>
+          <svg
+            aria-hidden="true"
+            class="bi bi-chevron-right"
+            fill="currentColor"
+            height="14"
+            role="img"
+            viewBox="0 0 16 16"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title />
+            <path
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <a
+            href="/women"
+          >
+            women
+          </a>
+          <svg
+            aria-hidden="true"
+            class="bi bi-chevron-right"
+            fill="currentColor"
+            height="14"
+            role="img"
+            viewBox="0 0 16 16"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title />
+            <path
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <span>
+            Haori Coat in Washed Denim
+          </span>
+        </nav>
+        <div
+          class="sc-iIPllB buzzRw"
+        >
+          <div
+            class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            data-gatsby-image-wrapper=""
+            style="position: relative; overflow: hidden; display: inline-block; vertical-align: top;"
+          >
+            <div
+              style="max-width: 995px; display: block;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                role="presentation"
+                src="data:image/svg+xml;charset=utf-8,%3Csvg height='995' width='995' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                style="max-width: 100%; display: block; position: static;"
+              />
+            </div>
+            <div
+              aria-hidden="true"
+              data-placeholder-image=""
+              style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
+            />
+            <img
+              alt="selected image"
+              data-gatsby-image-ssr=""
+              data-main-image=""
+              data-src="/static/5e566884fdc0f35caf38e43e3d3b3faa/87640/image-1.webp"
+              data-srcset="/static/5e566884fdc0f35caf38e43e3d3b3faa/dc55b/image-1.webp 249w,/static/5e566884fdc0f35caf38e43e3d3b3faa/525ed/image-1.webp 498w,/static/5e566884fdc0f35caf38e43e3d3b3faa/87640/image-1.webp 995w"
+              decoding="async"
+              loading="lazy"
+              sizes="(min-width: 995px) 995px, 100vw"
+              style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+            />
+            <noscript />
+            <script
+              type="module"
+            >
+              const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}
+            </script>
+          </div>
           <ul
-            class="sc-idOhPF jrLBIl"
+            class="sc-gicCDI bSomNq"
           >
             <li
-              class="sc-dIUggk"
+              class="sc-ezWOiH"
             >
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; vertical-align: top; opacity: 1;"
               >
                 <div
-                  style="max-width: 1px; display: block;"
+                  style="max-width: 995px; display: block;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     role="presentation"
-                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.1933333333333334' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='995' width='995' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
                     style="max-width: 100%; display: block; position: static;"
                   />
                 </div>
-                <img
-                  alt=""
+                <div
                   aria-hidden="true"
                   data-placeholder-image=""
-                  decoding="async"
-                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAYABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAUEAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABs5cclPYuYZuES2C//8QAHRAAAgICAwEAAAAAAAAAAAAAAgMBBAAREhMUIv/aAAgBAQABBQJrRUMW1yWXz+t4Bcgs1pYXjbtIdav/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAdEAACAgMAAwAAAAAAAAAAAAABAgARECFREnGB/9oACAEBAAY/AraAb3hV+4Ddnmp3yC6r3FUm6n//xAAcEAEAAwEAAwEAAAAAAAAAAAABABEhQRAxUXH/2gAIAQEAAT8h0VrQHZWgfXj8uRxAK4GPrzy0KYaa8RLED3P/2gAMAwEAAgADAAAAECfPf//EABURAQEAAAAAAAAAAAAAAAAAABEg/9oACAEDAQE/EGP/xAAXEQADAQAAAAAAAAAAAAAAAAABEBEh/9oACAECAQE/EAMVX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERACExQRBxsYH/2gAIAQEAAT8QI0EAqpjx024IL0x8Ehd2e1nwcEUcj8xBKG/pkD8NIADpxREqAMYXaVBDm5//2Q=="
                   style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
                 />
-                <picture>
-                  <source
-                    sizes="100vw"
-                    srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/8cca9/pietsie-atlin-4.webp 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/b81ad/pietsie-atlin-4.webp 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/9ceb8/pietsie-atlin-4.webp 600w"
-                    type="image/webp"
-                  />
-                  <img
-                    alt=""
-                    data-gatsby-image-ssr=""
-                    data-main-image=""
-                    decoding="async"
-                    loading="eager"
-                    sizes="100vw"
-                    src="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg"
-                    srcset="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/5d47b/pietsie-atlin-4.jpg 150w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/1e7db/pietsie-atlin-4.jpg 300w,/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg 600w"
-                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                  />
-                </picture>
+                <img
+                  alt="gallery image"
+                  data-gatsby-image-ssr=""
+                  data-main-image=""
+                  decoding="async"
+                  loading="eager"
+                  sizes="(min-width: 995px) 995px, 100vw"
+                  src="/static/5e566884fdc0f35caf38e43e3d3b3faa/87640/image-1.webp"
+                  srcset="/static/5e566884fdc0f35caf38e43e3d3b3faa/dc55b/image-1.webp 249w,/static/5e566884fdc0f35caf38e43e3d3b3faa/525ed/image-1.webp 498w,/static/5e566884fdc0f35caf38e43e3d3b3faa/87640/image-1.webp 995w"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                />
                 <noscript />
                 <script
                   type="module"
                 >
-                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}
                 </script>
               </div>
             </li>
             <li
-              class="sc-dIUggk"
+              class="sc-ezWOiH"
             >
               <div
                 class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
                 data-gatsby-image-wrapper=""
-                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
+                style="position: relative; overflow: hidden; display: inline-block; vertical-align: top; opacity: 1;"
               >
                 <div
-                  style="max-width: 1px; display: block;"
+                  style="max-width: 800px; display: block;"
                 >
                   <img
                     alt=""
                     aria-hidden="true"
                     role="presentation"
-                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.5' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1024' width='800' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
                     style="max-width: 100%; display: block; position: static;"
                   />
                 </div>
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  data-placeholder-image=""
-                  decoding="async"
-                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUBAgME/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAXi8To4Eod6ykmhkV//EABwQAAICAgMAAAAAAAAAAAAAAAECAAQRIgNBQv/aAAgBAQABBQJ2CKbgy1sLLp06lt88oOkdiX8z/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHBAAAQQDAQAAAAAAAAAAAAAAAQACECERUWGh/9oACAEBAAY/AsuVNpWz1AS7gknc/wD/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMWFx/9oACAEBAAE/IVzUEBtfrYoCaXlpnercu7kFOMAl5VEi+R0d1OI8g4T/2gAMAwEAAgADAAAAECz2zv/EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxAr/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQEf/aAAgBAgEBPxALkZ//xAAhEAEAAgIBAwUAAAAAAAAAAAABABExUSFBYYFxobHR8P/aAAgBAQABPxDCEWLV1MQDlpaOwomng7rD2lb3QfTHzAh3n97wHEPNVKCqYNtKwV3lRXzG5bUf+7F5v7gqnSLbtT//2Q=="
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-                />
-                <picture>
-                  <source
-                    sizes="100vw"
-                    srcset="/static/a414d5b3121133600f7cb6cdef8673da/4c6e4/pietsie-atlin-7.webp 150w,/static/a414d5b3121133600f7cb6cdef8673da/8e42d/pietsie-atlin-7.webp 300w,/static/a414d5b3121133600f7cb6cdef8673da/e1ec2/pietsie-atlin-7.webp 600w"
-                    type="image/webp"
-                  />
-                  <img
-                    alt=""
-                    data-gatsby-image-ssr=""
-                    data-main-image=""
-                    decoding="async"
-                    loading="eager"
-                    sizes="100vw"
-                    src="/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg"
-                    srcset="/static/a414d5b3121133600f7cb6cdef8673da/fa2a5/pietsie-atlin-7.jpg 150w,/static/a414d5b3121133600f7cb6cdef8673da/cdddd/pietsie-atlin-7.jpg 300w,/static/a414d5b3121133600f7cb6cdef8673da/435f9/pietsie-atlin-7.jpg 600w"
-                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                  />
-                </picture>
-                <noscript />
-                <script
-                  type="module"
-                >
-                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-                </script>
-              </div>
-            </li>
-            <li
-              class="sc-dIUggk"
-            >
-              <div
-                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
-                data-gatsby-image-wrapper=""
-                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
-              >
                 <div
-                  style="max-width: 1px; display: block;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    role="presentation"
-                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.5' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                    style="max-width: 100%; display: block; position: static;"
-                  />
-                </div>
-                <img
-                  alt=""
                   aria-hidden="true"
                   data-placeholder-image=""
-                  decoding="async"
-                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAwADAAAAAAAAAAAAAAAAAAQFAgMG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgD/2gAMAwEAAhADEAAAAWEWJZqYkFYK9FARqGwL/8QAHRAAAgEEAwAAAAAAAAAAAAAAAQIRAAMTIhIxMv/aAAgBAQABBQJtqRoa2dRcWOclvRMEGDiJDWkYDvPFf//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAEDAQE/ASn/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAHBAAAgICAwAAAAAAAAAAAAAAABEBITFxAiIy/9oACAEBAAY/AlhEdhPFCVwYNkyMhnmERsrjR//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhcfD/2gAIAQEAAT8hFwOC7uENSX+IRdS7tGvJyQuWHryNs12nxCpU+oPtqgkA5dwhisgOGNrM/9oADAMBAAIAAwAAABDH9P3/xAAYEQADAQEAAAAAAAAAAAAAAAAAAREQIf/aAAgBAwEBPxDmJGWH/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERITH/2gAIAQIBAT8Qr6imkQ//xAAgEAEBAAICAgIDAAAAAAAAAAABEQAhMUFRcWGBodHh/9oACAEBAAE/EFZCNeTP1i8GwYhsmnjvICKAxw4gWpi1Q5r6xrYeASuphzoIP2ZA1qI63/MUDqsDefZSs/GADKtfBkctFAI+Lg2toGkPWf/Z"
                   style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
                 />
-                <picture>
-                  <source
-                    sizes="100vw"
-                    srcset="/static/597520e19b6aa9cfc80a981e4e8386de/4c6e4/elaina_midland-3.webp 150w,/static/597520e19b6aa9cfc80a981e4e8386de/8e42d/elaina_midland-3.webp 300w,/static/597520e19b6aa9cfc80a981e4e8386de/e1ec2/elaina_midland-3.webp 600w"
-                    type="image/webp"
-                  />
-                  <img
-                    alt=""
-                    data-gatsby-image-ssr=""
-                    data-main-image=""
-                    decoding="async"
-                    loading="eager"
-                    sizes="100vw"
-                    src="/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg"
-                    srcset="/static/597520e19b6aa9cfc80a981e4e8386de/fa2a5/elaina_midland-3.jpg 150w,/static/597520e19b6aa9cfc80a981e4e8386de/cdddd/elaina_midland-3.jpg 300w,/static/597520e19b6aa9cfc80a981e4e8386de/435f9/elaina_midland-3.jpg 600w"
-                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                  />
-                </picture>
+                <img
+                  alt="gallery image"
+                  data-gatsby-image-ssr=""
+                  data-main-image=""
+                  decoding="async"
+                  loading="eager"
+                  sizes="(min-width: 800px) 800px, 100vw"
+                  src="/static/1fcdbf9d7092a17c5ca5bb9a43f6327b/b86b5/image-2.webp"
+                  srcset="/static/1fcdbf9d7092a17c5ca5bb9a43f6327b/a9873/image-2.webp 200w,/static/1fcdbf9d7092a17c5ca5bb9a43f6327b/04c63/image-2.webp 400w,/static/1fcdbf9d7092a17c5ca5bb9a43f6327b/b86b5/image-2.webp 800w"
+                  style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+                />
                 <noscript />
                 <script
                   type="module"
                 >
-                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-                </script>
-              </div>
-            </li>
-            <li
-              class="sc-dIUggk"
-            >
-              <div
-                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
-                data-gatsby-image-wrapper=""
-                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
-              >
-                <div
-                  style="max-width: 1px; display: block;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    role="presentation"
-                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='0.6666666666666666' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                    style="max-width: 100%; display: block; position: static;"
-                  />
-                </div>
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  data-placeholder-image=""
-                  decoding="async"
-                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGrLamFpYD/AP/EABsQAAIDAAMAAAAAAAAAAAAAAAERAAIDEhMj/9oACAEBAAEFAtb1XPsIqo2MB6EKf//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAaEAACAgMAAAAAAAAAAAAAAAAAARAREiFB/9oACAEBAAY/ArRo4YjUf//EABoQAQADAAMAAAAAAAAAAAAAAAEAESFBccH/2gAIAQEAAT8hUQtILEnkQVnuOwXWCym1xBVT/9oADAMBAAIAAwAAABAr/wD/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPxCD/8QAFxEBAAMAAAAAAAAAAAAAAAAAARARIf/aAAgBAgEBPxDUbj//xAAeEAEAAgIBBQAAAAAAAAAAAAABABEhMUFhcaHB8P/aAAgBAQABPxC+QLyUZPMw9DVpQfmDQ8yZtxAADyAQrFVi+zKgDXU9z//Z"
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-                />
-                <picture>
-                  <source
-                    sizes="100vw"
-                    srcset="/static/5de9f409a5a5abb0a95569ed12d4c3e9/70dfd/elaina_midland-4.webp 150w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/9b21f/elaina_midland-4.webp 300w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/9ff6b/elaina_midland-4.webp 600w"
-                    type="image/webp"
-                  />
-                  <img
-                    alt=""
-                    data-gatsby-image-ssr=""
-                    data-main-image=""
-                    decoding="async"
-                    loading="eager"
-                    sizes="100vw"
-                    src="/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg"
-                    srcset="/static/5de9f409a5a5abb0a95569ed12d4c3e9/f1a3a/elaina_midland-4.jpg 150w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/81bf6/elaina_midland-4.jpg 300w,/static/5de9f409a5a5abb0a95569ed12d4c3e9/3f4ea/elaina_midland-4.jpg 600w"
-                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                  />
-                </picture>
-                <noscript />
-                <script
-                  type="module"
-                >
-                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-                </script>
-              </div>
-            </li>
-            <li
-              class="sc-dIUggk"
-            >
-              <div
-                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
-                data-gatsby-image-wrapper=""
-                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
-              >
-                <div
-                  style="max-width: 1px; display: block;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    role="presentation"
-                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                    style="max-width: 100%; display: block; position: static;"
-                  />
-                </div>
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  data-placeholder-image=""
-                  decoding="async"
-                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQFBgP/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABpzLoE6B5hkyyjpRD/8QAHRAAAQQCAwAAAAAAAAAAAAAAAgABAwQSMxEhI//aAAgBAQABBQK7I4NmfEJZw3ukREb1tF7TA/qv/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BIT//xAAeEAACAgEFAQAAAAAAAAAAAAABAgARIRASMlFxgf/aAAgBAQAGPwJVBrdALOIrHqIw5CWTeIs+xPdP/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyFRFjaQtgmiP0jHTaIWWTWRgnOlUZOL4Yj9DF2f/9oADAMBAAIAAwAAABC/yH//xAAWEQEBAQAAAAAAAAAAAAAAAAABABD/2gAIAQMBAT8QYnP/xAAXEQADAQAAAAAAAAAAAAAAAAAAATEQ/9oACAECAQE/EEHSM//EAB0QAQEAAQQDAAAAAAAAAAAAAAERACExQVFhcZH/2gAIAQEAAT8QO0USMDa+3AVzrJp2POJLbl74uQRAJCEqt60+4JW2zCeNPOJurCuSscBoCjH3bggyVfccgz//2Q=="
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-                />
-                <picture>
-                  <source
-                    sizes="100vw"
-                    srcset="/static/ddeb0faace7a650dc777dcc61914b1de/c65bc/pietsie-atlin-6.webp 150w,/static/ddeb0faace7a650dc777dcc61914b1de/078c3/pietsie-atlin-6.webp 300w,/static/ddeb0faace7a650dc777dcc61914b1de/6d09e/pietsie-atlin-6.webp 600w"
-                    type="image/webp"
-                  />
-                  <img
-                    alt=""
-                    data-gatsby-image-ssr=""
-                    data-main-image=""
-                    decoding="async"
-                    loading="eager"
-                    sizes="100vw"
-                    src="/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg"
-                    srcset="/static/ddeb0faace7a650dc777dcc61914b1de/96deb/pietsie-atlin-6.jpg 150w,/static/ddeb0faace7a650dc777dcc61914b1de/0fdf4/pietsie-atlin-6.jpg 300w,/static/ddeb0faace7a650dc777dcc61914b1de/a89ca/pietsie-atlin-6.jpg 600w"
-                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                  />
-                </picture>
-                <noscript />
-                <script
-                  type="module"
-                >
-                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-                </script>
-              </div>
-            </li>
-            <li
-              class="sc-dIUggk"
-            >
-              <div
-                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
-                data-gatsby-image-wrapper=""
-                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
-              >
-                <div
-                  style="max-width: 1px; display: block;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    role="presentation"
-                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='0.9683333333333333' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                    style="max-width: 100%; display: block; position: static;"
-                  />
-                </div>
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  data-placeholder-image=""
-                  decoding="async"
-                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAATABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAQFAQIDBv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGTwxET0zVLX15ZdCH/xAAbEAACAwEBAQAAAAAAAAAAAAABBAADERMjNP/aAAgBAQABBQJywgK2npHt2ve0b+dU+5n/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAcEAACAgIDAAAAAAAAAAAAAAABAgAQESFBUXH/2gAIAQEABj8CCdwJnVKeIuKPogr/xAAeEAACAgEFAQAAAAAAAAAAAAAAAREhMRBRYZGx8P/aAAgBAQABPyFSoi7YuzaqWi1+MTyRNzmBuz6G4zv8Gs//2gAMAwEAAgADAAAAEPvPPf/EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAEDAQE/EFj/xAAXEQEBAQEAAAAAAAAAAAAAAAABEBEx/9oACAECAQE/EAMhyf/EABsQAQADAQADAAAAAAAAAAAAAAEAESFRMeHw/9oACAEBAAE/EDVoqjcSq5GabEMF2LFFaHWYW8Mq0pAAvnuGKOcoV/FEvs//2Q=="
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-                />
-                <picture>
-                  <source
-                    sizes="100vw"
-                    srcset="/static/6767260d2590b3fb8d50c6b995c829a8/6bc6e/pietsie-atlin-5.webp 150w,/static/6767260d2590b3fb8d50c6b995c829a8/50a0d/pietsie-atlin-5.webp 300w,/static/6767260d2590b3fb8d50c6b995c829a8/68747/pietsie-atlin-5.webp 600w"
-                    type="image/webp"
-                  />
-                  <img
-                    alt=""
-                    data-gatsby-image-ssr=""
-                    data-main-image=""
-                    decoding="async"
-                    loading="eager"
-                    sizes="100vw"
-                    src="/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg"
-                    srcset="/static/6767260d2590b3fb8d50c6b995c829a8/72c97/pietsie-atlin-5.jpg 150w,/static/6767260d2590b3fb8d50c6b995c829a8/4a85a/pietsie-atlin-5.jpg 300w,/static/6767260d2590b3fb8d50c6b995c829a8/e07e6/pietsie-atlin-5.jpg 600w"
-                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                  />
-                </picture>
-                <noscript />
-                <script
-                  type="module"
-                >
-                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-                </script>
-              </div>
-            </li>
-            <li
-              class="sc-dIUggk"
-            >
-              <div
-                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
-                data-gatsby-image-wrapper=""
-                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
-              >
-                <div
-                  style="max-width: 1px; display: block;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    role="presentation"
-                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1.5' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                    style="max-width: 100%; display: block; position: static;"
-                  />
-                </div>
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  data-placeholder-image=""
-                  decoding="async"
-                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAADAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAFAokE2MpmTswd3H//EABsQAAICAwEAAAAAAAAAAAAAAAECAxEAEhMh/9oACAEBAAEFAmw10ktmLnkrMWY+tEwSOMhdbLVreFRf/8QAFREBAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8BIf/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABsQAAMAAgMAAAAAAAAAAAAAAAABERAxIVFh/9oACAEBAAY/Aq0L0pWzvDr4NoY6jSx//8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRYf/aAAgBAQABPyHFXhODCeh5mYIDYzLnYW+xF9JSTQghRvext7DfZwByeZJbb3yf/9oADAMBAAIAAwAAABAYDwD/xAAXEQEBAQEAAAAAAAAAAAAAAAAAESEx/9oACAEDAQE/EEdVr//EABcRAQEBAQAAAAAAAAAAAAAAABEQIQH/2gAIAQIBAT8QXeRwn//EAB4QAQEAAgICAwAAAAAAAAAAAAERACExQWFxkbHR/9oACAEBAAE/EKT2k0Qn5kKCRE1OE9dYIUicsMWobHZcHjHPWeeuMhWiEXxhbZVLhLAqE3Zo+s7Z0jifKgdc50rOTqOOIlpN4/Of/9k="
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-                />
-                <picture>
-                  <source
-                    sizes="100vw"
-                    srcset="/static/cf70b8d2ec726c940b9c1d1caede05e9/4c6e4/elaina_midland-2.webp 150w,/static/cf70b8d2ec726c940b9c1d1caede05e9/8e42d/elaina_midland-2.webp 300w,/static/cf70b8d2ec726c940b9c1d1caede05e9/e1ec2/elaina_midland-2.webp 600w"
-                    type="image/webp"
-                  />
-                  <img
-                    alt=""
-                    data-gatsby-image-ssr=""
-                    data-main-image=""
-                    decoding="async"
-                    loading="eager"
-                    sizes="100vw"
-                    src="/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg"
-                    srcset="/static/cf70b8d2ec726c940b9c1d1caede05e9/fa2a5/elaina_midland-2.jpg 150w,/static/cf70b8d2ec726c940b9c1d1caede05e9/cdddd/elaina_midland-2.jpg 300w,/static/cf70b8d2ec726c940b9c1d1caede05e9/435f9/elaina_midland-2.jpg 600w"
-                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                  />
-                </picture>
-                <noscript />
-                <script
-                  type="module"
-                >
-                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
-                </script>
-              </div>
-            </li>
-            <li
-              class="sc-dIUggk"
-            >
-              <div
-                class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
-                data-gatsby-image-wrapper=""
-                style="position: relative; overflow: hidden; display: inline-block; opacity: 1;"
-              >
-                <div
-                  style="max-width: 1px; display: block;"
-                >
-                  <img
-                    alt=""
-                    aria-hidden="true"
-                    role="presentation"
-                    src="data:image/svg+xml;charset=utf-8,%3Csvg height='1' width='1' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                    style="max-width: 100%; display: block; position: static;"
-                  />
-                </div>
-                <img
-                  alt=""
-                  aria-hidden="true"
-                  data-placeholder-image=""
-                  decoding="async"
-                  src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAQDBQL/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAABo5/qM3ZaNxlHOsAv/8QAGxAAAgMAAwAAAAAAAAAAAAAAAhEAAQMQMjP/2gAIAQEAAQUCNAZG+Nms1Z1Ow5etKf/EABcRAQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQMBAT8BYmv/xAAVEQEBAAAAAAAAAAAAAAAAAAAQAf/aAAgBAgEBPwEh/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQITER/9oACAEBAAY/AmU6WQxdixGH/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGB/9oACAEBAAE/IXc+4GAexFvZzo0GrKj8QZgMPIs6gqnJhwyf/9oADAMBAAIAAwAAABBg6AP/xAAYEQACAwAAAAAAAAAAAAAAAAABEBExQf/aAAgBAwEBPxCjCYX/xAAZEQACAwEAAAAAAAAAAAAAAAAAARARITH/2gAIAQIBAT8QWqzThx//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUFR/9oACAEBAAE/EHjoQXw9Zt3EBTGMhU2ZF4YEW35sIxq0nx8nAaNWAyzXA74cHfsrTdJZ2Gw7kOz/2Q=="
-                  style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
-                />
-                <picture>
-                  <source
-                    sizes="100vw"
-                    srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/c65bc/pietsie-atlin-blouse.webp 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/078c3/pietsie-atlin-blouse.webp 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/6d09e/pietsie-atlin-blouse.webp 600w"
-                    type="image/webp"
-                  />
-                  <img
-                    alt=""
-                    data-gatsby-image-ssr=""
-                    data-main-image=""
-                    decoding="async"
-                    loading="eager"
-                    sizes="100vw"
-                    src="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg"
-                    srcset="/static/184dc14fc5e96a12c4f7c6ee0f71f32a/96deb/pietsie-atlin-blouse.jpg 150w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/0fdf4/pietsie-atlin-blouse.jpg 300w,/static/184dc14fc5e96a12c4f7c6ee0f71f32a/a89ca/pietsie-atlin-blouse.jpg 600w"
-                    style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
-                  />
-                </picture>
-                <noscript />
-                <script
-                  type="module"
-                >
-                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t)e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset")),e.complete&&(e.style.opacity=1)}
+                  const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}
                 </script>
               </div>
             </li>
           </ul>
         </div>
-        <div
-          class="sc-fodVxV lbzmpy"
-        >
-          <label
-            class="sc-hBEYos gMLomm"
-            for="size"
-          >
-            size
-          </label>
-          <select
-            class="sc-kstrdz eOpnUf"
-            id="size"
-          >
-            <option
-              selected=""
-              value=""
-            >
-              select an option
-            </option>
-            <option
-              value="small"
-            >
-              small
-            </option>
-            <option
-              value="medium"
-            >
-              medium
-            </option>
-            <option
-              value="large"
-            >
-              large
-            </option>
-          </select>
-        </div>
-        <div
-          class="sc-fodVxV lbzmpy"
-        >
-          <label
-            class="sc-hBEYos gMLomm"
-            for="color"
-          >
-            color
-          </label>
-          <select
-            class="sc-kstrdz eOpnUf"
-            id="color"
-          >
-            <option
-              selected=""
-              value=""
-            >
-              select an option
-            </option>
-            <option
-              value="blue"
-            >
-              blue
-            </option>
-            <option
-              value="grey"
-            >
-              grey
-            </option>
-            <option
-              value="black"
-            >
-              black
-            </option>
-          </select>
-        </div>
-        <button
-          class="sc-fFubgz bhOtJp snipcart-add-item"
-          data-item-custom1-name="size"
-          data-item-custom1-options="small|medium|large"
-          data-item-custom2-name="color"
-          data-item-custom2-options="blue|grey|black"
-          data-item-description="Pietsie Campbell creates all of her garments out of deadstock, vintage fabrics, and natural fibers. Each collection is made in sunny California and embodies the effortlessly chic look we all strive for. Our favorite loose, flowing blouse in a cotton and linen blend. Slightly fitted across the shoulders. Wear tucked or loose, with the sleeves rolled up or down. Delicate pleating at shoulders, bell sleeves, pleated cuffs. Trapeze shape, easy fit. Pulls over, vintage shell buttons on a placket that ends mid way. Delicate hand-pleated detail on chest, stand-up prairie collar."
-          data-item-id="pietsie-atlin-blouse"
-          data-item-image="/static/d6c0fcb2853b21bbbc34c6cbfe062d14/029bf/pietsie-atlin-4.jpg"
-          data-item-name="Pietsie Atlin Blouse"
-          data-item-price="240.00"
-          data-item-url="/pietsie-atlin-blouse/"
-        >
-          Add to Cart
-        </button>
         <section
-          class="sc-bBXqnf jeUMqg"
+          class="sc-ciZhAO lhlVoR"
         >
-          <h2
-            class="sc-iwyYcG elVgQC"
-          >
-            Description
-          </h2>
           <div
-            class="sc-cxFLnm jewTNR"
+            aria-label="price"
+            class="sc-bZnhIo glxnwU"
+          >
+             
+            $
+            420.00
+          </div>
+          <h1
+            class="sc-jdAMXn hHMygc"
+          >
+            Haori Coat in Washed Denim
+          </h1>
+        </section>
+        <section
+          class="sc-iAvgwm eKvhBU"
+        >
+          <div
+            aria-label="description"
+            class="sc-cTQhss eLJSZq"
           >
             <p>
-              test html
+              Atelier Delphine's classic Haori Coat in 5-layer gauze
+            </p>
+            
+
+            <ul>
+              
+
+              <li>
+                Relaxed, exaggerated oversized, and unisex, one size fits all
+              </li>
+              
+
+              <li>
+                2 hip pockets
+              </li>
+              
+
+              <li>
+                Hem sits below the hip
+              </li>
+              
+
+            </ul>
+            
+
+            <p>
+              100% Cotton
+            </p>
+            
+
+            <p>
+              Machine wash with gentle cycle or hand wash, low tumble dry
+            </p>
+            
+
+            <p>
+              Made in the US
             </p>
           </div>
         </section>
+        <div
+          class="sc-iTONeN jaLzfD"
+        >
+          <form
+            aria-label="custom options"
+            class="sc-cxabCf kFksTT"
+            name="Select Size"
+          >
+            <span
+              aria-label="selected option"
+              class="sc-ivTmOn eaVOQW"
+            >
+              Size | 
+            </span>
+            <input
+              class="sc-fLlhyt lpjRgX"
+              id="Extra Small"
+              name="Size"
+              type="radio"
+              value="Extra Small"
+            />
+            <label
+              class="sc-bBrHrO figqjx"
+              for="Extra Small"
+            >
+              Extra Small
+            </label>
+            <input
+              class="sc-fLlhyt lpjRgX"
+              id="Small"
+              name="Size"
+              type="radio"
+              value="Small"
+            />
+            <label
+              class="sc-bBrHrO figqjx"
+              for="Small"
+            >
+              Small
+            </label>
+            <input
+              class="sc-fLlhyt lpjRgX"
+              id="Medium"
+              name="Size"
+              type="radio"
+              value="Medium"
+            />
+            <label
+              class="sc-bBrHrO figqjx"
+              for="Medium"
+            >
+              Medium
+            </label>
+            <input
+              class="sc-fLlhyt lpjRgX"
+              id="Large"
+              name="Size"
+              type="radio"
+              value="Large"
+            />
+            <label
+              class="sc-bBrHrO figqjx"
+              for="Large"
+            >
+              Large
+            </label>
+          </form>
+          <button
+            class="sc-llJcti eQCCYg snipcart-add-item"
+            data-item-custom1-name="Size"
+            data-item-custom1-options="Extra Small|Small|Medium|Large"
+            data-item-custom1-value=""
+            data-item-description="Atelier Delphine's classic Haori Coat in 5-layer gauze
+
+Relaxed, exaggerated oversized, and unisex, one size fits all
+2 hip pockets
+Hem sits below the hip
+
+100% Cotton
+Machine wash with gentle cycle or hand wash, low tumble dry
+Made in the US"
+            data-item-id="haori-coat-in-washed-denim"
+            data-item-image="/static/5e566884fdc0f35caf38e43e3d3b3faa/87640/image-1.webp"
+            data-item-max-quantity="1"
+            data-item-name="Haori Coat in Washed Denim"
+            data-item-price="420.00"
+            data-item-url="/haori-coat-in-washed-denim/"
+          >
+            Add to Cart
+          </button>
+        </div>
+        <div
+          class="sc-jOrMOR bnBTii"
+        >
+          <a
+            class="sc-himrzO hurDTw"
+            href="mailto:howdy@upful.com?Subject=Haori Coat in Washed Denim"
+          >
+            <svg
+              aria-label="contact email link icon"
+              class="svg-icon icon-mail "
+              fill="none"
+              height="20"
+              role="img"
+              viewBox="0 0 27 22"
+              width="27"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Mail Icon
+              </title>
+              <path
+                clip-rule="evenodd"
+                d="M1.458 1.5h24.084v17H1.458v-17zM0 0H27v20H0V0zm3.461 4.608l9.72 7.222.427.317.427-.317 9.72-7.222-.854-1.216-9.293 6.905-9.293-6.905-.854 1.216z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                transform="translate(0 1)"
+              />
+            </svg>
+            <span
+              class="sc-ikZpkk jcTDMF"
+            >
+              Email us about this product
+            </span>
+          </a>
+          <button
+            class="sc-kLLXSd cvdMMf"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              data-testid="Share Icon"
+              fill="none"
+              focusable="false"
+              height="21"
+              viewBox="0 0 18 21"
+              width="27"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Share Product
+              </title>
+              <path
+                clip-rule="evenodd"
+                d="M9.545.56L9 0l-.545.56-5.143 5.286 1.09 1.122L8.23 3.035V15.45H9.77V3.035l3.826 3.933 1.091-1.122L9.545.561zM0 11.75V21h18v-9.25h-1.543v7.664H1.543V11.75H0z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <span
+              class="sc-ikZpkk jcTDMF"
+            >
+              Share Product
+            </span>
+            <div
+              class="sc-jIZahH ghXDrj"
+            >
+              <a
+                aria-label="Share to Facebook"
+                href="http://www.facebook.com/sharer.php?u=upful.shop/haori-coat-in-washed-denim/"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-icon icon-share-facebook "
+                  data-testid="Facebook Icon"
+                  fill="none"
+                  focusable="false"
+                  height="18"
+                  viewBox="0 0 9 18"
+                  width="9"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>
+                    Share to Facebook
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M7.861 9.007H5.394V18H1.737V9.007H0V5.829h1.738V3.772C1.737 2.3 2.421 0 5.427 0l2.709.01v3.085H6.17c-.321 0-.775.165-.775.866v1.868h2.786l-.32 3.178z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                aria-label="Share to Twitter"
+                href="https://twitter.com/intent/tweet?url=upful.shop/haori-coat-in-washed-denim/"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-icon icon-share-twitter "
+                  data-testid="Twitter Icon"
+                  fill="none"
+                  focusable="false"
+                  height="20"
+                  viewBox="0 0 20 17"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>
+                    Share to Twitter
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M17.64 2.576a4.115 4.115 0 0 0 1.803-2.27c-.792.47-1.67.812-2.605.996a4.102 4.102 0 0 0-6.99 3.742A11.647 11.647 0 0 1 1.392.757 4.083 4.083 0 0 0 .837 2.82a4.1 4.1 0 0 0 1.825 3.413A4.086 4.086 0 0 1 .803 5.72v.052a4.105 4.105 0 0 0 3.29 4.022 4.108 4.108 0 0 1-1.852.07 4.106 4.106 0 0 0 3.832 2.85 8.231 8.231 0 0 1-5.094 1.755A8.33 8.33 0 0 1 0 14.412a11.612 11.612 0 0 0 6.289 1.843c7.545 0 11.671-6.25 11.671-11.672 0-.178-.004-.355-.011-.53a8.339 8.339 0 0 0 2.047-2.124 8.202 8.202 0 0 1-2.357.646h.001z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                aria-label="Share to Pinterest"
+                href="http://pinterest.com/pin/create/button/?url=upful.shop/haori-coat-in-washed-denim/&media=upful.shop/static/5e566884fdc0f35caf38e43e3d3b3faa/87640/image-1.webp&description=Haori Coat in Washed Denim"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-icon icon-share-pinterest "
+                  data-testid="Pinterest Icon"
+                  fill="none"
+                  focusable="false"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>
+                    Share to Pinterest
+                  </title>
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 0C4.479 0 0 4.477 0 10a9.999 9.999 0 0 0 6.355 9.311c-.087-.79-.166-2.005.035-2.868.183-.781 1.173-4.971 1.173-4.971s-.3-.6-.3-1.485c0-1.388.808-2.429 1.81-2.429.854 0 1.265.641 1.265 1.409 0 .859-.545 2.141-.827 3.33-.238.996.5 1.806 1.48 1.806 1.776 0 3.144-1.873 3.144-4.577 0-2.394-1.72-4.068-4.178-4.068-2.845 0-4.513 2.134-4.513 4.34 0 .859.329 1.78.741 2.281.083.1.094.188.072.288-.075.315-.245.995-.28 1.133-.043.183-.143.223-.334.134-1.248-.581-2.03-2.407-2.03-3.875 0-3.154 2.292-6.05 6.609-6.05 3.468 0 6.165 2.472 6.165 5.775 0 3.446-2.175 6.221-5.191 6.221-1.013 0-1.965-.527-2.292-1.15l-.625 2.378c-.225.868-.834 1.957-1.242 2.62A10 10 0 0 0 9.999 20C15.521 20 20 15.523 20 10 20 4.478 15.521.001 10 .001V0z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </button>
+        </div>
       </div>
     </main>
   </div>
   <footer
-    class="sc-gKsewC fIoWJo"
+    class="sc-evZas NxEgn"
   >
     <nav
-      class="sc-iBPRYJ eeUOoZ"
+      aria-label="Footer"
+      class="sc-breuTD cHRYoe"
     >
-      <h5
-        class="sc-kEjbxe iqwogK"
-      >
-        Categories
-      </h5>
       <a
+        class="sc-ksZaOG"
+        href="/women/"
+      >
+        women
+      </a>
+      <a
+        class="sc-ksZaOG"
+        href="/kids/"
+      >
+        kids
+      </a>
+      <a
+        class="sc-ksZaOG"
         href="/about/"
       >
-        About Us
+        about
       </a>
       <a
-        href="/clothing/"
+        class="sc-ksZaOG"
+        href="/returns/"
       >
-        Clothing
-      </a>
-      <a
-        href="/home/"
-      >
-        Home
-      </a>
-      <a
-        href="/accessories/"
-      >
-        Accessories
+        returns
       </a>
     </nav>
-    <div
-      class="sc-fubCfw flkmPR"
+    <address
+      class="sc-idiyUo gwMrhD"
     >
-      <h5
-        class="sc-kEjbxe iqwogK"
-      >
-        Contact
-      </h5>
-      <address
-        class="sc-iqHYGH fZGVri"
-      >
-        StoreFront
-        <br />
-        555 Santa Monica Blvd.
-        <br />
-        Los Angeles, CA 90210
-      </address>
-      <address
-        class="sc-iqHYGH fZGVri"
-      >
-        <a
-          href="mailto:howdy@storefront.com"
-        >
-          howdy@storefront.com
-        </a>
-      </address>
-    </div>
-    <div
-      class="sc-pFZIQ bQODGP"
-    >
-      <h5
-        class="sc-kEjbxe iqwogK"
-      >
-        Terms & Conditions
-      </h5>
       <a
-        href="/returns"
+        href="mailto:howdy@storefront.com"
       >
-        Returns
+        howdy@storefront.com
       </a>
-    </div>
+    </address>
     <div
-      class="sc-jrAGrp kxXRxJ"
+      class="sc-fEOsli iqDUsf"
     >
-      © StoreFront 
-      2019
+      © Upful 
+      2022
+       Made with full Irations
     </div>
   </footer>
 </div>

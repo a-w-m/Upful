@@ -26,6 +26,7 @@ exports[`Category matches snapshot 1`] = `
         </button>
       </div>
       <nav
+        aria-label="Main"
         class="sc-dkzDqf ckAmYP"
         id="menu"
       >
@@ -631,6 +632,7 @@ exports[`Category matches snapshot 1`] = `
     class="sc-evZas NxEgn"
   >
     <nav
+      aria-label="Footer"
       class="sc-breuTD cHRYoe"
     >
       <a

@@ -2,6 +2,7 @@
 
 exports[`Option matches snapshot 1`] = `
 <form
+  aria-label="custom options"
   class="sc-hKMtZM dtFrcj"
   name="Select Size"
 >

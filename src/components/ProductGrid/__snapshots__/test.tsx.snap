@@ -34,7 +34,7 @@ exports[`ProductGrid should match snapshot 1`] = `
               style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
             />
             <img
-              alt=""
+              alt="thumbnail"
               data-gatsby-image-ssr=""
               data-main-image=""
               data-src="/static/1a4732d2748806c6a0c45dcd0ac92ca4/a640e/image-1.webp"
@@ -52,6 +52,25 @@ exports[`ProductGrid should match snapshot 1`] = `
             </script>
           </div>
         </a>
+        <div
+          class="sc-eCYdqJ craCFA"
+        >
+          <h3
+            class="sc-gsnTZi fcNkwz"
+          >
+            Easy Sweatpant in Natural
+          </h3>
+          <div
+            class="sc-dkzDqf kTktQY"
+          >
+            158.00
+          </div>
+          <span
+            class="sc-hKMtZM"
+          >
+            Sold Out
+          </span>
+        </div>
       </article>
       <article
         class="sc-bczRLJ bIIyW"
@@ -81,7 +100,7 @@ exports[`ProductGrid should match snapshot 1`] = `
               style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
             />
             <img
-              alt=""
+              alt="thumbnail"
               data-gatsby-image-ssr=""
               data-main-image=""
               data-src="/static/5e566884fdc0f35caf38e43e3d3b3faa/87640/image-1.webp"
@@ -99,6 +118,20 @@ exports[`ProductGrid should match snapshot 1`] = `
             </script>
           </div>
         </a>
+        <div
+          class="sc-eCYdqJ craCFA"
+        >
+          <h3
+            class="sc-gsnTZi fcNkwz"
+          >
+            Haori Coat in Washed Denim
+          </h3>
+          <div
+            class="sc-dkzDqf jPfPxC"
+          >
+            420.00
+          </div>
+        </div>
       </article>
       <article
         class="sc-bczRLJ bIIyW"
@@ -128,7 +161,7 @@ exports[`ProductGrid should match snapshot 1`] = `
               style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
             />
             <img
-              alt=""
+              alt="thumbnail"
               data-gatsby-image-ssr=""
               data-main-image=""
               data-src="/static/9bb4bfc8c3b86199d4c6f2ce7bd2fe68/e565f/image-1.webp"
@@ -146,6 +179,20 @@ exports[`ProductGrid should match snapshot 1`] = `
             </script>
           </div>
         </a>
+        <div
+          class="sc-eCYdqJ craCFA"
+        >
+          <h3
+            class="sc-gsnTZi fcNkwz"
+          >
+            Mardi Dress in Majorelle
+          </h3>
+          <div
+            class="sc-dkzDqf kTktQY"
+          >
+            330.00
+          </div>
+        </div>
       </article>
       <article
         class="sc-bczRLJ bIIyW"
@@ -175,7 +222,7 @@ exports[`ProductGrid should match snapshot 1`] = `
               style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
             />
             <img
-              alt=""
+              alt="thumbnail"
               data-gatsby-image-ssr=""
               data-main-image=""
               data-src="/static/3ab4e7845d0eddea1b17acedc963dd31/8f66e/image-1.webp"
@@ -193,6 +240,20 @@ exports[`ProductGrid should match snapshot 1`] = `
             </script>
           </div>
         </a>
+        <div
+          class="sc-eCYdqJ craCFA"
+        >
+          <h3
+            class="sc-gsnTZi fcNkwz"
+          >
+            Mona Marble Dress
+          </h3>
+          <div
+            class="sc-dkzDqf kTktQY"
+          >
+            280.00
+          </div>
+        </div>
       </article>
       <article
         class="sc-bczRLJ bIIyW"
@@ -222,7 +283,7 @@ exports[`ProductGrid should match snapshot 1`] = `
               style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
             />
             <img
-              alt=""
+              alt="thumbnail"
               data-gatsby-image-ssr=""
               data-main-image=""
               data-src="/static/01ab4798217057a46bbd2c052b23d4bd/67ded/image-1.webp"
@@ -240,6 +301,20 @@ exports[`ProductGrid should match snapshot 1`] = `
             </script>
           </div>
         </a>
+        <div
+          class="sc-eCYdqJ craCFA"
+        >
+          <h3
+            class="sc-gsnTZi fcNkwz"
+          >
+            The Field Jumpsuit
+          </h3>
+          <div
+            class="sc-dkzDqf kTktQY"
+          >
+            145.00
+          </div>
+        </div>
       </article>
       <article
         class="sc-bczRLJ bIIyW"
@@ -269,7 +344,7 @@ exports[`ProductGrid should match snapshot 1`] = `
               style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
             />
             <img
-              alt=""
+              alt="thumbnail"
               data-gatsby-image-ssr=""
               data-main-image=""
               data-src="/static/9bc7109a20b6a0d06cfdc4e6bb8a3970/c7f64/image-1.webp"
@@ -287,6 +362,20 @@ exports[`ProductGrid should match snapshot 1`] = `
             </script>
           </div>
         </a>
+        <div
+          class="sc-eCYdqJ craCFA"
+        >
+          <h3
+            class="sc-gsnTZi fcNkwz"
+          >
+            Virginia Dress
+          </h3>
+          <div
+            class="sc-dkzDqf kTktQY"
+          >
+            440.00
+          </div>
+        </div>
       </article>
       <article
         class="sc-bczRLJ bIIyW"
@@ -316,7 +405,7 @@ exports[`ProductGrid should match snapshot 1`] = `
               style="height: 100%; left: 0px; position: absolute; top: 0px; width: 100%;"
             />
             <img
-              alt=""
+              alt="thumbnail"
               data-gatsby-image-ssr=""
               data-main-image=""
               data-src="/static/63315f2eafa8f2947de0de1c5d3a32dd/3cd29/image-1.webp"
@@ -334,6 +423,20 @@ exports[`ProductGrid should match snapshot 1`] = `
             </script>
           </div>
         </a>
+        <div
+          class="sc-eCYdqJ craCFA"
+        >
+          <h3
+            class="sc-gsnTZi fcNkwz"
+          >
+            Peace Daisy Tee
+          </h3>
+          <div
+            class="sc-dkzDqf kTktQY"
+          >
+            55.00
+          </div>
+        </div>
       </article>
     </div>
   </div>

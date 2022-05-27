@@ -2,6 +2,7 @@
 
 exports[`ProductNav should match snapshot 1`] = `
 <nav
+  aria-label="Product"
   class="sc-bczRLJ eoUIHq"
 >
   <a

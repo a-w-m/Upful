@@ -23,6 +23,7 @@ exports[`Header should match snapshot 1`] = `
       </button>
     </div>
     <nav
+      aria-label="Main"
       class="sc-dkzDqf ckAmYP"
       id="menu"
     >

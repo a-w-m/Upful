@@ -14,6 +14,7 @@ exports[`Pagination matches snapshot 1`] = `
     href="/TEST/2/"
   >
     <svg
+      aria-hidden="false"
       class="bi bi-chevron-right"
       fill="currentColor"
       height="14"
