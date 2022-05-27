@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import device from "../Layout/mediaQuery"
 
 export const Container = styled.div`
   display: grid;
@@ -11,29 +12,38 @@ export const Container = styled.div`
   & > a:first-child {
     grid-area: prev;
     font-size: 1.4rem;
-    justify-self: start;
-    color: var(--secondary-color);
+    font-family: var(--main-font);
     text-decoration: none;
-    transition: all 0.2s ease;
     justify-self: end;
+
+    @media ${device.tablet} {
+      font-size: 1.6rem;
+    }
   }
   & > p {
     font-family: var(--main-font);
     font-size: 1.4rem;
     grid-area: num;
+
+    @media ${device.tablet} {
+      font-size: 1.6rem;
+    }
   }
 
   & > a:last-child {
     grid-area: next;
     font-size: 1.4rem;
-    justify-self: end;
-    color: var(--secondary-color);
+    font-family: var(--main-font);
     text-decoration: none;
-    transition: all 0.2s ease;
     justify-self: start;
+
+    @media ${device.tablet} {
+      font-size: 1.6rem;
+    }
   }
 
-  & > a:hover {
-    color: var(--pagination-link-hover);
+  & > a:hover,
+  & > a:focus {
+    color: var(--header-nav-link-hover);
   }
 `

@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container } from "./styled"
-import { ChevronLeft, ChevronRight } from "../Icons/index"
 
 interface Props {
   currentPage: number
@@ -20,7 +19,7 @@ const Pagination: React.FC<Props> = props => {
         <Link
           to={prevPage <= 1 ? `/${category}/` : `/${category}/${prevPage}/`}
         >
-          <ChevronLeft title={"Previous Page"} hidden = {false}/>
+          Previous
         </Link>
       )}
       <p>
@@ -28,7 +27,7 @@ const Pagination: React.FC<Props> = props => {
       </p>
       {nextPage <= numPages && (
         <Link to={`/${category}/${nextPage}/`}>
-          <ChevronRight title="Next Page" hidden = {false}></ChevronRight>
+          Next
         </Link>
       )}
     </Container>
