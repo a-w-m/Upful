@@ -9,11 +9,6 @@ interface OptionProps {
   selected: { [name: string]: P.Options } | null
 }
 
-type HTMLElementEvent<T extends HTMLElement> = ChangeEvent & {
-  target: T
-  currentTarget: T
-}
-
 const Options: React.FC<OptionProps> = props => {
   const { dispatch, productOptions, selected } = props
 
@@ -35,9 +30,10 @@ const Options: React.FC<OptionProps> = props => {
     <>
       {productOptions.map(productOption => {
         return (
-          <Container
+          <Container aria-label = "custom options"
             name={`Select ${productOption.customField}`}
             key={productOption.customField}
+          
           >
             <Field aria-label = 'selected option'>{`${productOption.customField} | ${
               selected ? selected[`${productOption.customField}`]["option"] : ""

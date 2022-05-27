@@ -11,7 +11,7 @@ interface Props {
 const ProductNav: React.FC<Props> = props => {
   const { collection, title } = props
   return (
-    <Wrapper>
+    <Wrapper aria-label="Product">
       <Link to={"/"}>HOME</Link>
       <ChevronRight title ="" hidden ={true}></ChevronRight>
       <Link to={`/${collection}`}>{collection}</Link>
