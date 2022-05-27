@@ -1,50 +1,61 @@
 import React from "react"
-import { fireEvent, render, screen } from "@testing-library/react"
-import Header from ".."
+//import custom render function wrapped in context providers
+import { render, screen } from "src/utils/test/test-utils"
+import userEvent from "@testing-library/user-event"
+import Header from "."
 
-describe("Header component", () => {
-  test("matches snapshot", () => {
-    const { container } = render(<Header children="" />)
-    expect(container.firstChild).toMatchSnapshot()
-  })
-
-  test("renders Header with correct site title", () => {
-    render(<Header children="" />)
-
-    expect(screen.getByText("StoreFront")).toBeInTheDocument()
-  })
-
-  // test("displays toggle menu on small screens", ()=>{
-  //   render(<Header children="" />)
-
-  //   expect(screen.getByAltText("toggle-menu")).toBeInTheDocument()
-
-  // })
-
-  // test("does not display toggle menu on large screens", ()=>{
-  //   render(<Header children="" />)
-
-  //   expect(screen.queryAllByAltText("toggle-menu")).toBeNull()
-
-  // })
+beforeEach(() => {
+  render(<Header siteTitle={""} />)
 })
 
-// describe("click outside toggle menu", () => {
-//   test("Nav remains visible when clicking inside component ", () => {
-//     render(<Header children="" />)
-//     const Button = screen.getByRole("button")
-//     const Nav = screen.getAllByRole("navigation", { hidden: true })[0]
-//     fireEvent.click(Button)
-//     fireEvent.click(Nav)
-//     expect(Nav).toBeVisible()
-//   })
+describe("Header", () => {
 
-//   test("Nav is not visible when clicking outside component", () => {
-//     render(<Header children="" />)
-//     const Button = screen.getByRole("button")
-//     const Nav = screen.getAllByRole("navigation", { hidden: true })[0]
-//     fireEvent.click(Button)
-//     fireEvent.mouseDown(Button)
-//     expect(Nav).not.toBeVisible()
-//   })
-// })
+  it("should match snapshot", () => {
+    const header = screen.getByRole("banner")
+    expect(header).toMatchSnapshot()
+  })
+
+  it("should display navigation toggle button", () => {
+    const nav = screen.getByRole("button", { name: /toggle navigation/ })
+    expect(nav).toBeInTheDocument()
+  })
+
+  it("should display logo", () => {
+    const logo = screen.getByRole("img", { name: /logo/ })
+    expect(logo).toBeInTheDocument()
+  })
+
+  it("should display snipcart cart button ", () => {
+    const cartbutton = screen.getByRole("button", {
+      name: "snipcart-checkout",
+    })
+    expect(cartbutton).toBeInTheDocument()
+  })
+
+  it("should not display navigation menu in default view", () => {
+    const nav = screen.queryByRole("navigation", { hidden: true })
+    expect(nav).not.toBeVisible()
+  })
+})
+describe("when user clicks toggle button", () => {
+
+  it("should display navigation menu when user clicks toggle button", async () => {
+    const user = userEvent.setup()
+    const button = screen.getByRole("button", {
+      name: /toggle navigation/,
+    })
+    const nav = screen.getByRole("navigation", { hidden: true })
+    await user.click(button)
+    expect(nav).toBeVisible()
+  })
+
+  it("it should not display navigation when user clicks toggle button a second time", async () => {
+    const user = userEvent.setup()
+    const button = screen.getByRole("button", {
+      name: /toggle navigation/,
+    })
+    const nav = screen.queryByRole("navigation", { hidden: true })
+    await user.dblClick(button)
+    expect(nav).not.toBeVisible()
+  })
+})

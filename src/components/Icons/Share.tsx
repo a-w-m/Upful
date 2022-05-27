@@ -8,9 +8,11 @@ const ShareIcon: React.FC<{}> = () => {
       height="21"
       fill="none"
       viewBox="0 0 18 21"
+      focusable = "false"
+      aria-hidden = "true"
+      data-testid = "Share Icon"
     >
-      <title>Share Icon</title>
-
+      <title>Share Product</title>
       <path
         fill="currentColor"
         fillRule="evenodd"

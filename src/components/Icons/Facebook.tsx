@@ -9,8 +9,11 @@ const FacebookIcon: React.FC<{}> = () => {
       height="18"
       fill="none"
       viewBox="0 0 9 18"
+      aria-hidden = "true"
+      focusable ="false"
+      data-testid = "Facebook Icon"
     >
-      <title>Share Facebook Icon</title>
+      <title>Share to Facebook</title>
 
       <path
         fill="currentColor"

@@ -1,37 +1,49 @@
 import React from "react"
-import { fireEvent, render, screen } from "@testing-library/react"
+import { render, screen, waitFor } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 import ImageGallery from "./index"
-import { imageGalleryData } from "../../../__mocks__/mock-data"
+import { getImageGalleryData } from "../../utils/test/data"
 
-describe("ImageGallery Component", () => {
-  const mockDispatch = jest.fn()
+const mockDispatch = jest.fn()
 
-  test("matches snapshot", () => {
-    const { container } = render(
-      <ImageGallery
-        images={imageGalleryData}
-        dispatch={mockDispatch}
-      ></ImageGallery>
-    )
+const props = {
+  galleryImages: getImageGalleryData(),
+  dispatch: mockDispatch,
+  selected: getImageGalleryData()[0].childImageSharp.gatsbyImageData,
+}
+
+describe("ImageGallery", () => {
+  it("should match snapshot", () => {
+    const { container } = render(<ImageGallery {...props}></ImageGallery>)
     expect(container.firstChild).toMatchSnapshot()
   })
 
-  test("dispatch is called when gallery image is clicked ", () => {
-    render(
-      <ImageGallery
-        images={imageGalleryData}
-        dispatch={mockDispatch}
-      ></ImageGallery>
-    )
+  it("should display the default selected image", () => {
+    render(<ImageGallery {...props}></ImageGallery>)
+    const image = screen.getByRole("img", { name: /selected/ })
+
+    expect(image).toBeInTheDocument
+  })
+
+  it("should display no gallery images if none received in props", () => {
+    render(<ImageGallery {...props} galleryImages={[]}></ImageGallery>)
+    const images = screen.queryAllByRole("img", { name: /gallery/ })
+
+    expect(images).toHaveLength(0)
+  })
+
+  it("should display all the images received in props", () => {
+    render(<ImageGallery {...props}></ImageGallery>)
+    const images = screen.getAllByRole("img", { name: /gallery/ })
+    expect(images.length).toEqual(getImageGalleryData().length)
+  })
+
+ 
+  it("should call dispatch function when user clicks gallery image", async () => {
+    const user = userEvent.setup()
+    render(<ImageGallery {...props}></ImageGallery>)
     const image = screen.getAllByRole("listitem")[0]
-    fireEvent.click(image)
+    await user.click(image)
     expect(mockDispatch).toHaveBeenCalledTimes(1)
   })
-})
-
-test("no list rendered when no images supplied", () => {
-  const { container } = render(
-    <ImageGallery images={[]} dispatch={jest.fn()}></ImageGallery>
-  )
-  expect(container.firstChild).toBeNull()
 })

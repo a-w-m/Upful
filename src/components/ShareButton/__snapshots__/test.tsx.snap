@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Before user clicks ShareButton should match snapshot 1`] = `
+<button
+  class="sc-gsnTZi edmMsC"
+  type="button"
+>
+  <svg
+    aria-hidden="true"
+    data-testid="Share Icon"
+    fill="none"
+    focusable="false"
+    height="21"
+    viewBox="0 0 18 21"
+    width="27"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Share Product
+    </title>
+    <path
+      clip-rule="evenodd"
+      d="M9.545.56L9 0l-.545.56-5.143 5.286 1.09 1.122L8.23 3.035V15.45H9.77V3.035l3.826 3.933 1.091-1.122L9.545.561zM0 11.75V21h18v-9.25h-1.543v7.664H1.543V11.75H0z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
+  <span
+    class="sc-dkzDqf eWJTSj"
+  >
+    Share Product
+  </span>
+  <div
+    class="sc-hKMtZM fklTcG"
+  >
+    <a
+      aria-label="Share to Facebook"
+      href="http://www.facebook.com/sharer.php?u=upful.shop"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-icon icon-share-facebook "
+        data-testid="Facebook Icon"
+        fill="none"
+        focusable="false"
+        height="18"
+        viewBox="0 0 9 18"
+        width="9"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Share to Facebook
+        </title>
+        <path
+          clip-rule="evenodd"
+          d="M7.861 9.007H5.394V18H1.737V9.007H0V5.829h1.738V3.772C1.737 2.3 2.421 0 5.427 0l2.709.01v3.085H6.17c-.321 0-.775.165-.775.866v1.868h2.786l-.32 3.178z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </a>
+    <a
+      aria-label="Share to Twitter"
+      href="https://twitter.com/intent/tweet?url=upful.shop"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-icon icon-share-twitter "
+        data-testid="Twitter Icon"
+        fill="none"
+        focusable="false"
+        height="20"
+        viewBox="0 0 20 17"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Share to Twitter
+        </title>
+        <path
+          clip-rule="evenodd"
+          d="M17.64 2.576a4.115 4.115 0 0 0 1.803-2.27c-.792.47-1.67.812-2.605.996a4.102 4.102 0 0 0-6.99 3.742A11.647 11.647 0 0 1 1.392.757 4.083 4.083 0 0 0 .837 2.82a4.1 4.1 0 0 0 1.825 3.413A4.086 4.086 0 0 1 .803 5.72v.052a4.105 4.105 0 0 0 3.29 4.022 4.108 4.108 0 0 1-1.852.07 4.106 4.106 0 0 0 3.832 2.85 8.231 8.231 0 0 1-5.094 1.755A8.33 8.33 0 0 1 0 14.412a11.612 11.612 0 0 0 6.289 1.843c7.545 0 11.671-6.25 11.671-11.672 0-.178-.004-.355-.011-.53a8.339 8.339 0 0 0 2.047-2.124 8.202 8.202 0 0 1-2.357.646h.001z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </a>
+    <a
+      aria-label="Share to Pinterest"
+      href="http://pinterest.com/pin/create/button/?url=upful.shop&media=image&description=Upful"
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-icon icon-share-pinterest "
+        data-testid="Pinterest Icon"
+        fill="none"
+        focusable="false"
+        height="20"
+        viewBox="0 0 20 20"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Share to Pinterest
+        </title>
+        <path
+          clip-rule="evenodd"
+          d="M10 0C4.479 0 0 4.477 0 10a9.999 9.999 0 0 0 6.355 9.311c-.087-.79-.166-2.005.035-2.868.183-.781 1.173-4.971 1.173-4.971s-.3-.6-.3-1.485c0-1.388.808-2.429 1.81-2.429.854 0 1.265.641 1.265 1.409 0 .859-.545 2.141-.827 3.33-.238.996.5 1.806 1.48 1.806 1.776 0 3.144-1.873 3.144-4.577 0-2.394-1.72-4.068-4.178-4.068-2.845 0-4.513 2.134-4.513 4.34 0 .859.329 1.78.741 2.281.083.1.094.188.072.288-.075.315-.245.995-.28 1.133-.043.183-.143.223-.334.134-1.248-.581-2.03-2.407-2.03-3.875 0-3.154 2.292-6.05 6.609-6.05 3.468 0 6.165 2.472 6.165 5.775 0 3.446-2.175 6.221-5.191 6.221-1.013 0-1.965-.527-2.292-1.15l-.625 2.378c-.225.868-.834 1.957-1.242 2.62A10 10 0 0 0 9.999 20C15.521 20 20 15.523 20 10 20 4.478 15.521.001 10 .001V0z"
+          fill="currentColor"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </a>
+  </div>
+</button>
+`;

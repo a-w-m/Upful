@@ -30,7 +30,7 @@ const Footer: React.FC<{}> = () => {
 
   return (
     <FooterContainer>
-      <FooterNav>
+      <FooterNav aria-label = "Footer">
         {footerData.site.siteMetadata.menuLinks.categories.map(category => {
           return (
             <FooterLink to={category.slug} key={category.name}>

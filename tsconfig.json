@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "test-utils": ["src/utils/test/test-utils.tsx"],
+    },
     "module": "commonjs",
     "target": "es2016",
     "jsx": "preserve",

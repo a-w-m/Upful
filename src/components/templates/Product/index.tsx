@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useRef } from "react"
+import React, { useReducer,} from "react"
 import { useInventory } from "../../Provider"
 import { graphql } from "gatsby"
 import { getSrc } from "gatsby-plugin-image"
@@ -50,7 +50,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
   const { html } = data.markdownRemark
   const { slug } = data.markdownRemark.fields
 
-  const url = data.site.url || `https://${location.hostname}`
+  const url = data.site.siteMetadata.url || `https://${location?.hostname}`
   const path = url + slug
   const optionsSelected = createOptionsSelected(productOptions)
 
@@ -75,7 +75,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
         ></ImageGallery>
 
         <TitleContainer>
-          <BasePrice>
+          <BasePrice aria-label = "price">
             {" "}
             $
             {(price + calculateTotalPriceChange(state.optionsSelected)).toFixed(
@@ -86,7 +86,7 @@ const Product: React.FC<P.Product> = ({ data, location }) => {
         </TitleContainer>
 
         <DescriptionWrapper>
-          <DescriptionContents dangerouslySetInnerHTML={{ __html: html }} />
+          <DescriptionContents aria-label="description" dangerouslySetInnerHTML={{ __html: html }} />
         </DescriptionWrapper>
 
         <ProductForm>

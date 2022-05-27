@@ -44,8 +44,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

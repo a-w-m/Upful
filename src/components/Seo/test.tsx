@@ -1,87 +1,50 @@
 import React from "react"
-import { render } from "@testing-library/react"
+import { render, waitFor } from "@testing-library/react"
 import Helmet from "react-helmet"
 
 import SEO from "."
+import { getQueryMockData } from "src/utils/test/data"
 
-const siteAuthor = "awm"
-const siteTitle = "StoreFront"
-const siteDescription = "Knick and Knacks"
-const siteURL = "http://localhost"
-const siteKeywords = ""
-const siteImage = "image"
+const { siteMetadata } = getQueryMockData.getSiteQuery().site
 
-describe("SEO component", () => {
-  test("matches snapshot", () => {
-    const { container } = render(<SEO />)
-    expect(container.firstChild).toMatchSnapshot()
+describe("SEO", () => {
+  beforeEach(() => {
+    render(<SEO />)
   })
 
-  test("should render correct meta data for home page", () => {
-    render(<SEO />)
-    const helmet: any = Helmet.peek()
+  it("should have site title", async () => {
+    await waitFor(() => {
+      expect(document.title).toBe(siteMetadata.title)
+    })
+  })
 
-    expect(helmet.title).toBe(siteTitle)
+  it("should contain meta tags", async () => {
+    const helmet = Helmet.peek()
+    const metaTags = helmet.metaTags
 
-    expect(helmet.metaTags).toEqual(
-      expect.arrayContaining([
-        {
-          name: "canonical",
-          content: siteURL,
-        },
-        {
-          name: "description",
-          content: siteDescription,
-        },
-        {
-          name: "image",
-          content: siteImage,
-        },
-        {
-          name: "og:url",
-          content: siteURL,
-        },
-        {
-          name: "og:type",
-          content: "website",
-        },
-        {
-          name: "og:title",
-          content: siteTitle,
-        },
-        {
-          name: "og:description",
-          content: siteDescription,
-        },
-        {
-          name: "og:image",
-          content: siteImage,
-        },
-        {
-          name: "twitter:card",
-          content: "summary_large_image",
-        },
-        {
-          name: "twitter:creator",
-          content: siteAuthor,
-        },
-        {
-          name: "twitter:title",
-          content: siteTitle,
-        },
-        {
-          name: "twitter:description",
-          content: siteDescription,
-        },
-        {
-          name: "twitter:image",
-          content: siteImage,
-        },
-        {
-          name: "keywords",
-          content: siteKeywords,
-        },
-      ])
-    )
+    await waitFor(() => {
+      const tags = document.querySelectorAll("meta")
+      expect(tags).toHaveLength(metaTags.length)
+    })
+  })
+
+  it("should contain link tags", async () => {
+    const helmet = Helmet.peek()
+    const linkTags = helmet.linkTags
+
+    await waitFor(() => {
+      const tags = document.querySelectorAll("link")
+      expect(tags).toHaveLength(linkTags.length)
+    })
+  })
+
+  it("should contain html attributes", async () => {
+    const helmet = Helmet.peek()
+    const attributes = helmet.htmlAttributes
+
+    await waitFor(() => {
+      const html = document.querySelector("html")
+      expect(html).toHaveAttribute("lang", attributes?.lang)
+    })
   })
 })

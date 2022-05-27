@@ -1,19 +1,40 @@
 import React from "react"
-import { render, screen } from "@testing-library/react"
+//import custom render function wrapped in context providers
+import { render, screen } from "src/utils/test/test-utils"
 import Layout from "."
 
-describe("Layout component", () => {
-  test("should match snapshot", () => {
-    render(<Layout children="" />)
-    const { container } = render(<Layout children="" />)
 
-    expect(container.firstChild).toMatchSnapshot()
+describe("Layout", () => {
+  const child = <h1>child</h1>
+  beforeEach(()=>{
+  render(<Layout children= {child}/>)
   })
 
-  test("should display correct title and date", () => {
-    render(<Layout children="" />)
+  it("should match snapshot", () => {
+    expect(document.body).toMatchSnapshot()
 
-    expect(screen.getByText("StoreFront")).toBeInTheDocument()
-    expect(screen.getByText(/2019/)).toBeInTheDocument()
   })
+
+  it("should display header", ()=>{
+    const header = screen.getByRole('banner')
+    expect(header).toBeInTheDocument()
+  })
+
+  it("should display footer", ()=>{
+    const header = screen.getByRole('contentinfo')
+    expect(header).toBeInTheDocument()
+  })
+
+  
+  it("should display main", ()=>{
+    const header = screen.getByRole('main')
+    expect(header).toBeInTheDocument()
+  })
+
+  it("should display children", ()=>{
+    const heading = screen.getByRole('heading')
+    expect(heading).toBeInTheDocument()
+  })
+
+  
 })

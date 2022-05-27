@@ -20,7 +20,7 @@ const Pagination: React.FC<Props> = props => {
         <Link
           to={prevPage <= 1 ? `/${category}/` : `/${category}/${prevPage}/`}
         >
-          <ChevronLeft />
+          <ChevronLeft title={"Previous Page"} hidden = {false}/>
         </Link>
       )}
       <p>
@@ -28,7 +28,7 @@ const Pagination: React.FC<Props> = props => {
       </p>
       {nextPage <= numPages && (
         <Link to={`/${category}/${nextPage}/`}>
-          <ChevronRight />
+          <ChevronRight title="Next Page" hidden = {false}></ChevronRight>
         </Link>
       )}
     </Container>

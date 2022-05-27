@@ -1,28 +1,60 @@
 import React from "react"
-import { fireEvent, render, screen, waitFor } from "@testing-library/react"
+import { cleanup, render, screen, waitFor } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 import Option from "./index"
-import { pageQueryData } from "../../../__mocks__/mock-data"
-const dispatchMock = jest.fn()
-const customField = pageQueryData.data.markdownRemark.frontmatter.customField2
+import { getProductFormData } from "../../utils/test/data"
 
-beforeEach(() => {
-  if (customField)
-    render(<Option customField={customField} dispatch={dispatchMock}></Option>)
-})
+describe("Option", () => {
+  const dispatchMock = jest.fn()
 
-describe("Option Componenent", () => {
-  test("matches snapshot", () => {
-    if (customField) {
-      const { container } = render(
-        <Option customField={customField} dispatch={dispatchMock}></Option>
-      )
-      expect(container.firstChild).toMatchSnapshot()
-    }
+  beforeEach(() => {
+    render(
+      <Option
+        productOptions={getProductFormData()}
+        dispatch={dispatchMock}
+        selected={null}
+      ></Option>
+    )
   })
 
-  test("dispatch is called when select element changes", () => {
-    const select = screen.getByRole("combobox")
-    fireEvent.change(select, { tareget: { value: "large" } })
-    expect(dispatchMock).toHaveBeenCalledTimes(1)
+  // clear mocks to prevent userEvent history from persisting across tests
+  afterEach(() => {
+    cleanup()
+    jest.clearAllMocks()
+  })
+
+  it("matches snapshot", () => {
+    const form = screen.getByRole("form")
+    expect(form).toMatchSnapshot()
+  })
+
+  it("should display name of custom field", () => {
+    const field = screen.getByText(/Size/i)
+    expect(field).toBeInTheDocument()
+  })
+
+  it("should display each radio input", () => {
+    const inputs = screen.getAllByRole("radio")
+    expect(inputs).toHaveLength(getProductFormData()[0].options.length)
+  })
+
+  it("should display each label", ()=>{
+    const labels = document.querySelectorAll('label')
+    expect(labels).toHaveLength(getProductFormData()[0].options.length)
+  })
+
+  it("should display name of option that user clicks", async () => {
+    const user = userEvent.setup()
+    const option = screen.getByRole("radio", { name: /large/i })
+    await user.click(option)
+    const selected = screen.getByText(/Size | Large/)
+    await waitFor(()=>expect(selected).toBeInTheDocument())
+  })
+
+  it("should call dispatch when user clicks option", async () => {
+    const user = userEvent.setup()
+    const option = screen.getByRole("radio", { name: /large/i })
+    await user.click(option)
+    await waitFor(()=>expect(dispatchMock).toHaveBeenCalledTimes(1))
   })
 })

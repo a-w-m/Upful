@@ -13,14 +13,14 @@ const Hamburger: React.FC<HamburgerProps> = props => {
     <Container open={open} onClick={() => setOpen(prev => !prev)}>
       <Button
         type="button"
-        aria-label="open navigation"
-        aria-controls="link-list"
-        aria-expanded="false"
+        aria-label="toggle navigation"
+        aria-expanded={open? true: false}
+        aria-controls = "menu"
         open={open}
       >
-        <div />
-        <div />
-        <div />
+        <span />
+        <span />
+        <span />
       </Button>
     </Container>
   )

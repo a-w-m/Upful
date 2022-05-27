@@ -1,40 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Option Componenent matches snapshot 1`] = `
-<div
-  class="sc-dlfnbm fgsagg"
+exports[`Option matches snapshot 1`] = `
+<form
+  aria-label="custom options"
+  class="sc-hKMtZM dtFrcj"
+  name="Select Size"
 >
+  <span
+    aria-label="selected option"
+    class="sc-dkzDqf FRBwX"
+  >
+    Size | 
+  </span>
+  <input
+    class="sc-bczRLJ YJXLH"
+    id="Extra Small"
+    name="Size"
+    type="radio"
+    value="Extra Small"
+  />
   <label
-    class="sc-gsTCUz fJlOKk"
-    for="color"
+    class="sc-gsnTZi biaMNL"
+    for="Extra Small"
   >
-    color
+    Extra Small
   </label>
-  <select
-    class="sc-bdfBwQ eMAlNn"
-    id="color"
+  <input
+    class="sc-bczRLJ YJXLH"
+    id="Small"
+    name="Size"
+    type="radio"
+    value="Small"
+  />
+  <label
+    class="sc-gsnTZi biaMNL"
+    for="Small"
   >
-    <option
-      selected=""
-      value=""
-    >
-      select an option
-    </option>
-    <option
-      value="blue"
-    >
-      blue
-    </option>
-    <option
-      value="grey"
-    >
-      grey
-    </option>
-    <option
-      value="black"
-    >
-      black
-    </option>
-  </select>
-</div>
+    Small
+  </label>
+  <input
+    class="sc-bczRLJ YJXLH"
+    id="Medium"
+    name="Size"
+    type="radio"
+    value="Medium"
+  />
+  <label
+    class="sc-gsnTZi biaMNL"
+    for="Medium"
+  >
+    Medium
+  </label>
+  <input
+    class="sc-bczRLJ YJXLH"
+    id="Large"
+    name="Size"
+    type="radio"
+    value="Large"
+  />
+  <label
+    class="sc-gsnTZi biaMNL"
+    for="Large"
+  >
+    Large
+  </label>
+</form>
 `;

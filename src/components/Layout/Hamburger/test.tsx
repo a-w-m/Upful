@@ -1,20 +1,38 @@
 import React from "react"
-import { fireEvent, render, screen, waitFor } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 import Hamburger from "."
 
 describe("Hamburger component", () => {
-  const open = true
   const setOpen = jest.fn()
 
-  test("component tree matches snapshot", () => {
-    const { container } = render(<Hamburger open={open} setOpen={setOpen} />)
-    expect(container.firstChild).toMatchSnapshot()
+  it("should match snapshot", () => {
+    render(<Hamburger open={false} setOpen={setOpen} />)
+    const button = screen.getByRole("button")
+    expect(button).toMatchSnapshot()
   })
 
-  test("setOpen() is called when pressed", () => {
-    render(<Hamburger open={open} setOpen={setOpen} />)
+  it("should handle click", async () => {
+    render(<Hamburger open={false} setOpen={setOpen} />)
+    const user = userEvent.setup()
     const button = screen.getByRole("button")
-    fireEvent.click(button)
+    await user.click(button)
     expect(setOpen).toHaveBeenCalledTimes(1)
+  })
+
+  it("should apply style when open", () => {
+    render(<Hamburger open={true} setOpen={setOpen} />)
+    const menu = document.querySelectorAll("span")
+    expect(menu[0]).toHaveStyle({ transform: "rotate(45deg)" })
+    expect(menu[1]).toHaveStyle({ opacity: "0", transform: "translateX(2rem)" })
+    expect(menu[2]).toHaveStyle({ transform: "rotate(-45deg)" })
+  })
+
+  it("should apply style when not open", () => {
+    render(<Hamburger open={false} setOpen={setOpen} />)
+    const menu = document.querySelectorAll("span")
+    expect(menu[0]).toHaveStyle({ transform: "rotate(0)" })
+    expect(menu[1]).toHaveStyle({ opacity: "1", transform: "translateX(0)" })
+    expect(menu[2]).toHaveStyle({ transform: "rotate(0)" })
   })
 })

@@ -1,14 +1,10 @@
 const React = require("react")
 const gatsby = jest.requireActual("gatsby")
 
-const author = "awm"
-const title = "StoreFront"
-const description = "Knick and Knacks"
-const url = "http://localhost"
-const keywords = []
-const image = "image"
+const mockDate = new Date(Date.UTC(2022, 5))
 
-const mockDate = new Date("2019-04-07T10:20:30Z")
+const {getQueryMockData} = require("../src/utils/test/data")
+
 
 module.exports = {
   ...gatsby,
@@ -33,16 +29,11 @@ module.exports = {
   ),
   StaticQuery: jest.fn(),
   useStaticQuery: jest.fn().mockReturnValue({
-    site: {
-      siteMetadata: {
-        title,
-        description,
-        author,
-        url,
-        keywords,
-        image,
-      },
-    },
+    ...getQueryMockData.getAllMarkdownRemarkQuery(),
+    ...getQueryMockData.getFileQuery(),
+    ...getQueryMockData.getSiteQuery()
   }),
-  Date: jest.spyOn(global.Date, "now").mockImplementation(() => mockDate),
+  Date: jest.spyOn(global.Date, "now").mockImplementation(() => mockDate)
 }
+
+

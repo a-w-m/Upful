@@ -1,16 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hamburger component component tree matches snapshot 1`] = `
+exports[`Hamburger component should match snapshot 1`] = `
 <button
-  aria-controls="link-list"
+  aria-controls="menu"
   aria-expanded="false"
-  aria-label="open navigation"
-  class="sc-bdfBwQ jrcbxy"
-  open=""
+  aria-label="toggle navigation"
+  class="sc-gsnTZi jUeZLU"
   type="button"
 >
-  <div />
-  <div />
-  <div />
+  <span />
+  <span />
+  <span />
 </button>
 `;

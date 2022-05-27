@@ -9,8 +9,11 @@ const TwitterIcon: React.FC<{}> = () => {
       height="20"
       fill="none"
       viewBox="0 0 20 17"
+      aria-hidden = "true"
+      focusable ="false"
+      data-testid = "Twitter Icon"
     >
-      <title>Share Twitter Icon</title>
+      <title>Share to Twitter</title>
 
       <path
         fill="currentColor"
