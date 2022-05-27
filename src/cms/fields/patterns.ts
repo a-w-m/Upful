@@ -41,6 +41,7 @@ export const settingsDefaults: Array<CmsField> = [
   F.stringField("Title", "title"),
   F.stringField("Description", "description"),
   F.stringField("Author", "author"),
+  F.stringField('Email', 'email'),
   F.stringField("Url", "url"),
   F.listField("Keywords", "keywords", F.stringField("Keyword", "keyword")),
   F.nestedListField("Meta", "meta", [
