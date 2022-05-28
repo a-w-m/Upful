@@ -5,7 +5,7 @@ exports[`Category matches snapshot 1`] = `
   class="sc-dIouRR DzqZm"
 >
   <header
-    class="sc-jSMfEi fWJutG"
+    class="sc-jSMfEi dhsDWM"
   >
     <div
       class="sc-gKXOVf bRgbNH"
@@ -664,9 +664,9 @@ exports[`Category matches snapshot 1`] = `
       class="sc-idiyUo gwMrhD"
     >
       <a
-        href="mailto:howdy@storefront.com"
+        href="contact@upful.shop"
       >
-        howdy@storefront.com
+        contact@upful.shop
       </a>
     </address>
     <div
