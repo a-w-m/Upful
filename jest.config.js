@@ -14,8 +14,8 @@ module.exports = {
   },
   moduleDirectories: ['node_modules', __dirname],
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
-  transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
-  globals: {
+  transformIgnorePatterns: [`node_modules/(?!(gatsby|gatsby-script)/)`],
+    globals: {
     __PATH_PREFIX__: ``,
   },
   testURL: `http://localhost`,
