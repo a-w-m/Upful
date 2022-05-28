@@ -20,7 +20,6 @@
     "gatsby-transformer-remark": "^5.15.0",
     "gatsby-transformer-sharp": "^4.15.0",
     "netlify-cms-app": "^2.15.72",
-    "prop-types": "^15.7.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
@@ -33,7 +32,6 @@
     "@testing-library/user-event": "^14.2.0",
     "@types/jest": "^27.5.1",
     "@types/node-fetch": "^2.6.1",
-    "@types/prop-types": "^15.7.3",
     "@types/react": "^18.0.9",
     "@types/react-helmet": "^6.1.0",
     "@types/styled-components": "^5.1.25",
@@ -42,7 +40,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "prettier": "^2.6.2",
-    "react-test-renderer": "^17.0.2",
     "typescript": "^4.7.2"
   },
   "keywords": [
