@@ -13,97 +13,9 @@ export const snipcart = css`
     --cart-input-checked-bgColor: #00beff;
     --cart-disabled-bgColor: #d1d2da;
     --cart-disabled-color: #8f99a3;
-  }
+    /* Snipcart Theming css variables: https://docs.snipcart.com/v3/setup/theming
+    */
 
-  /*remove item custom element*/
-  .snipcart-overwrite .snipcart-remove-item {
-    text-decoration: underline;
-    cursor: pointer;
-
-    &:hover {
-      color: var(--header-nav-link-hover);
-    }
-  }
-
-  /*/cart header*/
-  .snipcart-overwrite .snipcart-cart__secondary-header {
-    background-color: var(--main-bg);
-    border-bottom: 0.1rem solid var(--cart-input-borderColor);
-  }
-  .snipcart-overwrite
-    .snipcart-cart__secondary-header
-    .snipcart-cart__secondary-header-title {
-    background-color: var(--main-bg);
-    text-align: center;
-  }
-
-  /*item-line*/
-  .snipcart-overwrite .snipcart-item-line {
-    border-bottom: 0.1rem solid var(--cart-input-borderColor);
-  }
-
-  /* item-line title */
-  .snipcart-overwrite .snipcart-item-line__title {
-    font-family: var(--main-font);
-    font-weight: 300;
-  }
-
-  /* increment button */
-  .snipcart-overwrite .snipcart-item-quantity__quantity .snipcart-button-icon {
-    background-color: var(
-      --cart-disabled-bgColor
-    ); //var(--cart-input-checked-bgColor);
-    color: #000;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--cart-input-checked-bgColor);
-    }
-  }
-
-  .snipcart-overwrite
-    .snipcart-item-quantity__quantity
-    .snipcart-button-icon.is-secondary[disabled] {
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--cart-disabled-bgColor);
-    }
-  }
-
-  /* overwrite billing/shipping background and border */
-  .snipcart-overwrite .snipcart-billing-completed,
-  .snipcart-overwrite .snipcart-shipping-completed {
-    background-color: var(--cart-main-white);
-    border-bottom: 0.1rem solid var(--cart-input-borderColor);
-  }
-
-  /*overwrite checkout cart-summary background*/
-  .snipcart-overwrite .snipcart-cart-summary {
-    background-color: var(--cart-main-white);
-  }
-
-  /*overlay when cart opens*/
-  #snipcart::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 150ms ease-out;
-  }
-
-  html.snipcart-sidecart--opened #snipcart::before {
-    opacity: 0.6;
-  }
-  /* Snipcart Theming css variables: https://docs.snipcart.com/v3/setup/theming
-  */
-
-  #snipcart {
     /* Buttons */
 
     /* Primary */
@@ -224,5 +136,91 @@ export const snipcart = css`
     --color-icon: var(--cart-main-brown);
     --bgColor-default: var(--cart-main-white);
     --bgColor-modal: var(--cart-main-white);
+  }
+
+  /*remove item custom element*/
+  .snipcart-overwrite .snipcart-remove-item {
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--header-nav-link-hover);
+    }
+  }
+
+  /*/cart header*/
+  .snipcart-overwrite .snipcart-cart__secondary-header {
+    background-color: var(--main-bg);
+    border-bottom: 0.1rem solid var(--cart-input-borderColor);
+  }
+  .snipcart-overwrite
+    .snipcart-cart__secondary-header
+    .snipcart-cart__secondary-header-title {
+    background-color: var(--main-bg);
+    text-align: center;
+  }
+
+  /*item-line*/
+  .snipcart-overwrite .snipcart-item-line {
+    border-bottom: 0.1rem solid var(--cart-input-borderColor);
+  }
+
+  /* item-line title */
+  .snipcart-overwrite .snipcart-item-line__title {
+    font-family: var(--main-font);
+    font-weight: 300;
+  }
+
+  /* increment button */
+  .snipcart-overwrite .snipcart-item-quantity__quantity .snipcart-button-icon {
+    background-color: var(
+      --cart-disabled-bgColor
+    ); //var(--cart-input-checked-bgColor);
+    color: #000;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--cart-input-checked-bgColor);
+    }
+  }
+
+  .snipcart-overwrite
+    .snipcart-item-quantity__quantity
+    .snipcart-button-icon.is-secondary[disabled] {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--cart-disabled-bgColor);
+    }
+  }
+
+  /* overwrite billing/shipping background and border */
+  .snipcart-overwrite .snipcart-billing-completed,
+  .snipcart-overwrite .snipcart-shipping-completed {
+    background-color: var(--cart-main-white);
+    border-bottom: 0.1rem solid var(--cart-input-borderColor);
+  }
+
+  /*overwrite checkout cart-summary background*/
+  .snipcart-overwrite .snipcart-cart-summary {
+    background-color: var(--cart-main-white);
+  }
+
+  /*overlay when cart opens*/
+  #snipcart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease-out;
+  }
+
+  html.snipcart-sidecart--opened #snipcart::before {
+    opacity: 0.6;
   }
 `
