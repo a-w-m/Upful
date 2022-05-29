@@ -207,7 +207,7 @@ export const snipcart = css`
   }
 
   /*overlay when cart opens*/
-  .snipcart-overwrite div:nth-child(2)::before {
+  .snipcart::before {
     content: "";
     position: absolute;
     top: 0;
