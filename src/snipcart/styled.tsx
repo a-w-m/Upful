@@ -137,9 +137,22 @@ export const snipcart = css`
     --bgColor-default: var(--cart-main-white);
     --bgColor-modal: var(--cart-main-white);
 
-    & .snipcart-overwrite .snipcart{
-      background-color: red;
+    & .snipcart-overwrite #snipcart::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms ease-out;
     }
+
+    &.html.snipcart-sidecart--opened .snipcart::before {
+    opacity: 0.6;
+  }
   }
 
   /*remove item custom element*/
@@ -208,23 +221,5 @@ export const snipcart = css`
   /*overwrite checkout cart-summary background*/
   .snipcart-overwrite .snipcart-cart-summary {
     background-color: var(--cart-main-white);
-  }
-
-  /*overlay when cart opens*/
-  .snipcart::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 150ms ease-out;
-  }
-
-  html.snipcart-sidecart--opened .snipcart::before {
-    opacity: 0.6;
   }
 `
