@@ -136,6 +136,10 @@ export const snipcart = css`
     --color-icon: var(--cart-main-brown);
     --bgColor-default: var(--cart-main-white);
     --bgColor-modal: var(--cart-main-white);
+
+    & .snipcart-overwrite .snipcart{
+      background-color: red;
+    }
   }
 
   /*remove item custom element*/
