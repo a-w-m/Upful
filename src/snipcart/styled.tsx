@@ -137,6 +137,8 @@ export const snipcart = css`
     --bgColor-default: var(--cart-main-white);
     --bgColor-modal: var(--cart-main-white);
 
+    //snipcart overlay
+
     & .snipcart-overwrite #snipcart::before{
     content: "";
     position: absolute;
@@ -149,16 +151,13 @@ export const snipcart = css`
     pointer-events: none;
     transition: opacity 150ms ease-out;
     }
-
+  
+  //reduce opacity when cart opened class is present
    &.snipcart-sidecart--opened #snipcart::before {
     opacity: 0.6;
   }
 
 }
-
-html.snipcart-sidecart--opened .snipcart-overwrite #snipcart::before {
-    opacity: 0.6;
-  }
 
   /*remove item custom element*/
   .snipcart-overwrite .snipcart-remove-item {
