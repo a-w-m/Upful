@@ -150,7 +150,7 @@ export const snipcart = css`
     transition: opacity 150ms ease-out;
     }
 
-    &.snipcart-sidecart--opened .snipcart::before {
+   .snipcart-sidecart--opened #snipcart::before {
     opacity: 0.6;
   }
   }
