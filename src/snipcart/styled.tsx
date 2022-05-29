@@ -150,9 +150,14 @@ export const snipcart = css`
     transition: opacity 150ms ease-out;
     }
 
-   .snipcart-sidecart--opened #snipcart::before {
+   &.snipcart-sidecart--opened #snipcart::before {
     opacity: 0.6;
   }
+
+}
+
+html.snipcart-sidecart--opened .snipcart-overwrite #snipcart::before {
+    opacity: 0.6;
   }
 
   /*remove item custom element*/
