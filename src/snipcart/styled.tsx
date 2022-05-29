@@ -207,7 +207,7 @@ export const snipcart = css`
   }
 
   /*overlay when cart opens*/
-  .snipcart-overwrite:nth-child(2)::before {
+  .snipcart-overwrite .snipcart::before {
     content: "";
     position: absolute;
     top: 0;
@@ -220,7 +220,7 @@ export const snipcart = css`
     transition: opacity 150ms ease-out;
   }
 
-  html.snipcart-sidecart--opened .snipcart-overwrite:nth-child(2)::before {
+  html.snipcart-sidecart--opened .snipcart::before {
     opacity: 0.6;
   }
 `
