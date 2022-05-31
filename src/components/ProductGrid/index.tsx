@@ -18,7 +18,7 @@ const ProductGrid: React.FC<C.Grid> = props => {
             price={price}
             thumbnail={thumbnail}
             slug={slug}
-            key={index}
+            key={id}
             galleryImages={galleryImages}
           ></ProductThumbnail>
         )
