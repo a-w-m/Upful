@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-digital-storefront",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A digitial storefront powered by gatsby, snipcart, and netlify/cms.",
+  "author": "Amrey Mathurin <a-w-m>",
+  "contributors": ["Kyle Mathews <mathews.kyle@gmail.com>"],
   "dependencies": {
     "gatsby": "^4.15.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
