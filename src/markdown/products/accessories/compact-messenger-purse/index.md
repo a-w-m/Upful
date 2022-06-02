@@ -1,7 +1,7 @@
 ---
-title: Compact Leather Purse
+title: Compact Messenger Purse
 date: 2022-06-01T12:26:59.841Z
-id: compact-leather-purse
+id: compact-messenger-purse
 thumbnail: images/image-1.jpg
 galleryImages:
   - images/image-2.jpg
@@ -10,4 +10,4 @@ price: 150
 featured: false
 productOptions: []
 ---
-A compact leather purse perfect for your daily runnings.
+A vintage leather purse perfect for your daily runnings.
