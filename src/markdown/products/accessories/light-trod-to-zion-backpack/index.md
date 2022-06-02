@@ -7,6 +7,7 @@ galleryImages:
   - images/image-2.jpg
   - images/image-3.jpg
   - images/image-4.jpg
+  - images/image-5.jpg
 price: 200
 featured: true
 productOptions: []
