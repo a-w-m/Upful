@@ -1,7 +1,7 @@
 ---
-title: Arden Gourd
+title: Ardent Gourd
 date: 2022-06-03T15:03:14.402Z
-id: arden-gourd
+id: ardent-gourd
 thumbnail: images/image-1.jpg
 galleryImages:
   - images/image-2.jpg
