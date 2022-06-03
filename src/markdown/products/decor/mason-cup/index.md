@@ -1,5 +1,5 @@
 ---
-title: Mason cup
+title: Mason Cup
 date: 2022-06-03T14:54:18.593Z
 id: mason-cup
 thumbnail: images/image-1.jpg
