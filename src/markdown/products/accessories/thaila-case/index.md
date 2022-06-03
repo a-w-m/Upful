@@ -12,4 +12,4 @@ price: 100
 featured: true
 productOptions: []
 ---
-Store your magical things in this classic wooden case/
+Store your magical things in this classic wooden case.
