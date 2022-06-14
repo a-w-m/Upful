@@ -60,7 +60,7 @@ CMS.init({
   config: {
     backend: {
       name: "git-gateway",
-      branch: "develop",
+      branch: "demo",
       commit_messages: {
         create: `CMS Create {{collection}} {{slug}}`,
         update: `CMS Update {{collection}} “{{slug}}”`,

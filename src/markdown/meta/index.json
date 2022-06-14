@@ -24,8 +24,12 @@
         "slug": "/kids/"
       },
       {
-        "name": "decor",
-        "slug": "/decor/"
+        "name": "accessories",
+        "slug": "/accessories/"
+      },
+      {
+        "name": "home",
+        "slug": "/home/"
       }
     ]
   },
