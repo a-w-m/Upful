@@ -2,8 +2,10 @@
 title: Luka Jacket
 date: 2022-06-14T19:00:34.497Z
 id: luka-jacket
-thumbnail: images/img_20211008_111646.jpg
-galleryImages: []
+thumbnail: images/img_20211008_111655.jpg
+galleryImages:
+  - images/img_20211008_111646.jpg
+  - images/img_20211008_111733.jpg
 price: 325
 featured: false
 productOptions: []
@@ -12,8 +14,8 @@ Stunning hand embroidered vintage denim jacket. Features hand selected vintage L
 
 Materials: Medium Wash Denim Jacket, Re-Purposed textiles
 
-Size: Women's Large-X-Large/ Men's Large
+Size: Men's X-Large
 
 Measurements: 19” Pit to pit, 20” shoulder to hem
 
-Care: Spot Clean with a damp cloth or Dry Clean Only
+Care: Spot clean with a damp cloth or dry clean
