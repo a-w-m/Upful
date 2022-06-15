@@ -18,4 +18,4 @@ Size: Women's Large (or an oversized Medium)
 
 Measurements: Center front to hem 20", Armpit to armpit 22.5", Waist 19.5"
 
-Dry clean only
+Care: Spot Clean with damp cloth or Dry clean
