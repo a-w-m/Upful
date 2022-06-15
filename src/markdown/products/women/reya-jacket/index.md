@@ -5,6 +5,7 @@ id: reya-jacket
 thumbnail: images/img_20211008_111244.jpg
 galleryImages:
   - images/img_20211008_111250.jpg
+  - images/img_20211008_111314.jpg
 price: 275
 featured: false
 productOptions: []
@@ -13,8 +14,6 @@ Stunning hand embroidered vintage denim jacket. Features hand selected vintage L
 
 Materials: Medium-Light Wash Denim Jacket, Re-Purposed textiles
 
-Size: Women's Large
+Size: Women's Medium (Oversized Fit)
 
-Measurements: 19” Pit to pit, 20” shoulder to hem
-
-Care: Spot Clean with a damp cloth or Dry Clean Only
+Care: Spot Clean with a damp cloth or Dry Clean
