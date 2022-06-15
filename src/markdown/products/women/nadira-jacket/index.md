@@ -10,12 +10,12 @@ price: 275
 featured: false
 productOptions: []
 ---
-Stunning hand embroidered vintage denim jacket. Features hand selected vintage jacket and up-cycled handmade mud cloth textiles. Second hand clothing and re-purposed textile waste come together to make this intentional piece. This is a unique, one-of-a- kind addition to your intentional wardrobe. A true piece of wearable art. 
+Stunning hand embroidered vintage denim jacket. Features hand selected vintage Classic Denim jacket and up-cycled handmade mud cloth textiles. Second hand clothing and re-purposed textile waste come together to make this intentional piece. This is a unique, one-of-a- kind addition to your intentional wardrobe. A true piece of wearable art. 
 
-Medium-Wash Grey Denim
+Materials: Medium-Wash Grey Denim, Up-cycled mud cloth textiles
 
-Size Women's Large
+Size: Women's Large
 
-Measurements: 19” Pit to pit, 20” shoulder to hem
+Measurements: Bust 42”, Waist 34-38”, Length 20”, Sleeve length 22”
 
-Dry clean only
+Care: Spot clean with damp cloth or dry clean
