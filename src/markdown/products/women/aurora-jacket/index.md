@@ -17,4 +17,4 @@ Size: Women's Small/Medium
 
 Measurements: 19” Pit to pit, 20” shoulder to hem
 
-Care: Spot Clean with a damp cloth or Dry Clean Only
+Care: Spot clean with a damp cloth or dry clean
