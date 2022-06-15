@@ -5,6 +5,7 @@ id: origin-jacket
 thumbnail: images/img_20211008_112710.jpg
 galleryImages:
   - images/img_20211008_112714.jpg
+  - images/img_20211008_112739.jpg
 price: 275
 featured: false
 productOptions: []
@@ -13,8 +14,6 @@ Stunning hand embroidered vintage denim jacket. Features hand selected vintage L
 
 Materials: Medium-Light Wash Denim Jacket, Re-Purposed textiles
 
-Size: Women's Medium/Large
+Size: Marked Size XXL (fits a women's Large/ men's medium) 
 
-Measurements: 19” Pit to pit, 20” shoulder to hem
-
-Care: Spot Clean with a damp cloth or Dry Clean Only
+Care: Spot Clean with a damp cloth or Dry Clean
