@@ -3,7 +3,8 @@ title: Indigo Blues Jacket
 date: 2022-06-14T19:06:33.948Z
 id: indigo-blues-jacket
 thumbnail: images/img_20211008_113430.jpg
-galleryImages: []
+galleryImages:
+  - images/img_20211008_113336.jpg
 price: 325
 featured: false
 productOptions: []
@@ -12,7 +13,7 @@ Stunning hand embroidered vintage denim jacket. Features hand selected vintage L
 
 Materials: Medium-Light Wash Denim Jacket, Re-Purposed textiles
 
-Size: Women's X-Large/ Men's Large to X-Large
+Size: Women's X-Large/ Men's Large
 
 Measurements: 19” Pit to pit, 20” shoulder to hem
 
