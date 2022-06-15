@@ -15,6 +15,4 @@ Materials: Medium-Light Wash Denim Jacket, Re-Purposed textiles
 
 Size: Women's X-Large/ Men's Large
 
-Measurements: 19” Pit to pit, 20” shoulder to hem
-
 Care: Spot Clean with a damp cloth or Dry Clean Only
