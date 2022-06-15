@@ -7,7 +7,7 @@ galleryImages:
   - images/img_20220615_153345.jpg
   - images/img_20220615_153353.jpg
   - images/img_20220615_153507.jpg
-price: 327
+price: 325
 featured: false
 productOptions: []
 ---
