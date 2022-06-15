@@ -2,8 +2,11 @@
 title: Cinnamon and Amber Jacket
 date: 2022-06-14T19:30:47.581Z
 id: cinnamon-and-amber-jacket
-thumbnail: images/img_20211008_112843.jpg
-galleryImages: []
+thumbnail: images/img_20211008_112858.jpg
+galleryImages:
+  - images/img_20211008_112843.jpg
+  - images/img_20211008_112903.jpg
+  - images/img_20211008_112958.jpg
 price: 275
 featured: false
 productOptions: []
