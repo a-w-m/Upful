@@ -5,6 +5,7 @@ id: sayrah-jacket
 thumbnail: images/img_20211008_111846.jpg
 galleryImages:
   - images/img_20211008_111904.jpg
+  - images/img_20211008_111923.jpg
 price: 275
 featured: false
 productOptions: []
@@ -13,8 +14,6 @@ Stunning hand embroidered vintage denim jacket. Features hand selected vintage L
 
 Materials: Medium Wash Denim Jacket, Re-Purposed textiles
 
-Size: Women's Medium/Large
+Size: Women's Medium (Oversized Fit)
 
-Measurements: 19” Pit to pit, 20” shoulder to hem
-
-Care: Spot Clean with a damp cloth or Dry Clean Only
+Care: Spot clean with a damp cloth or dry clean
