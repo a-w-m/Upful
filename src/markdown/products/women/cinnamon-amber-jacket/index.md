@@ -15,8 +15,6 @@ Stunning hand embroidered vintage denim jacket. Features hand selected vintage L
 
 Materials: Light Wash Denim Jacket, Re-Purposed Mud Cloth textiles
 
-Size: Women's Medium/Large
-
-Measurements: 19” Pit to pit, 20” shoulder to hem
+Size: Women's Medium
 
 Care: Spot Clean with a damp cloth or Dry Clean Only
