@@ -16,6 +16,4 @@ Materials: Medium Wash Denim Jacket, Re-Purposed textiles
 
 Size: Men's X-Large
 
-Measurements: 19” Pit to pit, 20” shoulder to hem
-
 Care: Spot clean with a damp cloth or dry clean
