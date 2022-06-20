@@ -27,6 +27,7 @@ export const query = graphql`
       filter: {
         childMarkdownRemark: { frontmatter: { featured: { eq: true } } }
       }
+      sort: {fields: sourceInstanceName, order: DESC}
     ) {
       edges {
         node {
