@@ -10,7 +10,7 @@ galleryImages:
   - images/image-5.jpg
   - images/image-6.jpg
 price: 200
-featured: true
+featured: false
 productOptions: []
 ---
 A striking array of color come together in this elegant vintage hand bag.
