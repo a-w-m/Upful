@@ -8,7 +8,7 @@ galleryImages:
   - images/image-3.jpg
   - images/image-4.jpg
 price: 60
-featured: true
+featured: false
 productOptions: []
 ---
 Multi-toned wooden bowl.
