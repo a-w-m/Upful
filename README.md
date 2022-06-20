@@ -4,6 +4,6 @@
   </a>
 </p>
 
-##
+# Description
   Upful is an E-commerce boutique built using Gatsby, Snipcart, and Netlify.
 
