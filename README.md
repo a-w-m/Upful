@@ -3,7 +3,8 @@
     <img alt="Gatsby" src="src\images\logo\upful-gold-frame-logo.png" width="100" />
   </a>
 </p>
-<h1 align="center">
+
+
+##
   Upful is an E-commerce boutique built using Gatsby, Snipcart, and Netlify.
-</h1>
 
