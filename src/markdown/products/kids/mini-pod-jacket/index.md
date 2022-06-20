@@ -5,7 +5,7 @@ id: mini-pod-jacket
 thumbnail: images/img_20211008_112124.jpg
 galleryImages: []
 price: 125
-featured: false
+featured: true
 productOptions: []
 ---
 Stunning Vintage Levi's denim kid's jacket featuring up-cycled mud cloth. This is our mini version of the Unisex Pod Jacket. A conscious and sustainable piece for little ones. Note: Matching adult jacket available for a Mommy & Me set. 
