@@ -7,7 +7,7 @@ galleryImages:
   - images/image-2.jpg
   - images/image-3.jpg
 price: 50
-featured: true
+featured: false
 productOptions: []
 ---
 Read your favorite tomes on this intricately carved bookstand.

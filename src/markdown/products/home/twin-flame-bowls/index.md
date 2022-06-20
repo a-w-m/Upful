@@ -9,7 +9,7 @@ galleryImages:
   - images/image-1.jpg
   - images/image-5.jpg
 price: 60
-featured: true
+featured: false
 productOptions: []
 ---
 Twin bowls that are each one of a kind.

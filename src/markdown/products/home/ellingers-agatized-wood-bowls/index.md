@@ -7,7 +7,7 @@ galleryImages:
   - images/image-2.jpg
   - images/image-3.jpg
 price: 60
-featured: true
+featured: false
 productOptions: []
 ---
 Long lasting bowls made from raw materials.

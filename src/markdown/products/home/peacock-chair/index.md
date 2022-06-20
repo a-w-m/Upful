@@ -7,7 +7,7 @@ galleryImages:
   - images/image-3.jpg
   - images/image-4.jpg
 price: 150
-featured: true
+featured: false
 productOptions: []
 ---
 Classic peacock chair.
