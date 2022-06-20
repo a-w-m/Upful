@@ -8,7 +8,7 @@ galleryImages:
   - images/image-3.jpg
   - images/image-4.jpg
 price: 100
-featured: true
+featured: false
 productOptions: []
 ---
 Masked figures chip across this pillow, evoking the energy of play, performance and survival.
