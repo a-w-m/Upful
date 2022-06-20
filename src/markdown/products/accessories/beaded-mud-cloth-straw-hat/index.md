@@ -7,7 +7,7 @@ galleryImages:
   - images/image-2.jpg
   - images/image-3.jpg
 price: 150
-featured: true
+featured: false
 productOptions: []
 ---
 Vintage straw hat adorned with mud cloth and bead work.
