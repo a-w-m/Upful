@@ -1,9 +1,3 @@
-<p align="center">
-  <a href="https://demo--thirsty-blackwell-f130f4.netlify.app/">
-    <img alt="Gatsby" src="src\images\logo\upful-gold-frame-logo.png" width="100" />
-  </a>
-</p>
-<h1 align="center">
-  Upful is an E-commerce boutique built using Gatsby, Snipcart, and Netlify.
-</h1>
+[![Gatsby](src\images\logo\upful-gold-frame-logo.png)](https://demo--thirsty-blackwell-f130f4.netlify.app/) 
 
+# Upful is an E-commerce boutique built using Gatsby, Snipcart, and Netlify.
