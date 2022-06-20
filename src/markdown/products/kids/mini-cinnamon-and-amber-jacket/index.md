@@ -7,7 +7,7 @@ galleryImages:
   - images/img_20211008_110947.jpg
   - images/img_20211008_111006.jpg
 price: 125
-featured: false
+featured: true
 productOptions: []
 ---
 Our mini version of the Cinnamon and Amber Jacket. Features handmade up-cycled mud cloth textiles and vintage Jordache Jeans denim jacket. A true classic piece. 
