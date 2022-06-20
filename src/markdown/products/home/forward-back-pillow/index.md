@@ -7,7 +7,7 @@ galleryImages:
   - images/image-2.jpg
   - images/image-3.jpg
 price: 100
-featured: true
+featured: false
 productOptions: []
 ---
 Repeating symmetries march forward and back in earthen clay tones on this pillow.
