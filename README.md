@@ -9,3 +9,6 @@
 
 # Technology
 - I wrote Upful using React typescript. I use Netlify CMS to create the data, Gatsby to query the data and generate pages, Snipcart to handle cart integration, and Netlify to deploy the application and handle serverless functions.
+
+# Demo
+[Live App](https://demo--thirsty-blackwell-f130f4.netlify.app/)
