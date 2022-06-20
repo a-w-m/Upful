@@ -5,7 +5,7 @@
 </p>
 
 # Description
-Upful is a minimalist E-commerce boutique built using Gatsby, Snipcart, Netlify, and Netlify CMS. 
+Upful is a minimalist boutique built using Gatsby, Snipcart, Netlify, and Netlify CMS. 
 
 # Technology
 I wrote Upful using React typescript. I use Netlify CMS to create the data, Gatsby to query the data and generate pages, Snipcart to handle cart integration, and Netlify to deploy the application and handle serverless functions.
