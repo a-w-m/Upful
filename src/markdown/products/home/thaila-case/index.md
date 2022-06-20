@@ -9,7 +9,7 @@ galleryImages:
   - images/image-4.jpg
   - images/image-5.jpg
 price: 100
-featured: true
+featured: false
 productOptions: []
 ---
 Store your magical things in this classic wooden case.
