@@ -18,4 +18,4 @@ Size: Women's Small/Medium
 
 Measurements: 22.25” long, 19.5” wide (pit to pit), 23” sleeve
 
-Care: Spot Clean with a damp cloth or Dry Clean Only
+Care: Spot clean with a damp cloth or dry clean
