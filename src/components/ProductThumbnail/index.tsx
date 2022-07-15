@@ -42,7 +42,9 @@ const ProductThumbnail: React.FC<P.Thumbnail> = props => {
               : thumbnail.childImageSharp.gatsbyImageData
           }
           alt= "thumbnail"
-        />
+          objectFit="contain"
+          style={{height: "280px"}}
+                    />
       </Link>
       {!loading && (
         <ProductInfoContainer>
@@ -82,9 +84,8 @@ export const thumbnailQuery = graphql`
 export const imageQuery = graphql`
   fragment ThumbnailImage on ImageSharp {
     gatsbyImageData(
-      width: 1024
-      aspectRatio: 1
-      transformOptions: { fit: COVER }
-    )
+      width: 2560
+      transformOptions: {fit: CONTAIN, cropFocus: ATTENTION}
+         )
   }
 `

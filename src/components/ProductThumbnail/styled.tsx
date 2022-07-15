@@ -62,4 +62,5 @@ export const ProductInfoContainer = styled.div`
   align-items: center;
   text-align: center;
   font-size: 1.4rem;
+  padding: 1rem;
 `

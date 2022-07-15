@@ -10,7 +10,7 @@ exports[`Thumbnail Component matches snapshot 1`] = `
     <div
       class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
       data-gatsby-image-wrapper=""
-      style="position: relative; overflow: hidden; display: inline-block; vertical-align: top;"
+      style="position: relative; overflow: hidden; display: inline-block; vertical-align: top; height: 280px;"
     >
       <div
         style="max-width: 995px; display: block;"
@@ -37,7 +37,7 @@ exports[`Thumbnail Component matches snapshot 1`] = `
         decoding="async"
         loading="lazy"
         sizes="(min-width: 995px) 995px, 100vw"
-        style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; opacity: 0;"
+        style="height: 100%; left: 0px; position: absolute; top: 0px; transform: translateZ(0); transition: opacity 250ms linear; width: 100%; will-change: opacity; object-fit: contain; opacity: 0;"
       />
       <noscript />
       <script
@@ -48,7 +48,7 @@ exports[`Thumbnail Component matches snapshot 1`] = `
     </div>
   </a>
   <div
-    class="sc-eCYdqJ craCFA"
+    class="sc-eCYdqJ dPRCrd"
   >
     <h3
       class="sc-gsnTZi fcNkwz"

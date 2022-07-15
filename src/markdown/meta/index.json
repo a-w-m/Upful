@@ -16,16 +16,20 @@
   "menuLinks": {
     "categories": [
       {
-        "name": "women",
-        "slug": "/women/"
+        "name": "jackets",
+        "slug": "/jackets/"
       },
       {
         "name": "kids",
         "slug": "/kids/"
       },
       {
-        "name": "decor",
-        "slug": "/decor/"
+        "name": "accessories",
+        "slug": "/accessories/"
+      },
+      {
+        "name": "home",
+        "slug": "/home/"
       }
     ]
   },
