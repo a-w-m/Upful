@@ -10,8 +10,8 @@ Upful is a minimalist boutique built using Gatsby, Snipcart, Netlify, and Netlif
 Leveraging a headless CMS, continuous integration, serverless functions, and Snipcart, I developed an online storefront that allows non-developers to add new pages, content, and products. Behind the scenes, I used Gatsby's graphql API to query content and generate static pages. I composed unit-tested React UI components written in TypeScript and maintained consistent application state using React hooks.
 
 # Images
-![landing-page](assets/screenshots/upful-landing.png)(https://demo--upful-shop.netlify.app/)
-![product-page](assets/screenshots/product-page.png)https://demo--upful-shop.netlify.app/mini-cinnamon-and-amber-jacket/
+[![landing-page](assets/screenshots/upful-landing.png)](https://demo--upful-shop.netlify.app/)
+[![product-page](assets/screenshots/product-page.png)](https://demo--upful-shop.netlify.app/mini-cinnamon-and-amber-jacket/)
 
 # Demo
 [Live App](https://demo--upful-shop.netlify.app/)
